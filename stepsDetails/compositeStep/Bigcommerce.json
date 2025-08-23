@@ -1,0 +1,814 @@
+[
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bdCAHIVgKsxFCZW6SAB82FoYrQ",
+        "name": "getChannels",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request Body\",\"description\":\"Bigcommerce API request body schema.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The API key name for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for authentication.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"platform\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"date_created\":{\"type\":\"string\"},\"date_modified\":{\"type\":\"string\"},\"external_id\":{\"type\":\"string\"},\"icon_url\":{\"type\":\"string\"},\"is_listable_from_ui\":{\"type\":\"boolean\"},\"is_enabled\":{\"type\":\"boolean\"},\"is_visible\":{\"type\":\"boolean\"},\"status\":{\"type\":\"string\"}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{\"pagination\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"count\":{\"type\":\"integer\"},\"per_page\":{\"type\":\"integer\"},\"current_page\":{\"type\":\"integer\"},\"total_pages\":{\"type\":\"integer\"},\"links\":{\"type\":\"object\",\"properties\":{\"current\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.546Z",
+        "updatedAt": "2025-04-27T11:08:51.546Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bdDB1VGKblHVHQj2dLLWfrcklj",
+        "name": "getChannel",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request Body\",\"description\":\"Bigcommerce API request body schema.\",\"required\":[\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the API key used for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash associated with the Bigcommerce store.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Bigcommerce API request.\",\"required\":[\"channelId\"],\"properties\":{\"channelId\":{\"type\":\"string\",\"title\":\"Channel ID\",\"description\":\"The channel ID for the Bigcommerce API request.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"channelId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"platform\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"date_created\":{\"type\":\"string\"},\"date_modified\":{\"type\":\"string\"},\"external_id\":{\"type\":\"string\"},\"icon_url\":{\"type\":\"string\"},\"is_listable_from_ui\":{\"type\":\"boolean\"},\"is_enabled\":{\"type\":\"boolean\"},\"is_visible\":{\"type\":\"boolean\"},\"status\":{\"type\":\"string\"}},\"required\":[]},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.522Z",
+        "updatedAt": "2025-04-27T11:08:51.522Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bdE4nRzxd3L2rFroa60UxgIYUT",
+        "name": "createChannel",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The API key name for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for authentication.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Request body for the Bigcommerce API.\",\"required\":[\"name\",\"type\",\"platform\"],\"properties\":{\"name\":{\"type\":\"string\",\"title\":\"Name\",\"description\":\"Name of the entity.\"},\"config_meta\":{\"type\":\"object\",\"title\":\"Configuration Metadata\",\"description\":\"Metadata for configuration.\",\"properties\":{\"app\":{\"type\":\"object\",\"title\":\"Application Configuration\",\"description\":\"Application configuration details.\",\"properties\":{\"id\":{\"type\":\"integer\",\"title\":\"Application ID\",\"description\":\"Application ID.\"},\"sections\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"query_path\":{\"type\":\"string\",\"title\":\"Query Path\",\"description\":\"Query path for the section.\"},\"title\":{\"type\":\"string\",\"title\":\"Section Title\",\"description\":\"Title of the section.\"}}}}}}}},\"type\":{\"type\":\"string\",\"title\":\"Type\",\"description\":\"Type of the entity.\"},\"platform\":{\"type\":\"string\",\"title\":\"Platform\",\"description\":\"Platform of the entity.\"},\"status\":{\"type\":\"string\",\"title\":\"Status\",\"description\":\"Status of the entity.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"config_meta\":{\"app\":{\"id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"sections\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}},\"type\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"platform\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"status\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"platform\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"date_created\":{\"type\":\"string\"},\"date_modified\":{\"type\":\"string\"},\"external_id\":{\"type\":\"string\"},\"icon_url\":{\"type\":\"string\"},\"is_listable_from_ui\":{\"type\":\"boolean\"},\"is_enabled\":{\"type\":\"boolean\"},\"is_visible\":{\"type\":\"boolean\"},\"config_meta\":{\"type\":\"object\",\"properties\":{\"app\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"sections\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"query_path\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}},\"required\":[]},\"status\":{\"type\":\"string\"}},\"required\":[]},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.497Z",
+        "updatedAt": "2025-04-27T11:08:51.497Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bdEQvO7F20aLsIlegYpePq7hFH",
+        "name": "updateChannel",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema for Bigcommerce endpoint\",\"required\":[\"body\",\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Bigcommerce API request.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of the Bigcommerce API key.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the Bigcommerce API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for identifying the Bigcommerce store.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Data payload for the Bigcommerce API request.\",\"properties\":{\"is_listable_from_ui\":{\"title\":\"Is Listable from UI\",\"description\":\"Indicates if the item is listable from the user interface.\",\"type\":\"boolean\"},\"name\":{\"type\":\"string\",\"title\":\"Name\",\"description\":\"Name of the item.\"},\"config_meta\":{\"type\":\"object\",\"title\":\"Configuration Metadata\",\"description\":\"Metadata related to the configuration.\",\"properties\":{\"app\":{\"type\":\"object\",\"title\":\"Application Details\",\"description\":\"Details about the associated application.\",\"properties\":{\"id\":{\"type\":\"integer\",\"title\":\"Application ID\",\"description\":\"Unique identifier for the application.\"},\"sections\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of sections within the application.\",\"properties\":{\"query_path\":{\"type\":\"string\",\"title\":\"Query Path\",\"description\":\"Path for querying data.\"},\"title\":{\"type\":\"string\",\"title\":\"Section Title\",\"description\":\"Title of the section.\"}}}}}}}},\"status\":{\"type\":\"string\",\"title\":\"Status\",\"description\":\"Status of the item.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Bigcommerce API request.\",\"required\":[\"channelId\"],\"properties\":{\"channelId\":{\"type\":\"string\",\"title\":\"Channel ID\",\"description\":\"Identifier for the sales channel.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"is_listable_from_ui\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"config_meta\":{\"app\":{\"id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"sections\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}},\"status\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"channelId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"platform\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"date_created\":{\"type\":\"string\"},\"date_modified\":{\"type\":\"string\"},\"external_id\":{\"type\":\"string\"},\"icon_url\":{\"type\":\"string\"},\"is_listable_from_ui\":{\"type\":\"boolean\"},\"is_enabled\":{\"type\":\"boolean\"},\"is_visible\":{\"type\":\"boolean\"},\"config_meta\":{\"type\":\"object\",\"properties\":{\"app\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"sections\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"query_path\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}},\"required\":[]},\"status\":{\"type\":\"string\"}},\"required\":[]},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.472Z",
+        "updatedAt": "2025-04-27T11:08:51.472Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bdIRStDZyf9OrbMKM5h4sqQ6ci",
+        "name": "getChannelActiveTheme",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request Body\",\"description\":\"Request body for the Bigcommerce API.\",\"required\":[\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The API key name for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for authentication.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Bigcommerce API request.\",\"required\":[\"channelId\"],\"properties\":{\"channelId\":{\"type\":\"string\",\"title\":\"Channel ID\",\"description\":\"The channel ID for the request.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"channelId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"active_theme_uuid\":{\"type\":\"string\"},\"active_theme_configuration_uuid\":{\"type\":\"string\"},\"active_theme_version_uuid\":{\"type\":\"string\"},\"saved_theme_configuration_uuid\":{\"type\":\"string\"}},\"required\":[]},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.450Z",
+        "updatedAt": "2025-04-27T11:08:51.450Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bdJsCNNSfRMzqgZo8ePFd4Ps0Y",
+        "name": "getChannelsCurrencyAssignments",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request Body\",\"description\":\"Bigcommerce API request body schema.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The API key name for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for authentication.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"channel_id\":{\"type\":\"integer\"},\"enabled_currencies\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"default_currency\":{\"type\":\"string\"}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.428Z",
+        "updatedAt": "2025-04-27T11:08:51.428Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bdL0ExiOOvo7gyJvgfqSZSzNc1",
+        "name": "getCustomers",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce Bigcommerce Request Body\",\"description\":\"Request body for the Bigcommerce Bigcommerce endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The API key name for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for authentication.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"authentication\":{\"type\":\"object\",\"properties\":{\"force_password_reset\":{\"type\":\"boolean\"}},\"required\":[]},\"company\":{\"type\":\"string\"},\"customer_group_id\":{\"type\":\"integer\"},\"email\":{\"type\":\"string\"},\"first_name\":{\"type\":\"string\"},\"last_name\":{\"type\":\"string\"},\"notes\":{\"type\":\"string\"},\"phone\":{\"type\":\"string\"},\"registration_ip_address\":{\"type\":\"string\"},\"tax_exempt_category\":{\"type\":\"string\"},\"date_created\":{\"type\":\"string\"},\"date_modified\":{\"type\":\"string\"},\"accepts_product_review_abandoned_cart_emails\":{\"type\":\"boolean\"},\"origin_channel_id\":{\"type\":\"integer\"},\"channel_ids\":{\"type\":\"string\"}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{\"pagination\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"count\":{\"type\":\"integer\"},\"per_page\":{\"type\":\"integer\"},\"current_page\":{\"type\":\"integer\"},\"total_pages\":{\"type\":\"integer\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.405Z",
+        "updatedAt": "2025-04-27T11:08:51.405Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bdLXeJgxQgsgFXhqVG3nPISuvq",
+        "name": "createCustomer",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema.\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication credentials for the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of the API key.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The hash identifier for the store.\"}}},\"body\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of customer data objects.\",\"required\":[\"channel_ids\",\"addresses\",\"last_name\",\"first_name\",\"email\"],\"properties\":{\"channel_ids\":{\"type\":\"array\",\"title\":\"Channel IDs\",\"description\":\"Array of channel IDs associated with the customer.\",\"items\":{\"type\":\"string\"}},\"addresses\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of address objects for the customer.\",\"properties\":{\"country_code\":{\"type\":\"string\",\"title\":\"Country Code\",\"description\":\"Two-letter country code (e.g., US, CA).\"},\"state_or_province\":{\"type\":\"string\",\"title\":\"State/Province\",\"description\":\"State or province of the address.\"},\"form_fields\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of custom form field objects.\",\"properties\":{\"name\":{\"type\":\"string\",\"title\":\"Field Name\",\"description\":\"Name of the custom form field.\"},\"value\":{\"type\":\"string\",\"title\":\"Field Value\",\"description\":\"Value of the custom form field.\"}}}},\"address_type\":{\"type\":\"string\",\"title\":\"Address Type\",\"description\":\"Type of address (e.g., billing, shipping).\"},\"address2\":{\"type\":\"string\",\"title\":\"Address Line 2\",\"description\":\"Second line of the address.\"},\"city\":{\"type\":\"string\",\"title\":\"City\",\"description\":\"City of the address.\"},\"phone\":{\"type\":\"string\",\"title\":\"Phone Number\",\"description\":\"Phone number of the customer.\"},\"address1\":{\"type\":\"string\",\"title\":\"Address Line 1\",\"description\":\"First line of the address.\"},\"last_name\":{\"type\":\"string\",\"title\":\"Last Name\",\"description\":\"Last name of the customer.\"},\"company\":{\"type\":\"string\",\"title\":\"Company\",\"description\":\"Company name of the customer.\"},\"postal_code\":{\"type\":\"string\",\"title\":\"Postal Code\",\"description\":\"Postal code of the address.\"},\"first_name\":{\"type\":\"string\",\"title\":\"First Name\",\"description\":\"First name of the customer.\"}}}},\"store_credit_amounts\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of store credit amount objects.\",\"properties\":{\"amount\":{\"type\":\"number\",\"title\":\"Amount\",\"description\":\"Amount of store credit.\"}}}},\"origin_channel_id\":{\"type\":\"integer\",\"title\":\"Origin Channel ID\",\"description\":\"ID of the origin channel.\"},\"notes\":{\"type\":\"string\",\"title\":\"Notes\",\"description\":\"Customer notes.\"},\"accepts_product_review_abandoned_cart_emails\":{\"title\":\"Accepts Marketing Emails\",\"description\":\"Indicates if the customer accepts marketing emails.\",\"type\":\"boolean\"},\"last_name\":{\"type\":\"string\",\"title\":\"Last Name\",\"description\":\"Last name of the customer.\"},\"form_fields\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of custom form field objects.\",\"properties\":{\"name\":{\"type\":\"string\",\"title\":\"Field Name\",\"description\":\"Name of the custom form field.\"},\"value\":{\"type\":\"string\",\"title\":\"Field Value\",\"description\":\"Value of the custom form field.\"}}}},\"phone\":{\"type\":\"string\",\"title\":\"Phone Number\",\"description\":\"Phone number of the customer.\"},\"company\":{\"type\":\"string\",\"title\":\"Company\",\"description\":\"Company name of the customer.\"},\"tax_exempt_category\":{\"type\":\"string\",\"title\":\"Tax Exempt Category\",\"description\":\"Tax exempt category of the customer.\"},\"first_name\":{\"type\":\"string\",\"title\":\"First Name\",\"description\":\"First name of the customer.\"},\"customer_group_id\":{\"type\":\"integer\",\"title\":\"Customer Group ID\",\"description\":\"ID of the customer group.\"},\"email\":{\"type\":\"string\",\"title\":\"Email Address\",\"description\":\"Email address of the customer.\"},\"authentication\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the customer.\",\"required\":[\"force_password_reset\",\"new_password\"],\"properties\":{\"force_password_reset\":{\"title\":\"Force Password Reset\",\"description\":\"Indicates if password reset is required.\",\"type\":\"boolean\"},\"new_password\":{\"type\":\"string\",\"title\":\"New Password\",\"description\":\"New password for the customer.\"}}}}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"status\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"errors\":{\"type\":\"object\",\"properties\":{\".customer_create\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.374Z",
+        "updatedAt": "2025-04-27T11:08:51.374Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bm6oduno4BvqUQJLqiYwvHQsQu",
+        "name": "getCategoryTrees",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request body\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for identifying the Bigcommerce store.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"channels\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{\"pagination\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"count\":{\"type\":\"integer\"},\"per_page\":{\"type\":\"integer\"},\"current_page\":{\"type\":\"integer\"},\"total_pages\":{\"type\":\"integer\"},\"links\":{\"type\":\"object\",\"properties\":{\"previous\":{\"type\":\"string\"},\"current\":{\"type\":\"string\"},\"next\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.348Z",
+        "updatedAt": "2025-04-27T11:08:51.348Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bmUfesYwEHnyEImYqLpnd1Wd1A",
+        "name": "upsertCategoryTree",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for Bigcommerce API access.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of your Bigcommerce API key.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of your Bigcommerce API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for identifying your Bigcommerce store.\"}}},\"body\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"required\":[\"name\"],\"properties\":{\"channels\":{\"type\":\"array\",\"title\":\"Channels\",\"description\":\"An array of integer representing channels.\",\"items\":{\"type\":\"string\"}},\"name\":{\"type\":\"string\",\"title\":\"Name\",\"description\":\"Name of the item.\"}}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"channels\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.323Z",
+        "updatedAt": "2025-04-27T11:08:51.323Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bmXEQN0ePm24naqCN6H2d8fYTf",
+        "name": "getCategories",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request Body\",\"description\":\"Bigcommerce API request body schema.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for identifying the Bigcommerce store.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"category_id\":{\"type\":\"integer\"},\"parent_id\":{\"type\":\"integer\"},\"tree_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"views\":{\"type\":\"integer\"},\"sort_order\":{\"type\":\"integer\"},\"page_title\":{\"type\":\"string\"},\"search_keywords\":{\"type\":\"string\"},\"meta_keywords\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"meta_description\":{\"type\":\"string\"},\"layout_file\":{\"type\":\"string\"},\"is_visible\":{\"type\":\"boolean\"},\"default_product_sort\":{\"type\":\"string\"},\"url\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"},\"is_customized\":{\"type\":\"boolean\"}},\"required\":[]},\"image_url\":{\"type\":\"string\"},\"category_uuid\":{\"type\":\"string\"}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{\"pagination\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"count\":{\"type\":\"integer\"},\"per_page\":{\"type\":\"integer\"},\"current_page\":{\"type\":\"integer\"},\"total_pages\":{\"type\":\"integer\"},\"links\":{\"type\":\"object\",\"properties\":{\"previous\":{\"type\":\"string\"},\"current\":{\"type\":\"string\"},\"next\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.297Z",
+        "updatedAt": "2025-04-27T11:08:51.297Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bmj4greFnjEpzgFNHFhT9fStEM",
+        "name": "createCategories",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema for Bigcommerce endpoint.\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of your Bigcommerce API key.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of your Bigcommerce API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The hash identifier for your Bigcommerce store.\"}}},\"body\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"An array of Bigcommerce pages to be processed.\",\"required\":[\"tree_id\",\"page_title\",\"parent_id\"],\"properties\":{\"is_visible\":{\"title\":\"Is Visible\",\"description\":\"Indicates whether the page is visible on the storefront.\",\"type\":\"boolean\"},\"tree_id\":{\"type\":\"integer\",\"title\":\"Tree ID\",\"description\":\"The ID of the page in the site's navigation tree.\"},\"page_title\":{\"type\":\"string\",\"title\":\"Page Title\",\"description\":\"The title of the page.\"},\"image_url\":{\"type\":\"string\",\"title\":\"Image URL\",\"description\":\"URL of the page's image.\"},\"description\":{\"type\":\"string\",\"title\":\"Page Description\",\"description\":\"A brief description of the page.\"},\"meta_keywords\":{\"type\":\"array\",\"title\":\"Meta Keywords\",\"description\":\"Keywords for search engine optimization (SEO).\",\"items\":{\"type\":\"string\"}},\"search_keywords\":{\"type\":\"string\",\"title\":\"Search Keywords\",\"description\":\"Additional keywords for search.\"},\"default_product_sort\":{\"type\":\"string\",\"title\":\"Default Product Sort\",\"description\":\"The default sorting order for products on this page.\"},\"url\":{\"type\":\"object\",\"title\":\"URL Details\",\"description\":\"Details about the page's URL.\",\"properties\":{\"path\":{\"type\":\"string\",\"title\":\"URL Path\",\"description\":\"The path component of the page's URL.\"},\"is_customized\":{\"title\":\"Is URL Customized\",\"description\":\"Indicates whether the URL is customized.\",\"type\":\"boolean\"}}},\"meta_description\":{\"type\":\"string\",\"title\":\"Meta Description\",\"description\":\"Meta description for SEO.\"},\"layout_file\":{\"type\":\"string\",\"title\":\"Layout File\",\"description\":\"The path to the layout file for this page.\"},\"parent_id\":{\"type\":\"integer\",\"title\":\"Parent ID\",\"description\":\"The ID of the parent page in the navigation tree.\"},\"name\":{\"type\":\"string\",\"title\":\"Page Name\",\"description\":\"The name of the page.\"},\"sort_order\":{\"type\":\"integer\",\"title\":\"Sort Order\",\"description\":\"The sorting order of this page relative to its siblings.\"},\"views\":{\"type\":\"integer\",\"title\":\"Page Views\",\"description\":\"The number of times this page has been viewed.\"}}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"category_id\":{\"type\":\"integer\"},\"category_uuid\":{\"type\":\"string\"},\"parent_id\":{\"type\":\"integer\"},\"tree_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"views\":{\"type\":\"integer\"},\"sort_order\":{\"type\":\"integer\"},\"page_title\":{\"type\":\"string\"},\"search_keywords\":{\"type\":\"string\"},\"meta_keywords\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"meta_description\":{\"type\":\"string\"},\"layout_file\":{\"type\":\"string\"},\"is_visible\":{\"type\":\"boolean\"},\"default_product_sort\":{\"type\":\"string\"},\"url\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"},\"is_customized\":{\"type\":\"boolean\"}},\"required\":[]}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"success\":{\"type\":\"integer\"},\"failed\":{\"type\":\"integer\"}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.269Z",
+        "updatedAt": "2025-04-27T11:08:51.269Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bmka8ZBAVFOG1Q2s1Ira3L74fa",
+        "name": "updateCategories",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema for Bigcommerce endpoint.\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of the API key for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the API key for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for authentication.\"}}},\"body\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of category objects to be processed by the Bigcommerce API.\",\"properties\":{\"is_visible\":{\"title\":\"Is Visible\",\"description\":\"Indicates whether the category is visible to customers.\",\"type\":\"boolean\"},\"tree_id\":{\"type\":\"integer\",\"title\":\"Tree ID\",\"description\":\"The ID of the category within the category tree.\"},\"page_title\":{\"type\":\"string\",\"title\":\"Page Title\",\"description\":\"The title of the category page.\"},\"description\":{\"type\":\"string\",\"title\":\"Category Description\",\"description\":\"A description of the category.\"},\"search_keywords\":{\"type\":\"string\",\"title\":\"Search Keywords\",\"description\":\"Keywords for search engine optimization (SEO).\"},\"meta_keywords\":{\"type\":\"array\",\"title\":\"Meta Keywords\",\"description\":\"Array of meta keywords for SEO.\",\"items\":{\"type\":\"string\"}},\"default_product_sort\":{\"type\":\"string\",\"title\":\"Default Product Sort\",\"description\":\"The default sorting method for products within this category.\"},\"url\":{\"type\":\"object\",\"title\":\"URL Details\",\"description\":\"Details about the category's URL.\",\"properties\":{\"path\":{\"type\":\"string\",\"title\":\"URL Path\",\"description\":\"The path component of the category's URL.\"},\"is_customized\":{\"title\":\"Is URL Customized\",\"description\":\"Indicates whether the URL is customized.\",\"type\":\"boolean\"}}},\"category_uuid\":{\"type\":\"string\",\"title\":\"Category UUID\",\"description\":\"Universally Unique Identifier (UUID) for the category.\"},\"meta_description\":{\"type\":\"string\",\"title\":\"Meta Description\",\"description\":\"Meta description for SEO.\"},\"layout_file\":{\"type\":\"string\",\"title\":\"Layout File\",\"description\":\"The path to the layout file for this category.\"},\"category_id\":{\"type\":\"integer\",\"title\":\"Category ID\",\"description\":\"The unique ID of the category.\"},\"parent_id\":{\"type\":\"integer\",\"title\":\"Parent Category ID\",\"description\":\"The ID of the parent category, if any.\"},\"name\":{\"type\":\"string\",\"title\":\"Category Name\",\"description\":\"The name of the category.\"},\"sort_order\":{\"type\":\"integer\",\"title\":\"Sort Order\",\"description\":\"The sort order of this category.\"},\"views\":{\"type\":\"integer\",\"title\":\"Number of Views\",\"description\":\"The number of times this category has been viewed.\"}}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"success\":{\"type\":\"integer\"},\"failed\":{\"type\":\"integer\"}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.241Z",
+        "updatedAt": "2025-04-27T11:08:51.241Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bmlIOP8UwlVIDrqObpfGCSWrHC",
+        "name": "deleteCatagoryTree",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of the Bigcommerce API key.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the Bigcommerce API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for the Bigcommerce store.\"}}},\"body\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"required\":[\"id\"],\"properties\":{\"channels\":{\"type\":\"array\",\"title\":\"Channels\",\"description\":\"An array of channel IDs.\",\"items\":{\"type\":\"string\"}},\"name\":{\"type\":\"string\",\"title\":\"Name\",\"description\":\"The name of the item.\"},\"id\":{\"type\":\"integer\",\"title\":\"ID\",\"description\":\"The ID of the item.\"}}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"success\":{\"type\":\"integer\"},\"failed\":{\"type\":\"integer\"}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.215Z",
+        "updatedAt": "2025-04-27T11:08:51.215Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bmlfZzJAg5Lx0HLfwEA8ytROJh",
+        "name": "deleteCategories",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request Body\",\"description\":\"Bigcommerce API request body schema.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for identifying the Bigcommerce store.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"success\":{\"type\":\"integer\"},\"failed\":{\"type\":\"integer\"}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.190Z",
+        "updatedAt": "2025-04-27T11:08:51.190Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bmlxXlW6cAzkOniyTyvdyPjJGJ",
+        "name": "createProduct",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema for Bigcommerce endpoint.\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The API key name for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for authentication.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Product Details\",\"description\":\"Product details for the Bigcommerce API request.\",\"required\":[\"type\",\"price\",\"weight\",\"name\"],\"properties\":{\"calculated_price\":{\"type\":\"number\",\"title\":\"Calculated Price\",\"description\":\"Calculated price of the product.\"},\"gift_wrapping_options_list\":{\"type\":\"array\",\"title\":\"Gift Wrapping Options List\",\"description\":\"List of gift wrapping options.\",\"items\":{\"type\":\"string\"}},\"page_title\":{\"type\":\"string\",\"title\":\"Page Title\",\"description\":\"Title of the product page.\"},\"parent_relations\":{\"type\":\"array\",\"title\":\"Parent Relations\",\"description\":\"List of parent relations.\",\"items\":{\"type\":\"string\"}},\"option_set_id\":{\"type\":\"string\",\"title\":\"Option Set ID\",\"description\":\"ID of the option set.\"},\"videos\":{\"type\":\"array\",\"title\":\"Videos\",\"description\":\"List of product videos.\",\"items\":{\"type\":\"string\"}},\"is_condition_shown\":{\"title\":\"Is Condition Shown\",\"description\":\"Indicates whether the condition is shown.\",\"type\":\"boolean\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"calculated_price\":{\"type\":\"number\",\"title\":\"Calculated Price\",\"description\":\"Calculated price of the variant.\"},\"bin_picking_number\":{\"type\":\"string\",\"title\":\"Bin Picking Number\",\"description\":\"Bin picking number for the variant.\"},\"purchasing_disabled_message\":{\"type\":\"string\",\"title\":\"Purchasing Disabled Message\",\"description\":\"Message displayed when purchasing is disabled.\"},\"map_price\":{\"type\":\"integer\",\"title\":\"MAP Price\",\"description\":\"MAP price of the variant.\"},\"retail_price\":{\"type\":\"integer\",\"title\":\"Retail Price\",\"description\":\"Retail price of the variant.\"},\"price\":{\"type\":\"number\",\"title\":\"Price\",\"description\":\"Price of the variant.\"},\"inventory_warning_level\":{\"type\":\"integer\",\"title\":\"Inventory Warning Level\",\"description\":\"Inventory warning level for the variant.\"},\"product_id\":{\"type\":\"integer\",\"title\":\"Product ID\",\"description\":\"ID of the product.\"},\"is_free_shipping\":{\"title\":\"Is Free Shipping\",\"description\":\"Indicates whether shipping is free for the variant.\",\"type\":\"boolean\"},\"fixed_cost_shipping_price\":{\"type\":\"integer\",\"title\":\"Fixed Cost Shipping Price\",\"description\":\"Fixed cost shipping price for the variant.\"},\"id\":{\"type\":\"integer\",\"title\":\"Variant ID\",\"description\":\"ID of the variant.\"},\"purchasing_disabled\":{\"title\":\"Purchasing Disabled\",\"description\":\"Indicates whether purchasing is disabled for the variant.\",\"type\":\"boolean\"},\"sku\":{\"type\":\"string\",\"title\":\"SKU\",\"description\":\"SKU of the variant.\"},\"calculated_weight\":{\"type\":\"integer\",\"title\":\"Calculated Weight\",\"description\":\"Calculated weight of the variant.\"},\"height\":{\"type\":\"integer\",\"title\":\"Height\",\"description\":\"Height of the variant.\"},\"cost_price\":{\"type\":\"integer\",\"title\":\"Cost Price\",\"description\":\"Cost price of the variant.\"},\"gtin\":{\"type\":\"string\",\"title\":\"GTIN\",\"description\":\"GTIN of the variant.\"},\"image_url\":{\"type\":\"string\",\"title\":\"Image URL\",\"description\":\"Image URL of the variant.\"},\"option_values\":{\"type\":\"array\",\"title\":\"Option Values\",\"description\":\"List of option values for the variant.\",\"items\":{\"type\":\"string\"}},\"weight\":{\"type\":\"integer\",\"title\":\"Weight\",\"description\":\"Weight of the variant.\"},\"upc\":{\"type\":\"string\",\"title\":\"UPC\",\"description\":\"UPC of the variant.\"},\"sku_id\":{\"type\":\"string\",\"title\":\"SKU ID\",\"description\":\"SKU ID of the variant.\"},\"mpn\":{\"type\":\"string\",\"title\":\"MPN\",\"description\":\"MPN of the variant.\"},\"sale_price\":{\"type\":\"integer\",\"title\":\"Sale Price\",\"description\":\"Sale price of the variant.\"},\"depth\":{\"type\":\"integer\",\"title\":\"Depth\",\"description\":\"Depth of the variant.\"},\"inventory_level\":{\"type\":\"integer\",\"title\":\"Inventory Level\",\"description\":\"Inventory level of the variant.\"},\"width\":{\"type\":\"integer\",\"title\":\"Width\",\"description\":\"Width of the variant.\"}}}},\"type\":{\"type\":\"string\",\"title\":\"Product Type\",\"description\":\"Type of the product.\"},\"map_price\":{\"type\":\"integer\",\"title\":\"MAP Price\",\"description\":\"MAP price of the product.\"},\"retail_price\":{\"type\":\"integer\",\"title\":\"Retail Price\",\"description\":\"Retail price of the product.\"},\"layout_file\":{\"type\":\"string\",\"title\":\"Layout File\",\"description\":\"Layout file for the product.\"},\"reviews\":{\"type\":\"array\",\"title\":\"Reviews\",\"description\":\"List of product reviews.\",\"items\":{\"type\":\"string\"}},\"price\":{\"type\":\"number\",\"title\":\"Price\",\"description\":\"Price of the product.\"},\"inventory_warning_level\":{\"type\":\"integer\",\"title\":\"Inventory Warning Level\",\"description\":\"Inventory warning level for the product.\"},\"options\":{\"type\":\"array\",\"title\":\"Options\",\"description\":\"List of product options.\",\"items\":{\"type\":\"string\"}},\"warranty\":{\"type\":\"string\",\"title\":\"Warranty\",\"description\":\"Warranty information for the product.\"},\"is_free_shipping\":{\"title\":\"Is Free Shipping\",\"description\":\"Indicates whether shipping is free for the product.\",\"type\":\"boolean\"},\"total_sold\":{\"type\":\"integer\",\"title\":\"Total Sold\",\"description\":\"Total number of products sold.\"},\"sku\":{\"type\":\"string\",\"title\":\"SKU\",\"description\":\"SKU of the product.\"},\"height\":{\"type\":\"integer\",\"title\":\"Height\",\"description\":\"Height of the product.\"},\"custom_url\":{\"type\":\"object\",\"title\":\"Custom URL\",\"description\":\"Custom URL details for the product.\",\"properties\":{\"is_customized\":{\"title\":\"Is Customized\",\"description\":\"Indicates whether the URL is customized.\",\"type\":\"boolean\"},\"url\":{\"type\":\"string\",\"title\":\"Custom URL\",\"description\":\"Custom URL.\"}}},\"images\":{\"type\":\"array\",\"title\":\"Images\",\"description\":\"List of product images.\",\"items\":{\"type\":\"string\"}},\"open_graph_use_meta_description\":{\"title\":\"Use Meta Description for Open Graph\",\"description\":\"Indicates whether to use meta description for Open Graph.\",\"type\":\"boolean\"},\"custom_fields\":{\"type\":\"array\",\"title\":\"Custom Fields\",\"description\":\"List of custom fields for the product.\",\"items\":{\"type\":\"string\"}},\"weight\":{\"type\":\"integer\",\"title\":\"Weight\",\"description\":\"Weight of the product.\"},\"upc\":{\"type\":\"string\",\"title\":\"UPC\",\"description\":\"UPC of the product.\"},\"mpn\":{\"type\":\"string\",\"title\":\"MPN\",\"description\":\"MPN of the product.\"},\"open_graph_type\":{\"type\":\"string\",\"title\":\"Open Graph Type\",\"description\":\"Open Graph type for the product.\"},\"open_graph_use_image\":{\"title\":\"Use Image for Open Graph\",\"description\":\"Indicates whether to use image for Open Graph.\",\"type\":\"boolean\"},\"brand_id\":{\"type\":\"integer\",\"title\":\"Brand ID\",\"description\":\"ID of the brand.\"},\"meta_description\":{\"type\":\"string\",\"title\":\"Meta Description\",\"description\":\"Meta description for the product.\"},\"condition\":{\"type\":\"string\",\"title\":\"Condition\",\"description\":\"Condition of the product.\"},\"inventory_level\":{\"type\":\"integer\",\"title\":\"Inventory Level\",\"description\":\"Inventory level of the product.\"},\"name\":{\"type\":\"string\",\"title\":\"Product Name\",\"description\":\"Name of the product.\"},\"open_graph_description\":{\"type\":\"string\",\"title\":\"Open Graph Description\",\"description\":\"Open Graph description for the product.\"},\"open_graph_use_product_name\":{\"title\":\"Use Product Name for Open Graph\",\"description\":\"Indicates whether to use product name for Open Graph.\",\"type\":\"boolean\"},\"reviews_rating_sum\":{\"type\":\"integer\",\"title\":\"Reviews Rating Sum\",\"description\":\"Sum of reviews ratings.\"},\"reviews_count\":{\"type\":\"integer\",\"title\":\"Reviews Count\",\"description\":\"Number of reviews.\"},\"primary_image\":{\"type\":\"string\",\"title\":\"Primary Image URL\",\"description\":\"URL of the primary image.\"},\"inventory_tracking\":{\"type\":\"string\",\"title\":\"Inventory Tracking\",\"description\":\"Inventory tracking method.\"},\"preorder_release_date\":{\"type\":\"string\",\"title\":\"Preorder Release Date\",\"description\":\"Preorder release date.\"},\"description\":{\"type\":\"string\",\"title\":\"Product Description\",\"description\":\"Description of the product.\"},\"bin_picking_number\":{\"type\":\"string\",\"title\":\"Bin Picking Number\",\"description\":\"Bin picking number for the product.\"},\"availability\":{\"type\":\"string\",\"title\":\"Availability\",\"description\":\"Availability of the product.\"},\"search_keywords\":{\"type\":\"string\",\"title\":\"Search Keywords\",\"description\":\"Search keywords for the product.\"},\"meta_keywords\":{\"type\":\"array\",\"title\":\"Meta Keywords\",\"description\":\"List of meta keywords for the product.\",\"items\":{\"type\":\"string\"}},\"modifiers\":{\"type\":\"array\",\"title\":\"Modifiers\",\"description\":\"List of modifiers for the product.\",\"items\":{\"type\":\"string\"}},\"related_products\":{\"type\":\"array\",\"title\":\"Related Products\",\"description\":\"List of related product IDs.\",\"items\":{\"type\":\"integer\"}},\"is_price_hidden\":{\"title\":\"Is Price Hidden\",\"description\":\"Indicates whether the price is hidden.\",\"type\":\"boolean\"},\"order_quantity_minimum\":{\"type\":\"integer\",\"title\":\"Minimum Order Quantity\",\"description\":\"Minimum order quantity.\"},\"availability_description\":{\"type\":\"string\",\"title\":\"Availability Description\",\"description\":\"Description of the product availability.\"},\"fixed_cost_shipping_price\":{\"type\":\"integer\",\"title\":\"Fixed Cost Shipping Price\",\"description\":\"Fixed cost shipping price for the product.\"},\"categories\":{\"type\":\"array\",\"title\":\"Categories\",\"description\":\"List of product categories.\",\"items\":{\"type\":\"string\"}},\"base_variant_id\":{\"type\":\"integer\",\"title\":\"Base Variant ID\",\"description\":\"ID of the base variant.\"},\"sort_order\":{\"type\":\"integer\",\"title\":\"Sort Order\",\"description\":\"Sort order for the product.\"},\"cost_price\":{\"type\":\"integer\",\"title\":\"Cost Price\",\"description\":\"Cost price of the product.\"},\"option_set_display\":{\"type\":\"string\",\"title\":\"Option Set Display\",\"description\":\"Display of the option set.\"},\"gtin\":{\"type\":\"string\",\"title\":\"GTIN\",\"description\":\"GTIN of the product.\"},\"order_quantity_maximum\":{\"type\":\"integer\",\"title\":\"Maximum Order Quantity\",\"description\":\"Maximum order quantity.\"},\"is_visible\":{\"title\":\"Is Visible\",\"description\":\"Indicates whether the product is visible.\",\"type\":\"boolean\"},\"is_preorder_only\":{\"title\":\"Is Preorder Only\",\"description\":\"Indicates whether the product is preorder only.\",\"type\":\"boolean\"},\"date_created\":{\"type\":\"string\",\"title\":\"Date Created\",\"description\":\"Date the product was created.\"},\"preorder_message\":{\"type\":\"string\",\"title\":\"Preorder Message\",\"description\":\"Preorder message for the product.\"},\"tax_class_id\":{\"type\":\"integer\",\"title\":\"Tax Class ID\",\"description\":\"ID of the tax class.\"},\"bulk_pricing_rules\":{\"type\":\"array\",\"title\":\"Bulk Pricing Rules\",\"description\":\"List of bulk pricing rules for the product.\",\"items\":{\"type\":\"string\"}},\"open_graph_title\":{\"type\":\"string\",\"title\":\"Open Graph Title\",\"description\":\"Open Graph title for the product.\"},\"sale_price\":{\"type\":\"integer\",\"title\":\"Sale Price\",\"description\":\"Sale price of the product.\"},\"product_tax_code\":{\"type\":\"string\",\"title\":\"Product Tax Code\",\"description\":\"Product tax code.\"},\"depth\":{\"type\":\"integer\",\"title\":\"Depth\",\"description\":\"Depth of the product.\"},\"date_modified\":{\"type\":\"string\",\"title\":\"Date Modified\",\"description\":\"Date the product was modified.\"},\"gift_wrapping_options_type\":{\"type\":\"string\",\"title\":\"Gift Wrapping Options Type\",\"description\":\"Type of gift wrapping options.\"},\"width\":{\"type\":\"integer\",\"title\":\"Width\",\"description\":\"Width of the product.\"},\"price_hidden_label\":{\"type\":\"string\",\"title\":\"Price Hidden Label\",\"description\":\"Label for hidden price.\"},\"is_featured\":{\"title\":\"Is Featured\",\"description\":\"Indicates whether the product is featured.\",\"type\":\"boolean\"},\"view_count\":{\"type\":\"integer\",\"title\":\"View Count\",\"description\":\"Number of times the product was viewed.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"calculated_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"gift_wrapping_options_list\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"page_title\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"parent_relations\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"option_set_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"videos\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"is_condition_shown\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"variants\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"type\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"map_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"retail_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"layout_file\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"reviews\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_warning_level\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"options\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"warranty\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"is_free_shipping\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"total_sold\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"sku\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"height\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"custom_url\":{\"is_customized\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"url\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"images\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"open_graph_use_meta_description\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"custom_fields\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"weight\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"upc\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"mpn\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"open_graph_type\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"open_graph_use_image\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"brand_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"meta_description\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"condition\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_level\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"open_graph_description\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"open_graph_use_product_name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"reviews_rating_sum\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"reviews_count\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"primary_image\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_tracking\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"preorder_release_date\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"description\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bin_picking_number\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"availability\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"search_keywords\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"meta_keywords\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"modifiers\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"related_products\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"is_price_hidden\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"order_quantity_minimum\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"availability_description\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"fixed_cost_shipping_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"categories\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"base_variant_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"sort_order\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"cost_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"option_set_display\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"gtin\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"order_quantity_maximum\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"is_visible\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"is_preorder_only\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"date_created\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"preorder_message\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"tax_class_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bulk_pricing_rules\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"open_graph_title\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"sale_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"product_tax_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"depth\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"date_modified\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"gift_wrapping_options_type\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"width\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"price_hidden_label\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"is_featured\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"view_count\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"weight\":{\"type\":\"integer\"},\"width\":{\"type\":\"integer\"},\"depth\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"price\":{\"type\":\"number\"},\"cost_price\":{\"type\":\"integer\"},\"retail_price\":{\"type\":\"integer\"},\"sale_price\":{\"type\":\"integer\"},\"map_price\":{\"type\":\"integer\"},\"tax_class_id\":{\"type\":\"integer\"},\"product_tax_code\":{\"type\":\"string\"},\"calculated_price\":{\"type\":\"number\"},\"categories\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"brand_id\":{\"type\":\"integer\"},\"option_set_id\":{\"type\":\"string\"},\"option_set_display\":{\"type\":\"string\"},\"inventory_level\":{\"type\":\"integer\"},\"inventory_warning_level\":{\"type\":\"integer\"},\"inventory_tracking\":{\"type\":\"string\"},\"reviews_rating_sum\":{\"type\":\"integer\"},\"reviews_count\":{\"type\":\"integer\"},\"total_sold\":{\"type\":\"integer\"},\"fixed_cost_shipping_price\":{\"type\":\"integer\"},\"is_free_shipping\":{\"type\":\"boolean\"},\"is_visible\":{\"type\":\"boolean\"},\"is_featured\":{\"type\":\"boolean\"},\"related_products\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"warranty\":{\"type\":\"string\"},\"bin_picking_number\":{\"type\":\"string\"},\"layout_file\":{\"type\":\"string\"},\"upc\":{\"type\":\"string\"},\"mpn\":{\"type\":\"string\"},\"gtin\":{\"type\":\"string\"},\"search_keywords\":{\"type\":\"string\"},\"availability\":{\"type\":\"string\"},\"availability_description\":{\"type\":\"string\"},\"gift_wrapping_options_type\":{\"type\":\"string\"},\"gift_wrapping_options_list\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"sort_order\":{\"type\":\"integer\"},\"condition\":{\"type\":\"string\"},\"is_condition_shown\":{\"type\":\"boolean\"},\"order_quantity_minimum\":{\"type\":\"integer\"},\"order_quantity_maximum\":{\"type\":\"integer\"},\"page_title\":{\"type\":\"string\"},\"meta_keywords\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"meta_description\":{\"type\":\"string\"},\"date_created\":{\"type\":\"string\"},\"date_modified\":{\"type\":\"string\"},\"view_count\":{\"type\":\"integer\"},\"preorder_release_date\":{\"type\":\"string\"},\"preorder_message\":{\"type\":\"string\"},\"is_preorder_only\":{\"type\":\"boolean\"},\"is_price_hidden\":{\"type\":\"boolean\"},\"price_hidden_label\":{\"type\":\"string\"},\"custom_url\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"},\"is_customized\":{\"type\":\"boolean\"}},\"required\":[]},\"base_variant_id\":{\"type\":\"integer\"},\"open_graph_type\":{\"type\":\"string\"},\"open_graph_title\":{\"type\":\"string\"},\"open_graph_description\":{\"type\":\"string\"},\"open_graph_use_meta_description\":{\"type\":\"boolean\"},\"open_graph_use_product_name\":{\"type\":\"boolean\"},\"open_graph_use_image\":{\"type\":\"boolean\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"sku\":{\"type\":\"string\"},\"sku_id\":{\"type\":\"string\"},\"price\":{\"type\":\"number\"},\"calculated_price\":{\"type\":\"number\"},\"sale_price\":{\"type\":\"integer\"},\"retail_price\":{\"type\":\"integer\"},\"map_price\":{\"type\":\"integer\"},\"weight\":{\"type\":\"integer\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"depth\":{\"type\":\"integer\"},\"is_free_shipping\":{\"type\":\"boolean\"},\"fixed_cost_shipping_price\":{\"type\":\"integer\"},\"calculated_weight\":{\"type\":\"integer\"},\"purchasing_disabled\":{\"type\":\"boolean\"},\"purchasing_disabled_message\":{\"type\":\"string\"},\"image_url\":{\"type\":\"string\"},\"cost_price\":{\"type\":\"integer\"},\"upc\":{\"type\":\"string\"},\"mpn\":{\"type\":\"string\"},\"gtin\":{\"type\":\"string\"},\"inventory_level\":{\"type\":\"integer\"},\"inventory_warning_level\":{\"type\":\"integer\"},\"bin_picking_number\":{\"type\":\"string\"},\"option_values\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"primary_image\":{\"type\":\"string\"},\"videos\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"custom_fields\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"bulk_pricing_rules\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"reviews\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"options\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"modifiers\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"parent_relations\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.145Z",
+        "updatedAt": "2025-04-27T11:08:51.145Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bmmXltHQ0J7RaMOGwUEqT39hcQ",
+        "name": "getACategoryTree",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema\",\"required\":[\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The API key name for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for authentication.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Bigcommerce API request.\",\"required\":[\"categoryTreeId\"],\"properties\":{\"categoryTreeId\":{\"type\":\"string\",\"title\":\"Category Tree ID\",\"description\":\"The ID of the category tree.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"categoryTreeId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"parent_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"is_visible\":{\"type\":\"boolean\"},\"depth\":{\"type\":\"integer\"},\"path\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"children\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"url\":{\"type\":\"string\"}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.117Z",
+        "updatedAt": "2025-04-27T11:08:51.117Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bmpuqh306ClLviaP6Ztnel04kN",
+        "name": "updateProduct",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema for Bigcommerce endpoint.\",\"required\":[\"body\",\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for accessing the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of the Bigcommerce API key.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the Bigcommerce API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for identifying the Bigcommerce store.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Data related to the request body for the Bigcommerce API.\",\"properties\":{\"data\":{\"type\":\"object\",\"title\":\"Product Data\",\"description\":\"Product information for the Bigcommerce API.\",\"properties\":{\"calculated_price\":{\"type\":\"integer\",\"title\":\"Calculated Price\",\"description\":\"The calculated price of the product.\"},\"gift_wrapping_options_list\":{\"type\":\"array\",\"title\":\"Gift Wrapping Options List\",\"description\":\"List of available gift wrapping options.\",\"items\":{\"type\":\"string\"}},\"page_title\":{\"type\":\"string\",\"title\":\"Page Title\",\"description\":\"Title of the product page.\"},\"option_set_id\":{\"type\":\"string\",\"title\":\"Option Set ID\",\"description\":\"ID of the option set.\"},\"is_condition_shown\":{\"title\":\"Show Condition\",\"description\":\"Indicates whether the product condition should be shown.\",\"type\":\"boolean\"},\"type\":{\"type\":\"string\",\"title\":\"Product Type\",\"description\":\"Type of the product.\"},\"map_price\":{\"type\":\"integer\",\"title\":\"Map Price\",\"description\":\"The Manufacturer's Suggested Retail Price (MSRP).\"},\"retail_price\":{\"type\":\"integer\",\"title\":\"Retail Price\",\"description\":\"The retail price of the product.\"},\"layout_file\":{\"type\":\"string\",\"title\":\"Layout File\",\"description\":\"Path to the product layout file.\"},\"price\":{\"type\":\"integer\",\"title\":\"Price\",\"description\":\"The price of the product.\"},\"inventory_warning_level\":{\"type\":\"integer\",\"title\":\"Inventory Warning Level\",\"description\":\"The inventory level at which a warning should be issued.\"},\"warranty\":{\"type\":\"string\",\"title\":\"Warranty Information\",\"description\":\"Warranty details for the product.\"},\"is_free_shipping\":{\"title\":\"Free Shipping\",\"description\":\"Indicates whether free shipping is available for this product.\",\"type\":\"boolean\"},\"id\":{\"type\":\"integer\",\"title\":\"Product ID\",\"description\":\"The unique identifier for the product.\"},\"total_sold\":{\"type\":\"integer\",\"title\":\"Total Sold\",\"description\":\"Total number of units sold.\"},\"sku\":{\"type\":\"string\",\"title\":\"SKU\",\"description\":\"Stock Keeping Unit (SKU) for the product.\"},\"height\":{\"type\":\"integer\",\"title\":\"Height\",\"description\":\"Height of the product (in appropriate units).\"},\"custom_url\":{\"type\":\"object\",\"title\":\"Custom URL\",\"description\":\"Custom URL settings for the product.\",\"properties\":{\"is_customized\":{\"title\":\"Custom URL Enabled\",\"description\":\"Indicates whether a custom URL is used.\",\"type\":\"boolean\"},\"url\":{\"type\":\"string\",\"title\":\"Custom URL\",\"description\":\"The custom URL for the product.\"}}},\"open_graph_use_meta_description\":{\"title\":\"Use Meta Description for Open Graph\",\"description\":\"Indicates whether to use the meta description for Open Graph.\",\"type\":\"boolean\"},\"weight\":{\"type\":\"integer\",\"title\":\"Weight\",\"description\":\"Weight of the product (in appropriate units).\"},\"upc\":{\"type\":\"string\",\"title\":\"UPC\",\"description\":\"Universal Product Code (UPC) for the product.\"},\"mpn\":{\"type\":\"string\",\"title\":\"MPN\",\"description\":\"Manufacturer Part Number (MPN) for the product.\"},\"open_graph_type\":{\"type\":\"string\",\"title\":\"Open Graph Type\",\"description\":\"The type of content for Open Graph.\"},\"open_graph_use_image\":{\"title\":\"Use Image for Open Graph\",\"description\":\"Indicates whether to use an image for Open Graph.\",\"type\":\"boolean\"},\"brand_id\":{\"type\":\"integer\",\"title\":\"Brand ID\",\"description\":\"The ID of the product brand.\"},\"meta_description\":{\"type\":\"string\",\"title\":\"Meta Description\",\"description\":\"Meta description for the product.\"},\"condition\":{\"type\":\"string\",\"title\":\"Product Condition\",\"description\":\"Condition of the product (e.g., New, Used).\"},\"inventory_level\":{\"type\":\"integer\",\"title\":\"Inventory Level\",\"description\":\"Current inventory level of the product.\"},\"name\":{\"type\":\"string\",\"title\":\"Product Name\",\"description\":\"Name of the product.\"},\"open_graph_description\":{\"type\":\"string\",\"title\":\"Open Graph Description\",\"description\":\"Description for Open Graph.\"},\"open_graph_use_product_name\":{\"title\":\"Use Product Name for Open Graph\",\"description\":\"Indicates whether to use the product name for Open Graph.\",\"type\":\"boolean\"},\"reviews_rating_sum\":{\"type\":\"integer\",\"title\":\"Reviews Rating Sum\",\"description\":\"Sum of all review ratings.\"},\"reviews_count\":{\"type\":\"integer\",\"title\":\"Reviews Count\",\"description\":\"Total number of reviews.\"},\"inventory_tracking\":{\"type\":\"string\",\"title\":\"Inventory Tracking\",\"description\":\"Inventory tracking method.\"},\"preorder_release_date\":{\"type\":\"string\",\"title\":\"Preorder Release Date\",\"description\":\"Date when preorders will be fulfilled.\"},\"description\":{\"type\":\"string\",\"title\":\"Product Description\",\"description\":\"Detailed description of the product.\"},\"bin_picking_number\":{\"type\":\"string\",\"title\":\"Bin Picking Number\",\"description\":\"Bin picking number for warehouse management.\"},\"availability\":{\"type\":\"string\",\"title\":\"Product Availability\",\"description\":\"Availability status of the product.\"},\"search_keywords\":{\"type\":\"string\",\"title\":\"Search Keywords\",\"description\":\"Keywords for search optimization.\"},\"meta_keywords\":{\"type\":\"array\",\"title\":\"Meta Keywords\",\"description\":\"Meta keywords for SEO.\",\"items\":{\"type\":\"string\"}},\"related_products\":{\"type\":\"array\",\"title\":\"Related Products\",\"description\":\"List of related product IDs.\",\"items\":{\"type\":\"integer\"}},\"is_price_hidden\":{\"title\":\"Hide Price\",\"description\":\"Indicates whether the price should be hidden.\",\"type\":\"boolean\"},\"order_quantity_minimum\":{\"type\":\"integer\",\"title\":\"Minimum Order Quantity\",\"description\":\"Minimum quantity allowed per order.\"},\"availability_description\":{\"type\":\"string\",\"title\":\"Availability Description\",\"description\":\"Description of product availability.\"},\"fixed_cost_shipping_price\":{\"type\":\"integer\",\"title\":\"Fixed Cost Shipping Price\",\"description\":\"Fixed cost for shipping.\"},\"categories\":{\"type\":\"array\",\"title\":\"Categories\",\"description\":\"List of category IDs the product belongs to.\",\"items\":{\"type\":\"integer\"}},\"base_variant_id\":{\"type\":\"integer\",\"title\":\"Base Variant ID\",\"description\":\"ID of the base variant.\"},\"sort_order\":{\"type\":\"integer\",\"title\":\"Sort Order\",\"description\":\"Sorting order for the product.\"},\"cost_price\":{\"type\":\"integer\",\"title\":\"Cost Price\",\"description\":\"Cost price of the product.\"},\"option_set_display\":{\"type\":\"string\",\"title\":\"Option Set Display\",\"description\":\"How option sets are displayed.\"},\"gtin\":{\"type\":\"string\",\"title\":\"GTIN\",\"description\":\"Global Trade Item Number (GTIN).\"},\"order_quantity_maximum\":{\"type\":\"integer\",\"title\":\"Maximum Order Quantity\",\"description\":\"Maximum quantity allowed per order.\"},\"is_visible\":{\"title\":\"Visible\",\"description\":\"Indicates whether the product is visible.\",\"type\":\"boolean\"},\"is_preorder_only\":{\"title\":\"Preorder Only\",\"description\":\"Indicates whether the product is available for preorder only.\",\"type\":\"boolean\"},\"date_created\":{\"type\":\"string\",\"title\":\"Date Created\",\"description\":\"Date when the product was created.\"},\"preorder_message\":{\"type\":\"string\",\"title\":\"Preorder Message\",\"description\":\"Message displayed for preorders.\"},\"tax_class_id\":{\"type\":\"integer\",\"title\":\"Tax Class ID\",\"description\":\"ID of the tax class.\"},\"open_graph_title\":{\"type\":\"string\",\"title\":\"Open Graph Title\",\"description\":\"Title for Open Graph.\"},\"sale_price\":{\"type\":\"integer\",\"title\":\"Sale Price\",\"description\":\"Sale price of the product.\"},\"product_tax_code\":{\"type\":\"string\",\"title\":\"Product Tax Code\",\"description\":\"Tax code for the product.\"},\"depth\":{\"type\":\"integer\",\"title\":\"Depth\",\"description\":\"Depth of the product (in appropriate units).\"},\"date_modified\":{\"type\":\"string\",\"title\":\"Date Modified\",\"description\":\"Date when the product was last modified.\"},\"gift_wrapping_options_type\":{\"type\":\"string\",\"title\":\"Gift Wrapping Options Type\",\"description\":\"Type of gift wrapping options.\"},\"width\":{\"type\":\"integer\",\"title\":\"Width\",\"description\":\"Width of the product (in appropriate units).\"},\"price_hidden_label\":{\"type\":\"string\",\"title\":\"Price Hidden Label\",\"description\":\"Label displayed when price is hidden.\"},\"is_featured\":{\"title\":\"Featured Product\",\"description\":\"Indicates whether the product is featured.\",\"type\":\"boolean\"},\"view_count\":{\"type\":\"integer\",\"title\":\"View Count\",\"description\":\"Number of times the product has been viewed.\"}}},\"meta\":{\"type\":\"object\",\"title\":\"Meta Data\",\"description\":\"Metadata related to the product.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Bigcommerce API.\",\"required\":[\"productId\"],\"properties\":{\"productId\":{\"type\":\"string\",\"title\":\"Product ID\",\"description\":\"ID of the product.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"data\":{\"calculated_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"gift_wrapping_options_list\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"page_title\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"option_set_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"is_condition_shown\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"type\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"map_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"retail_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"layout_file\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_warning_level\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"warranty\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"is_free_shipping\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"total_sold\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"sku\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"height\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"custom_url\":{\"is_customized\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"url\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"open_graph_use_meta_description\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"weight\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"upc\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"mpn\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"open_graph_type\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"open_graph_use_image\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"brand_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"meta_description\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"condition\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_level\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"open_graph_description\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"open_graph_use_product_name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"reviews_rating_sum\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"reviews_count\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_tracking\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"preorder_release_date\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"description\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bin_picking_number\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"availability\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"search_keywords\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"meta_keywords\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"related_products\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"is_price_hidden\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"order_quantity_minimum\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"availability_description\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"fixed_cost_shipping_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"categories\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"base_variant_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"sort_order\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"cost_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"option_set_display\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"gtin\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"order_quantity_maximum\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"is_visible\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"is_preorder_only\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"date_created\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"preorder_message\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"tax_class_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"open_graph_title\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"sale_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"product_tax_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"depth\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"date_modified\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"gift_wrapping_options_type\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"width\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"price_hidden_label\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"is_featured\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"view_count\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"meta\":{}},\"url\":{\"productId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"weight\":{\"type\":\"integer\"},\"width\":{\"type\":\"integer\"},\"depth\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"price\":{\"type\":\"integer\"},\"cost_price\":{\"type\":\"integer\"},\"retail_price\":{\"type\":\"integer\"},\"sale_price\":{\"type\":\"integer\"},\"map_price\":{\"type\":\"integer\"},\"tax_class_id\":{\"type\":\"integer\"},\"product_tax_code\":{\"type\":\"string\"},\"calculated_price\":{\"type\":\"integer\"},\"categories\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"brand_id\":{\"type\":\"integer\"},\"option_set_id\":{\"type\":\"string\"},\"option_set_display\":{\"type\":\"string\"},\"inventory_level\":{\"type\":\"integer\"},\"inventory_warning_level\":{\"type\":\"integer\"},\"inventory_tracking\":{\"type\":\"string\"},\"reviews_rating_sum\":{\"type\":\"integer\"},\"reviews_count\":{\"type\":\"integer\"},\"total_sold\":{\"type\":\"integer\"},\"fixed_cost_shipping_price\":{\"type\":\"integer\"},\"is_free_shipping\":{\"type\":\"boolean\"},\"is_visible\":{\"type\":\"boolean\"},\"is_featured\":{\"type\":\"boolean\"},\"related_products\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"warranty\":{\"type\":\"string\"},\"bin_picking_number\":{\"type\":\"string\"},\"layout_file\":{\"type\":\"string\"},\"upc\":{\"type\":\"string\"},\"mpn\":{\"type\":\"string\"},\"gtin\":{\"type\":\"string\"},\"search_keywords\":{\"type\":\"string\"},\"availability\":{\"type\":\"string\"},\"availability_description\":{\"type\":\"string\"},\"gift_wrapping_options_type\":{\"type\":\"string\"},\"gift_wrapping_options_list\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"sort_order\":{\"type\":\"integer\"},\"condition\":{\"type\":\"string\"},\"is_condition_shown\":{\"type\":\"boolean\"},\"order_quantity_minimum\":{\"type\":\"integer\"},\"order_quantity_maximum\":{\"type\":\"integer\"},\"page_title\":{\"type\":\"string\"},\"meta_keywords\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"meta_description\":{\"type\":\"string\"},\"date_created\":{\"type\":\"string\"},\"date_modified\":{\"type\":\"string\"},\"view_count\":{\"type\":\"integer\"},\"preorder_release_date\":{\"type\":\"string\"},\"preorder_message\":{\"type\":\"string\"},\"is_preorder_only\":{\"type\":\"boolean\"},\"is_price_hidden\":{\"type\":\"boolean\"},\"price_hidden_label\":{\"type\":\"string\"},\"custom_url\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"},\"is_customized\":{\"type\":\"boolean\"}},\"required\":[]},\"base_variant_id\":{\"type\":\"integer\"},\"open_graph_type\":{\"type\":\"string\"},\"open_graph_title\":{\"type\":\"string\"},\"open_graph_description\":{\"type\":\"string\"},\"open_graph_use_meta_description\":{\"type\":\"boolean\"},\"open_graph_use_product_name\":{\"type\":\"boolean\"},\"open_graph_use_image\":{\"type\":\"boolean\"}},\"required\":[]},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.077Z",
+        "updatedAt": "2025-04-27T11:08:51.077Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bmrtEoULVAMpOXjyQ9LQxwQ8cA",
+        "name": "getBrands",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request body\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The API key name for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for authentication.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"page_title\":{\"type\":\"string\"},\"meta_keywords\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"meta_description\":{\"type\":\"string\"},\"image_url\":{\"type\":\"string\"},\"search_keywords\":{\"type\":\"string\"},\"custom_url\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"},\"is_customized\":{\"type\":\"boolean\"}},\"required\":[]}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{\"pagination\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"count\":{\"type\":\"integer\"},\"per_page\":{\"type\":\"integer\"},\"current_page\":{\"type\":\"integer\"},\"total_pages\":{\"type\":\"integer\"},\"links\":{\"type\":\"object\",\"properties\":{\"current\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.048Z",
+        "updatedAt": "2025-04-27T11:08:51.048Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2bmu53TaGZtfbyjq0gUVaaEmC0C",
+        "name": "createBrand ",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for Bigcommerce API requests.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of your Bigcommerce API key.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of your Bigcommerce API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The hash identifier for your Bigcommerce store.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Data related to the request body for the Bigcommerce API.\",\"required\":[\"name\"],\"properties\":{\"meta_description\":{\"type\":\"string\",\"title\":\"Meta Description\",\"description\":\"Meta description for the product or resource.\"},\"page_title\":{\"type\":\"string\",\"title\":\"Page Title\",\"description\":\"Title of the page or resource.\"},\"image_url\":{\"type\":\"string\",\"title\":\"Image URL\",\"description\":\"URL of the main image.\"},\"name\":{\"type\":\"string\",\"title\":\"Name\",\"description\":\"Name of the product or resource.\"},\"meta_keywords\":{\"type\":\"array\",\"title\":\"Meta Keywords\",\"description\":\"Array of meta keywords for SEO.\",\"items\":{\"type\":\"string\"}},\"search_keywords\":{\"type\":\"string\",\"title\":\"Search Keywords\",\"description\":\"Keywords for internal search functionality.\"},\"custom_url\":{\"type\":\"object\",\"title\":\"Custom URL\",\"description\":\"Custom URL settings for the resource.\",\"properties\":{\"is_customized\":{\"title\":\"Is Customized\",\"description\":\"Indicates whether a custom URL is set.\",\"type\":\"boolean\"},\"url\":{\"type\":\"string\",\"title\":\"Custom URL\",\"description\":\"The custom URL for the resource.\"}}}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"meta_description\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"page_title\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"image_url\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"meta_keywords\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"search_keywords\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"custom_url\":{\"is_customized\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"url\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"status\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:51.022Z",
+        "updatedAt": "2025-04-27T11:08:51.022Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2tJKIh1ct4w6cQxU2YWS31KUrfM",
+        "name": "getWebhooks",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request Body\",\"description\":\"Bigcommerce API request body for Bigcommerce endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"storeHash\",\"apiKeyName\",\"apiKeyValue\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\"},\"apiKeyName\":{\"type\":\"string\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for identifying the Bigcommerce store.\"}}},\"param\":{\"type\":\"object\",\"properties\":{\"limit\":{\"type\":\"string\"},\"page\":{\"type\":\"string\"}}}}}",
+              "uiSchema": "{\"auth\":{\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"limit\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"page\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"client_id\":{\"type\":\"string\"},\"store_hash\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"},\"destination\":{\"type\":\"string\"},\"headers\":{\"type\":\"string\"},\"is_active\":{\"type\":\"boolean\"},\"created_at\":{\"type\":\"integer\"},\"updated_at\":{\"type\":\"integer\"},\"events_history_enabled\":{\"type\":\"boolean\"}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{\"pagination\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"count\":{\"type\":\"integer\"},\"per_page\":{\"type\":\"integer\"},\"current_page\":{\"type\":\"integer\"},\"total_pages\":{\"type\":\"integer\"},\"links\":{\"type\":\"object\",\"properties\":{\"previous\":{\"type\":\"string\"},\"current\":{\"type\":\"string\"},\"next\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:50.995Z",
+        "updatedAt": "2025-04-27T11:08:50.995Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2tJKnA8fZBpTJlU3WO2wqx9OSur",
+        "name": "createWebhook",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of your Bigcommerce API key.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of your Bigcommerce API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The hash identifier for your Bigcommerce store.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Data payload for the Bigcommerce API request.\",\"required\":[\"is_active\",\"scope\",\"destination\"],\"properties\":{\"headers\":{\"type\":\"object\",\"title\":\"Request Headers\",\"description\":\"Optional headers for the Bigcommerce API request.\"},\"is_active\":{\"title\":\"Is Active\",\"description\":\"Indicates whether the item is active in Bigcommerce.\",\"type\":\"boolean\"},\"scope\":{\"type\":\"string\",\"title\":\"Scope\",\"description\":\"Scope or context of the Bigcommerce API request.\"},\"destination\":{\"type\":\"string\",\"title\":\"Destination\",\"description\":\"Destination or target of the Bigcommerce API request.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"headers\":{},\"is_active\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"scope\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"destination\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"client_id\":{\"type\":\"string\"},\"store_hash\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"},\"destination\":{\"type\":\"string\"},\"headers\":{\"type\":\"string\"},\"is_active\":{\"type\":\"boolean\"},\"created_at\":{\"type\":\"integer\"},\"updated_at\":{\"type\":\"integer\"},\"events_history_enabled\":{\"type\":\"boolean\"}},\"required\":[]},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:50.969Z",
+        "updatedAt": "2025-04-27T11:08:50.969Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2tJLGQBhOeLW3DlOESLLeVNP6Cr",
+        "name": "deleteWebhook",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request Body\",\"description\":\"Bigcommerce API request body schema.\",\"required\":[\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for identifying the Bigcommerce store.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Details\",\"description\":\"URL details for the Bigcommerce API request.\",\"required\":[\"id\"],\"properties\":{\"id\":{\"type\":\"string\",\"title\":\"URL ID\",\"description\":\"The ID of the URL.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"client_id\":{\"type\":\"string\"},\"store_hash\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"},\"destination\":{\"type\":\"string\"},\"headers\":{\"type\":\"string\"},\"is_active\":{\"type\":\"boolean\"},\"created_at\":{\"type\":\"integer\"},\"updated_at\":{\"type\":\"integer\"},\"events_history_enabled\":{\"type\":\"boolean\"}},\"required\":[]},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:50.944Z",
+        "updatedAt": "2025-04-27T11:08:50.944Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_2tJLT22orYe6uZQ9aa90WuteI0y",
+        "name": "getWebhook",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema\",\"required\":[\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The API key name for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for authentication.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Information\",\"description\":\"URL information for the Bigcommerce API request.\",\"required\":[\"id\"],\"properties\":{\"id\":{\"type\":\"string\",\"title\":\"URL ID\",\"description\":\"The ID of the URL.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"client_id\":{\"type\":\"string\"},\"store_hash\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"},\"destination\":{\"type\":\"string\"},\"headers\":{\"type\":\"string\"},\"is_active\":{\"type\":\"boolean\"},\"created_at\":{\"type\":\"integer\"},\"updated_at\":{\"type\":\"integer\"},\"events_history_enabled\":{\"type\":\"boolean\"}},\"required\":[]},\"meta\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:50.920Z",
+        "updatedAt": "2025-04-27T11:08:50.920Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_bc_retrieve_product",
+        "name": "getProduct",
+        "imageUrl": "https://docs.vuestorefront.io/v2/integrations-logos/thumbnails/bigcommerce.png",
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema\",\"required\":[\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication information for Bigcommerce API access.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of the Bigcommerce API key.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the Bigcommerce API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for identifying the Bigcommerce store.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"Parameters related to the requested URL.\",\"required\":[\"productId\"],\"properties\":{\"productId\":{\"type\":\"string\",\"title\":\"Product ID\",\"description\":\"The ID of the product being accessed.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"productId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"weight\":{\"type\":\"integer\"},\"width\":{\"type\":\"integer\"},\"depth\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"price\":{\"type\":\"integer\"},\"cost_price\":{\"type\":\"integer\"},\"retail_price\":{\"type\":\"integer\"},\"sale_price\":{\"type\":\"integer\"},\"map_price\":{\"type\":\"integer\"},\"tax_class_id\":{\"type\":\"integer\"},\"product_tax_code\":{\"type\":\"string\"},\"categories\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"brand_id\":{\"type\":\"integer\"},\"inventory_level\":{\"type\":\"integer\"},\"inventory_warning_level\":{\"type\":\"integer\"},\"inventory_tracking\":{\"type\":\"string\"},\"fixed_cost_shipping_price\":{\"type\":\"integer\"},\"is_free_shipping\":{\"type\":\"boolean\"},\"is_visible\":{\"type\":\"boolean\"},\"is_featured\":{\"type\":\"boolean\"},\"related_products\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"warranty\":{\"type\":\"string\"},\"bin_picking_number\":{\"type\":\"string\"},\"layout_file\":{\"type\":\"string\"},\"upc\":{\"type\":\"string\"},\"search_keywords\":{\"type\":\"string\"},\"availability_description\":{\"type\":\"string\"},\"availability\":{\"type\":\"string\"},\"gift_wrapping_options_type\":{\"type\":\"string\"},\"gift_wrapping_options_list\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"sort_order\":{\"type\":\"integer\"},\"condition\":{\"type\":\"string\"},\"is_condition_shown\":{\"type\":\"boolean\"},\"order_quantity_minimum\":{\"type\":\"integer\"},\"order_quantity_maximum\":{\"type\":\"integer\"},\"page_title\":{\"type\":\"string\"},\"meta_keywords\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"meta_description\":{\"type\":\"string\"},\"view_count\":{\"type\":\"integer\"},\"preorder_release_date\":{\"type\":\"string\"},\"preorder_message\":{\"type\":\"string\"},\"is_preorder_only\":{\"type\":\"boolean\"},\"is_price_hidden\":{\"type\":\"boolean\"},\"price_hidden_label\":{\"type\":\"string\"},\"custom_url\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"},\"is_customized\":{\"type\":\"boolean\"}},\"required\":[]},\"open_graph_type\":{\"type\":\"string\"},\"open_graph_title\":{\"type\":\"string\"},\"open_graph_description\":{\"type\":\"string\"},\"open_graph_use_meta_description\":{\"type\":\"boolean\"},\"open_graph_use_product_name\":{\"type\":\"boolean\"},\"open_graph_use_image\":{\"type\":\"boolean\"},\"brand_name\":{\"type\":\"string\"},\"gtin\":{\"type\":\"string\"},\"mpn\":{\"type\":\"string\"},\"reviews_rating_sum\":{\"type\":\"integer\"},\"reviews_count\":{\"type\":\"integer\"},\"total_sold\":{\"type\":\"integer\"},\"custom_fields\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"value\":{\"type\":\"string\"}},\"required\":[]}},\"bulk_pricing_rules\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"quantity_min\":{\"type\":\"integer\"},\"quantity_max\":{\"type\":\"integer\"},\"type\":{\"type\":\"string\"},\"amount\":{\"type\":\"integer\"}},\"required\":[]}},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"image_file\":{\"type\":\"string\"},\"is_thumbnail\":{\"type\":\"boolean\"},\"sort_order\":{\"type\":\"integer\"},\"description\":{\"type\":\"string\"},\"image_url\":{\"type\":\"string\"},\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"date_modified\":{\"type\":\"string\"}},\"required\":[]}},\"videos\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"sort_order\":{\"type\":\"integer\"},\"type\":{\"type\":\"string\"},\"video_id\":{\"type\":\"string\"},\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"length\":{\"type\":\"string\"}},\"required\":[]}},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"cost_price\":{\"type\":\"integer\"},\"price\":{\"type\":\"integer\"},\"sale_price\":{\"type\":\"integer\"},\"retail_price\":{\"type\":\"integer\"},\"weight\":{\"type\":\"integer\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"depth\":{\"type\":\"integer\"},\"is_free_shipping\":{\"type\":\"boolean\"},\"fixed_cost_shipping_price\":{\"type\":\"integer\"},\"purchasing_disabled\":{\"type\":\"boolean\"},\"purchasing_disabled_message\":{\"type\":\"string\"},\"upc\":{\"type\":\"string\"},\"inventory_level\":{\"type\":\"integer\"},\"inventory_warning_level\":{\"type\":\"integer\"},\"bin_picking_number\":{\"type\":\"string\"},\"mpn\":{\"type\":\"string\"},\"gtin\":{\"type\":\"string\"},\"product_id\":{\"type\":\"integer\"},\"sku\":{\"type\":\"string\"},\"option_values\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"option_display_name\":{\"type\":\"string\"},\"label\":{\"type\":\"string\"}},\"required\":[]}},\"calculated_price\":{\"type\":\"integer\"},\"calculated_weight\":{\"type\":\"integer\"}},\"required\":[]}}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:50.888Z",
+        "updatedAt": "2025-04-27T11:08:50.888Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_bcdeleteproduct",
+        "name": "deleteProduct",
+        "imageUrl": "https://docs.vuestorefront.io/v2/integrations-logos/thumbnails/bigcommerce.png",
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema\",\"required\":[\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of the API key for authentication.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of the API key for authentication.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash associated with the Bigcommerce store.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Bigcommerce API request.\",\"required\":[\"productId\"],\"properties\":{\"productId\":{\"type\":\"string\",\"title\":\"Product ID\",\"description\":\"The ID of the product.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"productId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:50.863Z",
+        "updatedAt": "2025-04-27T11:08:50.863Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_bcgetproducts",
+        "name": "getProducts",
+        "imageUrl": "https://docs.vuestorefront.io/v2/integrations-logos/thumbnails/bigcommerce.png",
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request Body\",\"description\":\"Bigcommerce API request body schema.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"required\":[\"storeHash\",\"apiKeyName\",\"apiKeyValue\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\"},\"store_hash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The store hash for identifying the Bigcommerce store.\"},\"apiKeyName\":{\"type\":\"string\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash (alternative)\",\"description\":\"Alternative field for store hash (duplicate).\"}}},\"param\":{\"type\":\"object\",\"properties\":{\"limit\":{\"type\":\"string\"},\"page\":{\"type\":\"string\"}}}}}",
+              "uiSchema": "{\"auth\":{\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"store_hash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"limit\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"page\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"weight\":{\"type\":\"integer\"},\"width\":{\"type\":\"integer\"},\"depth\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"price\":{\"type\":\"integer\"},\"cost_price\":{\"type\":\"integer\"},\"retail_price\":{\"type\":\"integer\"},\"sale_price\":{\"type\":\"integer\"},\"map_price\":{\"type\":\"integer\"},\"tax_class_id\":{\"type\":\"integer\"},\"product_tax_code\":{\"type\":\"string\"},\"categories\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"brand_id\":{\"type\":\"integer\"},\"inventory_level\":{\"type\":\"integer\"},\"inventory_warning_level\":{\"type\":\"integer\"},\"inventory_tracking\":{\"type\":\"string\"},\"fixed_cost_shipping_price\":{\"type\":\"integer\"},\"is_free_shipping\":{\"type\":\"boolean\"},\"is_visible\":{\"type\":\"boolean\"},\"is_featured\":{\"type\":\"boolean\"},\"related_products\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"warranty\":{\"type\":\"string\"},\"bin_picking_number\":{\"type\":\"string\"},\"layout_file\":{\"type\":\"string\"},\"upc\":{\"type\":\"string\"},\"search_keywords\":{\"type\":\"string\"},\"availability_description\":{\"type\":\"string\"},\"availability\":{\"type\":\"string\"},\"gift_wrapping_options_type\":{\"type\":\"string\"},\"gift_wrapping_options_list\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"sort_order\":{\"type\":\"integer\"},\"condition\":{\"type\":\"string\"},\"is_condition_shown\":{\"type\":\"boolean\"},\"order_quantity_minimum\":{\"type\":\"integer\"},\"order_quantity_maximum\":{\"type\":\"integer\"},\"page_title\":{\"type\":\"string\"},\"meta_keywords\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"meta_description\":{\"type\":\"string\"},\"view_count\":{\"type\":\"integer\"},\"preorder_release_date\":{\"type\":\"string\"},\"preorder_message\":{\"type\":\"string\"},\"is_preorder_only\":{\"type\":\"boolean\"},\"is_price_hidden\":{\"type\":\"boolean\"},\"price_hidden_label\":{\"type\":\"string\"},\"custom_url\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"},\"is_customized\":{\"type\":\"boolean\"}},\"required\":[]},\"open_graph_type\":{\"type\":\"string\"},\"open_graph_title\":{\"type\":\"string\"},\"open_graph_description\":{\"type\":\"string\"},\"open_graph_use_meta_description\":{\"type\":\"boolean\"},\"open_graph_use_product_name\":{\"type\":\"boolean\"},\"open_graph_use_image\":{\"type\":\"boolean\"},\"brand_name\":{\"type\":\"string\"},\"gtin\":{\"type\":\"string\"},\"mpn\":{\"type\":\"string\"},\"reviews_rating_sum\":{\"type\":\"integer\"},\"reviews_count\":{\"type\":\"integer\"},\"total_sold\":{\"type\":\"integer\"},\"custom_fields\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"value\":{\"type\":\"string\"}},\"required\":[]}},\"bulk_pricing_rules\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"quantity_min\":{\"type\":\"integer\"},\"quantity_max\":{\"type\":\"integer\"},\"type\":{\"type\":\"string\"},\"amount\":{\"type\":\"integer\"}},\"required\":[]}},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"image_file\":{\"type\":\"string\"},\"is_thumbnail\":{\"type\":\"boolean\"},\"sort_order\":{\"type\":\"integer\"},\"description\":{\"type\":\"string\"},\"image_url\":{\"type\":\"string\"},\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"date_modified\":{\"type\":\"string\"}},\"required\":[]}},\"videos\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"sort_order\":{\"type\":\"integer\"},\"type\":{\"type\":\"string\"},\"video_id\":{\"type\":\"string\"},\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"length\":{\"type\":\"string\"}},\"required\":[]}},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"cost_price\":{\"type\":\"integer\"},\"price\":{\"type\":\"integer\"},\"sale_price\":{\"type\":\"integer\"},\"retail_price\":{\"type\":\"integer\"},\"weight\":{\"type\":\"integer\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"depth\":{\"type\":\"integer\"},\"is_free_shipping\":{\"type\":\"boolean\"},\"fixed_cost_shipping_price\":{\"type\":\"integer\"},\"purchasing_disabled\":{\"type\":\"boolean\"},\"purchasing_disabled_message\":{\"type\":\"string\"},\"upc\":{\"type\":\"string\"},\"inventory_level\":{\"type\":\"integer\"},\"inventory_warning_level\":{\"type\":\"integer\"},\"bin_picking_number\":{\"type\":\"string\"},\"mpn\":{\"type\":\"string\"},\"gtin\":{\"type\":\"string\"},\"product_id\":{\"type\":\"integer\"},\"sku\":{\"type\":\"string\"},\"option_values\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"option_display_name\":{\"type\":\"string\"},\"label\":{\"type\":\"string\"}},\"required\":[]}},\"calculated_price\":{\"type\":\"integer\"},\"calculated_weight\":{\"type\":\"integer\"}},\"required\":[]}},\"date_created\":{\"type\":\"string\"},\"date_modified\":{\"type\":\"string\"},\"base_variant_id\":{\"type\":\"integer\"},\"calculated_price\":{\"type\":\"integer\"},\"options\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"display_name\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"config\":{\"type\":\"object\",\"properties\":{\"default_value\":{\"type\":\"string\"},\"checked_by_default\":{\"type\":\"boolean\"},\"checkbox_label\":{\"type\":\"string\"},\"date_limited\":{\"type\":\"boolean\"},\"date_limit_mode\":{\"type\":\"string\"},\"date_earliest_value\":{\"type\":\"string\"},\"date_latest_value\":{\"type\":\"string\"},\"file_types_mode\":{\"type\":\"string\"},\"file_types_supported\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"file_types_other\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"file_max_size\":{\"type\":\"integer\"},\"text_characters_limited\":{\"type\":\"boolean\"},\"text_min_length\":{\"type\":\"integer\"},\"text_max_length\":{\"type\":\"integer\"},\"text_lines_limited\":{\"type\":\"boolean\"},\"text_max_lines\":{\"type\":\"integer\"},\"number_limited\":{\"type\":\"boolean\"},\"number_limit_mode\":{\"type\":\"string\"},\"number_lowest_value\":{\"type\":\"integer\"},\"number_highest_value\":{\"type\":\"integer\"},\"number_integers_only\":{\"type\":\"boolean\"},\"product_list_adjusts_inventory\":{\"type\":\"boolean\"},\"product_list_adjusts_pricing\":{\"type\":\"boolean\"},\"product_list_shipping_calc\":{\"type\":\"string\"}},\"required\":[]},\"sort_order\":{\"type\":\"integer\"},\"option_values\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"is_default\":{\"type\":\"boolean\"},\"label\":{\"type\":\"string\"},\"sort_order\":{\"type\":\"integer\"},\"value_data\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"id\":{\"type\":\"integer\"}},\"required\":[]}}},\"required\":[]}},\"modifiers\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"required\":{\"type\":\"boolean\"},\"sort_order\":{\"type\":\"integer\"},\"config\":{\"type\":\"object\",\"properties\":{\"default_value\":{\"type\":\"string\"},\"checked_by_default\":{\"type\":\"boolean\"},\"checkbox_label\":{\"type\":\"string\"},\"date_limited\":{\"type\":\"boolean\"},\"date_limit_mode\":{\"type\":\"string\"},\"date_earliest_value\":{\"type\":\"string\"},\"date_latest_value\":{\"type\":\"string\"},\"file_types_mode\":{\"type\":\"string\"},\"file_types_supported\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"file_types_other\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"file_max_size\":{\"type\":\"integer\"},\"text_characters_limited\":{\"type\":\"boolean\"},\"text_min_length\":{\"type\":\"integer\"},\"text_max_length\":{\"type\":\"integer\"},\"text_lines_limited\":{\"type\":\"boolean\"},\"text_max_lines\":{\"type\":\"integer\"},\"number_limited\":{\"type\":\"boolean\"},\"number_limit_mode\":{\"type\":\"string\"},\"number_lowest_value\":{\"type\":\"integer\"},\"number_highest_value\":{\"type\":\"integer\"},\"number_integers_only\":{\"type\":\"boolean\"},\"product_list_adjusts_inventory\":{\"type\":\"boolean\"},\"product_list_adjusts_pricing\":{\"type\":\"boolean\"},\"product_list_shipping_calc\":{\"type\":\"string\"}},\"required\":[]},\"display_name\":{\"type\":\"string\"},\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"option_values\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"is_default\":{\"type\":\"boolean\"},\"label\":{\"type\":\"string\"},\"sort_order\":{\"type\":\"integer\"},\"value_data\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"adjusters\":{\"type\":\"object\",\"properties\":{\"price\":{\"type\":\"object\",\"properties\":{\"adjuster\":{\"type\":\"string\"},\"adjuster_value\":{\"type\":\"integer\"}},\"required\":[]},\"weight\":{\"type\":\"object\",\"properties\":{\"adjuster\":{\"type\":\"string\"},\"adjuster_value\":{\"type\":\"integer\"}},\"required\":[]},\"image_url\":{\"type\":\"string\"},\"purchasing_disabled\":{\"type\":\"object\",\"properties\":{\"status\":{\"type\":\"boolean\"},\"message\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"id\":{\"type\":\"integer\"},\"option_id\":{\"type\":\"integer\"}},\"required\":[]}}},\"required\":[]}},\"option_set_id\":{\"type\":\"integer\"},\"option_set_display\":{\"type\":\"string\"}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{\"pagination\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"count\":{\"type\":\"integer\"},\"per_page\":{\"type\":\"integer\"},\"current_page\":{\"type\":\"integer\"},\"total_pages\":{\"type\":\"integer\"},\"links\":{\"type\":\"object\",\"properties\":{\"previous\":{\"type\":\"string\"},\"current\":{\"type\":\"string\"},\"next\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:50.830Z",
+        "updatedAt": "2025-04-27T11:08:50.830Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    },
+    {
+      "node": {
+        "clientId": "community",
+        "id": "_knexa_productbysku",
+        "name": "getProductBySku",
+        "imageUrl": null,
+        "isCommunityCreated": false,
+        "contract": {
+          "action": {
+            "request": {
+              "schema": "{\"type\":\"object\",\"title\":\"Bigcommerce API Request\",\"description\":\"Bigcommerce API request schema\",\"required\":[\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Bigcommerce API.\",\"required\":[\"apiKeyValue\",\"apiKeyName\",\"storeHash\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The value of your Bigcommerce API key.\"},\"apiKeyName\":{\"type\":\"string\",\"title\":\"API Key Name\",\"description\":\"The name of your Bigcommerce API key.\"},\"storeHash\":{\"type\":\"string\",\"title\":\"Store Hash\",\"description\":\"The hash identifier for your Bigcommerce store.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Bigcommerce API request.\",\"required\":[\"sku\"],\"properties\":{\"sku\":{\"type\":\"string\",\"title\":\"SKU\",\"description\":\"The Stock Keeping Unit (SKU) identifier.\"}}}}}",
+              "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeHash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"sku\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+              "__typename": "ContractOutput"
+            },
+            "success": {
+              "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"weight\":{\"type\":\"integer\"},\"width\":{\"type\":\"integer\"},\"depth\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"price\":{\"type\":\"integer\"},\"cost_price\":{\"type\":\"integer\"},\"retail_price\":{\"type\":\"integer\"},\"sale_price\":{\"type\":\"integer\"},\"map_price\":{\"type\":\"integer\"},\"tax_class_id\":{\"type\":\"integer\"},\"product_tax_code\":{\"type\":\"string\"},\"calculated_price\":{\"type\":\"integer\"},\"categories\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"brand_id\":{\"type\":\"integer\"},\"option_set_id\":{\"type\":\"string\"},\"option_set_display\":{\"type\":\"string\"},\"inventory_level\":{\"type\":\"integer\"},\"inventory_warning_level\":{\"type\":\"integer\"},\"inventory_tracking\":{\"type\":\"string\"},\"reviews_rating_sum\":{\"type\":\"integer\"},\"reviews_count\":{\"type\":\"integer\"},\"total_sold\":{\"type\":\"integer\"},\"fixed_cost_shipping_price\":{\"type\":\"integer\"},\"is_free_shipping\":{\"type\":\"boolean\"},\"is_visible\":{\"type\":\"boolean\"},\"is_featured\":{\"type\":\"boolean\"},\"related_products\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"warranty\":{\"type\":\"string\"},\"bin_picking_number\":{\"type\":\"string\"},\"layout_file\":{\"type\":\"string\"},\"upc\":{\"type\":\"string\"},\"mpn\":{\"type\":\"string\"},\"gtin\":{\"type\":\"string\"},\"search_keywords\":{\"type\":\"string\"},\"availability\":{\"type\":\"string\"},\"availability_description\":{\"type\":\"string\"},\"gift_wrapping_options_type\":{\"type\":\"string\"},\"gift_wrapping_options_list\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"sort_order\":{\"type\":\"integer\"},\"condition\":{\"type\":\"string\"},\"is_condition_shown\":{\"type\":\"boolean\"},\"order_quantity_minimum\":{\"type\":\"integer\"},\"order_quantity_maximum\":{\"type\":\"integer\"},\"page_title\":{\"type\":\"string\"},\"meta_keywords\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"meta_description\":{\"type\":\"string\"},\"date_created\":{\"type\":\"string\"},\"date_modified\":{\"type\":\"string\"},\"view_count\":{\"type\":\"integer\"},\"preorder_release_date\":{\"type\":\"string\"},\"preorder_message\":{\"type\":\"string\"},\"is_preorder_only\":{\"type\":\"boolean\"},\"is_price_hidden\":{\"type\":\"boolean\"},\"price_hidden_label\":{\"type\":\"string\"},\"custom_url\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"},\"is_customized\":{\"type\":\"boolean\"}},\"required\":[]},\"base_variant_id\":{\"type\":\"integer\"},\"open_graph_type\":{\"type\":\"string\"},\"open_graph_title\":{\"type\":\"string\"},\"open_graph_description\":{\"type\":\"string\"},\"open_graph_use_meta_description\":{\"type\":\"boolean\"},\"open_graph_use_product_name\":{\"type\":\"boolean\"},\"open_graph_use_image\":{\"type\":\"boolean\"}},\"required\":[]}},\"meta\":{\"type\":\"object\",\"properties\":{\"pagination\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"integer\"},\"count\":{\"type\":\"integer\"},\"per_page\":{\"type\":\"integer\"},\"current_page\":{\"type\":\"integer\"},\"total_pages\":{\"type\":\"integer\"},\"links\":{\"type\":\"object\",\"properties\":{\"current\":{\"type\":\"string\"}},\"required\":[]},\"too_many\":{\"type\":\"boolean\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+              "__typename": "ContractOutput"
+            },
+            "__typename": "ActionContractOutput"
+          },
+          "__typename": "DataSourceSpecOutput"
+        },
+        "type": "API",
+        "createdAt": "2025-04-27T11:08:50.800Z",
+        "updatedAt": "2025-04-27T11:08:50.800Z",
+        "__typename": "DataSourceTemplatePattOutput"
+      },
+      "__typename": "DataSourceTemplateEdge"
+    }
+  ]

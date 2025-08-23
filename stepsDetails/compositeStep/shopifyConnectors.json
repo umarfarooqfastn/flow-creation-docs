@@ -1,0 +1,1056 @@
+[
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2Yrk5ZdsORprOGpdpf9R4piOtmn",
+      "name": "getProducts",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.1.0",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key value.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of your Shopify store.\"}}},\"params\":{\"type\":\"object\",\"title\":\"Request Parameters\",\"description\":\"Parameters to filter and limit the Shopify API response.\",\"properties\":{\"created_at_min\":{\"type\":\"string\",\"title\":\"Created At Minimum\",\"description\":\"Minimum creation date for filtering results (ISO 8601 format).\"},\"limit\":{\"title\":\"\",\"description\":\"test the flow Description\",\"enum\":[\"2\",\"3\"],\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"params\":{\"created_at_min\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"limit\":{\"ui:placeholder\":\"add limit\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"products\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"body_html\":{\"type\":[\"null\",\"string\"]},\"vendor\":{\"type\":\"string\"},\"product_type\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"handle\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"published_at\":{\"type\":[\"string\",\"null\"]},\"template_suffix\":{\"type\":[\"null\",\"string\"]},\"published_scope\":{\"type\":\"string\"},\"tags\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"inventory_policy\":{\"type\":\"string\"},\"compare_at_price\":{\"type\":[\"null\",\"string\"]},\"fulfillment_service\":{\"type\":\"string\"},\"inventory_management\":{\"type\":[\"null\",\"string\"]},\"option1\":{\"type\":\"string\"},\"option2\":{\"type\":\"string\"},\"option3\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"barcode\":{\"type\":[\"null\",\"string\"]},\"grams\":{\"type\":\"integer\"},\"image_id\":{\"type\":\"string\"},\"weight\":{\"type\":\"number\"},\"weight_unit\":{\"type\":\"string\"},\"inventory_item_id\":{\"type\":\"integer\"},\"inventory_quantity\":{\"type\":\"integer\"},\"old_inventory_quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"options\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"values\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"alt\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"src\":{\"type\":\"string\"},\"variant_ids\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"image\":{\"type\":\"object\",\"properties\":{\"created_at\":{\"type\":\"string\"},\"id\":{\"type\":\"integer\"},\"position\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"variant_ids\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"src\":{\"type\":\"string\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"updated_at\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-04/products.json\",\"method\":\"GET\",\"headers\":[],\"params\":[{\"key\":\"limit\",\"value\":\"{{params.limit}}\"},{\"key\":\"created_at_min\",\"value\":\"{{params.created_at_min}}\"}],\"body\":\"{}\",\"bulkHeaders\":\"\",\"bulkParams\":\"\",\"hasBulkHeaders\":false,\"hasBulkParams\":false,\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.662Z",
+      "updatedAt": "2025-05-14T17:07:54.029Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2585f767-eadd-497e-811d-ae940ca553db",
+      "name": "updateVariants",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.8",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema for Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Shopify API request.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of the Shopify store.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Request body for the Shopify API endpoint.\",\"required\":[\"variant\"],\"properties\":{\"variant\":{\"type\":\"object\",\"title\":\"Variant Details\",\"description\":\"Details about the product variant.\",\"properties\":{\"presentment_prices\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"compare_at_price\":{\"type\":\"string\",\"title\":\"Compare At Price\",\"description\":\"The compare at price for the variant.\"},\"price\":{\"type\":\"object\",\"title\":\"Price Details\",\"description\":\"Price details for the variant.\",\"properties\":{\"amount\":{\"type\":\"string\",\"title\":\"Amount\",\"description\":\"The price amount.\"},\"currency_code\":{\"type\":\"string\",\"title\":\"Currency Code\",\"description\":\"The currency code.\"}}}}}},\"compare_at_price\":{\"type\":\"null\",\"title\":\"Compare At Price (nullable)\",\"description\":\"Compare at price (can be null).\"},\"fulfillment_service\":{\"type\":\"string\",\"title\":\"Fulfillment Service\",\"description\":\"The fulfillment service for the variant.\"},\"inventory_management\":{\"type\":\"null\",\"title\":\"Inventory Management (nullable)\",\"description\":\"Inventory management (can be null).\"},\"taxable\":{\"title\":\"Taxable\",\"description\":\"Indicates if the variant is taxable.\",\"type\":\"boolean\"},\"old_inventory_quantity\":{\"type\":\"integer\",\"title\":\"Old Inventory Quantity\",\"description\":\"The old inventory quantity.\"},\"requires_shipping\":{\"title\":\"Requires Shipping\",\"description\":\"Indicates if the variant requires shipping.\",\"type\":\"boolean\"},\"created_at\":{\"type\":\"string\",\"title\":\"Created At\",\"description\":\"The creation timestamp.\"},\"weight\":{\"type\":\"number\",\"title\":\"Weight\",\"description\":\"The weight of the variant.\"},\"title\":{\"type\":\"string\",\"title\":\"Variant Title\",\"description\":\"The title of the variant.\"},\"inventory_policy\":{\"type\":\"string\",\"title\":\"Inventory Policy\",\"description\":\"The inventory policy for the variant.\"},\"updated_at\":{\"type\":\"string\",\"title\":\"Updated At\",\"description\":\"The last update timestamp.\"},\"weight_unit\":{\"type\":\"string\",\"title\":\"Weight Unit\",\"description\":\"The unit of weight.\"},\"inventory_item_id\":{\"type\":\"integer\",\"title\":\"Inventory Item ID\",\"description\":\"The inventory item ID.\"},\"price\":{\"type\":\"string\",\"title\":\"Price\",\"description\":\"The price of the variant.\"},\"admin_graphql_api_id\":{\"type\":\"string\",\"title\":\"Admin GraphQL API ID\",\"description\":\"The admin GraphQL API ID.\"},\"option3\":{\"type\":\"null\",\"title\":\"Option 3 (nullable)\",\"description\":\"Option 3 (can be null).\"},\"option1\":{\"type\":\"string\",\"title\":\"Option 1\",\"description\":\"Option 1.\"},\"position\":{\"type\":\"integer\",\"title\":\"Position\",\"description\":\"The position of the variant.\"},\"option2\":{\"type\":\"null\",\"title\":\"Option 2 (nullable)\",\"description\":\"Option 2 (can be null).\"},\"sku\":{\"type\":\"string\",\"title\":\"SKU\",\"description\":\"The SKU of the variant.\"},\"grams\":{\"type\":\"integer\",\"title\":\"Grams\",\"description\":\"The weight in grams.\"},\"image_id\":{\"type\":\"integer\",\"title\":\"Image ID\",\"description\":\"The image ID.\"},\"barcode\":{\"type\":\"null\",\"title\":\"Barcode (nullable)\",\"description\":\"Barcode (can be null).\"}}}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Shopify API endpoint.\",\"required\":[\"variantId\"],\"properties\":{\"variantId\":{\"type\":\"string\",\"title\":\"Variant ID\",\"description\":\"The ID of the variant.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"variant\":{\"presentment_prices\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"compare_at_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"fulfillment_service\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_management\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"taxable\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"old_inventory_quantity\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"requires_shipping\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"created_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"weight\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"title\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_policy\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"updated_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"weight_unit\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_item_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"admin_graphql_api_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"option3\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"option1\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"position\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"option2\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"sku\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"grams\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"image_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"barcode\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"url\":{\"variantId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"variant\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"inventory_policy\":{\"type\":\"string\"},\"compare_at_price\":{\"type\":\"string\"},\"fulfillment_service\":{\"type\":\"string\"},\"inventory_management\":{\"type\":\"string\"},\"option1\":{\"type\":\"string\"},\"option2\":{\"type\":\"string\"},\"option3\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"barcode\":{\"type\":\"string\"},\"grams\":{\"type\":\"integer\"},\"image_id\":{\"type\":\"integer\"},\"weight\":{\"type\":\"number\"},\"weight_unit\":{\"type\":\"string\"},\"inventory_item_id\":{\"type\":\"integer\"},\"inventory_quantity\":{\"type\":\"integer\"},\"old_inventory_quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-04/variants/{{url.variantId}}.json\",\"method\":\"PUT\",\"headers\":[{\"key\":\"content-type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.662Z",
+      "updatedAt": "2025-03-24T21:30:58.718Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2WrLtguLPEfIu9KEJooF6ZD6NVd",
+      "name": "getVariant",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Shopify API request.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key value.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"Your Shopify store name.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Shopify API request.\",\"required\":[\"variantId\"],\"properties\":{\"variantId\":{\"type\":\"string\",\"title\":\"Variant ID\",\"description\":\"The ID of the product variant.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"variantId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"variant\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"inventory_policy\":{\"type\":\"string\"},\"compare_at_price\":{\"type\":\"string\"},\"fulfillment_service\":{\"type\":\"string\"},\"inventory_management\":{\"type\":\"string\"},\"option1\":{\"type\":\"string\"},\"option2\":{\"type\":\"string\"},\"option3\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"barcode\":{\"type\":\"string\"},\"grams\":{\"type\":\"integer\"},\"image_id\":{\"type\":\"string\"},\"weight\":{\"type\":\"number\"},\"weight_unit\":{\"type\":\"string\"},\"inventory_item_id\":{\"type\":\"integer\"},\"inventory_quantity\":{\"type\":\"integer\"},\"old_inventory_quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-04/variants/{{url.variantId}}.json\",\"method\":\"GET\",\"headers\":[],\"params\":[],\"body\":\"{}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.662Z",
+      "updatedAt": "2025-03-24T21:30:58.694Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2XRywXc9J9dyR3TzAEveHAtbj6z",
+      "name": "createBasicProduct",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"Your Shopify store name.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Request body for creating/updating a Shopify product.\",\"required\":[\"product\"],\"properties\":{\"product\":{\"type\":\"object\",\"title\":\"Product Details\",\"description\":\"Details of the Shopify product.\",\"required\":[\"title\"],\"properties\":{\"body_html\":{\"type\":\"string\",\"title\":\"Product Description (HTML)\",\"description\":\"HTML content for the product description.\"},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"attachment\":{\"type\":\"string\",\"title\":\"Image Attachment\",\"description\":\"Image attachment data.\"},\"src\":{\"type\":\"string\",\"title\":\"Image Source URL\",\"description\":\"Image source URL.\"}}}},\"handle\":{\"type\":\"string\",\"title\":\"Product Handle\",\"description\":\"Unique handle for the product.\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"compare_at_price\":{\"type\":\"string\",\"title\":\"Compare At Price\",\"description\":\"Comparison price for the variant.\"},\"price\":{\"type\":\"string\",\"title\":\"Price\",\"description\":\"Price of the variant.\"},\"option1\":{\"type\":\"string\",\"title\":\"Option 1\",\"description\":\"First option value for the variant (e.g., size, color).\"},\"sku\":{\"type\":\"string\",\"title\":\"SKU\",\"description\":\"Stock Keeping Unit (SKU) for the variant.\"}}}},\"title\":{\"type\":\"string\",\"title\":\"Product Title\",\"description\":\"Title of the product.\"},\"status\":{\"type\":\"string\",\"title\":\"Product Status\",\"description\":\"Status of the product (e.g., active, draft).\"}}}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"product\":{\"body_html\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"images\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"handle\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"variants\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"title\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"status\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"product\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"body_html\":{\"type\":\"string\"},\"vendor\":{\"type\":\"string\"},\"product_type\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"handle\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"published_at\":{\"type\":\"string\"},\"template_suffix\":{\"type\":\"string\"},\"published_scope\":{\"type\":\"string\"},\"tags\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"inventory_policy\":{\"type\":\"string\"},\"compare_at_price\":{\"type\":\"string\"},\"fulfillment_service\":{\"type\":\"string\"},\"inventory_management\":{\"type\":\"string\"},\"option1\":{\"type\":\"string\"},\"option2\":{\"type\":\"string\"},\"option3\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"barcode\":{\"type\":\"string\"},\"grams\":{\"type\":\"integer\"},\"image_id\":{\"type\":\"string\"},\"weight\":{\"type\":\"number\"},\"weight_unit\":{\"type\":\"string\"},\"inventory_item_id\":{\"type\":\"integer\"},\"inventory_quantity\":{\"type\":\"integer\"},\"old_inventory_quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"options\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"values\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"position\":{\"type\":\"integer\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"alt\":{\"type\":\"string\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"src\":{\"type\":\"string\"},\"variant_ids\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"image\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"position\":{\"type\":\"integer\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"alt\":{\"type\":\"string\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"src\":{\"type\":\"string\"},\"variant_ids\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-04/products.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"content-type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.662Z",
+      "updatedAt": "2025-03-24T21:30:58.668Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2Xu7urI2nXG2DhKz6cNfmD6A4Hi",
+      "name": "updateBasicProduct",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify Product API Request\",\"description\":\"Shopify API request schema for creating/updating a product.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key\",\"description\":\"Your Shopify API key.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"Your Shopify store name.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Product Data\",\"description\":\"Data representing the product to be created or updated.\",\"required\":[\"product\"],\"properties\":{\"product\":{\"type\":\"object\",\"title\":\"Product Details\",\"description\":\"Details of the product.\",\"properties\":{\"body_html\":{\"type\":\"string\",\"title\":\"Product Description (HTML)\",\"description\":\"HTML content for the product description.\"},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"attachment\":{\"type\":\"string\",\"title\":\"Image Attachment\",\"description\":\"Image attachment data (e.g., base64 encoded).\"},\"src\":{\"type\":\"string\",\"title\":\"Image URL\",\"description\":\"URL of the product image.\"}}}},\"handle\":{\"type\":\"string\",\"title\":\"Product Handle\",\"description\":\"Unique identifier for the product (used in URLs).\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"compare_at_price\":{\"type\":\"string\",\"title\":\"Compare At Price\",\"description\":\"Comparison price for the variant.\"},\"price\":{\"type\":\"string\",\"title\":\"Price\",\"description\":\"Price of the variant.\"},\"option1\":{\"type\":\"string\",\"title\":\"Option 1\",\"description\":\"Value for the first option (e.g., size).\"},\"id\":{\"type\":\"string\",\"title\":\"Variant ID\",\"description\":\"Unique identifier for the variant.\"},\"sku\":{\"type\":\"string\",\"title\":\"SKU\",\"description\":\"Stock Keeping Unit for the variant.\"}}}},\"title\":{\"type\":\"string\",\"title\":\"Product Title\",\"description\":\"Title of the product.\"},\"status\":{\"type\":\"string\",\"title\":\"Product Status\",\"description\":\"Status of the product (e.g., active, draft).\"}}}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for accessing the product.\",\"required\":[\"productId\"],\"properties\":{\"productId\":{\"type\":\"string\",\"title\":\"Product ID\",\"description\":\"ID of the product to be updated.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"product\":{\"body_html\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"images\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"handle\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"variants\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"title\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"status\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"url\":{\"productId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"product\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"body_html\":{\"type\":\"string\"},\"vendor\":{\"type\":\"string\"},\"product_type\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"handle\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"published_at\":{\"type\":\"string\"},\"template_suffix\":{\"type\":\"string\"},\"published_scope\":{\"type\":\"string\"},\"tags\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"inventory_policy\":{\"type\":\"string\"},\"compare_at_price\":{\"type\":\"string\"},\"fulfillment_service\":{\"type\":\"string\"},\"inventory_management\":{\"type\":\"string\"},\"option1\":{\"type\":\"string\"},\"option2\":{\"type\":\"string\"},\"option3\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"barcode\":{\"type\":\"string\"},\"grams\":{\"type\":\"integer\"},\"image_id\":{\"type\":\"string\"},\"weight\":{\"type\":\"number\"},\"weight_unit\":{\"type\":\"string\"},\"inventory_item_id\":{\"type\":\"integer\"},\"inventory_quantity\":{\"type\":\"integer\"},\"old_inventory_quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"options\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"values\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"position\":{\"type\":\"integer\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"alt\":{\"type\":\"string\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"src\":{\"type\":\"string\"},\"variant_ids\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"image\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"position\":{\"type\":\"integer\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"alt\":{\"type\":\"string\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"src\":{\"type\":\"string\"},\"variant_ids\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-04/products/{{url.productId}}.json\",\"method\":\"PUT\",\"headers\":[{\"key\":\"content-type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.662Z",
+      "updatedAt": "2025-03-24T21:30:58.639Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2Yrg1f9Ro1k6R0hpp6NeeZWJlsu",
+      "name": "getProductsCount",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Shopify API request.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of the Shopify store.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"count\":{\"type\":\"integer\"}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-07/products/count.json\",\"method\":\"GET\",\"headers\":[],\"params\":[],\"body\":\"{}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.662Z",
+      "updatedAt": "2025-03-24T21:30:58.617Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2dbxddR5ErhT8abg7x5vyJ2vwRZ",
+      "name": "createWebhook",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key value.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of your Shopify store.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Data payload for the Shopify API request.\",\"required\":[\"url\"],\"properties\":{\"operation\":{\"type\":\"string\",\"title\":\"Operation\",\"description\":\"The type of operation to be performed (e.g., create, update, delete).\"},\"entity\":{\"type\":\"string\",\"title\":\"Entity\",\"description\":\"The type of Shopify entity being manipulated (e.g., product, order, customer).\"},\"url\":{\"type\":\"string\",\"title\":\"URL\",\"description\":\"The URL endpoint for the Shopify API call.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"operation\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"entity\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"url\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"webhook\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"address\":{\"type\":\"string\"},\"topic\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"format\":{\"type\":\"string\"},\"fields\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"metafield_namespaces\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"api_version\":{\"type\":\"string\"},\"private_metafield_namespaces\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-01/webhooks.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{\\r\\n    \\\"webhook\\\": {\\r\\n        \\\"topic\\\": \\\"{{body.entity}}/{{body.operation}}\\\",\\r\\n        \\\"address\\\": \\\"{{body.url}}\\\",\\r\\n        \\\"format\\\": \\\"json\\\",\\r\\n        \\\"fields\\\": [\\r\\n\\r\\n        ]\\r\\n    }\\r\\n}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.662Z",
+      "updatedAt": "2025-03-24T21:30:58.565Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2dcbAC2Paldmxc68MulbURlndtg",
+      "name": "registerWebhook",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key value.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"Your Shopify store name.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Data payload for the Shopify API request.\",\"required\":[\"url\"],\"properties\":{\"operation\":{\"type\":\"string\",\"title\":\"Operation\",\"description\":\"Type of operation to perform (e.g., create, update, delete).\"},\"entity\":{\"type\":\"string\",\"title\":\"Entity\",\"description\":\"Shopify entity to interact with (e.g., products, orders, customers).\"},\"url\":{\"type\":\"string\",\"title\":\"URL\",\"description\":\"Specific URL for the Shopify API endpoint.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"operation\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"entity\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"url\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"webhook\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"address\":{\"type\":\"string\"},\"topic\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"format\":{\"type\":\"string\"},\"fields\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"metafield_namespaces\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"api_version\":{\"type\":\"string\"},\"private_metafield_namespaces\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-01/webhooks.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{\\r\\n    \\\"webhook\\\": {\\r\\n        \\\"topic\\\": \\\"{{body.entity}}/{{body.operation}}\\\",\\r\\n        \\\"address\\\": \\\"{{body.url}}\\\",\\r\\n        \\\"format\\\": \\\"json\\\"\\r\\n    }\\r\\n}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.662Z",
+      "updatedAt": "2025-03-24T21:30:58.541Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2dccx0V2x2fiSVuSbLWIdsLQYrc",
+      "name": "getWebhooks",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.1.0",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key for accessing the Shopify store.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of the Shopify store.\"}}},\"param\":{\"type\":\"object\",\"title\":\"Request Parameters\",\"description\":\"Additional parameters for the Shopify API request.\",\"properties\":{\"address\":{\"type\":\"string\",\"title\":\"Address\",\"description\":\"Address related to the request.\"},\"topic\":{\"type\":\"string\",\"title\":\"Topic\",\"description\":\"Topic of the request.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"address\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"topic\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"webhooks\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"address\":{\"type\":\"string\"},\"topic\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"format\":{\"type\":\"string\"},\"fields\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"metafield_namespaces\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"api_version\":{\"type\":\"string\"},\"private_metafield_namespaces\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-01/webhooks.json\",\"method\":\"GET\",\"headers\":[],\"params\":[{\"key\":\"topic\",\"value\":\"{{param.topic}}\"},{\"key\":\"address\",\"value\":\"{{param.address}}\"}],\"body\":\"{}\",\"bulkHeaders\":\"\",\"bulkParams\":\"\",\"hasBulkHeaders\":false,\"hasBulkParams\":false,\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.662Z",
+      "updatedAt": "2025-03-24T21:30:58.489Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2dceXfj37xMPGMrZ4D9oV9PuOFq",
+      "name": "deleteWebhook",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Shopify API request.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for Shopify authentication.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of the Shopify store.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL related parameters for the Shopify API request.\",\"required\":[\"webhookId\"],\"properties\":{\"webhookId\":{\"type\":\"string\",\"title\":\"Webhook ID\",\"description\":\"The ID of the webhook.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"webhookId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-01/webhooks/{{url.webhookId}}.json\",\"method\":\"DELETE\",\"headers\":[],\"params\":[],\"body\":\"{}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.662Z",
+      "updatedAt": "2025-03-24T21:30:58.469Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2iCpikc1Lq5AJZ54EStnWQjN4oz",
+      "name": "getAccessToken",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.9",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema\",\"properties\":{\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Request body for Shopify API.\",\"required\":[\"code\",\"client_secret\",\"client_id\"],\"properties\":{\"code\":{\"type\":\"string\",\"title\":\"Authorization Code\",\"description\":\"Authorization code for Shopify.\"},\"client_secret\":{\"type\":\"string\",\"title\":\"Client Secret\",\"description\":\"Client secret for Shopify API authentication.\"},\"client_id\":{\"type\":\"string\",\"title\":\"Client ID\",\"description\":\"Client ID for Shopify API authentication.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for Shopify API request.\",\"required\":[\"storeName\"],\"properties\":{\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"Name of the Shopify store.\"}}}}}",
+            "uiSchema": "{\"body\":{\"code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"client_secret\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"client_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"access_token\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{url.storeName}}.myshopify.com/admin/oauth/access_token\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"NO_AUTH\",\"authConfig\":null}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.662Z",
+      "updatedAt": "2025-03-24T21:30:58.447Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2oMC1cISQbnwEVYr0UPzNVUSdkj",
+      "name": "updateOrder",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"\",\"description\":\"\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\"},\"storeName\":{\"type\":\"string\"}}},\"body\":{\"type\":\"object\",\"properties\":{\"order\":{\"type\":\"object\",\"properties\":{\"cancelled_at\":{\"type\":\"string\"},\"confirmation_number\":{\"type\":\"string\"},\"fulfillment_status\":{\"type\":\"string\"},\"original_total_additional_fees_set\":{\"type\":\"string\"},\"current_total_discounts_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"billing_address\":{\"type\":\"string\"},\"line_items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"variant_title\":{\"type\":\"string\"},\"fulfillment_status\":{\"type\":\"string\"},\"total_discount\":{\"type\":\"string\"},\"gift_card\":{\"type\":\"boolean\"},\"requires_shipping\":{\"type\":\"boolean\"},\"total_discount_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"title\":{\"type\":\"string\"},\"attributed_staffs\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"product_exists\":{\"type\":\"boolean\"},\"variant_id\":{\"type\":\"string\"},\"tax_lines\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"channel_liable\":{\"type\":\"boolean\"},\"rate\":{\"type\":\"number\"},\"price\":{\"type\":\"string\"},\"price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"title\":{\"type\":\"string\"}}}},\"price\":{\"type\":\"string\"},\"vendor\":{\"type\":\"string\"},\"product_id\":{\"type\":\"string\"},\"id\":{\"type\":\"integer\"},\"grams\":{\"type\":\"integer\"},\"sku\":{\"type\":\"string\"},\"fulfillable_quantity\":{\"type\":\"integer\"},\"quantity\":{\"type\":\"integer\"},\"fulfillment_service\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"variant_inventory_management\":{\"type\":\"string\"},\"discount_allocations\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"current_quantity\":{\"type\":\"integer\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"properties\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"duties\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}}}},\"original_total_duties_set\":{\"type\":\"string\"},\"presentment_currency\":{\"type\":\"string\"},\"total_discounts_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"location_id\":{\"type\":\"string\"},\"source_url\":{\"type\":\"string\"},\"landing_site\":{\"type\":\"string\"},\"source_identifier\":{\"type\":\"string\"},\"reference\":{\"type\":\"string\"},\"number\":{\"type\":\"integer\"},\"checkout_id\":{\"type\":\"string\"},\"checkout_token\":{\"type\":\"string\"},\"tax_lines\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"channel_liable\":{\"type\":\"boolean\"},\"rate\":{\"type\":\"number\"},\"price\":{\"type\":\"string\"},\"title\":{\"type\":\"string\"},\"price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}}}}},\"current_total_discounts\":{\"type\":\"string\"},\"merchant_of_record_app_id\":{\"type\":\"string\"},\"customer_locale\":{\"type\":\"string\"},\"current_total_additional_fees_set\":{\"type\":\"string\"},\"id\":{\"type\":\"integer\"},\"app_id\":{\"type\":\"integer\"},\"subtotal_price\":{\"type\":\"string\"},\"closed_at\":{\"type\":\"string\"},\"order_status_url\":{\"type\":\"string\"},\"current_total_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"device_id\":{\"type\":\"string\"},\"test\":{\"type\":\"boolean\"},\"total_shipping_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"subtotal_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"tax_exempt\":{\"type\":\"boolean\"},\"payment_gateway_names\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"total_tax\":{\"type\":\"string\"},\"tags\":{\"type\":\"string\"},\"current_subtotal_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"current_total_tax\":{\"type\":\"string\"},\"shipping_lines\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"phone\":{\"type\":\"string\"},\"user_id\":{\"type\":\"string\"},\"note_attributes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"name\":{\"type\":\"string\"},\"cart_token\":{\"type\":\"string\"},\"total_tax_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"landing_site_ref\":{\"type\":\"string\"},\"discount_codes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"estimated_taxes\":{\"type\":\"boolean\"},\"note\":{\"type\":\"string\"},\"current_subtotal_price\":{\"type\":\"string\"},\"current_total_tax_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"total_outstanding\":{\"type\":\"string\"},\"order_number\":{\"type\":\"integer\"},\"discount_applications\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"created_at\":{\"type\":\"string\"},\"total_line_items_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"taxes_included\":{\"type\":\"boolean\"},\"buyer_accepts_marketing\":{\"type\":\"boolean\"},\"payment_terms\":{\"type\":\"string\"},\"confirmed\":{\"type\":\"boolean\"},\"total_weight\":{\"type\":\"integer\"},\"contact_email\":{\"type\":\"string\"},\"refunds\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"total_discounts\":{\"type\":\"string\"},\"fulfillments\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"client_details\":{\"type\":\"string\"},\"po_number\":{\"type\":\"string\"},\"referring_site\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"processed_at\":{\"type\":\"string\"},\"company\":{\"type\":\"string\"},\"currency\":{\"type\":\"string\"},\"browser_ip\":{\"type\":\"string\"},\"email\":{\"type\":\"string\"},\"source_name\":{\"type\":\"string\"},\"total_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}}}}},\"current_total_duties_set\":{\"type\":\"string\"},\"total_price\":{\"type\":\"string\"},\"total_line_items_price\":{\"type\":\"string\"},\"total_tip_received\":{\"type\":\"string\"},\"token\":{\"type\":\"string\"},\"cancel_reason\":{\"type\":\"string\"},\"current_total_price\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"financial_status\":{\"type\":\"string\"},\"customer\":{\"type\":\"string\"}}}}},\"url\":{\"type\":\"object\",\"required\":[\"orderId\"],\"properties\":{\"orderId\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"order\":{\"cancelled_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"confirmation_number\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"fulfillment_status\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"original_total_additional_fees_set\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"current_total_discounts_set\":{\"shop_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"presentment_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"billing_address\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"line_items\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"original_total_duties_set\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"presentment_currency\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"total_discounts_set\":{\"shop_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"presentment_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"location_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"source_url\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"landing_site\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"source_identifier\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"reference\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"number\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"checkout_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"checkout_token\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"tax_lines\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"current_total_discounts\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"merchant_of_record_app_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"customer_locale\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"current_total_additional_fees_set\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"app_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"subtotal_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"closed_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"order_status_url\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"current_total_price_set\":{\"shop_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"presentment_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"device_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"test\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"total_shipping_price_set\":{\"shop_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"presentment_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"subtotal_price_set\":{\"shop_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"presentment_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"tax_exempt\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"payment_gateway_names\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"total_tax\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"tags\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"current_subtotal_price_set\":{\"shop_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"presentment_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"current_total_tax\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"shipping_lines\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"phone\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"user_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"note_attributes\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"cart_token\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"total_tax_set\":{\"shop_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"presentment_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"landing_site_ref\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"discount_codes\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"estimated_taxes\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"note\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"current_subtotal_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"current_total_tax_set\":{\"shop_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"presentment_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"total_outstanding\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"order_number\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"discount_applications\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"created_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"total_line_items_price_set\":{\"shop_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"presentment_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"taxes_included\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"buyer_accepts_marketing\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"payment_terms\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"confirmed\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"total_weight\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"contact_email\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"refunds\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"total_discounts\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"fulfillments\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"client_details\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"po_number\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"referring_site\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"updated_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"processed_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"company\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"browser_ip\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"email\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"source_name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"total_price_set\":{\"shop_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"presentment_money\":{\"amount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"currency_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"current_total_duties_set\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"total_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"total_line_items_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"total_tip_received\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"token\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"cancel_reason\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"current_total_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"admin_graphql_api_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"financial_status\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"customer\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"url\":{\"orderId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-04/orders/{{url.orderId}}.json\",\"method\":\"PUT\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"bulkHeaders\":\"\",\"bulkParams\":\"\",\"hasBulkHeaders\":false,\"hasBulkParams\":false,\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.405Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2oOgrdj0FEkHACuMJAUGZ6Glfxe",
+      "name": "getLocations",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.6",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body schema.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key value.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of your Shopify store.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"locations\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"address1\":{\"type\":\"string\"},\"address2\":{\"type\":\"string\"},\"city\":{\"type\":\"string\"},\"zip\":{\"type\":\"string\"},\"province\":{\"type\":\"string\"},\"country\":{\"type\":\"string\"},\"phone\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"country_code\":{\"type\":\"string\"},\"country_name\":{\"type\":\"string\"},\"province_code\":{\"type\":\"string\"},\"legacy\":{\"type\":\"boolean\"},\"active\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"localized_country_name\":{\"type\":\"string\"},\"localized_province_name\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-01/locations.json\",\"method\":\"GET\",\"headers\":[],\"params\":[],\"body\":\"{}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.377Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2oRnlRQRxQjURfIvuvFVqEuCGIp",
+      "name": "getInventoryLevels",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.8",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of the Shopify store.\"}}},\"param\":{\"type\":\"object\",\"title\":\"Request Parameters\",\"description\":\"Parameters for the Shopify API request.\",\"properties\":{\"location_ids\":{\"type\":\"string\",\"title\":\"Location IDs\",\"description\":\"Comma-separated list of location IDs.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"location_ids\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"inventory_levels\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"inventory_item_id\":{\"type\":\"integer\"},\"location_id\":{\"type\":\"integer\"},\"available\":{\"type\":[\"null\",\"integer\"]},\"updated_at\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-10/inventory_levels.json\",\"method\":\"GET\",\"headers\":[],\"params\":[{\"key\":\"location_ids\",\"value\":\"{{param.location_ids}}\"}],\"body\":\"{}\",\"bulkHeaders\":\"\",\"bulkParams\":\"\",\"hasBulkHeaders\":false,\"hasBulkParams\":false,\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.354Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2oRoM9hSLxNzYBUR8nxjrRHw2Mg",
+      "name": "getInventoryItems",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API Key Value.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"Your Shopify store name.\"}}},\"param\":{\"type\":\"object\",\"title\":\"Request Parameters\",\"description\":\"Parameters for the Shopify API request.\",\"properties\":{\"ids\":{\"type\":\"string\",\"title\":\"IDs\",\"description\":\"IDs required for the Shopify API request.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"ids\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"inventory_items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"sku\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"requires_shipping\":{\"type\":\"boolean\"},\"cost\":{\"type\":\"string\"},\"country_code_of_origin\":{\"type\":\"string\"},\"province_code_of_origin\":{\"type\":\"string\"},\"harmonized_system_code\":{\"type\":\"string\"},\"tracked\":{\"type\":\"boolean\"},\"country_harmonized_system_codes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-10/inventory_items.json\",\"method\":\"GET\",\"headers\":[],\"params\":[{\"key\":\"ids\",\"value\":\"{{param.ids}}\"}],\"body\":\"{}\",\"bulkHeaders\":\"\",\"bulkParams\":\"\",\"hasBulkHeaders\":false,\"hasBulkParams\":false,\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.326Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2oUCMSKHGSPMxTW6fbfpIeWi2iA",
+      "name": "getBulkInventory",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.5",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key value.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of your Shopify store.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"currentBulkOperation\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"},\"errorCode\":{\"type\":\"string\"},\"createdAt\":{\"type\":\"string\"},\"completedAt\":{\"type\":\"string\"},\"objectCount\":{\"type\":\"string\"},\"fileSize\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"extensions\":{\"type\":\"object\",\"properties\":{\"cost\":{\"type\":\"object\",\"properties\":{\"requestedQueryCost\":{\"type\":\"integer\"},\"actualQueryCost\":{\"type\":\"integer\"},\"throttleStatus\":{\"type\":\"object\",\"properties\":{\"maximumAvailable\":{\"type\":\"integer\"},\"currentlyAvailable\":{\"type\":\"integer\"},\"restoreRate\":{\"type\":\"integer\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-10/graphql.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{\\n  \\\"query\\\": \\\"query {\\\\n  currentBulkOperation {\\\\n    id\\\\n    status\\\\n    errorCode\\\\n    createdAt\\\\n    completedAt\\\\n    objectCount\\\\n    fileSize\\\\n    url\\\\n  }\\\\n}\\\"\\n}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.279Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2oZN64M1D6uWRglFYimtQj0PQfr",
+      "name": "getFulfillmentOrder",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body for Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Shopify API request.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key for authenticating with the Shopify store.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of the Shopify store.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"Parameters related to the URL for the Shopify API request.\",\"required\":[\"orderId\"],\"properties\":{\"orderId\":{\"type\":\"string\",\"title\":\"Order ID\",\"description\":\"The ID of the order.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"orderId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"fulfillment_orders\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"shop_id\":{\"type\":\"integer\"},\"order_id\":{\"type\":\"integer\"},\"assigned_location_id\":{\"type\":\"integer\"},\"request_status\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"},\"fulfill_at\":{\"type\":\"string\"},\"supported_actions\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"destination\":{\"type\":\"string\"},\"line_items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"shop_id\":{\"type\":\"integer\"},\"fulfillment_order_id\":{\"type\":\"integer\"},\"quantity\":{\"type\":\"integer\"},\"line_item_id\":{\"type\":\"integer\"},\"inventory_item_id\":{\"type\":\"string\"},\"fulfillable_quantity\":{\"type\":\"integer\"},\"variant_id\":{\"type\":\"string\"}},\"required\":[]}},\"international_duties\":{\"type\":\"string\"},\"fulfillment_holds\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"fulfill_by\":{\"type\":\"string\"},\"delivery_method\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"method_type\":{\"type\":\"string\"},\"min_delivery_date_time\":{\"type\":\"string\"},\"max_delivery_date_time\":{\"type\":\"string\"}},\"required\":[]},\"assigned_location\":{\"type\":\"object\",\"properties\":{\"address1\":{\"type\":\"string\"},\"address2\":{\"type\":\"string\"},\"city\":{\"type\":\"string\"},\"country_code\":{\"type\":\"string\"},\"location_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"phone\":{\"type\":\"string\"},\"province\":{\"type\":\"string\"},\"zip\":{\"type\":\"string\"}},\"required\":[]},\"merchant_requests\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-01/orders/{{url.orderId}}/fulfillment_orders.json\",\"method\":\"GET\",\"headers\":[],\"params\":[],\"body\":\"{}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.258Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2oaTEIfawz94910bAB2mlYsHxPL",
+      "name": "moveFulfillmentOrder",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.6",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Shopify API request.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of the Shopify store.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Data related to the request body for the Shopify endpoint.\",\"required\":[\"fulfillmentOrderId\",\"newLocationId\"],\"properties\":{\"fulfillmentOrderId\":{\"type\":\"string\",\"title\":\"Fulfillment Order ID\",\"description\":\"The ID of the fulfillment order.\"},\"lineitems\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"quantity\":{\"type\":\"string\",\"title\":\"Quantity\",\"description\":\"The quantity of the line item.\"},\"id\":{\"type\":\"string\",\"title\":\"Line Item ID\",\"description\":\"The ID of the line item.\"}}}},\"newLocationId\":{\"type\":\"string\",\"title\":\"New Location ID\",\"description\":\"The ID of the new location for the fulfillment.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"fulfillmentOrderId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"lineitems\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"newLocationId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"fulfillmentOrderMove\":{\"type\":\"object\",\"properties\":{\"movedFulfillmentOrder\":{\"type\":\"string\"},\"remainingFulfillmentOrder\":{\"type\":\"string\"},\"userErrors\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"message\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}},\"required\":[]},\"extensions\":{\"type\":\"object\",\"properties\":{\"cost\":{\"type\":\"object\",\"properties\":{\"requestedQueryCost\":{\"type\":\"integer\"},\"actualQueryCost\":{\"type\":\"integer\"},\"throttleStatus\":{\"type\":\"object\",\"properties\":{\"maximumAvailable\":{\"type\":\"number\"},\"currentlyAvailable\":{\"type\":\"integer\"},\"restoreRate\":{\"type\":\"number\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-01/graphql.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{\\n  \\\"query\\\": \\\"mutation fulfillmentOrderMove($id: ID!, $newLocationId: ID!, $lineItems: [FulfillmentOrderLineItemInput!]) { fulfillmentOrderMove(id: $id, newLocationId: $newLocationId, fulfillmentOrderLineItems: $lineItems) { movedFulfillmentOrder { id assignedLocation { name } } remainingFulfillmentOrder { id assignedLocation { name } } userErrors { field message } } }\\\",\\n  \\\"variables\\\": {\\n    \\\"id\\\": \\\"{{body.fulfillmentOrderId}}\\\",\\n    \\\"newLocationId\\\": \\\"{{body.newLocationId}}\\\",\\n    \\\"lineItems\\\": {{ body.lineitems | shape }}\\n  }\\n}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.239Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2oaUIPdRudEcUmycXQdvU0IsobU",
+      "name": "createFulfillment",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.6",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema for the Shopify endpoint.\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Shopify API request.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of the Shopify store.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Data related to the request body for the Shopify API.\",\"required\":[\"lineItemsByFulfillmentOrder\"],\"properties\":{\"trackingInfo\":{\"type\":\"object\",\"title\":\"Tracking Information\",\"description\":\"Tracking information for the shipment.\",\"properties\":{\"number\":{\"type\":\"string\",\"title\":\"Tracking Number\",\"description\":\"The tracking number for the shipment.\"},\"company\":{\"type\":\"string\",\"title\":\"Shipping Company\",\"description\":\"The name of the shipping company.\"},\"url\":{\"type\":\"string\",\"title\":\"Tracking URL\",\"description\":\"URL to track the shipment.\"}}},\"notifyCustomer\":{\"title\":\"Notify Customer\",\"description\":\"Whether to notify the customer about the shipment.\",\"type\":\"boolean\"},\"lineItemsByFulfillmentOrder\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"required\":[\"fulfillmentOrderId\"],\"properties\":{\"fulfillmentOrderId\":{\"type\":\"string\",\"title\":\"Fulfillment Order ID\",\"description\":\"The ID of the fulfillment order.\"}}}}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"trackingInfo\":{\"number\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"company\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"url\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"notifyCustomer\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"lineItemsByFulfillmentOrder\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"fulfillmentCreateV2\":{\"type\":\"object\",\"properties\":{\"fulfillment\":{\"type\":\"string\"},\"userErrors\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"message\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}},\"required\":[]},\"extensions\":{\"type\":\"object\",\"properties\":{\"cost\":{\"type\":\"object\",\"properties\":{\"requestedQueryCost\":{\"type\":\"integer\"},\"actualQueryCost\":{\"type\":\"integer\"},\"throttleStatus\":{\"type\":\"object\",\"properties\":{\"maximumAvailable\":{\"type\":\"number\"},\"currentlyAvailable\":{\"type\":\"integer\"},\"restoreRate\":{\"type\":\"number\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-01/graphql.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{\\n  \\\"query\\\": \\\"mutation fulfillmentCreateV2($fulfillment: FulfillmentV2Input!) { fulfillmentCreateV2(fulfillment: $fulfillment) { fulfillment { id status } userErrors { field message } } }\\\",\\n  \\\"variables\\\": {\\n    \\\"fulfillment\\\": {\\n      \\\"lineItemsByFulfillmentOrder\\\": {{body.lineItemsByFulfillmentOrder | shape}},\\n      \\\"trackingInfo\\\": {\\n        \\\"number\\\": \\\"{{body.trackingInfo.number}}\\\",\\n        \\\"url\\\": \\\"{{body.trackingInfo.url}}\\\",\\n        \\\"company\\\": \\\"{{body.trackingInfo.company}}\\\"\\n      },\\n      \\\"notifyCustomer\\\": {{body.notifyCustomer}}\\n    }\\n  }\\n}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.218Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2ofJ8wnNOpWQwKFqneWlumBAhC9",
+      "name": "getOrders",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.5",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of the Shopify store.\"}}},\"param\":{\"type\":\"object\",\"title\":\"Request Parameters\",\"description\":\"Parameters for the Shopify API request.\",\"properties\":{\"name\":{\"type\":\"string\",\"title\":\"Parameter Name\",\"description\":\"A parameter name.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"orders\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"app_id\":{\"type\":\"integer\"},\"browser_ip\":{\"type\":\"string\"},\"buyer_accepts_marketing\":{\"type\":\"boolean\"},\"cancel_reason\":{\"type\":\"string\"},\"cancelled_at\":{\"type\":\"string\"},\"cart_token\":{\"type\":\"string\"},\"checkout_id\":{\"type\":\"string\"},\"checkout_token\":{\"type\":\"string\"},\"client_details\":{\"type\":\"string\"},\"closed_at\":{\"type\":\"string\"},\"company\":{\"type\":\"string\"},\"confirmation_number\":{\"type\":\"string\"},\"confirmed\":{\"type\":\"boolean\"},\"contact_email\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"currency\":{\"type\":\"string\"},\"current_subtotal_price\":{\"type\":\"string\"},\"current_subtotal_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"current_total_additional_fees_set\":{\"type\":\"string\"},\"current_total_discounts\":{\"type\":\"string\"},\"current_total_discounts_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"current_total_duties_set\":{\"type\":\"string\"},\"current_total_price\":{\"type\":\"string\"},\"current_total_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"current_total_tax\":{\"type\":\"string\"},\"current_total_tax_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"customer_locale\":{\"type\":\"string\"},\"device_id\":{\"type\":\"string\"},\"discount_codes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"email\":{\"type\":\"string\"},\"estimated_taxes\":{\"type\":\"boolean\"},\"financial_status\":{\"type\":\"string\"},\"fulfillment_status\":{\"type\":\"string\"},\"landing_site\":{\"type\":\"string\"},\"landing_site_ref\":{\"type\":\"string\"},\"location_id\":{\"type\":\"string\"},\"merchant_of_record_app_id\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"note\":{\"type\":\"string\"},\"note_attributes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"number\":{\"type\":\"integer\"},\"order_number\":{\"type\":\"integer\"},\"order_status_url\":{\"type\":\"string\"},\"original_total_additional_fees_set\":{\"type\":\"string\"},\"original_total_duties_set\":{\"type\":\"string\"},\"payment_gateway_names\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"phone\":{\"type\":\"string\"},\"po_number\":{\"type\":\"string\"},\"presentment_currency\":{\"type\":\"string\"},\"processed_at\":{\"type\":\"string\"},\"reference\":{\"type\":\"string\"},\"referring_site\":{\"type\":\"string\"},\"source_identifier\":{\"type\":\"string\"},\"source_name\":{\"type\":\"string\"},\"source_url\":{\"type\":\"string\"},\"subtotal_price\":{\"type\":\"string\"},\"subtotal_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"tags\":{\"type\":\"string\"},\"tax_exempt\":{\"type\":\"boolean\"},\"tax_lines\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"price\":{\"type\":\"string\"},\"rate\":{\"type\":\"number\"},\"title\":{\"type\":\"string\"},\"price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"channel_liable\":{\"type\":\"boolean\"}},\"required\":[]}},\"taxes_included\":{\"type\":\"boolean\"},\"test\":{\"type\":\"boolean\"},\"token\":{\"type\":\"string\"},\"total_discounts\":{\"type\":\"string\"},\"total_discounts_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"total_line_items_price\":{\"type\":\"string\"},\"total_line_items_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"total_outstanding\":{\"type\":\"string\"},\"total_price\":{\"type\":\"string\"},\"total_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"total_shipping_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"total_tax\":{\"type\":\"string\"},\"total_tax_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"total_tip_received\":{\"type\":\"string\"},\"total_weight\":{\"type\":\"integer\"},\"updated_at\":{\"type\":\"string\"},\"user_id\":{\"type\":\"string\"},\"billing_address\":{\"type\":\"string\"},\"customer\":{\"type\":\"string\"},\"discount_applications\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"fulfillments\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"line_items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"attributed_staffs\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"current_quantity\":{\"type\":\"integer\"},\"fulfillable_quantity\":{\"type\":\"integer\"},\"fulfillment_service\":{\"type\":\"string\"},\"fulfillment_status\":{\"type\":\"string\"},\"gift_card\":{\"type\":\"boolean\"},\"grams\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"product_exists\":{\"type\":\"boolean\"},\"product_id\":{\"type\":\"string\"},\"properties\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"sku\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"title\":{\"type\":\"string\"},\"total_discount\":{\"type\":\"string\"},\"total_discount_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"variant_id\":{\"type\":\"string\"},\"variant_inventory_management\":{\"type\":\"string\"},\"variant_title\":{\"type\":\"string\"},\"vendor\":{\"type\":\"string\"},\"tax_lines\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"channel_liable\":{\"type\":\"boolean\"},\"price\":{\"type\":\"string\"},\"price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"rate\":{\"type\":\"number\"},\"title\":{\"type\":\"string\"}},\"required\":[]}},\"duties\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"discount_allocations\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"payment_terms\":{\"type\":\"string\"},\"refunds\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"shipping_address\":{\"type\":\"string\"},\"shipping_lines\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-04/orders.json\",\"method\":\"GET\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[{\"key\":\"name\",\"value\":\"{{param.name}}\"}],\"body\":\"{}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.188Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2ooih71uSpSRBpQx4ZWf6A3EnXb",
+      "name": "getProductsGraphQL",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.5",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key value.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of your Shopify store.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Data payload for the Shopify API request.\",\"required\":[\"query\"],\"properties\":{\"query\":{\"type\":\"string\",\"title\":\"Query\",\"description\":\"The query string for the Shopify API request.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"query\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"products\":{\"type\":\"object\",\"properties\":{\"edges\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"node\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"title\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"featuredImage\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"}},\"required\":[]},\"images\":{\"type\":\"object\",\"properties\":{\"nodes\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]},\"isGiftCard\":{\"type\":\"boolean\"},\"productCategory\":{},\"productType\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"},\"variants\":{\"type\":\"object\",\"properties\":{\"nodes\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"availableForSale\":{\"type\":\"boolean\"},\"id\":{\"type\":\"string\"},\"sku\":{\"type\":[\"string\",\"null\"]},\"displayName\":{\"type\":\"string\"},\"image\":{},\"inventoryQuantity\":{\"type\":\"integer\"},\"media\":{\"type\":\"object\",\"properties\":{\"nodes\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"preview\":{\"type\":\"object\",\"properties\":{\"image\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}}},\"required\":[]},\"price\":{\"type\":\"string\"},\"productVariantComponents\":{\"type\":\"object\",\"properties\":{\"nodes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]},\"title\":{\"type\":\"string\"},\"sellableOnlineQuantity\":{\"type\":\"integer\"}},\"required\":[]}}},\"required\":[]},\"media\":{\"type\":\"object\",\"properties\":{\"nodes\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"alt\":{\"type\":\"string\"},\"preview\":{\"type\":\"object\",\"properties\":{\"image\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}}},\"required\":[]},\"collections\":{\"type\":\"object\",\"properties\":{\"nodes\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"pageInfo\":{\"type\":\"object\",\"properties\":{\"hasNextPage\":{\"type\":\"boolean\"},\"endCursor\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]},\"extensions\":{\"type\":\"object\",\"properties\":{\"cost\":{\"type\":\"object\",\"properties\":{\"requestedQueryCost\":{\"type\":\"integer\"},\"actualQueryCost\":{\"type\":\"integer\"},\"throttleStatus\":{\"type\":\"object\",\"properties\":{\"maximumAvailable\":{\"type\":\"integer\"},\"currentlyAvailable\":{\"type\":\"integer\"},\"restoreRate\":{\"type\":\"integer\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-07/graphql.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"bulkHeaders\":\"\",\"bulkParams\":\"\",\"hasBulkHeaders\":false,\"hasBulkParams\":false,\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.160Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2sih52U9dxxTpOdYhieA6e8GkhO",
+      "name": "createStagedUploadURL",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.1.0",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema for Shopify endpoint.\",\"required\":[\"filename\",\"resource\",\"mimeType\",\"httpMethod\"],\"properties\":{\"filename\":{\"type\":\"string\",\"title\":\"Filename\",\"description\":\"Name of the file being uploaded or processed.\"},\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication credentials for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key value.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of your Shopify store.\"}}},\"resource\":{\"type\":\"string\",\"title\":\"Resource\",\"description\":\"The Shopify API resource being accessed (e.g., products, orders).\"},\"mimeType\":{\"type\":\"string\",\"title\":\"MIME Type\",\"description\":\"MIME type of the file (e.g., application/json, image/jpeg).\"},\"httpMethod\":{\"type\":\"string\",\"title\":\"HTTP Method\",\"description\":\"HTTP method used for the request (e.g., GET, POST, PUT, DELETE).\"}}}",
+            "uiSchema": "{\"filename\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"resource\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"mimeType\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"httpMethod\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"stagedUploadsCreate\":{\"type\":\"object\",\"properties\":{\"stagedTargets\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"},\"resourceUrl\":{\"type\":\"string\"},\"parameters\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"value\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}}},\"required\":[]}},\"required\":[]},\"extensions\":{\"type\":\"object\",\"properties\":{\"cost\":{\"type\":\"object\",\"properties\":{\"requestedQueryCost\":{\"type\":\"integer\"},\"actualQueryCost\":{\"type\":\"integer\"},\"throttleStatus\":{\"type\":\"object\",\"properties\":{\"maximumAvailable\":{\"type\":\"number\"},\"currentlyAvailable\":{\"type\":\"integer\"},\"restoreRate\":{\"type\":\"number\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2025-01/graphql.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{\\n  \\\"query\\\": \\\"mutation stagedUploadsCreate($input: [StagedUploadInput!]!) { stagedUploadsCreate(input: $input) { stagedTargets { url resourceUrl parameters { name value } } } }\\\",\\n  \\\"variables\\\": {\\n    \\\"input\\\": [\\n      {\\n        \\\"filename\\\": \\\"{{filename}}\\\",\\n        \\\"mimeType\\\": \\\"{{mimeType}}\\\",\\n        \\\"httpMethod\\\": \\\"{{httpMethod}}\\\",\\n        \\\"resource\\\": \\\"{{resource}}\\\"\\n      }\\n    ]\\n  }\\n}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.140Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2sivSSZrG8soCYgEiCmT4oBJ9zJ",
+      "name": "bulkCreateProducts",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.9",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"\",\"description\":\"\",\"required\":[\"fileUrl\"],\"properties\":{\"auth\":{\"type\":\"object\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\"},\"storeName\":{\"type\":\"string\"}}},\"fileUrl\":{\"type\":\"string\"}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"fileUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"bulkOperationRunMutation\":{\"type\":\"object\",\"properties\":{\"bulkOperation\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"}},\"required\":[]},\"userErrors\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"required\":[]},\"extensions\":{\"type\":\"object\",\"properties\":{\"cost\":{\"type\":\"object\",\"properties\":{\"requestedQueryCost\":{\"type\":\"integer\"},\"actualQueryCost\":{\"type\":\"integer\"},\"throttleStatus\":{\"type\":\"object\",\"properties\":{\"maximumAvailable\":{\"type\":\"number\"},\"currentlyAvailable\":{\"type\":\"integer\"},\"restoreRate\":{\"type\":\"number\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-01/graphql.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{\\n  \\\"query\\\": \\\"mutation($fileUrl: String!) {\\\\n  bulkOperationRunMutation(\\\\n    mutation: \\\\\\\"mutation call($input: ProductInput!) { productCreate(input: $input) { product { id title variants(first: 10) { edges { node { id title inventoryQuantity } } } } userErrors { message field } } }\\\\\\\",\\\\n    stagedUploadPath: $fileUrl\\\\n  ) {\\\\n    bulkOperation {\\\\n      id\\\\n      url\\\\n      status\\\\n    }\\\\n    userErrors {\\\\n      message\\\\n      field\\\\n    }\\\\n  }\\\\n}\\\",\\n  \\\"variables\\\": {\\n    \\\"fileUrl\\\": \\\"{{fileUrl}}\\\"\\n  }\\n}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.120Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_a477b986-c20a-4fd6-ad5f-76c3c2b46009",
+      "name": "createProduct",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.6",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify Product Request\",\"description\":\"Shopify API request schema for creating or updating a product.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key\",\"description\":\"Your Shopify API key.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"Your Shopify store name.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Product Data\",\"description\":\"Product details to be created or updated.\",\"required\":[\"product\"],\"properties\":{\"product\":{\"type\":\"object\",\"title\":\"Product\",\"description\":\"Represents a Shopify product.\",\"properties\":{\"body_html\":{\"type\":\"string\",\"title\":\"Product Description (HTML)\",\"description\":\"The HTML content of the product description.\"},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of product images.\",\"properties\":{\"src\":{\"type\":\"string\",\"title\":\"Image URL\",\"description\":\"The URL of the product image.\"}}}},\"created_at\":{\"type\":\"string\",\"title\":\"Created At\",\"description\":\"Timestamp indicating when the product was created.\"},\"handle\":{\"type\":\"string\",\"title\":\"Product Handle\",\"description\":\"The unique handle for the product (used in URLs).\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of product variants.\",\"required\":[\"title\"],\"properties\":{\"presentment_prices\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of presentment prices for the variant.\",\"properties\":{\"compare_at_price\":{\"type\":\"null\",\"title\":\"Compare At Price\",\"description\":\"Compare at price (can be null).\"},\"price\":{\"type\":\"object\",\"title\":\"Price\",\"description\":\"Price details for the variant.\",\"properties\":{\"amount\":{\"type\":\"string\",\"title\":\"Price Amount\",\"description\":\"The price amount.\"},\"currency_code\":{\"type\":\"string\",\"title\":\"Currency Code\",\"description\":\"The currency code (e.g., USD).\"}}}}}},\"inventory_management\":{\"type\":\"null\",\"title\":\"Inventory Management\",\"description\":\"Inventory management setting (can be null).\"},\"old_inventory_quantity\":{\"type\":\"integer\",\"title\":\"Old Inventory Quantity\",\"description\":\"Previous inventory quantity.\"},\"requires_shipping\":{\"title\":\"Requires Shipping\",\"description\":\"Indicates if the variant requires shipping.\",\"type\":\"boolean\"},\"created_at\":{\"type\":\"string\",\"title\":\"Created At\",\"description\":\"Timestamp indicating when the variant was created.\"},\"title\":{\"type\":\"string\",\"title\":\"Variant Title\",\"description\":\"The title of the variant.\"},\"updated_at\":{\"type\":\"string\",\"title\":\"Updated At\",\"description\":\"Timestamp indicating when the variant was last updated.\"},\"inventory_item_id\":{\"type\":\"integer\",\"title\":\"Inventory Item ID\",\"description\":\"The ID of the inventory item.\"},\"price\":{\"type\":\"string\",\"title\":\"Price\",\"description\":\"The price of the variant.\"},\"option3\":{\"type\":\"string\",\"title\":\"Option 3\",\"description\":\"The value of the third option (if applicable).\"},\"option1\":{\"type\":\"string\",\"title\":\"Option 1\",\"description\":\"The value of the first option.\"},\"option2\":{\"type\":\"string\",\"title\":\"Option 2\",\"description\":\"The value of the second option (if applicable).\"},\"sku\":{\"type\":\"string\",\"title\":\"SKU\",\"description\":\"The SKU (Stock Keeping Unit) of the variant.\"},\"grams\":{\"type\":\"integer\",\"title\":\"Weight (grams)\",\"description\":\"The weight of the variant in grams.\"},\"barcode\":{\"type\":\"null\",\"title\":\"Barcode\",\"description\":\"Barcode (can be null).\"},\"inventory_quantity\":{\"type\":\"integer\",\"title\":\"Inventory Quantity\",\"description\":\"The current inventory quantity.\"},\"compare_at_price\":{\"type\":\"null\",\"title\":\"Compare At Price\",\"description\":\"Compare at price (can be null).\"},\"fulfillment_service\":{\"type\":\"string\",\"title\":\"Fulfillment Service\",\"description\":\"The fulfillment service used for the variant.\"},\"taxable\":{\"title\":\"Taxable\",\"description\":\"Indicates if the variant is taxable.\",\"type\":\"boolean\"},\"weight\":{\"type\":\"integer\",\"title\":\"Weight\",\"description\":\"The weight of the variant.\"},\"inventory_policy\":{\"type\":\"string\",\"title\":\"Inventory Policy\",\"description\":\"Inventory policy for the variant.\"},\"weight_unit\":{\"type\":\"string\",\"title\":\"Weight Unit\",\"description\":\"Unit of weight (e.g., kg, lb).\"},\"admin_graphql_api_id\":{\"type\":\"string\",\"title\":\"Admin GraphQL API ID\",\"description\":\"Admin GraphQL API ID.\"},\"position\":{\"type\":\"integer\",\"title\":\"Position\",\"description\":\"Position of the variant.\"},\"image_id\":{\"type\":\"null\",\"title\":\"Image ID\",\"description\":\"Image ID (can be null).\"}}}},\"title\":{\"type\":\"string\",\"title\":\"Product Title\",\"description\":\"The title of the product.\"},\"tags\":{\"type\":\"string\",\"title\":\"Product Tags\",\"description\":\"Tags associated with the product.\"},\"published_scope\":{\"type\":\"string\",\"title\":\"Published Scope\",\"description\":\"Scope of product publication.\"},\"product_type\":{\"type\":\"string\",\"title\":\"Product Type\",\"description\":\"The type of product.\"},\"template_suffix\":{\"type\":\"null\",\"title\":\"Template Suffix\",\"description\":\"Template suffix (can be null).\"},\"updated_at\":{\"type\":\"string\",\"title\":\"Updated At\",\"description\":\"Timestamp indicating when the product was last updated.\"},\"vendor\":{\"type\":\"string\",\"title\":\"Vendor\",\"description\":\"The vendor of the product.\"},\"admin_graphql_api_id\":{\"type\":\"string\",\"title\":\"Admin GraphQL API ID\",\"description\":\"Admin GraphQL API ID.\"},\"published_at\":{\"type\":\"string\",\"title\":\"Published At\",\"description\":\"Timestamp indicating when the product was published.\"},\"status\":{\"type\":\"string\",\"title\":\"Product Status\",\"description\":\"The status of the product (e.g., active, draft).\"}}}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"product\":{\"body_html\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"images\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"created_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"handle\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"variants\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"title\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"tags\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"published_scope\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"product_type\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"template_suffix\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"updated_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"vendor\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"admin_graphql_api_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"published_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"status\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"product\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"body_html\":{\"type\":\"string\"},\"vendor\":{\"type\":\"string\"},\"product_type\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"handle\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"published_at\":{\"type\":\"string\"},\"template_suffix\":{\"type\":\"string\"},\"published_scope\":{\"type\":\"string\"},\"tags\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"inventory_policy\":{\"type\":\"string\"},\"compare_at_price\":{\"type\":\"string\"},\"fulfillment_service\":{\"type\":\"string\"},\"inventory_management\":{\"type\":\"string\"},\"option1\":{\"type\":\"string\"},\"option2\":{\"type\":\"string\"},\"option3\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"barcode\":{\"type\":\"string\"},\"grams\":{\"type\":\"integer\"},\"image_id\":{\"type\":\"string\"},\"weight\":{\"type\":\"number\"},\"weight_unit\":{\"type\":\"string\"},\"inventory_item_id\":{\"type\":\"integer\"},\"inventory_quantity\":{\"type\":\"integer\"},\"old_inventory_quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"options\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"values\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"image\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-04/products.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"content-type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.091Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_d544d2dd-7fa1-40f9-9812-32d79e4b9279",
+      "name": "createVariant",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.6",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify Variant Update Request\",\"description\":\"Shopify API request schema for updating a variant.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key\",\"description\":\"Your Shopify API key.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"Your Shopify store name.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Variant Data\",\"description\":\"Data for the variant to be updated.\",\"properties\":{\"variant\":{\"type\":\"object\",\"title\":\"Variant\",\"description\":\"Details of the variant.\",\"required\":[\"title\",\"price\",\"option1\",\"sku\"],\"properties\":{\"compare_at_price\":{\"type\":\"string\",\"title\":\"Compare At Price\",\"description\":\"Compare at price of the variant.\"},\"fulfillment_service\":{\"type\":\"string\",\"title\":\"Fulfillment Service\",\"description\":\"Fulfillment service for the variant.\"},\"inventory_management\":{\"type\":\"string\",\"title\":\"Inventory Management\",\"description\":\"Inventory management settings for the variant.\"},\"taxable\":{\"title\":\"Taxable\",\"description\":\"Indicates if the variant is taxable.\",\"type\":\"boolean\"},\"old_inventory_quantity\":{\"type\":\"integer\",\"title\":\"Old Inventory Quantity\",\"description\":\"Previous inventory quantity.\"},\"requires_shipping\":{\"title\":\"Requires Shipping\",\"description\":\"Indicates if the variant requires shipping.\",\"type\":\"boolean\"},\"created_at\":{\"type\":\"string\",\"title\":\"Created At\",\"description\":\"Date and time the variant was created.\"},\"weight\":{\"type\":\"integer\",\"title\":\"Weight\",\"description\":\"Weight of the variant.\"},\"title\":{\"type\":\"string\",\"title\":\"Variant Title\",\"description\":\"Title of the variant.\"},\"inventory_policy\":{\"type\":\"string\",\"title\":\"Inventory Policy\",\"description\":\"Inventory policy for the variant.\"},\"tax_code\":{\"type\":\"string\",\"title\":\"Tax Code\",\"description\":\"Tax code for the variant.\"},\"updated_at\":{\"type\":\"string\",\"title\":\"Updated At\",\"description\":\"Date and time the variant was last updated.\"},\"weight_unit\":{\"type\":\"string\",\"title\":\"Weight Unit\",\"description\":\"Unit of weight for the variant.\"},\"inventory_item_id\":{\"type\":\"integer\",\"title\":\"Inventory Item ID\",\"description\":\"ID of the inventory item.\"},\"price\":{\"type\":\"string\",\"title\":\"Price\",\"description\":\"Price of the variant.\"},\"product_id\":{\"type\":\"integer\",\"title\":\"Product ID\",\"description\":\"ID of the product.\"},\"option1\":{\"type\":\"string\",\"title\":\"Option 1\",\"description\":\"First option value for the variant.\"},\"id\":{\"type\":\"integer\",\"title\":\"Variant ID\",\"description\":\"ID of the variant.\"},\"position\":{\"type\":\"integer\",\"title\":\"Position\",\"description\":\"Position of the variant.\"},\"grams\":{\"type\":\"integer\",\"title\":\"Weight (grams)\",\"description\":\"Weight of the variant in grams.\"},\"image_id\":{\"type\":\"null\",\"title\":\"Image ID\",\"description\":\"Image ID (currently null).\"},\"sku\":{\"type\":\"string\",\"title\":\"SKU\",\"description\":\"SKU of the variant.\"},\"barcode\":{\"type\":\"string\",\"title\":\"Barcode\",\"description\":\"Barcode of the variant.\"}}}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the request.\",\"required\":[\"productId\"],\"properties\":{\"productId\":{\"type\":\"string\",\"title\":\"Product ID\",\"description\":\"ID of the product the variant belongs to.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"variant\":{\"compare_at_price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"fulfillment_service\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_management\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"taxable\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"old_inventory_quantity\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"requires_shipping\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"created_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"weight\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"title\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_policy\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"tax_code\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"updated_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"weight_unit\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_item_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"price\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"product_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"option1\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"position\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"grams\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"image_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"sku\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"barcode\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"url\":{\"productId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"variant\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"inventory_policy\":{\"type\":\"string\"},\"compare_at_price\":{\"type\":\"string\"},\"fulfillment_service\":{\"type\":\"string\"},\"inventory_management\":{\"type\":\"string\"},\"option1\":{\"type\":\"string\"},\"option2\":{\"type\":\"string\"},\"option3\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"barcode\":{\"type\":\"string\"},\"grams\":{\"type\":\"integer\"},\"image_id\":{\"type\":\"string\"},\"weight\":{\"type\":\"number\"},\"weight_unit\":{\"type\":\"string\"},\"inventory_item_id\":{\"type\":\"integer\"},\"inventory_quantity\":{\"type\":\"integer\"},\"old_inventory_quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-04/products/{{url.productId}}/variants.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"content-type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.063Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_d5b4aa52-d667-4630-b23e-a759569e5b45",
+      "name": "updateProduct",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.6",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema for Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"Your Shopify store name.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Request body for creating or updating a Shopify product.\",\"properties\":{\"product\":{\"type\":\"object\",\"title\":\"Product Details\",\"description\":\"Details of the Shopify product.\",\"properties\":{\"body_html\":{\"type\":\"string\",\"title\":\"Product Description (HTML)\",\"description\":\"HTML content for the product description.\"},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of product images.\",\"properties\":{\"src\":{\"type\":\"string\",\"title\":\"Image URL\",\"description\":\"Image URL.\"}}}},\"created_at\":{\"type\":\"string\",\"title\":\"Created At\",\"description\":\"Timestamp of product creation.\"},\"handle\":{\"type\":\"string\",\"title\":\"Product Handle\",\"description\":\"Unique handle for the product.\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of product variants.\",\"required\":[\"title\"],\"properties\":{\"presentment_prices\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of presentment prices for the variant.\",\"properties\":{\"compare_at_price\":{\"type\":\"null\",\"title\":\"Compare At Price\",\"description\":\"Comparison price (null if not applicable).\"},\"price\":{\"type\":\"object\",\"title\":\"Price Details\",\"description\":\"Price details for the variant.\",\"properties\":{\"amount\":{\"type\":\"string\",\"title\":\"Price Amount\",\"description\":\"Price amount.\"},\"currency_code\":{\"type\":\"string\",\"title\":\"Currency Code\",\"description\":\"Currency code.\"}}}}}},\"inventory_management\":{\"type\":\"null\",\"title\":\"Inventory Management\",\"description\":\"Inventory management setting (null if not applicable).\"},\"old_inventory_quantity\":{\"type\":\"integer\",\"title\":\"Old Inventory Quantity\",\"description\":\"Previous inventory quantity.\"},\"requires_shipping\":{\"title\":\"Requires Shipping\",\"description\":\"Indicates if the variant requires shipping.\",\"type\":\"boolean\"},\"created_at\":{\"type\":\"string\",\"title\":\"Created At\",\"description\":\"Timestamp of variant creation.\"},\"title\":{\"type\":\"string\",\"title\":\"Variant Title\",\"description\":\"Title of the variant.\"},\"updated_at\":{\"type\":\"string\",\"title\":\"Updated At\",\"description\":\"Timestamp of variant update.\"},\"inventory_item_id\":{\"type\":\"integer\",\"title\":\"Inventory Item ID\",\"description\":\"ID of the inventory item.\"},\"price\":{\"type\":\"string\",\"title\":\"Variant Price\",\"description\":\"Price of the variant.\"},\"product_id\":{\"type\":\"integer\",\"title\":\"Product ID\",\"description\":\"ID of the parent product.\"},\"option3\":{\"type\":\"null\",\"title\":\"Option 3\",\"description\":\"Third option value (null if not applicable).\"},\"option1\":{\"type\":\"string\",\"title\":\"Option 1\",\"description\":\"First option value.\"},\"id\":{\"type\":\"integer\",\"title\":\"Variant ID\",\"description\":\"ID of the variant.\"},\"option2\":{\"type\":\"null\",\"title\":\"Option 2\",\"description\":\"Second option value (null if not applicable).\"},\"sku\":{\"type\":\"string\",\"title\":\"SKU\",\"description\":\"SKU of the variant.\"},\"grams\":{\"type\":\"integer\",\"title\":\"Weight (grams)\",\"description\":\"Weight in grams.\"},\"barcode\":{\"type\":\"null\",\"title\":\"Barcode\",\"description\":\"Barcode (null if not applicable).\"},\"inventory_quantity\":{\"type\":\"integer\",\"title\":\"Inventory Quantity\",\"description\":\"Current inventory quantity.\"},\"compare_at_price\":{\"type\":\"null\",\"title\":\"Compare At Price\",\"description\":\"Comparison price (null if not applicable).\"},\"fulfillment_service\":{\"type\":\"string\",\"title\":\"Fulfillment Service\",\"description\":\"Fulfillment service.\"},\"taxable\":{\"title\":\"Taxable\",\"description\":\"Indicates if the variant is taxable.\",\"type\":\"boolean\"},\"weight\":{\"type\":\"integer\",\"title\":\"Weight\",\"description\":\"Weight.\"},\"inventory_policy\":{\"type\":\"string\",\"title\":\"Inventory Policy\",\"description\":\"Inventory policy.\"},\"weight_unit\":{\"type\":\"string\",\"title\":\"Weight Unit\",\"description\":\"Weight unit.\"},\"admin_graphql_api_id\":{\"type\":\"string\",\"title\":\"Admin GraphQL API ID\",\"description\":\"Admin GraphQL API ID.\"},\"position\":{\"type\":\"integer\",\"title\":\"Position\",\"description\":\"Position of the variant.\"},\"image_id\":{\"type\":\"null\",\"title\":\"Image ID\",\"description\":\"Image ID (null if not applicable).\"}}}},\"title\":{\"type\":\"string\",\"title\":\"Product Title\",\"description\":\"Title of the product.\"},\"tags\":{\"type\":\"string\",\"title\":\"Product Tags\",\"description\":\"Tags for the product.\"},\"published_scope\":{\"type\":\"string\",\"title\":\"Published Scope\",\"description\":\"Published scope of the product.\"},\"product_type\":{\"type\":\"string\",\"title\":\"Product Type\",\"description\":\"Type of the product.\"},\"template_suffix\":{\"type\":\"null\",\"title\":\"Template Suffix\",\"description\":\"Template suffix (null if not applicable).\"},\"updated_at\":{\"type\":\"string\",\"title\":\"Updated At\",\"description\":\"Timestamp of product update.\"},\"vendor\":{\"type\":\"string\",\"title\":\"Vendor\",\"description\":\"Vendor of the product.\"},\"admin_graphql_api_id\":{\"type\":\"string\",\"title\":\"Admin GraphQL API ID\",\"description\":\"Admin GraphQL API ID.\"},\"options\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"Array of product options.\",\"properties\":{\"product_id\":{\"type\":\"integer\",\"title\":\"Product ID\",\"description\":\"ID of the product.\"},\"values\":{\"type\":\"array\",\"title\":\"Option Values\",\"description\":\"Array of option values.\",\"items\":{\"type\":\"string\"}},\"name\":{\"type\":\"string\",\"title\":\"Option Name\",\"description\":\"Name of the option.\"},\"id\":{\"type\":\"integer\",\"title\":\"Option ID\",\"description\":\"ID of the option.\"},\"position\":{\"type\":\"integer\",\"title\":\"Option Position\",\"description\":\"Position of the option.\"}}}},\"id\":{\"type\":\"integer\",\"title\":\"Product ID\",\"description\":\"ID of the product.\"},\"published_at\":{\"type\":\"string\",\"title\":\"Published At\",\"description\":\"Timestamp of product publishing.\"},\"status\":{\"type\":\"string\",\"title\":\"Product Status\",\"description\":\"Status of the product.\"}}}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Shopify API request.\",\"required\":[\"productId\"],\"properties\":{\"productId\":{\"type\":\"string\",\"title\":\"Product ID\",\"description\":\"ID of the product.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"product\":{\"body_html\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"images\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"created_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"handle\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"variants\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"title\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"tags\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"published_scope\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"product_type\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"template_suffix\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"updated_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"vendor\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"admin_graphql_api_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"options\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"published_at\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"status\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"url\":{\"productId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"product\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"body_html\":{\"type\":\"string\"},\"vendor\":{\"type\":\"string\"},\"product_type\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"handle\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"published_at\":{\"type\":\"string\"},\"template_suffix\":{\"type\":\"string\"},\"published_scope\":{\"type\":\"string\"},\"tags\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"inventory_policy\":{\"type\":\"string\"},\"compare_at_price\":{\"type\":\"string\"},\"fulfillment_service\":{\"type\":\"string\"},\"inventory_management\":{\"type\":\"string\"},\"option1\":{\"type\":\"string\"},\"option2\":{\"type\":\"string\"},\"option3\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"barcode\":{\"type\":\"string\"},\"grams\":{\"type\":\"integer\"},\"image_id\":{\"type\":\"string\"},\"weight\":{\"type\":\"number\"},\"weight_unit\":{\"type\":\"string\"},\"inventory_item_id\":{\"type\":\"integer\"},\"inventory_quantity\":{\"type\":\"integer\"},\"old_inventory_quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"options\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"values\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"image\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-04/products/{{url.productId}}.json\",\"method\":\"PUT\",\"headers\":[{\"key\":\"content-type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:58.031Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_productbyhandle",
+      "name": "getProductByHandle",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.6",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Shopify API.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key value.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"Your Shopify store name.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Shopify API request.\",\"required\":[\"handle\"],\"properties\":{\"handle\":{\"type\":\"string\",\"title\":\"Resource Handle\",\"description\":\"Handle of the Shopify resource.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"handle\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"products\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"body_html\":{\"type\":\"string\"},\"vendor\":{\"type\":\"string\"},\"product_type\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"handle\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"published_at\":{\"type\":\"string\"},\"template_suffix\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"},\"published_scope\":{\"type\":\"string\"},\"tags\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"inventory_policy\":{\"type\":\"string\"},\"compare_at_price\":{\"type\":\"string\"},\"fulfillment_service\":{\"type\":\"string\"},\"inventory_management\":{\"type\":\"string\"},\"option1\":{\"type\":\"string\"},\"option2\":{\"type\":\"string\"},\"option3\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"barcode\":{\"type\":\"string\"},\"grams\":{\"type\":\"integer\"},\"image_id\":{\"type\":\"string\"},\"weight\":{\"type\":\"number\"},\"weight_unit\":{\"type\":\"string\"},\"inventory_item_id\":{\"type\":\"integer\"},\"inventory_quantity\":{\"type\":\"integer\"},\"old_inventory_quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"options\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"values\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"image\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2023-04/products.json?handle={{url.handle}}\",\"method\":\"GET\",\"headers\":[],\"params\":[],\"body\":\"{}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:57.998Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_shopifydeleteproduct",
+      "name": "deleteProduct",
+      "imageUrl": "https://docs.vuestorefront.io/v2/integrations-logos/thumbnails/shopify.png",
+      "isCommunityCreated": false,
+      "version": "1.0.6",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request Body\",\"description\":\"Shopify API request body for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Shopify API request.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"Your Shopify API key value.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"Your Shopify store name.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"Parameters related to the URL for the Shopify API request.\",\"required\":[\"productId\"],\"properties\":{\"productId\":{\"type\":\"string\",\"title\":\"Product ID\",\"description\":\"The ID of the Shopify product.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"productId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2022-10/products/{{url.productId}}.json\",\"method\":\"DELETE\",\"headers\":[],\"params\":[],\"body\":\"{}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:57.980Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_shopifygetproduct",
+      "name": "getProduct",
+      "imageUrl": "https://docs.vuestorefront.io/v2/integrations-logos/thumbnails/shopify.png",
+      "isCommunityCreated": false,
+      "version": "1.0.6",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Shopify API Request\",\"description\":\"Shopify API request schema for the Shopify endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication information for the Shopify API request.\",\"required\":[\"apiKeyValue\",\"storeName\"],\"properties\":{\"apiKeyValue\":{\"type\":\"string\",\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\"},\"storeName\":{\"type\":\"string\",\"title\":\"Store Name\",\"description\":\"The name of the Shopify store.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"Parameters related to the URL for the Shopify API request.\",\"required\":[\"productId\"],\"properties\":{\"productId\":{\"type\":\"string\",\"title\":\"Product ID\",\"description\":\"The ID of the product.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"productId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"product\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"body_html\":{\"type\":\"string\"},\"vendor\":{\"type\":\"string\"},\"product_type\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"handle\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"published_at\":{\"type\":\"string\"},\"template_suffix\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"},\"published_scope\":{\"type\":\"string\"},\"tags\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"inventory_policy\":{\"type\":\"string\"},\"compare_at_price\":{\"type\":\"string\"},\"fulfillment_service\":{\"type\":\"string\"},\"inventory_management\":{\"type\":\"string\"},\"option1\":{\"type\":\"string\"},\"option2\":{\"type\":\"string\"},\"option3\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"barcode\":{\"type\":\"string\"},\"grams\":{\"type\":\"integer\"},\"image_id\":{\"type\":\"string\"},\"weight\":{\"type\":\"integer\"},\"weight_unit\":{\"type\":\"string\"},\"inventory_item_id\":{\"type\":\"integer\"},\"inventory_quantity\":{\"type\":\"integer\"},\"old_inventory_quantity\":{\"type\":\"integer\"},\"presentment_prices\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"price\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[\"amount\",\"currency_code\"]},\"compare_at_price\":{\"type\":\"string\"}},\"required\":[\"price\",\"compare_at_price\"]}},\"requires_shipping\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"options\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"values\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"position\":{\"type\":\"integer\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"alt\":{\"type\":\"string\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"src\":{\"type\":\"string\"},\"variant_ids\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"image\":{\"type\":\"object\",\"properties\":{\"created_at\":{\"type\":\"string\"},\"id\":{\"type\":\"integer\"},\"position\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"variant_ids\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"src\":{\"type\":\"string\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"updated_at\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[\"product\"]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2022-10/products/{{url.productId}}.json\",\"method\":\"GET\",\"headers\":[],\"params\":[],\"body\":\"{}\",\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\",\"awsSignature\":{},\"bearerToken\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2025-03-24T21:30:57.958Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2olNhAnzaMKAMgq9b4PWeazAkN8",
+      "name": "setInventoryLevel",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.2",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"\",\"description\":\"\",\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"properties\":{\"auth\":{\"type\":\"object\",\"properties\":{\"apiKeyValue\":{\"type\":\"string\"},\"storeName\":{\"type\":\"string\"}}},\"body\":{\"type\":\"object\",\"properties\":{\"inventory_item_id\":{\"type\":\"integer\"},\"available\":{\"type\":\"integer\"},\"location_id\":{\"type\":\"integer\"}}}}}",
+            "uiSchema": "{\"auth\":{\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"location_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inventory_item_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"available\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"inventory_level\":{\"type\":\"object\",\"properties\":{\"inventory_item_id\":{\"type\":\"integer\"},\"location_id\":{\"type\":\"integer\"},\"available\":{\"type\":\"integer\"},\"updated_at\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-10/inventory_levels/set.json\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\"},\"body\":\"{{body | shape}}\"}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2024-11-12T19:42:49.269Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2olM1k5L51ckP05mTLURKBWEQfq",
+      "name": "updateInventoryItem",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.2",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"\",\"description\":\"\",\"properties\":{\"auth\":{\"type\":\"object\",\"properties\":{\"apiKeyValue\":{\"type\":\"string\"},\"storeName\":{\"type\":\"string\"}}},\"body\":{\"type\":\"object\",\"properties\":{\"inventory_item\":{\"type\":\"object\",\"properties\":{\"sku\":{\"type\":\"string\"}}}}},\"url\":{\"type\":\"object\",\"properties\":{\"inventoryItemId\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"storeName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"apiKeyValue\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"inventoryItemId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"inventory_item\":{\"sku\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"inventory_item\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"sku\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"requires_shipping\":{\"type\":\"boolean\"},\"cost\":{\"type\":\"string\"},\"country_code_of_origin\":{\"type\":\"string\"},\"province_code_of_origin\":{\"type\":\"string\"},\"harmonized_system_code\":{\"type\":\"string\"},\"tracked\":{\"type\":\"boolean\"},\"country_harmonized_system_codes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.storeName}}.myshopify.com/admin/api/2024-10/inventory_items/{{url.inventoryItemId}}.json\",\"method\":\"PUT\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"authType\":\"APIKEY\",\"authConfig\":{\"authKey\":\"X-Shopify-Access-Token\",\"authValue\":\"{{auth.apiKeyValue}}\"},\"body\":\"{{body | shape}}\"}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-21T13:29:04.663Z",
+      "updatedAt": "2024-11-12T19:27:40.786Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  }
+]

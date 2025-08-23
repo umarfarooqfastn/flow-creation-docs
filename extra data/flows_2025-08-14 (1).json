@@ -1,0 +1,1039 @@
+[
+  {
+    "clientId": "b9128ead-7894-4014-a64a-603b677b14dc",
+    "id": "syncConnectorActions",
+    "newName": null,
+    "name": "syncConnectorActions",
+    "description": null,
+    "actionType": "READ",
+    "inputName": "input",
+    "inputModelId": "json",
+    "chatWelcomeMessage": null,
+    "outputModelId": "json",
+    "errorModelId": "",
+    "headerModelId": "json",
+    "apiPreview": {
+      "graphql": null,
+      "rest": {
+        "schema": "{\"openapi\":\"3.0.3\",\"info\":{\"title\":\"Flow OpenAPI Specification\",\"description\":\"OpenAPI specification for the flow\",\"version\":\"1.0.11\"},\"servers\":[{\"url\":\"https://live.fastn.ai/api/v1\"}],\"paths\":{\"/syncConnectorActions\":{\"post\":{\"summary\":\"syncConnectorActions\",\"operationId\":\"POST-syncConnectorActions\",\"parameters\":[{\"in\":\"header\",\"name\":\"x-fastn-space-id\",\"description\":\"x-fastn-space-id Header\",\"schema\":{\"type\":\"string\",\"default\":\"b9128ead-7894-4014-a64a-603b677b14dc\"},\"required\":false},{\"in\":\"header\",\"name\":\"stage\",\"description\":\"stage Header\",\"schema\":{\"type\":\"string\",\"default\":\"DRAFT\"},\"required\":false},{\"in\":\"header\",\"name\":\"content-type\",\"description\":\"content-type Header\",\"schema\":{\"type\":\"string\",\"default\":\"application/json\"},\"required\":false},{\"in\":\"header\",\"name\":\"x-fastn-space-tenantid\",\"description\":\"x-fastn-space-tenantid Header\",\"schema\":{\"type\":\"string\",\"default\":\"\"},\"required\":false}],\"requestBody\":{\"required\":true,\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"input\":{\"title\":\"JSON\",\"properties\":{},\"type\":\"object\",\"description\":\"Free form JSON\"}},\"type\":\"object\"}}}},\"responses\":{\"200\":{\"description\":\"Success\",\"content\":{\"application/json\":{\"schema\":{\"title\":\"JSON\",\"properties\":{},\"type\":\"object\",\"description\":\"Free form JSON\"}}}}},\"security\":[{\"apiKey\":[]}]}}},\"components\":{\"securitySchemes\":{\"apiKey\":{\"in\":\"header\",\"name\":\"x-fastn-api-key\",\"type\":\"apiKey\"},\"bearerAuth\":{\"type\":\"http\",\"scheme\":\"bearer\"}}}}"
+      }
+    },
+    "version": "1.0.3",
+    "inputModel": {
+      "createdAt": 1755093483.3790255,
+      "updatedAt": 1755093483.3789976,
+      "id": "json",
+      "clientId": "b9128ead-7894-4014-a64a-603b677b14dc",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "outputModel": {
+      "createdAt": 1755093483.3790255,
+      "updatedAt": 1755093483.3789976,
+      "id": "json",
+      "clientId": "b9128ead-7894-4014-a64a-603b677b14dc",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "errorModel": null,
+    "headerModel": {
+      "createdAt": 1755093483.3790255,
+      "updatedAt": 1755093483.3789976,
+      "id": "json",
+      "clientId": "b9128ead-7894-4014-a64a-603b677b14dc",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "status": "DEPLOYED",
+    "createdAt": 1755094018.4253721,
+    "updatedAt": 1755094063.1033356,
+    "deployedAt": 1755094063.1033356,
+    "resolver": {
+      "id": "syncConnectorActions",
+      "label": null,
+      "clientId": "b9128ead-7894-4014-a64a-603b677b14dc",
+      "groupId": null,
+      "type": null,
+      "field": null,
+      "dependencies": null,
+      "start": "Variable1148",
+      "nodeBased": false,
+      "steps": [
+        {
+          "type": "COMPOSITE",
+          "id": "getConnectorGroups",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": {
+            "steps": [
+              {
+                "type": "INLINE",
+                "id": "getConnectorGroupsMap",
+                "actionId": null,
+                "inline": {
+                  "code": "\n{\n  \"header\": {\n  \"projectId\": \"community\"\n},\n  \"body\": {\n  \"connectorId\": \"community\",\n  \"query\": \"all\",\n  \"first\": 10\n},\n  \"auth\": {\n  \"bearerToken\": \"\",\n  \"domain\": \"\"\n}\n}",
+                  "language": "JINJA",
+                  "fields": [],
+                  "next": "getConnectorGroupsApi",
+                  "uiCode": "{\"actionType\":\"map\",\"target\":{\"header\":{\"actionType\":\"map\",\"target\":{\"projectId\":{\"actionType\":\"map\",\"target\":\"community\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":true,\"autoEscape\":\"MANUAL\",\"path\":\"header.projectId\",\"byUser\":false}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true},\"body\":{\"actionType\":\"map\",\"target\":{\"connectorId\":{\"actionType\":\"map\",\"target\":\"community\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":true,\"autoEscape\":\"MANUAL\",\"path\":\"body.connectorId\",\"byUser\":false},\"query\":{\"actionType\":\"map\",\"target\":\"all\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":true,\"autoEscape\":\"MANUAL\",\"path\":\"body.query\",\"byUser\":false},\"first\":{\"actionType\":\"map\",\"target\":\"10\",\"targetType\":\"number\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":true,\"autoEscape\":\"MANUAL\",\"path\":\"body.first\",\"byUser\":true}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true},\"auth\":{\"actionType\":\"map\",\"target\":{\"bearerToken\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":\"\"},\"domain\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":\"\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":false}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]}",
+                  "hasResponse": false,
+                  "isError": false,
+                  "statusCode": 200,
+                  "outputSchema": null,
+                  "queryExecutor": {
+                    "children": [],
+                    "returnLiteral": true,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "getConnectorGroupsApi",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": null,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "API",
+                "id": "getConnectorGroupsApi",
+                "actionId": null,
+                "inline": null,
+                "function": {
+                  "id": "_knexa_2kL5cqDnqupA8sk8texlTWXJpY5",
+                  "groupId": "_knexa_b6d3e0a2-9518-425e-9b8b-c5ce6a773e38",
+                  "connectorId": "community",
+                  "name": "getConnectorGroups",
+                  "version": "1.0.6",
+                  "imageUrl": null,
+                  "configuration": {
+                    "enableCache": false,
+                    "cacheTtlInSeconds": 0,
+                    "required": true,
+                    "validate": false,
+                    "enableRetry": false,
+                    "enableAuth": true,
+                    "authType": "BEARER",
+                    "auth": {
+                      "identifier": null,
+                      "authKey": null,
+                      "enableMultiConnection": false,
+                      "isWorkspaceIdentifier": true
+                    },
+                    "retry": {
+                      "maxRetries": 1,
+                      "maxDelayMilliseconds": 1000,
+                      "enableConnectionErrors": false,
+                      "retryList": [
+                        {
+                          "delayMilliseconds": 50,
+                          "statusCode": 500,
+                          "body": null
+                        }
+                      ]
+                    },
+                    "requestSetting": {
+                      "connectTimeoutInMilli": 30000,
+                      "readTimeoutInMilli": 30000,
+                      "writeTimeoutInMilli": 30000,
+                      "turnOffSslVerification": null
+                    }
+                  },
+                  "next": null,
+                  "queryExecutor": null
+                },
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": null,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ],
+            "next": "loopOverEdges",
+            "start": null,
+            "queryExecutor": null
+          },
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"searchDataSourceGroups\":{\"type\":\"object\",\"properties\":{\"pageInfo\":{\"type\":\"object\",\"properties\":{\"hasNextPage\":{\"type\":\"boolean\"},\"endCursor\":{\"type\":\"string\"},\"__typename\":{\"type\":\"string\"}},\"required\":[]},\"edges\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"node\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"clientId\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"imageUrl\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"description\":{\"type\":[\"null\",\"string\"]},\"tags\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"docLink\":{\"type\":[\"null\",\"string\"]},\"isOauth\":{\"type\":[\"boolean\",\"null\"]},\"oauth\":{},\"oauthInputContract\":{},\"enableActivate\":{\"type\":[\"boolean\",\"null\"]},\"resourceType\":{\"type\":[\"string\",\"null\"]},\"__typename\":{\"type\":\"string\"}},\"required\":[]},\"__typename\":{\"type\":\"string\"}},\"required\":[]}},\"__typename\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+          "next": "loopOverEdges",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "LOOP",
+          "id": "loopOverEdges",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": {
+            "next": "Success",
+            "start": "getConnectorsFromGroup",
+            "loopOver": "{{data.steps.getConnectorGroups.output.data.searchDataSourceGroups.edges}}",
+            "type": "DATA",
+            "steps": [
+              {
+                "type": "COMPOSITE",
+                "id": "getConnectorsFromGroup",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": {
+                  "steps": [
+                    {
+                      "type": "INLINE",
+                      "id": "getConnectorsFromGroupMap",
+                      "actionId": null,
+                      "inline": {
+                        "code": "\n{\n  \"headers\": {\n  \"projectId\": \"65da574b-0787-40e5-968f-b648eadafa34\"\n},\n  \"body\": {\n  \"groupType\": \"TEMPLATE_DATA_SOURCE_GROUP\",\n  \"clientId\": \"65da574b-0787-40e5-968f-b648eadafa34\",\n  \"groupId\": {% if data.steps.loopOverEdges.loopOverItem.node.id is defined %}\"{{data.steps.loopOverEdges.loopOverItem.node.id}}\"{% else %}\"\"{% endif %},\n  \"first\": 100\n},\n  \"auth\": {\n  \"bearerToken\": \"\",\n  \"domain\": \"\"\n}\n}",
+                        "language": "JINJA",
+                        "fields": [],
+                        "next": "getConnectorsFromGroupApi",
+                        "uiCode": "{\"actionType\":\"map\",\"target\":{\"headers\":{\"actionType\":\"map\",\"target\":{\"projectId\":{\"actionType\":\"map\",\"target\":\"65da574b-0787-40e5-968f-b648eadafa34\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":true,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"},\"body\":{\"actionType\":\"map\",\"target\":{\"groupType\":{\"actionType\":\"map\",\"target\":\"TEMPLATE_DATA_SOURCE_GROUP\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":true,\"autoEscape\":\"MANUAL\"},\"clientId\":{\"actionType\":\"map\",\"target\":\"65da574b-0787-40e5-968f-b648eadafa34\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":true,\"autoEscape\":\"MANUAL\"},\"groupId\":{\"actionType\":\"map\",\"target\":\"{{data.steps.loopOverEdges.loopOverItem.node.id}}\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":true,\"autoEscape\":\"MANUAL\"},\"first\":{\"actionType\":\"map\",\"target\":\"100\",\"targetType\":\"number\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":true,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"},\"auth\":{\"actionType\":\"map\",\"target\":{\"bearerToken\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":\"\"},\"domain\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":\"\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]}",
+                        "hasResponse": false,
+                        "isError": false,
+                        "statusCode": 200,
+                        "outputSchema": null,
+                        "queryExecutor": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "data"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "steps"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "loopOverEdges"
+                                          },
+                                          "value": {
+                                            "children": [
+                                              {
+                                                "key": {
+                                                  "type": "java.lang.String",
+                                                  "value": "loopOverItem"
+                                                },
+                                                "value": {
+                                                  "children": [
+                                                    {
+                                                      "key": {
+                                                        "type": "java.lang.String",
+                                                        "value": "node"
+                                                      },
+                                                      "value": {
+                                                        "children": [
+                                                          {
+                                                            "key": {
+                                                              "type": "java.lang.String",
+                                                              "value": "id"
+                                                            },
+                                                            "value": {
+                                                              "children": [],
+                                                              "returnLiteral": true,
+                                                              "symbolOrIndex": {
+                                                                "type": "java.lang.String",
+                                                                "value": "id"
+                                                              },
+                                                              "version": 2
+                                                            }
+                                                          }
+                                                        ],
+                                                        "returnLiteral": false,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.lang.String",
+                                                          "value": "node"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    }
+                                                  ],
+                                                  "returnLiteral": false,
+                                                  "symbolOrIndex": {
+                                                    "type": "java.lang.String",
+                                                    "value": "loopOverItem"
+                                                  },
+                                                  "version": 2
+                                                }
+                                              }
+                                            ],
+                                            "returnLiteral": false,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "loopOverEdges"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "steps"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "data"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "null",
+                            "value": null
+                          },
+                          "version": 2
+                        }
+                      },
+                      "function": null,
+                      "composite": null,
+                      "loop": null,
+                      "internalDatabase": null,
+                      "aiAction": null,
+                      "mcpClient": null,
+                      "logger": null,
+                      "downLoadFile": null,
+                      "endLoop": null,
+                      "trigger": null,
+                      "converter": null,
+                      "variables": null,
+                      "state": null,
+                      "conditional": null,
+                      "lambdaFunction": null,
+                      "outputSchema": null,
+                      "next": "getConnectorsFromGroupApi",
+                      "prevStep": null,
+                      "enableDebug": false,
+                      "description": null,
+                      "debugBreakAfter": null,
+                      "configuredStepSetting": null,
+                      "filter": null,
+                      "limit": null,
+                      "splitOut": null,
+                      "aggregate": null,
+                      "merge": null,
+                      "aiAgent": null,
+                      "settings": null,
+                      "ftp": null,
+                      "warnings": null,
+                      "tenantSettings": null
+                    },
+                    {
+                      "type": "API",
+                      "id": "getConnectorsFromGroupApi",
+                      "actionId": null,
+                      "inline": null,
+                      "function": {
+                        "id": "_knexa_2kKqRK1O1RkeXDe4ydt3P5C0hP3",
+                        "groupId": "_knexa_b6d3e0a2-9518-425e-9b8b-c5ce6a773e38",
+                        "connectorId": "community",
+                        "name": "getConnectorsFromGroup",
+                        "version": "1.0.8",
+                        "imageUrl": "https://fastnai.s3.amazonaws.com/assets/fastn_logo.png",
+                        "configuration": {
+                          "enableCache": false,
+                          "cacheTtlInSeconds": 0,
+                          "required": true,
+                          "validate": false,
+                          "enableRetry": false,
+                          "enableAuth": true,
+                          "authType": "BEARER",
+                          "auth": {
+                            "identifier": null,
+                            "authKey": null,
+                            "enableMultiConnection": false,
+                            "isWorkspaceIdentifier": true
+                          },
+                          "retry": {
+                            "maxRetries": 1,
+                            "maxDelayMilliseconds": 1000,
+                            "enableConnectionErrors": false,
+                            "retryList": [
+                              {
+                                "delayMilliseconds": 50,
+                                "statusCode": 500,
+                                "body": null
+                              }
+                            ]
+                          },
+                          "requestSetting": {
+                            "connectTimeoutInMilli": 30000,
+                            "readTimeoutInMilli": 30000,
+                            "writeTimeoutInMilli": 30000,
+                            "turnOffSslVerification": null
+                          }
+                        },
+                        "next": null,
+                        "queryExecutor": null
+                      },
+                      "composite": null,
+                      "loop": null,
+                      "internalDatabase": null,
+                      "aiAction": null,
+                      "mcpClient": null,
+                      "logger": null,
+                      "downLoadFile": null,
+                      "endLoop": null,
+                      "trigger": null,
+                      "converter": null,
+                      "variables": null,
+                      "state": null,
+                      "conditional": null,
+                      "lambdaFunction": null,
+                      "outputSchema": null,
+                      "next": null,
+                      "prevStep": null,
+                      "enableDebug": false,
+                      "description": null,
+                      "debugBreakAfter": null,
+                      "configuredStepSetting": null,
+                      "filter": null,
+                      "limit": null,
+                      "splitOut": null,
+                      "aggregate": null,
+                      "merge": null,
+                      "aiAgent": null,
+                      "settings": null,
+                      "ftp": null,
+                      "warnings": null,
+                      "tenantSettings": null
+                    }
+                  ],
+                  "next": "Variable6691",
+                  "start": null,
+                  "queryExecutor": null
+                },
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"dataSourceByGroup\":{\"type\":\"object\",\"properties\":{\"edges\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"node\":{\"type\":\"object\",\"properties\":{\"clientId\":{\"type\":\"string\"},\"id\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"imageUrl\":{\"type\":\"string\"},\"isCommunityCreated\":{\"type\":\"boolean\"},\"contract\":{\"type\":\"object\",\"properties\":{\"action\":{\"type\":\"object\",\"properties\":{\"request\":{\"type\":\"object\",\"properties\":{\"schema\":{\"type\":\"string\"},\"uiSchema\":{\"type\":\"string\"},\"__typename\":{\"type\":\"string\"}},\"required\":[]},\"success\":{\"type\":\"object\",\"properties\":{\"schema\":{\"type\":\"string\"},\"__typename\":{\"type\":\"string\"}},\"required\":[]},\"__typename\":{\"type\":\"string\"}},\"required\":[]},\"__typename\":{\"type\":\"string\"}},\"required\":[]},\"type\":{\"type\":\"string\"},\"createdAt\":{\"type\":\"string\"},\"updatedAt\":{\"type\":\"string\"},\"__typename\":{\"type\":\"string\"}},\"required\":[]},\"__typename\":{\"type\":\"string\"}},\"required\":[]}},\"pageInfo\":{\"type\":\"object\",\"properties\":{\"hasNextPage\":{\"type\":\"boolean\"},\"endCursor\":{\"type\":\"string\"},\"__typename\":{\"type\":\"string\"}},\"required\":[]},\"__typename\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+                "next": "Variable6691",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "VARIABLE",
+                "id": "Variable6691",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": {
+                  "next": null,
+                  "variables": [],
+                  "code": "\n{\n  \"details\": {{data.var.details  | insertItemToArray(data.steps.getConnectorsFromGroup.output.data.dataSourceByGroup.edges | tojson) | tojson}}\n}",
+                  "uiCode": "{\"actionType\":\"map\",\"target\":{\"details\":{\"actionType\":\"map\",\"target\":\"insertItem\",\"targetType\":\"array\",\"actions\":[{\"actionType\":\"insertItem\",\"item\":\"{{data.steps.getConnectorsFromGroup.output.data.dataSourceByGroup.edges}}\",\"target\":\"{{data.var.details}}\",\"variable\":\"details_insertItem\"},{\"actionType\":\"actions_return\",\"targetType\":\"array\",\"target\":\"details_insertItem\"}],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "steps"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "getConnectorsFromGroup"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "output"
+                                          },
+                                          "value": {
+                                            "children": [
+                                              {
+                                                "key": {
+                                                  "type": "java.lang.String",
+                                                  "value": "data"
+                                                },
+                                                "value": {
+                                                  "children": [
+                                                    {
+                                                      "key": {
+                                                        "type": "java.lang.String",
+                                                        "value": "dataSourceByGroup"
+                                                      },
+                                                      "value": {
+                                                        "children": [
+                                                          {
+                                                            "key": {
+                                                              "type": "java.lang.String",
+                                                              "value": "edges"
+                                                            },
+                                                            "value": {
+                                                              "children": [],
+                                                              "returnLiteral": true,
+                                                              "symbolOrIndex": {
+                                                                "type": "java.lang.String",
+                                                                "value": "edges"
+                                                              },
+                                                              "version": 2
+                                                            }
+                                                          }
+                                                        ],
+                                                        "returnLiteral": false,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.lang.String",
+                                                          "value": "dataSourceByGroup"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    }
+                                                  ],
+                                                  "returnLiteral": false,
+                                                  "symbolOrIndex": {
+                                                    "type": "java.lang.String",
+                                                    "value": "data"
+                                                  },
+                                                  "version": 2
+                                                }
+                                              }
+                                            ],
+                                            "returnLiteral": false,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "output"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "getConnectorsFromGroup"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "steps"
+                                },
+                                "version": 2
+                              }
+                            },
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "var"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "details"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "details"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "var"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ],
+            "itemSchema": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"node\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"id\": {\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t\"clientId\": {\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t\"imageUrl\": {\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t\"type\": {\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"type\": \"null\"\n\t\t\t\t},\n\t\t\t\t\"tags\": {\n\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"docLink\": {\n\t\t\t\t\t\"type\": \"null\"\n\t\t\t\t},\n\t\t\t\t\"isOauth\": {\n\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t},\n\t\t\t\t\"oauth\": {\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t\"oauthInputContract\": {\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t\"enableActivate\": {\n\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t},\n\t\t\t\t\"resourceType\": {\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t\"__typename\": {\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"__typename\": {\n\t\t\t\"type\": \"string\"\n\t\t}\n\t}\n}",
+            "isParallel": false,
+            "loopSize": "0",
+            "loopStart": "0",
+            "queryExecutor": null
+          },
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "Success",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INLINE",
+          "id": "Success",
+          "actionId": null,
+          "inline": {
+            "code": "\n{% if data.var %}{{data.var| shape}}{% else %}\"\"{% endif %}",
+            "language": "JINJA",
+            "fields": [],
+            "next": null,
+            "uiCode": "{\"actionType\":\"map\",\"target\":\"{{data.var}}\",\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "hasResponse": true,
+            "isError": false,
+            "statusCode": 200,
+            "outputSchema": null,
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "var"
+                        },
+                        "value": {
+                          "children": [],
+                          "returnLiteral": true,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "var"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": null,
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "VARIABLE",
+          "id": "Variable1148",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": {
+            "next": "getConnectorGroups",
+            "variables": [],
+            "code": "\n{\n  \"details\": {% if $fastn_array_default %}{{$fastn_array_default| shape}}{% else %}[]{% endif %}\n}",
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"details\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"array\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"byUser\":true}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "getConnectorGroups",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        }
+      ]
+    },
+    "types": [],
+    "tests": null,
+    "hasActionType": true,
+    "metaData": {
+      "enableLogs": true,
+      "isAsync": false,
+      "hasSecret": true,
+      "enableMultitenant": false,
+      "enableValidation": false,
+      "architecture": "REST",
+      "isCustomAuthenticationEnabled": true,
+      "isNotificationEnabled": false,
+      "flowType": "API",
+      "jobMemoryLimit": 8192,
+      "jobTimeOut": null,
+      "jobCpuLimit": "2",
+      "isConfigured": null,
+      "configurationFlows": [],
+      "invocationMethod": "API_REQUEST",
+      "priority": "URGENT",
+      "triggerType": null,
+      "schedule": null,
+      "triggerApp": null
+    },
+    "comment": null,
+    "labels": null,
+    "resourceType": "EXTERNAL",
+    "deleted": null,
+    "webhookId": null,
+    "webhook": null,
+    "createdby": null
+  }
+]

@@ -1,0 +1,645 @@
+[
+  {
+    "clientId": "a069807a-ef17-47cd-b4bc-ec29249049bd",
+    "id": "api_with_looping",
+    "newName": null,
+    "name": "api_with_looping",
+    "description": null,
+    "actionType": "READ",
+    "inputName": "input",
+    "inputModelId": "8584a14e72c081fb8543cda9c8954438",
+    "chatWelcomeMessage": null,
+    "outputModelId": "8584a14e72c081fb8543cda9c8954438",
+    "errorModelId": "",
+    "headerModelId": "",
+    "apiPreview": {
+      "graphql": null,
+      "rest": {
+        "schema": "{\"openapi\":\"3.0.3\",\"info\":{\"title\":\"Flow OpenAPI Specification\",\"description\":\"OpenAPI specification for the flow\",\"version\":\"1.0.11\"},\"servers\":[{\"url\":\"https://live.fastn.ai/api/v1\"}],\"paths\":{\"/api_with_looping\":{\"post\":{\"summary\":\"api_with_looping\",\"operationId\":\"POST-api_with_looping\",\"parameters\":[{\"in\":\"header\",\"name\":\"x-fastn-space-id\",\"description\":\"x-fastn-space-id Header\",\"schema\":{\"type\":\"string\",\"default\":\"a069807a-ef17-47cd-b4bc-ec29249049bd\"},\"required\":false},{\"in\":\"header\",\"name\":\"stage\",\"description\":\"stage Header\",\"schema\":{\"type\":\"string\",\"default\":\"DRAFT\"},\"required\":false},{\"in\":\"header\",\"name\":\"content-type\",\"description\":\"content-type Header\",\"schema\":{\"type\":\"string\",\"default\":\"application/json\"},\"required\":false},{\"in\":\"header\",\"name\":\"x-fastn-space-tenantid\",\"description\":\"x-fastn-space-tenantid Header\",\"schema\":{\"type\":\"string\",\"default\":\"\"},\"required\":false}],\"requestBody\":{\"required\":true,\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"input\":{\"description\":\"Free form JSON\",\"title\":\"JSON\",\"properties\":{},\"type\":\"object\"}},\"type\":\"object\"}}}},\"responses\":{\"200\":{\"description\":\"Success\",\"content\":{\"application/json\":{\"schema\":{\"description\":\"Free form JSON\",\"title\":\"JSON\",\"properties\":{},\"type\":\"object\"}}}}},\"security\":[{\"apiKey\":[]}]}}},\"components\":{\"securitySchemes\":{\"apiKey\":{\"type\":\"apiKey\",\"in\":\"header\",\"name\":\"x-fastn-api-key\"},\"bearerAuth\":{\"type\":\"http\",\"scheme\":\"bearer\"}}}}"
+      }
+    },
+    "version": "1.0.1",
+    "inputModel": {
+      "createdAt": 1755604403.7500775,
+      "updatedAt": 1755604403.7499728,
+      "id": "8584a14e72c081fb8543cda9c8954438",
+      "clientId": "a069807a-ef17-47cd-b4bc-ec29249049bd",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "description": "Free form JSON",
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "description": "Free form JSON",
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "outputModel": {
+      "createdAt": 1755604403.8082898,
+      "updatedAt": 1755604403.8082302,
+      "id": "8584a14e72c081fb8543cda9c8954438",
+      "clientId": "a069807a-ef17-47cd-b4bc-ec29249049bd",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "description": "Free form JSON",
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "description": "Free form JSON",
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "errorModel": null,
+    "headerModel": null,
+    "status": "DEPLOYED",
+    "createdAt": 1755604403.8146303,
+    "updatedAt": 1755604403.8228946,
+    "deployedAt": 1728148767.7861536,
+    "resolver": {
+      "id": "api_with_looping",
+      "label": null,
+      "clientId": "a069807a-ef17-47cd-b4bc-ec29249049bd",
+      "groupId": null,
+      "type": null,
+      "field": null,
+      "dependencies": null,
+      "start": "Variable_28979",
+      "nodeBased": false,
+      "steps": [
+        {
+          "type": "VARIABLE",
+          "id": "Variable_28979",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": {
+            "next": "getAllProducts",
+            "variables": [],
+            "code": "\n{\n  \"limit\": \"5\",\n  \"count\": 0\n}",
+            "uiCode": "{\n\t\"actionType\": \"map\",\n\t\"target\": {\n\t\t\"limit\": {\n\t\t\t\"actionType\": \"map\",\n\t\t\t\"target\": \"5\",\n\t\t\t\"targetType\": \"string\",\n\t\t\t\"actions\": [],\n\t\t\t\"default\": \"\"\n\t\t},\n\t\t\"count\": {\n\t\t\t\"actionType\": \"map\",\n\t\t\t\"target\": \"0\",\n\t\t\t\"targetType\": \"integer\",\n\t\t\t\"actions\": [],\n\t\t\t\"default\": null\n\t\t}\n\t},\n\t\"targetType\": \"object\",\n\t\"actions\": [],\n\t\"default\": []\n}",
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "getAllProducts",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": null,
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "COMPOSITE",
+          "id": "getAllProducts",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": {
+            "steps": [
+              {
+                "type": "INLINE",
+                "id": "getAllProductsMap",
+                "actionId": null,
+                "inline": {
+                  "code": "\n{\n  \"auth\": {\n  \"apiKeyValue\": {% if data.secrets.shopify_access_token is defined %}\"{{data.secrets.shopify_access_token}}\"{% else %}\"\"{% endif %},\n  \"storeName\": {% if data.secrets.shopify_store_name is defined %}\"{{data.secrets.shopify_store_name}}\"{% else %}\"\"{% endif %},\n  \"apiKeyName\": \"X-Shopify-Access-Token\"\n},\n  \"params\": {\n  \"limit\": {% if data.var.limit is defined %}\"{{data.var.limit}}\"{% else %}\"\"{% endif %}\n}\n}",
+                  "language": "JINJA",
+                  "fields": [],
+                  "next": "getAllProductsApi",
+                  "uiCode": "{\n\t\"actionType\": \"map\",\n\t\"target\": {\n\t\t\"auth\": {\n\t\t\t\"actionType\": \"map\",\n\t\t\t\"target\": {\n\t\t\t\t\"apiKeyValue\": {\n\t\t\t\t\t\"actionType\": \"map\",\n\t\t\t\t\t\"target\": \"{{data.secrets.shopify_access_token}}\",\n\t\t\t\t\t\"targetType\": \"string\",\n\t\t\t\t\t\"actions\": [],\n\t\t\t\t\t\"default\": []\n\t\t\t\t},\n\t\t\t\t\"storeName\": {\n\t\t\t\t\t\"actionType\": \"map\",\n\t\t\t\t\t\"target\": \"{{data.secrets.shopify_store_name}}\",\n\t\t\t\t\t\"targetType\": \"string\",\n\t\t\t\t\t\"actions\": [],\n\t\t\t\t\t\"default\": []\n\t\t\t\t},\n\t\t\t\t\"apiKeyName\": {\n\t\t\t\t\t\"actionType\": \"map\",\n\t\t\t\t\t\"target\": \"X-Shopify-Access-Token\",\n\t\t\t\t\t\"targetType\": \"string\",\n\t\t\t\t\t\"actions\": [],\n\t\t\t\t\t\"default\": []\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"targetType\": \"object\",\n\t\t\t\"actions\": [],\n\t\t\t\"default\": []\n\t\t},\n\t\t\"params\": {\n\t\t\t\"actionType\": \"map\",\n\t\t\t\"target\": {\n\t\t\t\t\"limit\": {\n\t\t\t\t\t\"actionType\": \"map\",\n\t\t\t\t\t\"target\": \"{{data.var.limit}}\",\n\t\t\t\t\t\"targetType\": \"string\",\n\t\t\t\t\t\"actions\": [],\n\t\t\t\t\t\"default\": []\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"targetType\": \"object\",\n\t\t\t\"actions\": [],\n\t\t\t\"default\": []\n\t\t}\n\t},\n\t\"targetType\": \"object\",\n\t\"actions\": [],\n\t\"default\": []\n}",
+                  "hasResponse": false,
+                  "isError": false,
+                  "statusCode": 200,
+                  "outputSchema": null,
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "secrets"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "shopify_access_token"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "shopify_access_token"
+                                      },
+                                      "version": 2
+                                    }
+                                  },
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "shopify_store_name"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "shopify_store_name"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "secrets"
+                                },
+                                "version": 2
+                              }
+                            },
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "var"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "limit"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "limit"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "var"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "getAllProductsApi",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": null,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "API",
+                "id": "getAllProductsApi",
+                "actionId": null,
+                "inline": null,
+                "function": {
+                  "id": "_knexa_2Yrk5ZdsORprOGpdpf9R4piOtmn",
+                  "groupId": "_knexa_2fc3b972-2f75-49d4-8cce-3a11a5990408",
+                  "connectorId": "community",
+                  "name": "getAllProducts",
+                  "version": "1.0.1",
+                  "imageUrl": "https://docs.vuestorefront.io/v2/integrations-logos/thumbnails/shopify.png",
+                  "configuration": {
+                    "enableCache": false,
+                    "cacheTtlInSeconds": 0,
+                    "required": true,
+                    "validate": false,
+                    "enableRetry": false,
+                    "enableAuth": false,
+                    "authType": "APIKEY",
+                    "auth": {
+                      "identifier": null,
+                      "authKey": null,
+                      "enableMultiConnection": null,
+                      "isWorkspaceIdentifier": null
+                    },
+                    "retry": {
+                      "maxRetries": 1,
+                      "maxDelayMilliseconds": 1000,
+                      "enableConnectionErrors": null,
+                      "retryList": [
+                        {
+                          "delayMilliseconds": 50,
+                          "statusCode": 500,
+                          "body": null
+                        }
+                      ]
+                    },
+                    "requestSetting": null
+                  },
+                  "next": null,
+                  "queryExecutor": null
+                },
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": null,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ],
+            "next": "getAllProductsProducts",
+            "start": null,
+            "queryExecutor": null
+          },
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"products\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"body_html\":{\"type\":[\"null\",\"string\"]},\"vendor\":{\"type\":\"string\"},\"product_type\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"handle\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"published_at\":{\"type\":[\"string\",\"null\"]},\"template_suffix\":{\"type\":[\"null\",\"string\"]},\"published_scope\":{\"type\":\"string\"},\"tags\":{\"type\":\"string\"},\"status\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"variants\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"sku\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"inventory_policy\":{\"type\":\"string\"},\"compare_at_price\":{\"type\":[\"null\",\"string\"]},\"fulfillment_service\":{\"type\":\"string\"},\"inventory_management\":{\"type\":[\"null\",\"string\"]},\"option1\":{\"type\":\"string\"},\"option2\":{\"type\":\"string\"},\"option3\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"barcode\":{\"type\":[\"null\",\"string\"]},\"grams\":{\"type\":\"integer\"},\"image_id\":{\"type\":\"string\"},\"weight\":{\"type\":\"number\"},\"weight_unit\":{\"type\":\"string\"},\"inventory_item_id\":{\"type\":\"integer\"},\"inventory_quantity\":{\"type\":\"integer\"},\"old_inventory_quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"admin_graphql_api_id\":{\"type\":\"string\"}},\"required\":[]}},\"options\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"values\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"images\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"alt\":{\"type\":\"string\"},\"position\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"created_at\":{\"type\":\"string\"},\"updated_at\":{\"type\":\"string\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"src\":{\"type\":\"string\"},\"variant_ids\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"image\":{\"type\":\"object\",\"properties\":{\"created_at\":{\"type\":\"string\"},\"id\":{\"type\":\"integer\"},\"position\":{\"type\":\"integer\"},\"product_id\":{\"type\":\"integer\"},\"variant_ids\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"}},\"src\":{\"type\":\"string\"},\"width\":{\"type\":\"integer\"},\"height\":{\"type\":\"integer\"},\"updated_at\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}}},\"required\":[]}",
+          "next": "getAllProductsProducts",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": null,
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "LOOP",
+          "id": "getAllProductsProducts",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": {
+            "next": "Response",
+            "start": "DB91228",
+            "loopOver": "{{data.steps.getAllProducts.output.products}}",
+            "type": "FIXED_SIZE",
+            "steps": [
+              {
+                "type": "INTERNAL_DB",
+                "id": "DB91228",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": {
+                  "next": "Variable_92035",
+                  "query": "create table if not exists products(\r\n    id varchar(100),\r\n    name varchar(100)\r\n);\r\n\r\ninsert into products values('{{data.steps.getAllProductsProducts.loopOverItem.id}}','{{data.steps.getAllProductsProducts.loopOverItem.title}}');",
+                  "code": null,
+                  "dbQueryParams": null,
+                  "queryExecutor": null
+                },
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "Variable_92035",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "VARIABLE",
+                "id": "Variable_92035",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": {
+                  "next": null,
+                  "variables": [],
+                  "code": "\n{\n  \"count\": {% if data.var.count  is defined or data.var.count  %}{{data.var.count  + 1|int}}{% else %}\"\"{% endif %}\n}",
+                  "uiCode": "{\n\t\"actionType\": \"map\",\n\t\"target\": {\n\t\t\"count\": {\n\t\t\t\"actionType\": \"map\",\n\t\t\t\"target\": \"\",\n\t\t\t\"targetType\": \"integer\",\n\t\t\t\"actions\": [\n\t\t\t\t{\n\t\t\t\t\t\"actionType\": \"mathematical_expression\",\n\t\t\t\t\t\"castType\": \"int\",\n\t\t\t\t\t\"calculation\": \"{{data.var.count}} + 1\",\n\t\t\t\t\t\"variable\": \"count_math_expression\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"actionType\": \"actions_return\",\n\t\t\t\t\t\"targetType\": \"string\",\n\t\t\t\t\t\"target\": \"count_math_expression\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"default\": \"\"\n\t\t}\n\t},\n\t\"targetType\": \"object\",\n\t\"actions\": [],\n\t\"default\": []\n}",
+                  "queryExecutor": null
+                },
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": null,
+                "description": null,
+                "debugBreakAfter": null,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ],
+            "itemSchema": "{\n\t\"type\": \"object\"\n}",
+            "isParallel": false,
+            "loopSize": "{{data.var.limit}}",
+            "loopStart": "0",
+            "queryExecutor": null
+          },
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "Response",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": null,
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INLINE",
+          "id": "Response",
+          "actionId": null,
+          "inline": {
+            "code": "\n{\n  \"message\": \"SUCCESS\",\n  \"noOfRecordsSaved\": {% if data.var.count  is defined %}{{data.var.count | tojson}}{% else %}null{% endif %}\n}",
+            "language": "JINJA",
+            "fields": [],
+            "next": null,
+            "uiCode": "{\n\t\"actionType\": \"map\",\n\t\"target\": {\n\t\t\"message\": {\n\t\t\t\"actionType\": \"map\",\n\t\t\t\"target\": \"SUCCESS\",\n\t\t\t\"targetType\": \"string\",\n\t\t\t\"actions\": [],\n\t\t\t\"default\": null\n\t\t},\n\t\t\"noOfRecordsSaved\": {\n\t\t\t\"actionType\": \"map\",\n\t\t\t\"target\": \"{{data.var.count}}\",\n\t\t\t\"targetType\": \"string\",\n\t\t\t\"actions\": [],\n\t\t\t\"default\": null\n\t\t}\n\t},\n\t\"targetType\": \"object\",\n\t\"actions\": [],\n\t\"default\": []\n}",
+            "hasResponse": true,
+            "isError": false,
+            "statusCode": 200,
+            "outputSchema": null,
+            "queryExecutor": null
+          },
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": null,
+          "prevStep": null,
+          "enableDebug": null,
+          "description": null,
+          "debugBreakAfter": null,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": null,
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        }
+      ]
+    },
+    "types": [],
+    "tests": null,
+    "hasActionType": true,
+    "metaData": {
+      "enableLogs": true,
+      "isAsync": false,
+      "hasSecret": true,
+      "enableMultitenant": false,
+      "enableValidation": false,
+      "architecture": "REST",
+      "isCustomAuthenticationEnabled": false,
+      "isNotificationEnabled": false,
+      "flowType": null,
+      "jobMemoryLimit": null,
+      "jobTimeOut": null,
+      "jobCpuLimit": null,
+      "isConfigured": null,
+      "configurationFlows": null,
+      "invocationMethod": "API_REQUEST",
+      "priority": null,
+      "triggerType": null,
+      "schedule": null,
+      "triggerApp": null
+    },
+    "comment": null,
+    "labels": null,
+    "resourceType": "EXTERNAL",
+    "deleted": null,
+    "webhookId": null,
+    "webhook": null,
+    "deployedBy": null,
+    "createdby": null
+  }
+]

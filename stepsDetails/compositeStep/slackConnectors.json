@@ -1,0 +1,39 @@
+[
+  {
+    "clientId": "community",
+    "id": "_knexa_2XfaKSZt7VF4AKpsRcQm683QmLP",
+    "code": null,
+    "contractVariables": [],
+    "name": "sendMessage",
+    "version": "1.1.1",
+    "isCommunityCreated": false,
+    "contract": {
+      "action": {
+        "request": {
+          "schema": "{\"type\":\"object\",\"title\":\"Slack API Request\",\"description\":\"Slack API request schema.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication parameters for the Slack API.\",\"required\":[\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"Bearer token for authentication with the Slack API.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Body of the Slack API request.\",\"required\":[\"channel\",\"text\"],\"properties\":{\"blocks\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"elements\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"text\":{\"type\":\"string\",\"title\":\"Text\",\"description\":\"Text content of the element.\"},\"type\":{\"type\":\"string\",\"title\":\"Type\",\"description\":\"Type of the element.\"}}}},\"text\":{\"type\":\"object\",\"title\":\"Text Object\",\"description\":\"Text object for the message block.\",\"properties\":{\"text\":{\"type\":\"string\",\"title\":\"Text\",\"description\":\"Text content of the text object.\"},\"type\":{\"type\":\"string\",\"title\":\"Type\",\"description\":\"Type of the text object.\"}}},\"type\":{\"type\":\"string\",\"title\":\"Type\",\"description\":\"Type of the message block.\"},\"fields\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"text\":{\"type\":\"string\",\"title\":\"Text\",\"description\":\"Text content of the field.\"},\"type\":{\"type\":\"string\",\"title\":\"Type\",\"description\":\"Type of the field.\"}}}}}}},\"channel\":{\"type\":\"string\",\"title\":\"Channel ID\",\"description\":\"Slack channel ID to send the message to.\"},\"text\":{\"type\":\"string\",\"title\":\"Message Text\",\"description\":\"Plain text message.\"}}}}}",
+          "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"blocks\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"channel\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"text\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+          "uiCode": "{\"actionType\":\"map\",\"target\":{\"auth\":{\"actionType\":\"map\",\"target\":{\"bearerToken\":{\"actionType\":\"map\",\"target\":\"{{auth.bearerToken}}\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Bearer Token\",\"description\":\"Bearer token for authentication with the Slack API.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"}} ,\"targetType\":\"object\",\"actions\":[],\"default\":[]},\"body\":{\"actionType\":\"map\",\"target\":{\"channel\":{\"actionType\":\"map\",\"target\":\"#ai_testing\",\"targetType\":\"string\",\"title\":\"Channel ID\"},\"text\":{\"actionType\":\"map\",\"target\":\"{{data.steps.flattenOrderDetails.output.flattenedRow[1]}}\",\"targetType\":\"string\",\"title\":\"Message Text\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[]}}",
+          "queryExecutor": null,
+          "__typename": "ContractOutput"
+        },
+        "success": {
+          "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"ok\":{\"type\":\"boolean\"},\"channel\":{\"type\":\"string\"},\"ts\":{\"type\":\"string\"},\"message\":{\"type\":\"object\",\"properties\":{\"bot_id\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"text\":{\"type\":\"string\"},\"user\":{\"type\":\"string\"},\"ts\":{\"type\":\"string\"},\"app_id\":{\"type\":\"string\"},\"blocks\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"block_id\":{\"type\":\"string\"},\"elements\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"elements\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"text\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}}},\"required\":[]}},\"team\":{\"type\":\"string\"},\"bot_profile\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"app_id\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"icons\":{\"type\":\"object\",\"properties\":{\"image_36\":{\"type\":\"string\"},\"image_48\":{\"type\":\"string\"},\"image_72\":{\"type\":\"string\"}},\"required\":[]},\"deleted\":{\"type\":\"boolean\"},\"updated\":{\"type\":\"integer\"},\"team_id\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"warning\":{\"type\":\"string\"},\"response_metadata\":{\"type\":\"object\",\"properties\":{\"warnings\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"required\":[]}",
+          "uiSchema": "{\"ok\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"channel\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"ts\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"message\":{\"bot_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"type\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"text\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"user\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"ts\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"app_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"blocks\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"team\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bot_profile\":{\"id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"app_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"icons\":{\"image_36\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"image_48\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"image_72\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"deleted\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"updated\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"team_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"warning\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"response_metadata\":{\"warnings\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}}",
+          "__typename": "ContractOutput"
+        },
+        "__typename": "ActionContractOutput"
+      },
+      "__typename": "DataSourceSpecOutput"
+    },
+    "type": "API",
+    "configurationLayer": {
+      "source": "_knexa_api_executor",
+      "mapper": "{\"url\":\"https://slack.com/api/chat.postMessage\",\"method\":\"POST\",\"headers\":[{\"key\":\"content-type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{ body | shape }}\",\"bulkHeaders\":\"\",\"bulkParams\":\"\",\"hasBulkHeaders\":false,\"hasBulkParams\":false,\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+      "__typename": "ConfigurationLayerOutput"
+    },
+    "labels": ["Message Management"],
+    "connectorId": "community",
+    "groupId": "_knexa_c9085d88-85d0-4436-82c6-4e42d6aba4c6",
+    "__typename": "DataSourceTemplatePattOutput"
+  }
+]

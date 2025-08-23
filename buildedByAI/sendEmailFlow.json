@@ -1,0 +1,679 @@
+[
+  {
+    "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+    "id": "sendEmailFlow",
+    "newName": null,
+    "name": "sendEmailFlow",
+    "description": "Send an email and return success message",
+    "actionType": "READ",
+    "inputName": "input",
+    "inputModelId": "07a1436d4df2fe3ee87d4fd70ea6a259",
+    "chatWelcomeMessage": null,
+    "outputModelId": "json",
+    "errorModelId": "",
+    "headerModelId": "9fed297b87c60d6808c16df827fc4407",
+    "apiPreview": {
+      "graphql": null,
+      "rest": {
+        "schema": "{\"openapi\":\"3.0.3\",\"info\":{\"title\":\"Flow OpenAPI Specification\",\"description\":\"OpenAPI specification for the flow\",\"version\":\"1.0.11\"},\"servers\":[{\"url\":\"https://qa.fastn.ai/api/v1\"}],\"paths\":{\"/sendEmailFlow\":{\"post\":{\"summary\":\"sendEmailFlow\",\"operationId\":\"POST-sendEmailFlow\",\"parameters\":[{\"in\":\"header\",\"name\":\"x-fastn-space-id\",\"description\":\"x-fastn-space-id Header\",\"schema\":{\"type\":\"string\",\"default\":\"60aecfe8-83ed-4df9-8467-8cf636d8eeff\"},\"required\":false},{\"in\":\"header\",\"name\":\"stage\",\"description\":\"stage Header\",\"schema\":{\"type\":\"string\",\"default\":\"DRAFT\"},\"required\":false},{\"in\":\"header\",\"name\":\"content-type\",\"description\":\"content-type Header\",\"schema\":{\"type\":\"string\",\"default\":\"application/json\"},\"required\":false},{\"in\":\"header\",\"name\":\"x-fastn-space-tenantid\",\"description\":\"x-fastn-space-tenantid Header\",\"schema\":{\"type\":\"string\",\"default\":\"\"},\"required\":false}],\"requestBody\":{\"required\":true,\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"input\":{\"type\":\"object\",\"description\":\"Free form JSON\",\"title\":\"JSON\",\"properties\":{\"to\":{\"type\":\"string\"},\"from\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"content\":{\"type\":\"string\"}}}},\"type\":\"object\"}}}},\"responses\":{\"200\":{\"description\":\"Success\",\"content\":{\"application/json\":{\"schema\":{\"title\":\"JSON\",\"properties\":{},\"type\":\"object\",\"description\":\"Free form JSON\"}}}}},\"security\":[{\"apiKey\":[]}]}}},\"components\":{\"securitySchemes\":{\"apiKey\":{\"in\":\"header\",\"name\":\"x-fastn-api-key\",\"type\":\"apiKey\"},\"bearerAuth\":{\"type\":\"http\",\"scheme\":\"bearer\"}}}}"
+      }
+    },
+    "version": "1.0.1",
+    "inputModel": {
+      "createdAt": 1755761350.2239325,
+      "updatedAt": 1755761350.2238643,
+      "id": "07a1436d4df2fe3ee87d4fd70ea6a259",
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "name": "sendEmailFlow",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "to": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "to": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    "outputModel": {
+      "createdAt": 1740422508.4287813,
+      "updatedAt": 1740422508.428733,
+      "id": "json",
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "errorModel": null,
+    "headerModel": {
+      "createdAt": 1755761379.2920797,
+      "updatedAt": 1755761379.292001,
+      "id": "9fed297b87c60d6808c16df827fc4407",
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "name": "sendEmailFlow",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "auth": {
+            "type": "string"
+          },
+          "authorization": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "auth": {
+            "type": "string"
+          },
+          "authorization": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    "status": "DEPLOYED",
+    "createdAt": 1755761380.6950655,
+    "updatedAt": 1755761411.3791394,
+    "deployedAt": 1755761411.3791394,
+    "resolver": {
+      "id": "sendEmailFlow",
+      "label": null,
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "groupId": null,
+      "type": null,
+      "field": null,
+      "dependencies": null,
+      "start": "sendMail",
+      "nodeBased": false,
+      "steps": [
+        {
+          "type": "COMPOSITE",
+          "id": "sendMail",
+          "actionId": null,
+          "composite": {
+            "id": "sendMail",
+            "next": "success",
+            "start": null,
+            "queryExecutor": null,
+            "steps": [
+              {
+                "type": "INLINE",
+                "id": "mapEmailData",
+                "actionId": null,
+                "inline": {
+                  "code": "{\n  \"auth\": {\n    \"bearerToken\": {% if data.secrets.gmail_bearer_token is defined %}\"{{data.secrets.gmail_bearer_token}}\"{% else %}\"{{data.headers.authorization}}\"{% endif %}\n  },\n  \"body\": {\n    \"subject\": \"{{data.input.subject}}\",\n    \"from\": \"{{data.input.from}}\",\n    \"to\": \"{{data.input.to}}\",\n    \"content\": \"{{data.input.content}}\"\n  }\n}",
+                  "language": "JINJA",
+                  "fields": [],
+                  "next": "sendMailApi",
+                  "uiCode": "{\"actionType\":\"map\",\"target\":{\"auth\":{\"actionType\":\"map\",\"target\":{\"bearerToken\":{\"actionType\":\"map\",\"target\":\"{{data.headers.authorization}}\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Bearer Token\",\"description\":\"The bearer token for Gmail API authentication.\",\"isRequred\":false,\"default\":\"\",\"autoEscape\":\"MANUAL\",\"selected\":false,\"byUser\":false,\"path\":\"auth.bearerToken\",\"field\":\"auth\",\"position\":[\"auth\",\"bearerToken\"],\"key\":\"bearerToken\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"Authentication\",\"description\":\"Authentication details for the Gmail API.\",\"isRequred\":false,\"default\":\"\",\"autoEscape\":\"MANUAL\",\"selected\":false,\"byUser\":false,\"path\":\"auth\",\"field\":\"\",\"position\":[\"auth\"],\"key\":\"auth\"},\"body\":{\"actionType\":\"map\",\"target\":{\"subject\":{\"actionType\":\"map\",\"target\":\"{{data.input.subject}}\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Subject\",\"description\":\"The subject of the email.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\",\"selected\":false,\"byUser\":false,\"path\":\"body.subject\",\"field\":\"body\",\"position\":[\"body\",\"subject\"],\"key\":\"subject\"},\"from\":{\"actionType\":\"map\",\"target\":\"{{data.input.from}}\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Raw Email Data\",\"description\":\"Your email address.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\",\"selected\":false,\"byUser\":false,\"path\":\"body.from\",\"field\":\"body\",\"position\":[\"body\",\"from\"],\"key\":\"from\"},\"to\":{\"actionType\":\"map\",\"target\":\"{{data.input.to}}\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Recipient Email\",\"description\":\"The recipient's email address.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\",\"selected\":false,\"byUser\":false,\"path\":\"body.to\",\"field\":\"body\",\"position\":[\"body\",\"to\"],\"key\":\"to\"},\"content\":{\"actionType\":\"map\",\"target\":\"{{data.input.content}}\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Email Content\",\"description\":\"The body content of the email.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\",\"selected\":false,\"byUser\":false,\"path\":\"body.content\",\"field\":\"body\",\"position\":[\"body\",\"content\"],\"key\":\"content\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"Request Body\",\"description\":\"Request body for the Gmail API.\",\"isRequred\":false,\"default\":\"\",\"autoEscape\":\"MANUAL\",\"selected\":false,\"byUser\":false,\"path\":\"body\",\"field\":\"\",\"position\":[\"body\"],\"key\":\"body\"}},\"targetType\":\"object\"}",
+                  "hasResponse": false,
+                  "isError": false,
+                  "statusCode": 200,
+                  "outputSchema": null,
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "input"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "subject"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "subject"
+                                      },
+                                      "version": 2
+                                    }
+                                  },
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "from"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "from"
+                                      },
+                                      "version": 2
+                                    }
+                                  },
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "to"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "to"
+                                      },
+                                      "version": 2
+                                    }
+                                  },
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "content"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "content"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "input"
+                                },
+                                "version": 2
+                              }
+                            },
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "headers"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "authorization"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "authorization"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "headers"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "sendMailApi",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "API",
+                "id": "sendMailApi",
+                "actionId": null,
+                "inline": null,
+                "function": {
+                  "id": "_knexa_2uTNDrdoR1wH1Dr2Xig6jteCIbf",
+                  "groupId": "5743b46c-38a0-418f-84fa-8ed18198f72e",
+                  "connectorId": "community",
+                  "name": "sendMail",
+                  "version": "1.1.0",
+                  "imageUrl": null,
+                  "configuration": {
+                    "enableCache": false,
+                    "cacheTtlInSeconds": 0,
+                    "required": true,
+                    "validate": false,
+                    "enableRetry": true,
+                    "enableAuth": true,
+                    "authType": "BEARER",
+                    "auth": {
+                      "identifier": null,
+                      "authKey": null,
+                      "enableMultiConnection": null,
+                      "isWorkspaceIdentifier": true
+                    },
+                    "retry": {
+                      "maxRetries": 3,
+                      "maxDelayMilliseconds": 1000,
+                      "enableConnectionErrors": false,
+                      "retryList": [
+                        {
+                          "delayMilliseconds": 1000,
+                          "statusCode": 500,
+                          "body": null
+                        }
+                      ]
+                    },
+                    "requestSetting": null
+                  },
+                  "next": null,
+                  "queryExecutor": null
+                },
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ]
+          },
+          "function": null,
+          "inline": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "success",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INLINE",
+          "id": "success",
+          "actionId": null,
+          "inline": {
+            "code": "{\n  \"status\": \"success\",\n  \"message\": \"Email sent successfully\",\n  \"emailId\": \"{{data.steps.sendMail.output.id}}\",\n  \"threadId\": \"{{data.steps.sendMail.output.threadId}}\"\n}",
+            "language": "JINJA",
+            "fields": [],
+            "next": null,
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"status\":{\"actionType\":\"map\",\"target\":\"success\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true},\"message\":{\"actionType\":\"map\",\"target\":\"Email sent successfully\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true},\"emailId\":{\"actionType\":\"map\",\"target\":\"{{data.steps.sendMail.output.id}}\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true},\"threadId\":{\"actionType\":\"map\",\"target\":\"{{data.steps.sendMail.output.threadId}}\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "hasResponse": true,
+            "isError": false,
+            "statusCode": 200,
+            "outputSchema": null,
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "steps"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "sendMail"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "output"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "id"
+                                          },
+                                          "value": {
+                                            "children": [],
+                                            "returnLiteral": true,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "id"
+                                            },
+                                            "version": 2
+                                          }
+                                        },
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "threadId"
+                                          },
+                                          "value": {
+                                            "children": [],
+                                            "returnLiteral": true,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "threadId"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "output"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "sendMail"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "steps"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": null,
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        }
+      ]
+    },
+    "types": [],
+    "tests": null,
+    "hasActionType": true,
+    "metaData": {
+      "enableLogs": true,
+      "isAsync": false,
+      "hasSecret": true,
+      "enableMultitenant": false,
+      "enableValidation": false,
+      "architecture": "REST",
+      "isCustomAuthenticationEnabled": true,
+      "isNotificationEnabled": false,
+      "flowType": "API",
+      "jobMemoryLimit": 4096,
+      "jobTimeOut": null,
+      "jobCpuLimit": "1",
+      "isConfigured": null,
+      "configurationFlows": [],
+      "invocationMethod": "API_REQUEST",
+      "priority": null,
+      "triggerType": null,
+      "schedule": null,
+      "triggerApp": null
+    },
+    "comment": null,
+    "labels": null,
+    "resourceType": "EXTERNAL",
+    "deleted": null,
+    "webhookId": null,
+    "webhook": null,
+    "deployedBy": "GenAIDeveloper",
+    "createdby": "GenAIDeveloper"
+  }
+]

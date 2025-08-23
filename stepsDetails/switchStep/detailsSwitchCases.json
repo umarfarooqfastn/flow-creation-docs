@@ -1,0 +1,683 @@
+[
+  {
+    "clientId": "b9128ead-7894-4014-a64a-603b677b14dc",
+    "id": "SwitchFlow",
+    "newName": null,
+    "name": "SwitchFlow",
+    "description": null,
+    "actionType": "READ",
+    "inputName": "input",
+    "inputModelId": "9ada259d78605a8255c56b895427134f",
+    "chatWelcomeMessage": null,
+    "outputModelId": "json",
+    "errorModelId": "",
+    "headerModelId": "json",
+    "apiPreview": {
+      "graphql": null,
+      "rest": {
+        "schema": "{\"openapi\":\"3.0.3\",\"info\":{\"title\":\"Flow OpenAPI Specification\",\"description\":\"OpenAPI specification for the flow\",\"version\":\"1.0.11\"},\"servers\":[{\"url\":\"https://live.fastn.ai/api/v1\"}],\"paths\":{\"/SwitchFlow\":{\"post\":{\"summary\":\"SwitchFlow\",\"operationId\":\"POST-SwitchFlow\",\"parameters\":[{\"in\":\"header\",\"name\":\"x-fastn-space-id\",\"description\":\"x-fastn-space-id Header\",\"schema\":{\"type\":\"string\",\"default\":\"b9128ead-7894-4014-a64a-603b677b14dc\"},\"required\":false},{\"in\":\"header\",\"name\":\"stage\",\"description\":\"stage Header\",\"schema\":{\"type\":\"string\",\"default\":\"DRAFT\"},\"required\":false},{\"in\":\"header\",\"name\":\"content-type\",\"description\":\"content-type Header\",\"schema\":{\"type\":\"string\",\"default\":\"application/json\"},\"required\":false},{\"in\":\"header\",\"name\":\"x-fastn-space-tenantid\",\"description\":\"x-fastn-space-tenantid Header\",\"schema\":{\"type\":\"string\",\"default\":\"\"},\"required\":false}],\"requestBody\":{\"required\":true,\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"input\":{\"type\":\"object\",\"description\":\"Free form JSON\",\"title\":\"JSON\",\"properties\":{\"value\":{\"type\":\"string\"}}}},\"type\":\"object\"}}}},\"responses\":{\"200\":{\"description\":\"Success\",\"content\":{\"application/json\":{\"schema\":{\"title\":\"JSON\",\"properties\":{},\"type\":\"object\",\"description\":\"Free form JSON\"}}}}},\"security\":[{\"apiKey\":[]}]}}},\"components\":{\"securitySchemes\":{\"apiKey\":{\"name\":\"x-fastn-api-key\",\"in\":\"header\",\"type\":\"apiKey\"},\"bearerAuth\":{\"scheme\":\"bearer\",\"type\":\"http\"}}}}"
+      }
+    },
+    "version": "1.0.1",
+    "inputModel": {
+      "createdAt": 1755476126.262466,
+      "updatedAt": 1755476126.2623343,
+      "id": "9ada259d78605a8255c56b895427134f",
+      "clientId": "b9128ead-7894-4014-a64a-603b677b14dc",
+      "name": "SwitchFlow",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    "outputModel": {
+      "createdAt": 1755475222.1250103,
+      "updatedAt": 1755475222.1249256,
+      "id": "json",
+      "clientId": "b9128ead-7894-4014-a64a-603b677b14dc",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "errorModel": null,
+    "headerModel": {
+      "createdAt": 1755475222.1250103,
+      "updatedAt": 1755475222.1249256,
+      "id": "json",
+      "clientId": "b9128ead-7894-4014-a64a-603b677b14dc",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "status": "DEPLOYED",
+    "createdAt": 1755476132.9844892,
+    "updatedAt": 1755476170.607925,
+    "deployedAt": 1755476170.607925,
+    "resolver": {
+      "id": "SwitchFlow",
+      "label": null,
+      "clientId": "b9128ead-7894-4014-a64a-603b677b14dc",
+      "groupId": null,
+      "type": null,
+      "field": null,
+      "dependencies": null,
+      "start": "switchIf_Equals_case_with_if_equals_ignore_cas",
+      "nodeBased": false,
+      "steps": [
+        {
+          "type": "CONDITIONAL",
+          "id": "switchIf_Equals_case_with_if_equals_ignore_cas",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": {
+            "id": "switchIf_Equals_case_with_if_equals_ignore_cas",
+            "next": "ElseCase",
+            "expressions": [
+              {
+                "name": "if Equals case with or",
+                "logic": "OR",
+                "conditions": [
+                  {
+                    "name": null,
+                    "logic": "AND",
+                    "conditions": null,
+                    "variable": "{{data.input.value}}",
+                    "value": "5",
+                    "operation": "EQ",
+                    "next": null
+                  },
+                  {
+                    "name": null,
+                    "logic": "AND",
+                    "conditions": null,
+                    "variable": "{{data.input.value}}",
+                    "value": "10",
+                    "operation": "EQ",
+                    "next": null
+                  }
+                ],
+                "variable": "{{data.input.value}}",
+                "value": "5",
+                "operation": "EQ",
+                "next": "EqualCase"
+              },
+              {
+                "name": "if equals ignore case",
+                "logic": "OR",
+                "conditions": [
+                  {
+                    "name": null,
+                    "logic": "AND",
+                    "conditions": null,
+                    "variable": "{{data.input.value}}",
+                    "value": "5",
+                    "operation": "EQ_IGNORE_CASE",
+                    "next": null
+                  },
+                  {
+                    "name": null,
+                    "logic": "AND",
+                    "conditions": null,
+                    "variable": "{{data.input.value}}",
+                    "value": "10",
+                    "operation": "EQ_IGNORE_CASE",
+                    "next": null
+                  }
+                ],
+                "variable": "{{data.input.value}}",
+                "value": "5",
+                "operation": "EQ_IGNORE_CASE",
+                "next": "EqualIgnoreCase"
+              },
+              {
+                "name": "if not equals case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": "100",
+                "operation": "NEQ",
+                "next": null
+              },
+              {
+                "name": "greater than case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": "100",
+                "operation": "GREATER_THAN",
+                "next": null
+              },
+              {
+                "name": "greater than equals case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": "100",
+                "operation": "GREATER_THAN_OR_EQ",
+                "next": null
+              },
+              {
+                "name": "less than case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": "99",
+                "operation": "LESS_THAN",
+                "next": null
+              },
+              {
+                "name": "less than or equal case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}} ",
+                "value": "99",
+                "operation": "LESS_THAN_OR_EQ",
+                "next": null
+              },
+              {
+                "name": "length equals case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": "33",
+                "operation": "LENGTH_EQ",
+                "next": null
+              },
+              {
+                "name": "starts with case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": "um",
+                "operation": "STARTS_WITH",
+                "next": null
+              },
+              {
+                "name": "end with case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": "ar",
+                "operation": "ENDS_WITH",
+                "next": null
+              },
+              {
+                "name": "contains case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": "ma",
+                "operation": "CONTAINS",
+                "next": null
+              },
+              {
+                "name": "exist or not case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": null,
+                "operation": "EXISTS",
+                "next": null
+              },
+              {
+                "name": "null or empty case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": null,
+                "operation": "NOT_EXISTS",
+                "next": null
+              },
+              {
+                "name": "none case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": null,
+                "operation": "NONE",
+                "next": null
+              },
+              {
+                "name": "type of text case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": "text",
+                "operation": "TYPE_OF",
+                "next": null
+              },
+              {
+                "name": "type of number case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": "number",
+                "operation": "TYPE_OF",
+                "next": null
+              },
+              {
+                "name": "type of boolean or List case",
+                "logic": "OR",
+                "conditions": [
+                  {
+                    "name": null,
+                    "logic": "AND",
+                    "conditions": null,
+                    "variable": "{{data.input.value}}",
+                    "value": "boolean",
+                    "operation": "TYPE_OF",
+                    "next": null
+                  },
+                  {
+                    "name": null,
+                    "logic": "AND",
+                    "conditions": null,
+                    "variable": " {{data.input.value}}",
+                    "value": "list",
+                    "operation": "TYPE_OF",
+                    "next": null
+                  }
+                ],
+                "variable": null,
+                "value": "boolean",
+                "operation": "TYPE_OF",
+                "next": null
+              },
+              {
+                "name": "type of object case",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.input.value}}",
+                "value": "object",
+                "operation": "TYPE_OF",
+                "next": null
+              }
+            ],
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "input"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "value"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "value"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "input"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "ElseCase",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INLINE",
+          "id": "ElseCase",
+          "actionId": null,
+          "inline": {
+            "code": "\n{\n  \"message\": \"Else case\"\n}",
+            "language": "JINJA",
+            "fields": [],
+            "next": null,
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"message\":{\"actionType\":\"map\",\"target\":\"Else case\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "hasResponse": true,
+            "isError": false,
+            "statusCode": 200,
+            "outputSchema": null,
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": null,
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INLINE",
+          "id": "EqualCase",
+          "actionId": null,
+          "inline": {
+            "code": "\n{\n  \"message\": \"equal case\"\n}",
+            "language": "JINJA",
+            "fields": [],
+            "next": null,
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"message\":{\"actionType\":\"map\",\"target\":\"equal case\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "hasResponse": true,
+            "isError": false,
+            "statusCode": 200,
+            "outputSchema": null,
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": null,
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INLINE",
+          "id": "EqualIgnoreCase",
+          "actionId": null,
+          "inline": {
+            "code": "\n{\n  \"message\": \"equal ignore case\"\n}",
+            "language": "JINJA",
+            "fields": [],
+            "next": null,
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"message\":{\"actionType\":\"map\",\"target\":\"equal ignore case\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "hasResponse": true,
+            "isError": false,
+            "statusCode": 200,
+            "outputSchema": null,
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": null,
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        }
+      ]
+    },
+    "types": [],
+    "tests": null,
+    "hasActionType": true,
+    "metaData": {
+      "enableLogs": true,
+      "isAsync": false,
+      "hasSecret": true,
+      "enableMultitenant": false,
+      "enableValidation": false,
+      "architecture": "REST",
+      "isCustomAuthenticationEnabled": true,
+      "isNotificationEnabled": false,
+      "flowType": "API",
+      "jobMemoryLimit": 4096,
+      "jobTimeOut": null,
+      "jobCpuLimit": "1",
+      "isConfigured": null,
+      "configurationFlows": [],
+      "invocationMethod": "API_REQUEST",
+      "priority": null,
+      "triggerType": null,
+      "schedule": null,
+      "triggerApp": null
+    },
+    "comment": null,
+    "labels": null,
+    "resourceType": "EXTERNAL",
+    "deleted": null,
+    "webhookId": null,
+    "webhook": null,
+    "createdby": "GenAIDeveloper"
+  }
+]

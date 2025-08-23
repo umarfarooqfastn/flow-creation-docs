@@ -1,0 +1,118 @@
+[
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2uTNDrdoR1wH1Dr2Xig6jteCIbf",
+      "name": "sendMail",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Gmail API Request\",\"description\":\"Gmail API request schema\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Gmail API.\",\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"The bearer token for Gmail API authentication.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Request body for the Gmail API.\",\"required\":[\"subject\",\"from\",\"to\",\"content\"],\"properties\":{\"subject\":{\"type\":\"string\",\"title\":\"Subject\",\"description\":\"The subject of the email.\"},\"from\":{\"type\":\"string\",\"title\":\"Raw Email Data\",\"description\":\"Your email address.\"},\"to\":{\"type\":\"string\",\"title\":\"Recipient Email\",\"description\":\"The recipient's email address.\"},\"content\":{\"type\":\"string\",\"title\":\"Email Content\",\"description\":\"The body content of the email.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"subject\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"from\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"to\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"content\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"threadId\":{\"type\":\"string\"},\"labelIds\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-05-21T15:07:23.030Z",
+      "updatedAt": "2025-05-21T15:07:23.030Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2uVFybNASBfzPswg7U5V0VzD6CP",
+      "name": "getMails",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Gmail Request Body\",\"description\":\"Data related to the request body for the Gmail Gmail API.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Parameters\",\"description\":\"Authentication parameters for Gmail API.\",\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"Bearer token for authentication.\"}}},\"param\":{\"type\":\"object\",\"title\":\"API Parameters\",\"description\":\"Parameters for Gmail API.\",\"properties\":{\"q\":{\"type\":\"string\",\"title\":\"Search Query\",\"description\":\"Search query.\"},\"labelIds\":{\"type\":\"string\",\"title\":\"Label IDs\",\"description\":\"Comma-separated list of label IDs.\"},\"maxResults\":{\"type\":\"string\",\"title\":\"Max Results\",\"description\":\"Maximum number of results to return.\"},\"includeSpamTrash\":{\"type\":\"string\",\"title\":\"Include Spam/Trash\",\"description\":\"Include spam and trash items.\"},\"pageToken\":{\"type\":\"string\",\"title\":\"Page Token\",\"description\":\"Token for pagination.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"includeSpamTrash\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"labelIds\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"maxResults\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"pageToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"q\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"messages\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"threadId\":{\"type\":\"string\"}},\"required\":[]}},\"nextPageToken\":{\"type\":\"string\"},\"resultSizeEstimate\":{\"type\":\"integer\"}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-05-21T15:07:23.007Z",
+      "updatedAt": "2025-08-06T21:21:30.762Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2uVGBXbTjSO8Ypp4jby4iLC05wG",
+      "name": "getMail",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"My connectors My connectors Request Body\",\"description\":\"Request body for the My connectors My connectors endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Parameters\",\"description\":\"Authentication parameters for the My connectors My connectors endpoint.\",\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"Bearer token for authentication with My connectors.\"}}},\"param\":{\"type\":\"object\",\"title\":\"Endpoint Parameters\",\"description\":\"Parameters for the My connectors My connectors endpoint.\",\"properties\":{\"format\":{\"type\":\"string\",\"title\":\"Data Format\",\"description\":\"Format of the data for My connectors.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the My connectors My connectors endpoint.\",\"required\":[\"messageId\"],\"properties\":{\"messageId\":{\"type\":\"string\",\"title\":\"Message ID\",\"description\":\"Message ID for the My connectors API call.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"format\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"messageId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"threadId\":{\"type\":\"string\"},\"labelIds\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"snippet\":{\"type\":\"string\"},\"payload\":{\"type\":\"object\",\"properties\":{\"partId\":{\"type\":\"string\"},\"mimeType\":{\"type\":\"string\"},\"filename\":{\"type\":\"string\"},\"headers\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"value\":{\"type\":\"string\"}},\"required\":[]}},\"body\":{\"type\":\"object\",\"properties\":{\"size\":{\"type\":\"integer\"}},\"required\":[]},\"parts\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partId\":{\"type\":\"string\"},\"mimeType\":{\"type\":\"string\"},\"filename\":{\"type\":\"string\"},\"headers\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"value\":{\"type\":\"string\"}},\"required\":[]}},\"body\":{\"type\":\"object\",\"properties\":{\"size\":{\"type\":\"integer\"},\"attachmentId\":{\"type\":\"string\"}},\"required\":[]},\"parts\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"partId\":{\"type\":\"string\"},\"mimeType\":{\"type\":\"string\"},\"filename\":{\"type\":\"string\"},\"headers\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"value\":{\"type\":\"string\"}},\"required\":[]}},\"body\":{\"type\":\"object\",\"properties\":{\"size\":{\"type\":\"integer\"},\"data\":{\"type\":\"string\"},\"attachmentId\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}}},\"required\":[]}}},\"required\":[]},\"sizeEstimate\":{\"type\":\"integer\"},\"historyId\":{\"type\":\"string\"},\"internalDate\":{\"type\":\"string\"}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-05-21T15:07:22.982Z",
+      "updatedAt": "2025-08-06T21:21:38.042Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_30vk6WZ9x3PzoY075pqyRB0O0bD",
+      "name": "getMailAttachments",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"\",\"description\":\"\",\"required\":[\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"properties\":{\"bearerToken\":{\"type\":\"string\"}}},\"url\":{\"type\":\"object\",\"required\":[\"attachmentId\",\"messageId\"],\"properties\":{\"messageId\":{\"type\":\"string\"},\"attachmentId\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"attachmentId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"messageId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"size\":{\"type\":\"integer\"},\"data\":{\"type\":\"string\"}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-08-06T21:20:58.643Z",
+      "updatedAt": "2025-08-06T21:20:58.643Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  }
+]

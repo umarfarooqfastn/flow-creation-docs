@@ -1,0 +1,1833 @@
+[
+  {
+    "clientId": "7e75a645-10ec-4772-b0f5-53612d3a4f0f",
+    "id": "shoppifyOrdersToGoogleSheet",
+    "newName": null,
+    "name": "shoppifyOrdersToGoogleSheet",
+    "description": null,
+    "actionType": "READ",
+    "inputName": "input",
+    "inputModelId": "0cfb931ee8a317ae9e83cb7b15a25a77",
+    "chatWelcomeMessage": null,
+    "outputModelId": "json",
+    "errorModelId": "",
+    "headerModelId": "json",
+    "apiPreview": {
+      "graphql": null,
+      "rest": {
+        "schema": "{\"openapi\":\"3.0.3\",\"info\":{\"title\":\"Flow OpenAPI Specification\",\"description\":\"OpenAPI specification for the flow\",\"version\":\"1.0.11\"},\"servers\":[{\"url\":\"https://live.fastn.ai/api/v1\"}],\"paths\":{\"/shoppifyOrdersToGoogleSheet\":{\"post\":{\"summary\":\"shoppifyOrdersToGoogleSheet\",\"operationId\":\"POST-shoppifyOrdersToGoogleSheet\",\"parameters\":[{\"in\":\"header\",\"name\":\"x-fastn-space-id\",\"description\":\"x-fastn-space-id Header\",\"schema\":{\"type\":\"string\",\"default\":\"7e75a645-10ec-4772-b0f5-53612d3a4f0f\"},\"required\":false},{\"in\":\"header\",\"name\":\"stage\",\"description\":\"stage Header\",\"schema\":{\"type\":\"string\",\"default\":\"DRAFT\"},\"required\":false},{\"in\":\"header\",\"name\":\"content-type\",\"description\":\"content-type Header\",\"schema\":{\"type\":\"string\",\"default\":\"application/json\"},\"required\":false},{\"in\":\"header\",\"name\":\"x-fastn-space-tenantid\",\"description\":\"x-fastn-space-tenantid Header\",\"schema\":{\"type\":\"string\",\"default\":\"\"},\"required\":false}],\"requestBody\":{\"required\":true,\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"input\":{\"type\":\"object\",\"description\":\"Free form JSON\",\"title\":\"JSON\",\"properties\":{\"name\":{\"type\":\"string\"},\"sheetTitle\":{\"type\":\"string\"}}}},\"type\":\"object\"}}}},\"responses\":{\"200\":{\"description\":\"Success\",\"content\":{\"application/json\":{\"schema\":{\"title\":\"JSON\",\"properties\":{},\"type\":\"object\",\"description\":\"Free form JSON\"}}}}},\"security\":[{\"apiKey\":[]}]}}},\"components\":{\"securitySchemes\":{\"apiKey\":{\"name\":\"x-fastn-api-key\",\"in\":\"header\",\"type\":\"apiKey\"},\"bearerAuth\":{\"scheme\":\"bearer\",\"type\":\"http\"}}}}"
+      }
+    },
+    "version": "1.0.1",
+    "inputModel": {
+      "createdAt": 1755188458.3110209,
+      "updatedAt": 1755188458.3109577,
+      "id": "0cfb931ee8a317ae9e83cb7b15a25a77",
+      "clientId": "7e75a645-10ec-4772-b0f5-53612d3a4f0f",
+      "name": "shoppifyOrdersToGoogleSheet",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "sheetTitle": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "sheetTitle": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    "outputModel": {
+      "createdAt": 1744927686.5513294,
+      "updatedAt": 1744927686.5513039,
+      "id": "json",
+      "clientId": "7e75a645-10ec-4772-b0f5-53612d3a4f0f",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "errorModel": null,
+    "headerModel": {
+      "createdAt": 1744927686.5513294,
+      "updatedAt": 1744927686.5513039,
+      "id": "json",
+      "clientId": "7e75a645-10ec-4772-b0f5-53612d3a4f0f",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "status": "DEPLOYED",
+    "createdAt": 1755188460.6482446,
+    "updatedAt": 1755193061.70433,
+    "deployedAt": 1755193061.70433,
+    "resolver": {
+      "id": "shoppifyOrdersToGoogleSheet",
+      "label": null,
+      "clientId": "7e75a645-10ec-4772-b0f5-53612d3a4f0f",
+      "groupId": null,
+      "type": null,
+      "field": null,
+      "dependencies": null,
+      "start": "Variable5785",
+      "nodeBased": false,
+      "steps": [
+        {
+          "type": "COMPOSITE",
+          "id": "getOrders",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": {
+            "steps": [
+              {
+                "type": "INLINE",
+                "id": "getOrdersMap",
+                "actionId": null,
+                "inline": {
+                  "code": "\n{\n  \"param\": {\n  \"name\": {% if data.input.name is defined %}\"{{data.input.name}}\"{% else %}\"\"{% endif %}\n},\n  \"auth\": {\n  \"apiKeyValue\": \"\",\n  \"storeName\": \"\"\n}\n}",
+                  "language": "JINJA",
+                  "fields": [],
+                  "next": "getOrdersApi",
+                  "uiCode": "{\"actionType\":\"map\",\"target\":{\"param\":{\"actionType\":\"map\",\"target\":{\"name\":{\"path\":\"param.name\",\"field\":\"param\",\"position\":[\"param\",\"name\"],\"key\":\"name\",\"selected\":true,\"actionType\":\"map\",\"target\":\"{{data.input.name}}\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"Parameter Name\",\"description\":\"A parameter name.\",\"isRequred\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]},\"auth\":{\"actionType\":\"map\",\"target\":{\"apiKeyValue\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"},\"storeName\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Store Name\",\"description\":\"The name of the Shopify store.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":false}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]}",
+                  "hasResponse": false,
+                  "isError": false,
+                  "statusCode": 200,
+                  "outputSchema": null,
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "input"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "name"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "name"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "input"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "getOrdersApi",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": null,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "API",
+                "id": "getOrdersApi",
+                "actionId": null,
+                "inline": null,
+                "function": {
+                  "id": "_knexa_2ofJ8wnNOpWQwKFqneWlumBAhC9",
+                  "groupId": "_knexa_2fc3b972-2f75-49d4-8cce-3a11a5990408",
+                  "connectorId": "community",
+                  "name": "getOrders",
+                  "version": "1.0.5",
+                  "imageUrl": null,
+                  "configuration": {
+                    "enableCache": false,
+                    "cacheTtlInSeconds": 0,
+                    "required": true,
+                    "validate": false,
+                    "enableRetry": false,
+                    "enableAuth": true,
+                    "authType": "APIKEY",
+                    "auth": {
+                      "identifier": null,
+                      "authKey": null,
+                      "enableMultiConnection": false,
+                      "isWorkspaceIdentifier": true
+                    },
+                    "retry": {
+                      "maxRetries": 1,
+                      "maxDelayMilliseconds": 1000,
+                      "enableConnectionErrors": false,
+                      "retryList": [
+                        {
+                          "delayMilliseconds": 50,
+                          "statusCode": 500,
+                          "body": null
+                        }
+                      ]
+                    },
+                    "requestSetting": null
+                  },
+                  "next": null,
+                  "queryExecutor": null
+                },
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": null,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ],
+            "next": "createSpreadsheet",
+            "start": null,
+            "queryExecutor": null
+          },
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"orders\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"app_id\":{\"type\":\"integer\"},\"browser_ip\":{\"type\":\"string\"},\"buyer_accepts_marketing\":{\"type\":\"boolean\"},\"cancel_reason\":{\"type\":\"string\"},\"cancelled_at\":{\"type\":\"string\"},\"cart_token\":{\"type\":\"string\"},\"checkout_id\":{\"type\":\"string\"},\"checkout_token\":{\"type\":\"string\"},\"client_details\":{\"type\":\"string\"},\"closed_at\":{\"type\":\"string\"},\"company\":{\"type\":\"string\"},\"confirmation_number\":{\"type\":\"string\"},\"confirmed\":{\"type\":\"boolean\"},\"contact_email\":{\"type\":\"string\"},\"created_at\":{\"type\":\"string\"},\"currency\":{\"type\":\"string\"},\"current_subtotal_price\":{\"type\":\"string\"},\"current_subtotal_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"current_total_additional_fees_set\":{\"type\":\"string\"},\"current_total_discounts\":{\"type\":\"string\"},\"current_total_discounts_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"current_total_duties_set\":{\"type\":\"string\"},\"current_total_price\":{\"type\":\"string\"},\"current_total_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"current_total_tax\":{\"type\":\"string\"},\"current_total_tax_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"customer_locale\":{\"type\":\"string\"},\"device_id\":{\"type\":\"string\"},\"discount_codes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"email\":{\"type\":\"string\"},\"estimated_taxes\":{\"type\":\"boolean\"},\"financial_status\":{\"type\":\"string\"},\"fulfillment_status\":{\"type\":\"string\"},\"landing_site\":{\"type\":\"string\"},\"landing_site_ref\":{\"type\":\"string\"},\"location_id\":{\"type\":\"string\"},\"merchant_of_record_app_id\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"note\":{\"type\":\"string\"},\"note_attributes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"number\":{\"type\":\"integer\"},\"order_number\":{\"type\":\"integer\"},\"order_status_url\":{\"type\":\"string\"},\"original_total_additional_fees_set\":{\"type\":\"string\"},\"original_total_duties_set\":{\"type\":\"string\"},\"payment_gateway_names\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"phone\":{\"type\":\"string\"},\"po_number\":{\"type\":\"string\"},\"presentment_currency\":{\"type\":\"string\"},\"processed_at\":{\"type\":\"string\"},\"reference\":{\"type\":\"string\"},\"referring_site\":{\"type\":\"string\"},\"source_identifier\":{\"type\":\"string\"},\"source_name\":{\"type\":\"string\"},\"source_url\":{\"type\":\"string\"},\"subtotal_price\":{\"type\":\"string\"},\"subtotal_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"tags\":{\"type\":\"string\"},\"tax_exempt\":{\"type\":\"boolean\"},\"tax_lines\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"price\":{\"type\":\"string\"},\"rate\":{\"type\":\"number\"},\"title\":{\"type\":\"string\"},\"price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"channel_liable\":{\"type\":\"boolean\"}},\"required\":[]}},\"taxes_included\":{\"type\":\"boolean\"},\"test\":{\"type\":\"boolean\"},\"token\":{\"type\":\"string\"},\"total_discounts\":{\"type\":\"string\"},\"total_discounts_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"total_line_items_price\":{\"type\":\"string\"},\"total_line_items_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"total_outstanding\":{\"type\":\"string\"},\"total_price\":{\"type\":\"string\"},\"total_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"total_shipping_price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"total_tax\":{\"type\":\"string\"},\"total_tax_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"total_tip_received\":{\"type\":\"string\"},\"total_weight\":{\"type\":\"integer\"},\"updated_at\":{\"type\":\"string\"},\"user_id\":{\"type\":\"string\"},\"billing_address\":{\"type\":\"string\"},\"customer\":{\"type\":\"string\"},\"discount_applications\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"fulfillments\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"line_items\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\"},\"admin_graphql_api_id\":{\"type\":\"string\"},\"attributed_staffs\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"current_quantity\":{\"type\":\"integer\"},\"fulfillable_quantity\":{\"type\":\"integer\"},\"fulfillment_service\":{\"type\":\"string\"},\"fulfillment_status\":{\"type\":\"string\"},\"gift_card\":{\"type\":\"boolean\"},\"grams\":{\"type\":\"integer\"},\"name\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"product_exists\":{\"type\":\"boolean\"},\"product_id\":{\"type\":\"string\"},\"properties\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"quantity\":{\"type\":\"integer\"},\"requires_shipping\":{\"type\":\"boolean\"},\"sku\":{\"type\":\"string\"},\"taxable\":{\"type\":\"boolean\"},\"title\":{\"type\":\"string\"},\"total_discount\":{\"type\":\"string\"},\"total_discount_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"variant_id\":{\"type\":\"string\"},\"variant_inventory_management\":{\"type\":\"string\"},\"variant_title\":{\"type\":\"string\"},\"vendor\":{\"type\":\"string\"},\"tax_lines\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"channel_liable\":{\"type\":\"boolean\"},\"price\":{\"type\":\"string\"},\"price_set\":{\"type\":\"object\",\"properties\":{\"shop_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]},\"presentment_money\":{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"string\"},\"currency_code\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"rate\":{\"type\":\"number\"},\"title\":{\"type\":\"string\"}},\"required\":[]}},\"duties\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"discount_allocations\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"payment_terms\":{\"type\":\"string\"},\"refunds\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"shipping_address\":{\"type\":\"string\"},\"shipping_lines\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}}},\"required\":[]}",
+          "next": "createSpreadsheet",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": "This tool is designed to execute the getOrders operation on the Shopify platform. It requires the JSON payload to strictly match the expected structure (key and type), otherwise, the operation will fail. Always get confirmation from the user before calling the tool.",
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "COMPOSITE",
+          "id": "createSpreadsheet",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": {
+            "steps": [
+              {
+                "type": "INLINE",
+                "id": "createSpreadsheetMap",
+                "actionId": null,
+                "inline": {
+                  "code": "\n{\n  \"body\": {\n  \"properties\": {\n  \"title\": {% if data.var.sheetTitle is defined %}\"{{data.var.sheetTitle}}\"{% else %}\"\"{% endif %}\n}\n},\n  \"auth\": {\n  \"bearerToken\": \"\"\n}\n}",
+                  "language": "JINJA",
+                  "fields": [],
+                  "next": "createSpreadsheetApi",
+                  "uiCode": "{\"actionType\":\"map\",\"target\":{\"body\":{\"actionType\":\"map\",\"target\":{\"properties\":{\"actionType\":\"map\",\"target\":{\"title\":{\"actionType\":\"map\",\"target\":\"{{data.var.sheetTitle}}\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"Sheet title\",\"description\":\"Use this field to add title for the google sheet.\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\",\"path\":\"body.properties.title\",\"byUser\":true}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true},\"auth\":{\"actionType\":\"map\",\"target\":{\"bearerToken\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Bearer Token\",\"description\":\"Bearer token for authentication with Google Sheets.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":false}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]}",
+                  "hasResponse": false,
+                  "isError": false,
+                  "statusCode": 200,
+                  "outputSchema": null,
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "var"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "sheetTitle"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "sheetTitle"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "var"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "createSpreadsheetApi",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": null,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "API",
+                "id": "createSpreadsheetApi",
+                "actionId": null,
+                "inline": null,
+                "function": {
+                  "id": "_knexa_2kIId6Qrog6sO2QPowOQoVdvyGf",
+                  "groupId": "_knexa_f251a593-86bd-4ae4-9fc5-45bc7e71a6c5",
+                  "connectorId": "community",
+                  "name": "createSpreadsheet",
+                  "version": "1.1.3",
+                  "imageUrl": null,
+                  "configuration": {
+                    "enableCache": false,
+                    "cacheTtlInSeconds": 0,
+                    "required": true,
+                    "validate": false,
+                    "enableRetry": false,
+                    "enableAuth": true,
+                    "authType": "BEARER",
+                    "auth": {
+                      "identifier": null,
+                      "authKey": null,
+                      "enableMultiConnection": false,
+                      "isWorkspaceIdentifier": true
+                    },
+                    "retry": {
+                      "maxRetries": 1,
+                      "maxDelayMilliseconds": 1000,
+                      "enableConnectionErrors": false,
+                      "retryList": [
+                        {
+                          "delayMilliseconds": 50,
+                          "statusCode": 500,
+                          "body": null
+                        }
+                      ]
+                    },
+                    "requestSetting": null
+                  },
+                  "next": null,
+                  "queryExecutor": null
+                },
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": null,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ],
+            "next": "CreateTableOrders",
+            "start": null,
+            "queryExecutor": null
+          },
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"spreadsheetId\":{\"type\":\"string\"},\"properties\":{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"locale\":{\"type\":\"string\"},\"autoRecalc\":{\"type\":\"string\"},\"timeZone\":{\"type\":\"string\"},\"defaultFormat\":{\"type\":\"object\",\"properties\":{\"backgroundColor\":{\"type\":\"object\",\"properties\":{\"red\":{\"type\":\"integer\"},\"green\":{\"type\":\"integer\"},\"blue\":{\"type\":\"integer\"}},\"required\":[]},\"padding\":{\"type\":\"object\",\"properties\":{\"top\":{\"type\":\"integer\"},\"right\":{\"type\":\"integer\"},\"bottom\":{\"type\":\"integer\"},\"left\":{\"type\":\"integer\"}},\"required\":[]},\"verticalAlignment\":{\"type\":\"string\"},\"wrapStrategy\":{\"type\":\"string\"},\"textFormat\":{\"type\":\"object\",\"properties\":{\"foregroundColor\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"fontFamily\":{\"type\":\"string\"},\"fontSize\":{\"type\":\"integer\"},\"bold\":{\"type\":\"boolean\"},\"italic\":{\"type\":\"boolean\"},\"strikethrough\":{\"type\":\"boolean\"},\"underline\":{\"type\":\"boolean\"},\"foregroundColorStyle\":{\"type\":\"object\",\"properties\":{\"rgbColor\":{\"type\":\"object\",\"properties\":{},\"required\":[]}},\"required\":[]}},\"required\":[]},\"backgroundColorStyle\":{\"type\":\"object\",\"properties\":{\"rgbColor\":{\"type\":\"object\",\"properties\":{\"red\":{\"type\":\"integer\"},\"green\":{\"type\":\"integer\"},\"blue\":{\"type\":\"integer\"}},\"required\":[]}},\"required\":[]}},\"required\":[]},\"spreadsheetTheme\":{\"type\":\"object\",\"properties\":{\"primaryFontFamily\":{\"type\":\"string\"},\"themeColors\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"colorType\":{\"type\":\"string\"},\"color\":{\"type\":\"object\",\"properties\":{\"rgbColor\":{\"type\":\"object\",\"properties\":{\"red\":{\"type\":\"number\"},\"green\":{\"type\":\"number\"},\"blue\":{\"type\":\"number\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}}},\"required\":[]}},\"required\":[]},\"sheets\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"properties\":{\"type\":\"object\",\"properties\":{\"sheetId\":{\"type\":\"integer\"},\"title\":{\"type\":\"string\"},\"index\":{\"type\":\"integer\"},\"sheetType\":{\"type\":\"string\"},\"gridProperties\":{\"type\":\"object\",\"properties\":{\"rowCount\":{\"type\":\"integer\"},\"columnCount\":{\"type\":\"integer\"}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"spreadsheetUrl\":{\"type\":\"string\"}},\"required\":[]}",
+          "next": "CreateTableOrders",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": "This tool is designed to execute the createSpreadsheet operation on the Google Sheets platform. It requires the JSON payload to strictly match the expected structure (key and type), otherwise, the operation will fail. Always get confirmation from the user before calling the tool.",
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "LOOP",
+          "id": "loopOverOrders",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": {
+            "next": "sendMessage",
+            "start": "flattenOrderDetails",
+            "loopOver": "{{data.steps.getOrders.output.orders}}",
+            "type": "DATA",
+            "steps": [
+              {
+                "type": "COMPOSITE",
+                "id": "appendSheet",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": {
+                  "steps": [
+                    {
+                      "type": "INLINE",
+                      "id": "appendSheetMap",
+                      "actionId": null,
+                      "inline": {
+                        "code": "function handler(params) {\n\n\treturn {\n\t\t\"auth\": {\n\t\t\t\"bearerToken\": \"\"\n\t\t},\n\t\t\"param\": {\n\t\t\t\"valueInputOption\": \"RAW\"\n\t\t},\n\t\t\"body\": {\n\t\t\t\"values\": [\n\t\t\t\tparams.data.steps.flattenOrderDetails.output.flattenedRow\n\t\t\t]\n\t\t},\n\t\t\"url\": {\n\t\t\t\"spreadsheet\": params.data.steps.createSpreadsheet.output.spreadsheetId,\n\t\t\t\"range\": \"Sheet1!A1\" // adjust the range as needed\n\t\t}\n\t};\n}",
+                        "language": "JAVASCRIPT",
+                        "fields": [],
+                        "next": "appendSheetApi",
+                        "uiCode": "function handler(params) {\n\n\treturn {\n\t\t\"auth\": {\n\t\t\t\"bearerToken\": \"\"\n\t\t},\n\t\t\"param\": {\n\t\t\t\"valueInputOption\": \"RAW\"\n\t\t},\n\t\t\"body\": {\n\t\t\t\"values\": [\n\t\t\t\tparams.data.steps.flattenOrderDetails.output.flattenedRow\n\t\t\t]\n\t\t},\n\t\t\"url\": {\n\t\t\t\"spreadsheet\": params.data.steps.createSpreadsheet.output.spreadsheetId,\n\t\t\t\"range\": \"Sheet1!A1\" // adjust the range as needed\n\t\t}\n\t};\n}",
+                        "hasResponse": false,
+                        "isError": false,
+                        "statusCode": 200,
+                        "outputSchema": null,
+                        "queryExecutor": null
+                      },
+                      "function": null,
+                      "composite": null,
+                      "loop": null,
+                      "internalDatabase": null,
+                      "aiAction": null,
+                      "mcpClient": null,
+                      "logger": null,
+                      "downLoadFile": null,
+                      "endLoop": null,
+                      "trigger": null,
+                      "converter": null,
+                      "variables": null,
+                      "state": null,
+                      "conditional": null,
+                      "lambdaFunction": null,
+                      "outputSchema": null,
+                      "next": "appendSheetApi",
+                      "prevStep": null,
+                      "enableDebug": false,
+                      "description": null,
+                      "debugBreakAfter": null,
+                      "configuredStepSetting": null,
+                      "filter": null,
+                      "limit": null,
+                      "splitOut": null,
+                      "aggregate": null,
+                      "merge": null,
+                      "aiAgent": null,
+                      "settings": null,
+                      "ftp": null,
+                      "warnings": null,
+                      "tenantSettings": null
+                    },
+                    {
+                      "type": "API",
+                      "id": "appendSheetApi",
+                      "actionId": null,
+                      "inline": null,
+                      "function": {
+                        "id": "_knexa_2kIhA9Yua5pg7anLIt0FyoHQGN1",
+                        "groupId": "_knexa_f251a593-86bd-4ae4-9fc5-45bc7e71a6c5",
+                        "connectorId": "community",
+                        "name": "appendSheet",
+                        "version": "1.1.2",
+                        "imageUrl": null,
+                        "configuration": {
+                          "enableCache": false,
+                          "cacheTtlInSeconds": 0,
+                          "required": true,
+                          "validate": false,
+                          "enableRetry": false,
+                          "enableAuth": true,
+                          "authType": "BEARER",
+                          "auth": {
+                            "identifier": null,
+                            "authKey": null,
+                            "enableMultiConnection": false,
+                            "isWorkspaceIdentifier": true
+                          },
+                          "retry": {
+                            "maxRetries": 1,
+                            "maxDelayMilliseconds": 1000,
+                            "enableConnectionErrors": false,
+                            "retryList": [
+                              {
+                                "delayMilliseconds": 50,
+                                "statusCode": 500,
+                                "body": null
+                              }
+                            ]
+                          },
+                          "requestSetting": null
+                        },
+                        "next": null,
+                        "queryExecutor": null
+                      },
+                      "composite": null,
+                      "loop": null,
+                      "internalDatabase": null,
+                      "aiAction": null,
+                      "mcpClient": null,
+                      "logger": null,
+                      "downLoadFile": null,
+                      "endLoop": null,
+                      "trigger": null,
+                      "converter": null,
+                      "variables": null,
+                      "state": null,
+                      "conditional": null,
+                      "lambdaFunction": null,
+                      "outputSchema": null,
+                      "next": null,
+                      "prevStep": null,
+                      "enableDebug": false,
+                      "description": null,
+                      "debugBreakAfter": null,
+                      "configuredStepSetting": null,
+                      "filter": null,
+                      "limit": null,
+                      "splitOut": null,
+                      "aggregate": null,
+                      "merge": null,
+                      "aiAgent": null,
+                      "settings": null,
+                      "ftp": null,
+                      "warnings": null,
+                      "tenantSettings": null
+                    }
+                  ],
+                  "next": null,
+                  "start": null,
+                  "queryExecutor": null
+                },
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"spreadsheetId\":{\"type\":\"string\"},\"tableRange\":{\"type\":\"string\"},\"updates\":{\"type\":\"object\",\"properties\":{\"spreadsheetId\":{\"type\":\"string\"},\"updatedRange\":{\"type\":\"string\"},\"updatedRows\":{\"type\":\"integer\"},\"updatedColumns\":{\"type\":\"integer\"},\"updatedCells\":{\"type\":\"integer\"}},\"required\":[]}},\"required\":[]}",
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": "This tool is designed to execute the appendSheet operation on the Google Sheets platform. It requires the JSON payload to strictly match the expected structure (key and type), otherwise, the operation will fail. Always get confirmation from the user before calling the tool.",
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "INLINE",
+                "id": "flattenOrderDetails",
+                "actionId": null,
+                "inline": {
+                  "code": "function handler(params) {\n  const orderDetails = params.data.steps.loopOverOrders.loopOverItem;\n\n  const flattenedRow = [\n    orderDetails.id || \"\",                                     // Order ID\n    orderDetails.name || \"\",                                   // Order Name\n    orderDetails.financial_status || \"\",                       // Payment Status\n    orderDetails.processed_at || \"\",                           // Order Date\n    orderDetails.subtotal_price || \"\",                         // Subtotal\n    orderDetails.total_price || \"\",                            // Total\n    orderDetails.currency || \"\",                               // Currency\n    orderDetails.email || \"\",                                  // Customer Email\n    orderDetails.line_items?.[0]?.name || \"\",                  // First Item Name\n    orderDetails.line_items?.[0]?.price || \"\",                 // First Item Price\n    orderDetails.line_items?.[0]?.quantity || \"\",              // First Item Quantity\n    orderDetails.shipping_address?.address1 || \"\",             // Shipping Address\n    orderDetails.shipping_address?.city || \"\",\n    orderDetails.shipping_address?.country || \"\"\n  ];\n  let flag = true;\n  if (orderDetails.financial_status === \"paid\") {\n    flag = false;\n  }\n  return {\n    flattenedRow: flattenedRow,\n    flag: flag\n  };\n}",
+                  "language": "JAVASCRIPT",
+                  "fields": [],
+                  "next": "Switch",
+                  "uiCode": "function handler(params) {\n  const orderDetails = params.data.steps.loopOverOrders.loopOverItem;\n\n  const flattenedRow = [\n    orderDetails.id || \"\",                                     // Order ID\n    orderDetails.name || \"\",                                   // Order Name\n    orderDetails.financial_status || \"\",                       // Payment Status\n    orderDetails.processed_at || \"\",                           // Order Date\n    orderDetails.subtotal_price || \"\",                         // Subtotal\n    orderDetails.total_price || \"\",                            // Total\n    orderDetails.currency || \"\",                               // Currency\n    orderDetails.email || \"\",                                  // Customer Email\n    orderDetails.line_items?.[0]?.name || \"\",                  // First Item Name\n    orderDetails.line_items?.[0]?.price || \"\",                 // First Item Price\n    orderDetails.line_items?.[0]?.quantity || \"\",              // First Item Quantity\n    orderDetails.shipping_address?.address1 || \"\",             // Shipping Address\n    orderDetails.shipping_address?.city || \"\",\n    orderDetails.shipping_address?.country || \"\"\n  ];\n  let flag = true;\n  if (orderDetails.financial_status === \"paid\") {\n    flag = false;\n  }\n  return {\n    flattenedRow: flattenedRow,\n    flag: flag\n  };\n}",
+                  "hasResponse": false,
+                  "isError": false,
+                  "statusCode": 200,
+                  "outputSchema": null,
+                  "queryExecutor": null
+                },
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "Switch",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "CONDITIONAL",
+                "id": "Switch",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": {
+                  "id": "Switch",
+                  "next": "InsertTableOrders",
+                  "expressions": [
+                    {
+                      "name": "ifPaid",
+                      "logic": "AND",
+                      "conditions": null,
+                      "variable": "{{data.steps.flattenOrderDetails.output.flag}}",
+                      "value": "false",
+                      "operation": "EQ_IGNORE_CASE",
+                      "next": "appendSheet"
+                    }
+                  ],
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "steps"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "flattenOrderDetails"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "output"
+                                          },
+                                          "value": {
+                                            "children": [
+                                              {
+                                                "key": {
+                                                  "type": "java.lang.String",
+                                                  "value": "flag"
+                                                },
+                                                "value": {
+                                                  "children": [],
+                                                  "returnLiteral": true,
+                                                  "symbolOrIndex": {
+                                                    "type": "java.lang.String",
+                                                    "value": "flag"
+                                                  },
+                                                  "version": 2
+                                                }
+                                              }
+                                            ],
+                                            "returnLiteral": false,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "output"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "flattenOrderDetails"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "steps"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "InsertTableOrders",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "INTERNAL_DB",
+                "id": "InsertTableOrders",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": {
+                  "next": null,
+                  "query": "INSERT INTO orders (\n  order_id,\n  order_number,\n  payment_status,\n  order_date,\n  subtotal,\n  total,\n  currency,\n  discount_code,\n  product_name,\n  product_price,\n  quantity,\n  shipping_method,\n  shipping_address,\n  notes\n) VALUES (\n  {{data.steps.flattenOrderDetails.output.flattenedRow[0]}},\n  '{{data.steps.flattenOrderDetails.output.flattenedRow[1]}}',\n  '{{data.steps.flattenOrderDetails.output.flattenedRow[2]}}',\n  '{{data.steps.flattenOrderDetails.output.flattenedRow[3]}}',\n  {{data.steps.flattenOrderDetails.output.flattenedRow[4]}},\n  {{data.steps.flattenOrderDetails.output.flattenedRow[5]}},\n  '{{data.steps.flattenOrderDetails.output.flattenedRow[6]}}',\n  '{{data.steps.flattenOrderDetails.output.flattenedRow[7]}}',\n  '{{data.steps.flattenOrderDetails.output.flattenedRow[8]}}',\n  {{data.steps.flattenOrderDetails.output.flattenedRow[9]}},\n  {{data.steps.flattenOrderDetails.output.flattenedRow[10]}},\n  '{{data.steps.flattenOrderDetails.output.flattenedRow[11]}}',\n  '{{data.steps.flattenOrderDetails.output.flattenedRow[12]}}',\n  '{{data.steps.flattenOrderDetails.output.flattenedRow[13]}}'\n);\n",
+                  "code": null,
+                  "dbQueryParams": [],
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "steps"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "flattenOrderDetails"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "output"
+                                          },
+                                          "value": {
+                                            "children": [
+                                              {
+                                                "key": {
+                                                  "type": "java.lang.String",
+                                                  "value": "flattenedRow"
+                                                },
+                                                "value": {
+                                                  "children": [
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "0"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "0"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "1"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "1"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "2"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "2"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "3"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "3"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "4"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "4"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "5"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "5"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "6"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "6"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "7"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "7"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "8"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "8"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "9"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "9"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "10"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "10"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "11"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "11"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "12"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "12"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    },
+                                                    {
+                                                      "key": {
+                                                        "type": "java.math.BigInteger",
+                                                        "value": "13"
+                                                      },
+                                                      "value": {
+                                                        "children": [],
+                                                        "returnLiteral": true,
+                                                        "symbolOrIndex": {
+                                                          "type": "java.math.BigInteger",
+                                                          "value": "13"
+                                                        },
+                                                        "version": 2
+                                                      }
+                                                    }
+                                                  ],
+                                                  "returnLiteral": false,
+                                                  "symbolOrIndex": {
+                                                    "type": "java.lang.String",
+                                                    "value": "flattenedRow"
+                                                  },
+                                                  "version": 2
+                                                }
+                                              }
+                                            ],
+                                            "returnLiteral": false,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "output"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "flattenOrderDetails"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "steps"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ],
+            "itemSchema": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"id\": {\n\t\t\t\"type\": \"integer\"\n\t\t},\n\t\t\"admin_graphql_api_id\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"app_id\": {\n\t\t\t\"type\": \"integer\"\n\t\t},\n\t\t\"browser_ip\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"buyer_accepts_marketing\": {\n\t\t\t\"type\": \"boolean\"\n\t\t},\n\t\t\"cancel_reason\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"cancelled_at\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"cart_token\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"checkout_id\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"checkout_token\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"client_details\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"closed_at\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"company\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"confirmation_number\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"confirmed\": {\n\t\t\t\"type\": \"boolean\"\n\t\t},\n\t\t\"contact_email\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"created_at\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"currency\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"current_subtotal_price\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"current_subtotal_price_set\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"current_total_additional_fees_set\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"current_total_discounts\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"current_total_discounts_set\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"current_total_duties_set\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"current_total_price\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"current_total_price_set\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"current_total_tax\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"current_total_tax_set\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"customer_locale\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"device_id\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"discount_codes\": {\n\t\t\t\"type\": \"array\",\n\t\t\t\"items\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t}\n\t\t},\n\t\t\"email\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"estimated_taxes\": {\n\t\t\t\"type\": \"boolean\"\n\t\t},\n\t\t\"financial_status\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"fulfillment_status\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"landing_site\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"landing_site_ref\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"location_id\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"merchant_of_record_app_id\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"name\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"note\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"note_attributes\": {\n\t\t\t\"type\": \"array\",\n\t\t\t\"items\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t}\n\t\t},\n\t\t\"number\": {\n\t\t\t\"type\": \"integer\"\n\t\t},\n\t\t\"order_number\": {\n\t\t\t\"type\": \"integer\"\n\t\t},\n\t\t\"order_status_url\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"original_total_additional_fees_set\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"original_total_duties_set\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"payment_gateway_names\": {\n\t\t\t\"type\": \"array\",\n\t\t\t\"items\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t}\n\t\t},\n\t\t\"phone\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"po_number\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"presentment_currency\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"processed_at\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"reference\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"referring_site\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"source_identifier\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"source_name\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"source_url\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"subtotal_price\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"subtotal_price_set\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"tags\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"tax_exempt\": {\n\t\t\t\"type\": \"boolean\"\n\t\t},\n\t\t\"tax_lines\": {\n\t\t\t\"type\": \"array\",\n\t\t\t\"items\": {\n\t\t\t\t\"type\": \"object\",\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"price\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"rate\": {\n\t\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t\t},\n\t\t\t\t\t\"title\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"price_set\": {\n\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"channel_liable\": {\n\t\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"taxes_included\": {\n\t\t\t\"type\": \"boolean\"\n\t\t},\n\t\t\"test\": {\n\t\t\t\"type\": \"boolean\"\n\t\t},\n\t\t\"token\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"total_discounts\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"total_discounts_set\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"total_line_items_price\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"total_line_items_price_set\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"total_outstanding\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"total_price\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"total_price_set\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"total_shipping_price_set\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"total_tax\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"total_tax_set\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"total_tip_received\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"total_weight\": {\n\t\t\t\"type\": \"integer\"\n\t\t},\n\t\t\"updated_at\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"user_id\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"billing_address\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"customer\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"discount_applications\": {\n\t\t\t\"type\": \"array\",\n\t\t\t\"items\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t}\n\t\t},\n\t\t\"fulfillments\": {\n\t\t\t\"type\": \"array\",\n\t\t\t\"items\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t}\n\t\t},\n\t\t\"line_items\": {\n\t\t\t\"type\": \"array\",\n\t\t\t\"items\": {\n\t\t\t\t\"type\": \"object\",\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"id\": {\n\t\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t\t},\n\t\t\t\t\t\"admin_graphql_api_id\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"attributed_staffs\": {\n\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"current_quantity\": {\n\t\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t\t},\n\t\t\t\t\t\"fulfillable_quantity\": {\n\t\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t\t},\n\t\t\t\t\t\"fulfillment_service\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"fulfillment_status\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"gift_card\": {\n\t\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t\t},\n\t\t\t\t\t\"grams\": {\n\t\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t\t},\n\t\t\t\t\t\"name\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"price\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"price_set\": {\n\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"product_exists\": {\n\t\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t\t},\n\t\t\t\t\t\"product_id\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"quantity\": {\n\t\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t\t},\n\t\t\t\t\t\"requires_shipping\": {\n\t\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t\t},\n\t\t\t\t\t\"sku\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"taxable\": {\n\t\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t\t},\n\t\t\t\t\t\"title\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"total_discount\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"total_discount_set\": {\n\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"variant_id\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"variant_inventory_management\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"variant_title\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"vendor\": {\n\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t},\n\t\t\t\t\t\"tax_lines\": {\n\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\t\"channel_liable\": {\n\t\t\t\t\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"price\": {\n\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"price_set\": {\n\t\t\t\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\t\t\t\"shop_money\": {\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\"presentment_money\": {\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\"amount\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t\t\"currency_code\": {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"rate\": {\n\t\t\t\t\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"title\": {\n\t\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"duties\": {\n\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t\"discount_allocations\": {\n\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"payment_terms\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"refunds\": {\n\t\t\t\"type\": \"array\",\n\t\t\t\"items\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t}\n\t\t},\n\t\t\"shipping_address\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"shipping_lines\": {\n\t\t\t\"type\": \"array\",\n\t\t\t\"items\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t}\n\t\t}\n\t}\n}",
+            "isParallel": false,
+            "loopSize": "0",
+            "loopStart": "0",
+            "queryExecutor": null
+          },
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "sendMessage",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "VARIABLE",
+          "id": "Variable5785",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": {
+            "next": "getOrders",
+            "variables": [],
+            "code": "\n{\n  \"sheetTitle\": {% if data.input.sheetTitle is defined %}\"{{data.input.sheetTitle}}\"{% else %}\"OrderDetails\"{% endif %},\n  \"name\": {% if data.input.name is defined %}\"{{data.input.name}}\"{% else %}null{% endif %}\n}",
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"sheetTitle\":{\"actionType\":\"map\",\"target\":\"{{data.input.sheetTitle}}\",\"targetType\":\"string\",\"actions\":[],\"default\":\"OrderDetails\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true},\"name\":{\"actionType\":\"map\",\"target\":\"{{data.input.name}}\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "input"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "name"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "name"
+                                },
+                                "version": 2
+                              }
+                            },
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "sheetTitle"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "sheetTitle"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "input"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "getOrders",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INTERNAL_DB",
+          "id": "CreateTableOrders",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": {
+            "next": "loopOverOrders",
+            "query": "CREATE TABLE IF NOT EXISTS orders (\n  order_id           BIGINT,           -- 6146460123432\n  order_number       TEXT,             -- \"#1057\"\n  payment_status     TEXT,             -- \"paid\"\n  order_date         TIMESTAMPTZ,      -- \"2024-11-03T20:49:10-05:00\"\n  subtotal           NUMERIC(10, 2),   -- \"324.97\"\n  total              NUMERIC(10, 2),   -- \"338.47\"\n  currency           TEXT,             -- \"EUR\"\n  discount_code      TEXT,             -- \"\"\n  product_name       TEXT,             -- \"Big Brown Bear Boots\"\n  product_price      NUMERIC(10, 2),   -- \"74.99\"\n  quantity           INTEGER,          -- 3\n  shipping_method    TEXT,             -- \"\"\n  shipping_address   TEXT,             -- \"\"\n  notes              TEXT              -- \"\"\n);\n",
+            "code": null,
+            "dbQueryParams": [],
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "loopOverOrders",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INLINE",
+          "id": "Success",
+          "actionId": null,
+          "inline": {
+            "code": "\n{\n  \"message\": \"Success\"\n}",
+            "language": "JINJA",
+            "fields": [],
+            "next": null,
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"message\":{\"actionType\":\"map\",\"target\":\"Success\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\",\"byUser\":true}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "hasResponse": true,
+            "isError": false,
+            "statusCode": 200,
+            "outputSchema": null,
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": null,
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "COMPOSITE",
+          "id": "sendMessage",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": {
+            "steps": [
+              {
+                "type": "INLINE",
+                "id": "sendMessageMap",
+                "actionId": null,
+                "inline": {
+                  "code": "\n{\n  \"body\": {\n  \"channel\": \"#ai_testing\",\n  \"text\": \"Orders saved to sheet and database.\"\n},\n  \"auth\": {\n  \"bearerToken\": \"\"\n}\n}",
+                  "language": "JINJA",
+                  "fields": [],
+                  "next": "sendMessageApi",
+                  "uiCode": "{\"actionType\":\"map\",\"target\":{\"body\":{\"actionType\":\"map\",\"target\":{\"channel\":{\"path\":\"body.channel\",\"field\":\"body\",\"position\":[\"body\",\"channel\"],\"key\":\"channel\",\"selected\":false,\"actionType\":\"map\",\"target\":\"#ai_testing\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Channel ID\",\"description\":\"Slack channel ID to send the message to.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"},\"text\":{\"path\":\"body.text\",\"field\":\"body\",\"position\":[\"body\",\"text\"],\"key\":\"text\",\"selected\":false,\"actionType\":\"map\",\"target\":\"Orders saved to sheet and database.\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Message Text\",\"description\":\"Plain text message.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]},\"auth\":{\"actionType\":\"map\",\"target\":{\"bearerToken\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Bearer Token\",\"description\":\"Bearer token for authentication with the Slack API.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]}",
+                  "hasResponse": false,
+                  "isError": false,
+                  "statusCode": 200,
+                  "outputSchema": null,
+                  "queryExecutor": {
+                    "children": [],
+                    "returnLiteral": true,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "sendMessageApi",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": null,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "API",
+                "id": "sendMessageApi",
+                "actionId": null,
+                "inline": null,
+                "function": {
+                  "id": "_knexa_2XfaKSZt7VF4AKpsRcQm683QmLP",
+                  "groupId": "_knexa_c9085d88-85d0-4436-82c6-4e42d6aba4c6",
+                  "connectorId": "community",
+                  "name": "sendMessage",
+                  "version": "1.1.1",
+                  "imageUrl": null,
+                  "configuration": {
+                    "enableCache": false,
+                    "cacheTtlInSeconds": 0,
+                    "required": true,
+                    "validate": false,
+                    "enableRetry": false,
+                    "enableAuth": true,
+                    "authType": "BEARER",
+                    "auth": {
+                      "identifier": null,
+                      "authKey": null,
+                      "enableMultiConnection": false,
+                      "isWorkspaceIdentifier": true
+                    },
+                    "retry": {
+                      "maxRetries": 1,
+                      "maxDelayMilliseconds": 1000,
+                      "enableConnectionErrors": false,
+                      "retryList": [
+                        {
+                          "delayMilliseconds": 50,
+                          "statusCode": 500,
+                          "body": null
+                        }
+                      ]
+                    },
+                    "requestSetting": null
+                  },
+                  "next": null,
+                  "queryExecutor": null
+                },
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": null,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": null,
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ],
+            "next": "Success",
+            "start": null,
+            "queryExecutor": null
+          },
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"ok\":{\"type\":\"boolean\"},\"channel\":{\"type\":\"string\"},\"ts\":{\"type\":\"string\"},\"message\":{\"type\":\"object\",\"properties\":{\"bot_id\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"text\":{\"type\":\"string\"},\"user\":{\"type\":\"string\"},\"ts\":{\"type\":\"string\"},\"app_id\":{\"type\":\"string\"},\"blocks\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"block_id\":{\"type\":\"string\"},\"elements\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"elements\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"text\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}}},\"required\":[]}},\"team\":{\"type\":\"string\"},\"bot_profile\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"app_id\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"icons\":{\"type\":\"object\",\"properties\":{\"image_36\":{\"type\":\"string\"},\"image_48\":{\"type\":\"string\"},\"image_72\":{\"type\":\"string\"}},\"required\":[]},\"deleted\":{\"type\":\"boolean\"},\"updated\":{\"type\":\"integer\"},\"team_id\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]},\"warning\":{\"type\":\"string\"},\"response_metadata\":{\"type\":\"object\",\"properties\":{\"warnings\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}},\"required\":[]}",
+          "next": "Success",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": "This tool is designed to execute the sendMessage operation on the Slack platform. It requires the JSON payload to strictly match the expected structure (key and type), otherwise, the operation will fail. Always get confirmation from the user before calling the tool.",
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        }
+      ]
+    },
+    "types": [],
+    "tests": null,
+    "hasActionType": true,
+    "metaData": {
+      "enableLogs": true,
+      "isAsync": false,
+      "hasSecret": true,
+      "enableMultitenant": false,
+      "enableValidation": false,
+      "architecture": "REST",
+      "isCustomAuthenticationEnabled": true,
+      "isNotificationEnabled": false,
+      "flowType": "API",
+      "jobMemoryLimit": 4096,
+      "jobTimeOut": null,
+      "jobCpuLimit": "1",
+      "isConfigured": null,
+      "configurationFlows": [],
+      "invocationMethod": "API_REQUEST",
+      "priority": null,
+      "triggerType": null,
+      "schedule": null,
+      "triggerApp": null
+    },
+    "comment": null,
+    "labels": null,
+    "resourceType": "EXTERNAL",
+    "deleted": null,
+    "webhookId": null,
+    "webhook": null,
+    "createdby": "GenAIDeveloper"
+  }
+]

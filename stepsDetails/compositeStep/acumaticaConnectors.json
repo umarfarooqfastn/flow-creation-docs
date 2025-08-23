@@ -1,0 +1,954 @@
+[
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2turfyc0YKsydg9P1s0G3NM67QI",
+      "name": "getRecords",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.6",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"\",\"description\":\"\",\"properties\":{\"auth\":{\"type\":\"object\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\"}}},\"param\":{\"type\":\"object\",\"properties\":{\"filter\":{\"type\":\"string\"},\"expand\":{\"type\":\"string\"},\"select\":{\"type\":\"string\"},\"top\":{\"type\":\"string\"},\"orderby\":{\"type\":\"string\"},\"skip\":{\"type\":\"string\"}}},\"url\":{\"type\":\"object\",\"required\":[\"tableName\"],\"properties\":{\"tableName\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"expand\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"filter\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"orderby\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"select\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"skip\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"top\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"tableName\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"odata.metadata\":{\"type\":\"string\"},\"value\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/odata/{{url.tableName}}\",\"method\":\"GET\",\"headers\":[{\"key\":\"Accept\",\"value\":\"application/json\"}],\"params\":[{\"key\":\"%24filter\",\"value\":\"{{param.filter}}\"},{\"key\":\"%24expand\",\"value\":\"{{param.expand}}\"},{\"key\":\"%24orderby\",\"value\":\"{{param.orderby}}\"},{\"key\":\"%24top\",\"value\":\"{{param.top}}\"},{\"key\":\"%24select\",\"value\":\"{{param.select}}\"},{\"key\":\"$skip\",\"value\":\"{{param.skip}}\"}],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-05-01T21:29:48.997Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2tgZ454nkKAqiaLXaTe5HWkOdKG",
+      "name": "createSalesOrder",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.8",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Accumatica Accumatica API Request\",\"description\":\"Accumatica Accumatica API request schema\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Accumatica Accumatica API.\",\"required\":[\"bearerToken\",\"instanceUrl\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the Accumatica instance.\"}}},\"param\":{\"type\":\"object\",\"title\":\"Parameters\",\"description\":\"Additional parameters for the Accumatica Accumatica API request.\",\"properties\":{\"expand\":{\"type\":\"string\",\"title\":\"Expand\",\"description\":\"Specifies fields to expand in the response.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Data payload for the Accumatica Accumatica API request.\",\"required\":[\"Description\",\"OrderType\",\"CustomerID\"],\"properties\":{\"Description\":{\"type\":\"object\",\"title\":\"Description\",\"description\":\"Description of the order or transaction.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Description Value\",\"description\":\"The value of the description.\"}}},\"Details\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"required\":[\"InvoiceNbr\",\"InventoryID\"],\"properties\":{\"OrderQty\":{\"type\":\"object\",\"title\":\"Order Quantity\",\"description\":\"Quantity of the item ordered.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Order Quantity Value\",\"description\":\"The value of the order quantity.\"}}},\"InvoiceNbr\":{\"type\":\"object\",\"title\":\"Invoice Number\",\"description\":\"Invoice number.\",\"required\":[\"value\"],\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Invoice Number Value\",\"description\":\"The value of the invoice number.\"}}},\"InvoiceType\":{\"type\":\"object\",\"title\":\"Invoice Type\",\"description\":\"Type of invoice.\",\"required\":[\"value\"],\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Invoice Type Value\",\"description\":\"The value of the invoice type.\"}}},\"InventoryID\":{\"type\":\"object\",\"title\":\"Inventory ID\",\"description\":\"Identifier for the inventory item.\",\"required\":[\"value\"],\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Inventory ID Value\",\"description\":\"The value of the inventory ID.\"}}}}}},\"OrderType\":{\"type\":\"object\",\"title\":\"Order Type\",\"description\":\"Type of order.\",\"required\":[\"value\"],\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Order Type Value\",\"description\":\"The value of the order type.\"}}},\"LocationID\":{\"type\":\"object\",\"title\":\"Location ID\",\"description\":\"Identifier for the location.\",\"required\":[\"value\"],\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Location ID Value\",\"description\":\"The value of the location ID.\"}}},\"CustomerID\":{\"type\":\"object\",\"title\":\"Customer ID\",\"description\":\"Identifier for the customer.\",\"required\":[\"value\"],\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Customer ID Value\",\"description\":\"The value of the Customer ID.\"}}}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"expand\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"Description\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Details\":{\"items\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"OrderType\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"LocationID\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"CustomerID\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Approved\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"BaseCurrencyID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"BillToAddressOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"BillToContactOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Branch\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CashAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ContactID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ControlTotal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CreatedDate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CreditHold\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"CurrencyID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CurrencyRate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CurrencyRateTypeID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CustomerID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CustomerOrder\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Date\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Description\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DestinationWarehouseID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Details\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"DisableAutomaticTaxCalculation\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"EffectiveDate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ExternalOrderOrigin\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ExternalOrderOriginal\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ExternalOrderSource\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ExternalRef\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ExternalRefundRef\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Hold\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"IsTaxValid\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"LastModified\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LocationID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MaxRiskScore\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OrderedQty\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"OrderNbr\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OrderTotal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"OrderType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PaymentMethod\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PaymentRef\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PreferredWarehouseID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ReciprocalRate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"RequestedOn\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ShipToAddressOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ShipToContactOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ShipVia\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"TaxTotal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"WillCall\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/SalesOrder\",\"method\":\"PUT\",\"headers\":[{\"key\":\"Accept\",\"value\":\"application/json\"},{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[{\"key\":\"%24expand\",\"value\":\"Details,Details/Allocations\"}],\"body\":\"{{body | shape}}\",\"hasBulkParams\":true,\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.501Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2tgZIWSbFrc5JTbHT71dNn4GuXE",
+      "name": "createStockItem",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Accumatica API Request\",\"description\":\"Accumatica API request schema for Accumatica endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Accumatica API.\",\"required\":[\"bearerToken\",\"instanceUrl\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the Accumatica instance.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Inventory Item Details\",\"description\":\"Details of the inventory item to be created or updated in Accumatica.\",\"properties\":{\"ItemClass\":{\"type\":\"object\",\"title\":\"Item Class\",\"description\":\"The class of the inventory item.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Item Class Value\",\"description\":\"The value of the item class.\"}}},\"Description\":{\"type\":\"object\",\"title\":\"Description\",\"description\":\"A description of the inventory item.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Description Value\",\"description\":\"The value of the description.\"}}},\"PurchaseUnit\":{\"type\":\"object\",\"title\":\"Purchase Unit of Measure\",\"description\":\"The unit of measure used for purchases.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Purchase Unit Value\",\"description\":\"The value of the purchase unit of measure.\"}}},\"TaxCategory\":{\"type\":\"object\",\"title\":\"Tax Category\",\"description\":\"The tax category for the inventory item.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Tax Category Value\",\"description\":\"The value of the tax category.\"}}},\"BaseUOM\":{\"type\":\"object\",\"title\":\"Base Unit of Measure\",\"description\":\"The base unit of measure for the inventory item.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Base UOM Value\",\"description\":\"The value of the base unit of measure.\"}}},\"PriceClassID\":{\"type\":\"object\",\"title\":\"Price Class ID\",\"description\":\"The ID of the price class for the inventory item.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Price Class ID Value\",\"description\":\"The value of the price class ID.\"}}},\"ProductManager\":{\"type\":\"object\",\"title\":\"Product Manager\",\"description\":\"The product manager responsible for the inventory item.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Product Manager Value\",\"description\":\"The value of the product manager.\"}}},\"SalesUnit\":{\"type\":\"object\",\"title\":\"Sales Unit of Measure\",\"description\":\"The unit of measure used for sales.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Sales Unit Value\",\"description\":\"The value of the sales unit of measure.\"}}},\"PostingClass\":{\"type\":\"object\",\"title\":\"Posting Class\",\"description\":\"The posting class for the inventory item.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Posting Class Value\",\"description\":\"The value of the posting class.\"}}},\"DefaultWarehouse\":{\"type\":\"object\",\"title\":\"Default Warehouse\",\"description\":\"The default warehouse for the inventory item.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Default Warehouse Value\",\"description\":\"The value of the default warehouse.\"}}},\"InventoryID\":{\"type\":\"object\",\"title\":\"Inventory ID\",\"description\":\"The unique identifier for the inventory item.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Inventory ID Value\",\"description\":\"The value of the Inventory ID.\"}}}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"ItemClass\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Description\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"PurchaseUnit\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"TaxCategory\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"BaseUOM\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"PriceClassID\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"ProductManager\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"SalesUnit\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"PostingClass\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"DefaultWarehouse\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"InventoryID\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"string\"},\"AutoIncrementalValue\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Availability\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"AverageCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"BaseUOM\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"COGSAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"COGSSubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Content\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CountryOfOrigin\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CurrentStdCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CurySpecificMSRP\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CurySpecificPrice\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CustomURL\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DefaultPrice\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"DefaultWarehouseID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Description\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"DimensionVolume\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"DimensionWeight\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"DiscountAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DiscountSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ExportToExternal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ImageUrl\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"InventoryAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"InventoryID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"InventorySubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ItemClass\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ItemStatus\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ItemType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LandedCostVarianceAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LandedCostVarianceSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"LastModified\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastStdCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"Markup\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MaxCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MetaDescription\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MetaKeywords\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MinCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MinMarkup\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MSRP\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"NotAvailable\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PageTitle\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PendingStdCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"POAccrualAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"POAccrualSubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PostingClass\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PriceClass\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PriceManager\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PriceWorkgroup\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ProductManager\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ProductWorkgroup\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PurchasePriceVarianceAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PurchasePriceVarianceSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PurchaseUOM\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ReasonCodeSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SalesAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SalesSubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SalesUOM\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SearchKeywords\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostRevaluationAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostRevaluationSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostVarianceAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostVarianceSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SubjectToCommission\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"TaxCategory\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ValuationMethod\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Visibility\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"VolumeUOM\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WeightUOM\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/StockItem\",\"method\":\"PUT\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.467Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2thIl4ptSrum24hDrVk2nBcKGhW",
+      "name": "generateToken",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.9",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"\",\"description\":\"\",\"properties\":{\"body\":{\"type\":\"object\",\"required\":[\"password\",\"client_secret\",\"client_id\",\"username\"],\"properties\":{\"password\":{\"type\":\"string\"},\"client_secret\":{\"type\":\"string\"},\"client_id\":{\"type\":\"string\"},\"username\":{\"type\":\"string\"}}},\"url\":{\"type\":\"object\",\"required\":[\"instanceUrl\"],\"properties\":{\"instanceUrl\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"body\":{\"password\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"client_secret\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"client_id\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"username\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"access_token\":{\"type\":\"string\"},\"expires_in\":{\"type\":\"integer\"},\"token_type\":{\"type\":\"string\"},\"refresh_token\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{url.instanceUrl}}/identity/connect/token\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/x-www-form-urlencoded\"}],\"params\":[],\"body\":\"client_id={{body.client_id}}&client_secret={{body.client_secret}}&username={{body.username}}&password={{body.password}}&scope=api offline_access&grant_type=password\",\"authType\":\"NO_AUTH\",\"authConfig\":null}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.443Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2tuq7u9DsDCXAYvVH0d2nubx7EP",
+      "name": "getTables",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.4",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"\",\"description\":\"\",\"properties\":{\"auth\":{\"type\":\"object\",\"required\":[\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"odata.metadata\":{\"type\":\"string\"},\"value\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/odata\",\"method\":\"GET\",\"headers\":[{\"key\":\"Accept\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.421Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2tuqwN5OXmuu88qDHLt3ugPQkhu",
+      "name": "getMetaDataOfTables",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.2",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"\",\"description\":\"\",\"properties\":{\"auth\":{\"type\":\"object\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"edmx:Edmx\":{\"type\":\"object\",\"properties\":{\"-Version\":{\"type\":\"string\"},\"-xmlns:edmx\":{\"type\":\"string\"},\"edmx:DataServices\":{\"type\":\"object\",\"properties\":{\"-m:DataServiceVersion\":{\"type\":\"string\"},\"-m:MaxDataServiceVersion\":{\"type\":\"string\"},\"-xmlns:m\":{\"type\":\"string\"},\"Schema\":{\"type\":\"object\",\"properties\":{\"-Namespace\":{\"type\":\"string\"},\"-xmlns\":{\"type\":\"string\"},\"EntityType\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"-Name\":{\"type\":\"string\"},\"Key\":{\"type\":\"object\",\"properties\":{\"PropertyRef\":{}},\"required\":[]},\"Property\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"-Name\":{\"type\":\"string\"},\"-Type\":{\"type\":\"string\"},\"-self-closing\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}},\"EntityContainer\":{\"type\":\"object\",\"properties\":{\"-Name\":{\"type\":\"string\"},\"-m:IsDefaultEntityContainer\":{\"type\":\"string\"},\"EntitySet\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"-Name\":{\"type\":\"string\"},\"-EntityType\":{\"type\":\"string\"},\"-self-closing\":{\"type\":\"string\"}},\"required\":[]}},\"FunctionImport\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"-Name\":{\"type\":\"string\"},\"-ReturnType\":{\"type\":\"string\"},\"-IsSideEffecting\":{\"type\":\"string\"},\"-EntitySet\":{\"type\":\"string\"},\"Parameter\":{}},\"required\":[]}}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/odata/$metadata\",\"method\":\"GET\",\"headers\":[{\"key\":\"Accept\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.396Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_9ad73aa7-8da1-48de-99cc-8ddbcad00281deletesalesorder",
+      "name": "deleteSalesOrder",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Accumatica API Request Body\",\"description\":\"Accumatica API request body for the Accumatica endpoint.\",\"required\":[\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for Accumatica API access.\",\"required\":[\"bearerToken\",\"instanceUrl\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the Accumatica instance.\"}}},\"url\":{\"type\":\"object\",\"title\":\"Order Details\",\"description\":\"Details specifying the order to be accessed.\",\"required\":[\"orderType\",\"orderNumber\"],\"properties\":{\"orderType\":{\"type\":\"string\",\"title\":\"Order Type\",\"description\":\"The type of order (e.g., sales order, purchase order).\"},\"orderNumber\":{\"type\":\"string\",\"title\":\"Order Number\",\"description\":\"The unique identifier for the order in Accumatica.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"orderType\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"orderNumber\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/SalesOrder/{{url.orderType}}/{{url.orderNumber}}\",\"method\":\"DELETE\",\"headers\":[{\"key\":\"Accept\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.340Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_9ad73aa7-8da1-48de-99cc-8ddbcad00281deletestockitem",
+      "name": "deleteStockItem",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Accumatica Accumatica Request Body\",\"description\":\"Accumatica Accumatica API request body\",\"required\":[\"url\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Accumatica Accumatica API.\",\"required\":[\"bearerToken\",\"instanceUrl\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the Accumatica instance.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Accumatica Accumatica API.\",\"required\":[\"stockItemId\"],\"properties\":{\"stockItemId\":{\"type\":\"string\",\"title\":\"Stock Item ID\",\"description\":\"The ID of the stock item.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"stockItemId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/StockItem/{{url.stockItemId}}\",\"method\":\"DELETE\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.318Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_9ad73aa7-8da1-48de-99cc-8ddbcad00281getsaleorder",
+      "name": "getSaleOrder",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.9",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Accumatica Accumatica Request Body\",\"description\":\"Request body for the Accumatica Accumatica endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Accumatica API.\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the Accumatica instance.\"}}},\"param\":{\"type\":\"object\",\"properties\":{\"expand\":{\"type\":\"string\"}}},\"url\":{\"type\":\"object\",\"required\":[\"orderId\"],\"properties\":{\"orderId\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"expand\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"orderId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Approved\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"BaseCurrencyID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"BillToAddressOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"BillToContactOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Branch\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CashAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ContactID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ControlTotal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CreatedDate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CreditHold\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"CurrencyID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CurrencyRate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CurrencyRateTypeID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CustomerID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CustomerOrder\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Date\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Description\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DestinationWarehouseID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Details\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Account\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"AlternateID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Amount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"AssociatedOrderLineNbr\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"AutoCreateIssue\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"AverageCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"Branch\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CalculateDiscountsOnImport\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Commissionable\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Completed\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"CustomerOrderNbr\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DiscountAmount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"DiscountedUnitPrice\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"DiscountPercent\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"ExtendedPrice\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"ExternalRef\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"FreeItem\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"GiftMessage\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"InventoryID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"InvoiceLineNbr\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"InvoiceNbr\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"InvoiceType\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastModifiedDate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LineDescription\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LineNbr\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"LineType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ManualPrice\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OpenQty\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"Operation\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OrderQty\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"OvershipThreshold\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"PurchaseWarehouse\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"QtyOnShipments\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"ReasonCode\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"RequestedOn\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SalespersonID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SchedOrderDate\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ShipOn\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ShippingRule\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ShipToLocation\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"TaxCategory\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"TaxZone\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"UnbilledAmount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"UndershipThreshold\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"UnitCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"UnitPrice\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"UOM\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"VendorID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WarehouseID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}},\"DisableAutomaticTaxCalculation\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"EffectiveDate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ExternalOrderOrigin\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ExternalOrderOriginal\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ExternalOrderSource\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ExternalRef\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ExternalRefundRef\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Hold\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"IsTaxValid\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastModified\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LocationID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"MaxRiskScore\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OrderedQty\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"OrderNbr\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OrderTotal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"OrderType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PaymentMethod\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PaymentRef\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PreferredWarehouseID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ReciprocalRate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"RequestedOn\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ShipToAddressOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ShipToContactOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ShipVia\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"TaxTotal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"WillCall\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/SalesOrder/{{url.orderId}}\",\"method\":\"GET\",\"headers\":[{\"key\":\"Accept\",\"value\":\"application/json\"}],\"params\":[{\"key\":\"$expand\",\"value\":\"{{param.expand}}\"}],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.289Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_9ad73aa7-8da1-48de-99cc-8ddbcad00281getsalesorders",
+      "name": "getSalesOrders",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.8",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Accumatica Accumatica Request Body\",\"description\":\"Request body for the Accumatica Accumatica endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Accumatica Accumatica endpoint.\",\"required\":[\"instanceUrl\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the Accumatica instance.\"}}},\"param\":{\"type\":\"object\",\"properties\":{\"top\":{\"type\":\"string\"},\"skip\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"skip\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"top\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Approved\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"BaseCurrencyID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"BillToAddressOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"BillToContactOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Branch\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CashAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ContactID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ControlTotal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CreatedDate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CreditHold\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"CurrencyID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CurrencyRate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CurrencyRateTypeID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CustomerID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CustomerOrder\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Date\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Description\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"DestinationWarehouseID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DisableAutomaticTaxCalculation\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"EffectiveDate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ExternalOrderOrigin\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ExternalOrderOriginal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ExternalOrderSource\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ExternalRef\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ExternalRefundRef\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Hold\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"IsTaxValid\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastModified\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LocationID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"MaxRiskScore\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OrderedQty\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"OrderNbr\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OrderTotal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"OrderType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PaymentMethod\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PaymentRef\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PreferredWarehouseID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ReciprocalRate\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"RequestedOn\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ShipToAddressOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ShipToContactOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ShipVia\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"TaxTotal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"WillCall\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/SalesOrder\",\"method\":\"GET\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[{\"key\":\"$top\",\"value\":\"{{param.top}}\"},{\"key\":\"$skip\",\"value\":\"{{param.skip}}\"}],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.264Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_9ad73aa7-8da1-48de-99cc-8ddbcad00281getstockitem",
+      "name": "getStockItem",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.7",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Accumatica Request Body\",\"description\":\"Accumatica API request body for Accumatica endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Accumatica API.\",\"required\":[\"bearerToken\",\"instanceUrl\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the Accumatica instance.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the Accumatica endpoint.\",\"required\":[\"stockItemId\"],\"properties\":{\"stockItemId\":{\"type\":\"string\",\"title\":\"Stock Item ID\",\"description\":\"The ID of the stock item.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"stockItemId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"AutoIncrementalValue\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Availability\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"AverageCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"BaseUOM\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"COGSAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"COGSSubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Content\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CountryOfOrigin\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CurrentStdCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CurySpecificMSRP\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CurySpecificPrice\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CustomURL\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DefaultPrice\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"DefaultWarehouseID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Description\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"DimensionVolume\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"DimensionWeight\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"DiscountAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DiscountSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ExportToExternal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ImageUrl\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"InventoryAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"InventoryID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"InventorySubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ItemClass\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ItemStatus\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ItemType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LandedCostVarianceAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LandedCostVarianceSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"LastModified\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastStdCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"Markup\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MaxCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MetaDescription\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MetaKeywords\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MinCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MinMarkup\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MSRP\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"NotAvailable\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PageTitle\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PendingStdCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"POAccrualAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"POAccrualSubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PostingClass\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PriceClass\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PriceManager\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PriceWorkgroup\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ProductManager\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ProductWorkgroup\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PurchasePriceVarianceAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PurchasePriceVarianceSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PurchaseUOM\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ReasonCodeSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SalesAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SalesSubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SalesUOM\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SearchKeywords\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostRevaluationAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostRevaluationSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostVarianceAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostVarianceSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SubjectToCommission\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"TaxCategory\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ValuationMethod\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Visibility\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"VolumeUOM\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WeightUOM\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/StockItem/{{url.stockItemId}}\",\"method\":\"GET\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"},{\"key\":\"Cookies\",\"value\":\"{{auth.cookies}}\"}],\"params\":[],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.177Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_9ad73aa7-8da1-48de-99cc-8ddbcad00281getstockitems",
+      "name": "getStockItems",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.1.0",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Accumatica Request Body\",\"description\":\"Accumatica API request body\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the Accumatica API request.\",\"required\":[\"bearerToken\",\"instanceUrl\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the Accumatica instance.\"}}},\"param\":{\"type\":\"object\",\"properties\":{\"expand\":{\"type\":\"string\"},\"select\":{\"type\":\"string\"},\"top\":{\"type\":\"string\"},\"skip\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"expand\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"select\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"top\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"skip\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"AutoIncrementalValue\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Availability\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"AverageCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"BaseUOM\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"COGSAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"COGSSubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Content\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CountryOfOrigin\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CurrentStdCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CurySpecificMSRP\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CurySpecificPrice\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CustomURL\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DefaultPrice\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"DefaultWarehouseID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Description\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"DimensionVolume\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"DimensionWeight\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"DiscountAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DiscountSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ExportToExternal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ImageUrl\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"InventoryAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"InventoryID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"InventorySubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ItemClass\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ItemStatus\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ItemType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LandedCostVarianceAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LandedCostVarianceSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"LastModified\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastStdCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"Markup\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MaxCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MetaDescription\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MetaKeywords\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MinCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MinMarkup\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"MSRP\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"NotAvailable\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PageTitle\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PendingStdCost\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"POAccrualAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"POAccrualSubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PostingClass\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"PriceClass\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PriceManager\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PriceWorkgroup\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ProductManager\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ProductWorkgroup\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PurchasePriceVarianceAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PurchasePriceVarianceSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PurchaseUOM\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ReasonCodeSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SalesAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SalesSubaccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SalesUOM\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SearchKeywords\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostRevaluationAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostRevaluationSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostVarianceAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StandardCostVarianceSubaccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SubjectToCommission\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"TaxCategory\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ValuationMethod\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Visibility\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"VolumeUOM\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WeightUOM\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/StockItem\",\"method\":\"GET\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[{\"key\":\"$top\",\"value\":\"{{param.top}}\"},{\"key\":\"$skip\",\"value\":\"{{param.skip}}\"},{\"key\":\"$select\",\"value\":\"{{param.select}}\"},{\"key\":\"$expand\",\"value\":\"{{param.expand}}\"}],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.106Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3createcontact",
+      "name": "createContact",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.4",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole API Request\",\"description\":\"AcumaticaWhole API Request Schema\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for AcumaticaWhole API.\",\"required\":[\"bearerToken\",\"instanceUrl\"],\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"The bearer token for authentication.\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the AcumaticaWhole instance.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Data payload for the AcumaticaWhole API request.\",\"properties\":{\"CompanyName\":{\"type\":\"object\",\"title\":\"Company Name\",\"description\":\"Name of the company.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Company Name Value\",\"description\":\"The value of the company name.\"}}},\"Email\":{\"type\":\"object\",\"title\":\"Email Address\",\"description\":\"Email address of the contact.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Email Value\",\"description\":\"The value of the email address.\"}}},\"Address\":{\"type\":\"object\",\"title\":\"Address\",\"description\":\"Address details of the contact.\",\"properties\":{\"AddressLine1\":{\"type\":\"object\",\"title\":\"Address Line 1\",\"description\":\"First line of the address.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Address Line 1 Value\",\"description\":\"The value of the address line 1.\"}}},\"State\":{\"type\":\"object\",\"title\":\"State/Province\",\"description\":\"State or province of the address.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"State Value\",\"description\":\"The value of the state/province.\"}}},\"PostalCode\":{\"type\":\"object\",\"title\":\"Postal Code\",\"description\":\"Postal code of the address.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Postal Code Value\",\"description\":\"The value of the postal code.\"}}},\"Country\":{\"type\":\"object\",\"title\":\"Country\",\"description\":\"Country of the address.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Country Value\",\"description\":\"The value of the country.\"}}},\"City\":{\"type\":\"object\",\"title\":\"City\",\"description\":\"City of the address.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"City Value\",\"description\":\"The value of the city.\"}}}}},\"FirstName\":{\"type\":\"object\",\"title\":\"First Name\",\"description\":\"First name of the contact.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"First Name Value\",\"description\":\"The value of the first name.\"}}},\"LastName\":{\"type\":\"object\",\"title\":\"Last Name\",\"description\":\"Last name of the contact.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Last Name Value\",\"description\":\"The value of the last name.\"}}}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"CompanyName\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Email\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Address\":{\"AddressLine1\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"State\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"PostalCode\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Country\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"City\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"FirstName\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"LastName\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"string\"},\"Active\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Address\":{\"type\":\"string\"},\"Attention\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"BusinessAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CompanyName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactClass\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ContactID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"ContactMethod\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"DateOfBirth\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DisplayName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"DoNotCall\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotEmail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotFax\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DuplicateFound\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Email\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ExtRefNbr\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Fax\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"FaxType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"FirstName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Gender\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Image\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"JobTitle\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LanguageOrLocale\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastIncomingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastOutgoingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MaritalStatus\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MiddleName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"NoMarketing\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoMassMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OverrideAccountAddress\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Owner\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"OwnerEmployeeName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ParentAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone1\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone1Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone2\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone2Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone3\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone3Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Reason\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Source\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SourceCampaign\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SpouseOrPartnerName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Title\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"WebSite\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Workgroup\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WorkgroupDescription\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Contact\",\"method\":\"PUT\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.074Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3createlead",
+      "name": "createLead",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.4",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole API Request\",\"description\":\"AcumaticaWhole API request schema for AcumaticaWhole endpoint.\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the AcumaticaWhole API.\",\"required\":[\"bearerToken\",\"instanceUrl\"],\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"The bearer token for authentication.\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the AcumaticaWhole instance.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Request body for the AcumaticaWhole endpoint.\",\"properties\":{\"Status\":{\"type\":\"object\",\"title\":\"Status\",\"description\":\"Status of the contact.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"The value of the status.\"}}},\"CompanyName\":{\"type\":\"object\",\"title\":\"Company Name\",\"description\":\"Name of the company associated with the contact.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"The value of the company name.\"}}},\"Email\":{\"type\":\"object\",\"title\":\"Email\",\"description\":\"Email address of the contact.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"The value of the email address.\"}}},\"Address\":{\"type\":\"object\",\"title\":\"Address\",\"description\":\"Address of the contact.\",\"properties\":{\"AddressLine1\":{\"type\":\"object\",\"title\":\"Address Line 1\",\"description\":\"First line of the contact's address.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"The value of the address line 1.\"}}},\"State\":{\"type\":\"object\",\"title\":\"State\",\"description\":\"State of the contact's address.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"The value of the state.\"}}},\"PostalCode\":{\"type\":\"object\",\"title\":\"Postal Code\",\"description\":\"Postal code of the contact's address.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"The value of the postal code.\"}}},\"Country\":{\"type\":\"object\",\"title\":\"Country\",\"description\":\"Country of the contact's address.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"The value of the country.\"}}},\"City\":{\"type\":\"object\",\"title\":\"City\",\"description\":\"City of the contact's address.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"The value of the city.\"}}}}},\"FirstName\":{\"type\":\"object\",\"title\":\"First Name\",\"description\":\"First name of the contact.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"The value of the first name.\"}}},\"ClassID\":{\"type\":\"object\",\"title\":\"Class ID\",\"description\":\"Class ID of the contact.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"The value of the Class ID.\"}}},\"LastName\":{\"type\":\"object\",\"title\":\"Last Name\",\"description\":\"Last name of the contact.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"The value of the last name.\"}}}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"Status\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"CompanyName\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Email\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Address\":{\"AddressLine1\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"State\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"PostalCode\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Country\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"City\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}},\"FirstName\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"ClassID\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"LastName\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"string\"},\"Active\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Address\":{\"type\":\"string\"},\"BusinessAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CompanyName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactMethod\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ConvertedBy\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Description\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DoNotCall\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotEmail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotFax\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DuplicateFound\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Email\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Fax\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"FaxType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"FirstName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"JobTitle\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LanguageOrLocale\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastIncomingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastOutgoingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LeadClass\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LeadDisplayName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LeadID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"NoMarketing\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoMassMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Owner\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"OwnerEmployeeName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ParentAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone1\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone1Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone2\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone2Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone3\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone3Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"QualificationDate\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Reason\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"RefContactID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Source\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SourceCampaign\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Title\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WebSite\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Workgroup\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WorkgroupDescription\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Lead\",\"method\":\"PUT\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:24.000Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3createopportunity",
+      "name": "createOpportunity",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.3",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole API Request\",\"description\":\"AcumaticaWhole API request schema.\",\"required\":[\"body\"],\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the AcumaticaWhole API.\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"The bearer token for authentication.\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the AcumaticaWhole instance.\"}}},\"body\":{\"type\":\"object\",\"title\":\"Request Body\",\"description\":\"Request body for AcumaticaWhole API.\",\"properties\":{\"Owner\":{\"type\":\"object\",\"title\":\"Owner\",\"description\":\"Owner of the opportunity in AcumaticaWhole.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"Value of the Owner.\"}}},\"Details\":{\"type\":\"object\",\"title\":\"Details\",\"description\":\"Details of the opportunity in AcumaticaWhole.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"Value of the Details.\"}}},\"OpportunityID\":{\"type\":\"object\",\"title\":\"Opportunity ID\",\"description\":\"Opportunity ID in AcumaticaWhole.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"Value of the Opportunity ID.\"}}},\"Stage\":{\"type\":\"object\",\"title\":\"Stage\",\"description\":\"Stage of the opportunity in AcumaticaWhole.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"Value of the Stage.\"}}},\"ClassID\":{\"type\":\"object\",\"title\":\"Class ID\",\"description\":\"Class ID associated with the opportunity in AcumaticaWhole.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"Value of the Class ID.\"}}},\"BusinessAccount\":{\"type\":\"object\",\"title\":\"Business Account\",\"description\":\"Business Account associated with the opportunity in AcumaticaWhole.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"Value of the Business Account.\"}}},\"Subject\":{\"type\":\"object\",\"title\":\"Subject\",\"description\":\"Subject of the opportunity in AcumaticaWhole.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"Value of the Subject.\"}}},\"CloseDate\":{\"type\":\"object\",\"title\":\"Close Date\",\"description\":\"Close date of the opportunity in AcumaticaWhole.\",\"properties\":{\"value\":{\"type\":\"string\",\"title\":\"Value\",\"description\":\"Value of the Close Date.\"}}}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"OpportunityID\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Subject\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Details\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"BusinessAccount\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Stage\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"ClassID\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"CloseDate\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"Owner\":{\"value\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Amount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"Branch\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"BusinessAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ClassID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactDisplayName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"ConvertedLeadDisplayName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ConvertedLeadID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CurrencyID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CurrencyViewState\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Details\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Discount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"Estimation\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Location\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ManualAmount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OpportunityID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Override\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Owner\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"OwnerEmployeeName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ParentAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Reason\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Source\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SourceCampaign\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Stage\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Subject\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"TaxZone\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Total\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"WeightTotal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"WorkgroupDescription\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"WorkgroupID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Opportunity\",\"method\":\"PUT\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:23.968Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3delcontact",
+      "name": "deleteContact",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.5",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole Request Body\",\"description\":\"Request body for the AcumaticaWhole AcumaticaWhole endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the AcumaticaWhole AcumaticaWhole endpoint.\",\"required\":[\"bearerToken\",\"instanceUrl\"],\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"Bearer token for authentication.\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"URL of the AcumaticaWhole instance.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the AcumaticaWhole AcumaticaWhole endpoint.\",\"required\":[\"contactId\"],\"properties\":{\"contactId\":{\"type\":\"string\",\"title\":\"Contact ID\",\"description\":\"ID of the contact.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"contactId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Contact/{{url.contactId}}\",\"method\":\"DELETE\",\"headers\":[],\"params\":[],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:23.944Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3deletelead",
+      "name": "deleteLead",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.3",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole Request Body\",\"description\":\"Request body for the AcumaticaWhole AcumaticaWhole endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the AcumaticaWhole AcumaticaWhole endpoint.\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"The bearer token for authentication.\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The Acumatica instance URL.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the AcumaticaWhole AcumaticaWhole endpoint.\",\"required\":[\"leadId\"],\"properties\":{\"leadId\":{\"type\":\"string\",\"title\":\"Lead ID\",\"description\":\"The ID of the lead.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"leadId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Lead/{{url.leadId}}\",\"method\":\"DELETE\",\"headers\":[],\"params\":[],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:23.921Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3deleteopportunity",
+      "name": "deleteOpportunity",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.3",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole AcumaticaWhole Request Body\",\"description\":\"Request body for AcumaticaWhole AcumaticaWhole endpoint\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for AcumaticaWhole AcumaticaWhole endpoint\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"Bearer token for authentication.\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"Acumatica instance URL for authentication.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for AcumaticaWhole AcumaticaWhole endpoint\",\"required\":[\"opportunityId\"],\"properties\":{\"opportunityId\":{\"type\":\"string\",\"title\":\"Opportunity ID\",\"description\":\"ID of the opportunity.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"opportunityId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Opportunity/{{url.opportunityId}}\",\"method\":\"DELETE\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-14T02:03:23.897Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3getcontact",
+      "name": "getContact",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.3",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole AcumaticaWhole Request Body\",\"description\":\"Request body for the AcumaticaWhole AcumaticaWhole endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the AcumaticaWhole AcumaticaWhole endpoint.\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"The bearer token for authentication.\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The Acumatica instance URL.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the AcumaticaWhole AcumaticaWhole endpoint.\",\"required\":[\"contactId\"],\"properties\":{\"contactId\":{\"type\":\"string\",\"title\":\"Contact ID\",\"description\":\"The ID of the contact.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"contactId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Active\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Attention\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"BusinessAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CompanyName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactClass\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ContactID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"ContactMethod\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"DateOfBirth\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DisplayName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"DoNotCall\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotEmail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotFax\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DuplicateFound\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Email\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ExtRefNbr\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Fax\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"FaxType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"FirstName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Gender\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Image\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"JobTitle\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LanguageOrLocale\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastIncomingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastOutgoingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MaritalStatus\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MiddleName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"NoMarketing\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoMassMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OverrideAccountAddress\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Owner\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"OwnerEmployeeName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ParentAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone1\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone1Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone2\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone2Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone3\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone3Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Reason\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Source\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SourceCampaign\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SpouseOrPartnerName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Title\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"WebSite\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Workgroup\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WorkgroupDescription\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Contact/{{url.contactId}}\",\"method\":\"GET\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.772Z",
+      "updatedAt": "2025-03-14T02:03:23.869Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3getcontacts",
+      "name": "getContacts",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.4",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole Request Body\",\"description\":\"Request body for the AcumaticaWhole AcumaticaWhole endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the AcumaticaWhole AcumaticaWhole endpoint.\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The Acumatica instance URL.\"}}},\"param\":{\"type\":\"object\",\"properties\":{\"filter\":{\"type\":\"string\"},\"expand\":{\"type\":\"string\"},\"inlinecount\":{\"type\":\"string\"},\"select\":{\"type\":\"string\"},\"top\":{\"type\":\"string\"},\"orderby\":{\"type\":\"string\"},\"skip\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"expand\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"filter\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inlinecount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"orderby\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"select\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"skip\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"top\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Active\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Attention\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"BusinessAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CompanyName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactClass\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"ContactMethod\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"DateOfBirth\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DisplayName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"DoNotCall\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotEmail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotFax\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DuplicateFound\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Email\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ExtRefNbr\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Fax\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"FaxType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"FirstName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Gender\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Image\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"JobTitle\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LanguageOrLocale\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastIncomingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastOutgoingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MaritalStatus\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"MiddleName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"NoMarketing\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoMassMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OverrideAccountAddress\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Owner\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OwnerEmployeeName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ParentAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone1\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone1Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone2\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone2Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone3\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone3Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Reason\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Source\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SourceCampaign\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SpouseOrPartnerName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Title\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"WebSite\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Workgroup\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WorkgroupDescription\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Contact\",\"method\":\"GET\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[{\"key\":\"$top\",\"value\":\"{{param.top}}\"},{\"key\":\"$skip\",\"value\":\"{{param.skip}}\"},{\"key\":\"$filter\",\"value\":\"{{param.filter}}\"},{\"key\":\"$orderby\",\"value\":\"{{param.orderby}}\"},{\"key\":\"$expand\",\"value\":\"{{param.expand}}\"},{\"key\":\"$select\",\"value\":\"{{param.select}}\"},{\"key\":\"$inlinecount\",\"value\":\"{{param.inlinecount}}\"}],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.772Z",
+      "updatedAt": "2025-03-14T02:03:23.822Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3getcustomers",
+      "name": "getCustomers",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.4",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole Request Body\",\"description\":\"Request body for the AcumaticaWhole AcumaticaWhole endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the AcumaticaWhole AcumaticaWhole endpoint.\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The Acumatica instance URL.\"}}},\"param\":{\"type\":\"object\",\"properties\":{\"filter\":{\"type\":\"string\"},\"expand\":{\"type\":\"string\"},\"inlinecount\":{\"type\":\"string\"},\"select\":{\"type\":\"string\"},\"top\":{\"type\":\"string\"},\"orderby\":{\"type\":\"string\"},\"skip\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"expand\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"filter\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inlinecount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"orderby\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"select\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"skip\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"top\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"AccountRef\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ApplyOverdueCharges\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"AutoApplyPayments\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"BAccountID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"BillingAddressOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"BillingContactOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"CreatedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CreditLimit\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"CurrencyID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CurrencyRateType\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CustomerCategory\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CustomerClass\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CustomerID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CustomerName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Email\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"EnableCurrencyOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"EnableRateOverride\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"EnableWriteOffs\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"FOBPoint\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"IsGuestCustomer\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LeadTimedays\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LocationName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"MultiCurrencyStatements\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OrderPriority\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"ParentRecord\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PriceClassID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"PrimaryContactID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"PrintDunningLetters\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"PrintInvoices\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"PrintStatements\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ResidentialDelivery\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"SaturdayDelivery\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"SendDunningLettersbyEmail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"SendInvoicesbyEmail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"SendStatementsbyEmail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"ShippingAddressOverride\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ShippingBranch\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ShippingContactOverride\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ShippingRule\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ShippingTerms\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ShippingZoneID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ShipVia\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"StatementCycleID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"StatementType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"TaxRegistrationID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"TaxZone\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Terms\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"WarehouseID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WriteOffLimit\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Customer\",\"method\":\"GET\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[{\"key\":\"$top\",\"value\":\"{{param.top}}\"},{\"key\":\"$skip\",\"value\":\"{{param.skip}}\"},{\"key\":\"$filter\",\"value\":\"{{param.filter}}\"},{\"key\":\"$orderby\",\"value\":\"{{param.orderby}}\"},{\"key\":\"$expand\",\"value\":\"{{param.expand}}\"},{\"key\":\"$select\",\"value\":\"{{param.select}}\"},{\"key\":\"$inlinecount\",\"value\":\"{{param.inlinecount}}\"}],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.772Z",
+      "updatedAt": "2025-03-14T02:03:23.794Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3getentities",
+      "name": "getEntities",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.4",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole Request Body\",\"description\":\"Request body for the AcumaticaWhole AcumaticaWhole endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the AcumaticaWhole AcumaticaWhole endpoint.\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The Acumatica instance URL.\"}}},\"param\":{\"type\":\"object\",\"properties\":{\"filter\":{\"type\":\"string\"},\"expand\":{\"type\":\"string\"},\"inlinecount\":{\"type\":\"string\"},\"select\":{\"type\":\"string\"},\"top\":{\"type\":\"string\"},\"orderby\":{\"type\":\"string\"},\"skip\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"expand\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"filter\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"inlinecount\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"orderby\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"select\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"skip\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"top\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"version\":{\"type\":\"object\",\"properties\":{\"acumaticaBuildVersion\":{\"type\":\"string\"},\"databaseVersion\":{\"type\":\"string\"}},\"required\":[]},\"endpoints\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"version\":{\"type\":\"string\"},\"href\":{\"type\":\"string\"}},\"required\":[]}}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity\",\"method\":\"GET\",\"headers\":[],\"params\":[{\"key\":\"$top\",\"value\":\"{{param.top}}\"},{\"key\":\"$skip\",\"value\":\"{{param.skip}}\"},{\"key\":\"$filter\",\"value\":\"{{param.filter}}\"},{\"key\":\"$orderby\",\"value\":\"{{param.orderby}}\"},{\"key\":\"$expand\",\"value\":\"{{param.expand}}\"},{\"key\":\"$select\",\"value\":\"{{param.select}}\"},{\"key\":\"$inlinecount\",\"value\":\"{{param.inlinecount}}\"}],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.772Z",
+      "updatedAt": "2025-03-14T02:03:23.770Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3getlead",
+      "name": "getLead",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.3",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole Request Body\",\"description\":\"Request body for the AcumaticaWhole AcumaticaWhole endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication Details\",\"description\":\"Authentication details for the AcumaticaWhole AcumaticaWhole endpoint.\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"The bearer token for authentication.\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The Acumatica instance URL.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the AcumaticaWhole AcumaticaWhole endpoint.\",\"required\":[\"leadId\"],\"properties\":{\"leadId\":{\"type\":\"string\",\"title\":\"Lead ID\",\"description\":\"The ID of the lead.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"leadId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Active\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"BusinessAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CompanyName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactMethod\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ConvertedBy\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Description\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DoNotCall\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotEmail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotFax\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DuplicateFound\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Email\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Fax\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"FaxType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"FirstName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"JobTitle\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LanguageOrLocale\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastIncomingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastOutgoingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LeadClass\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LeadDisplayName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LeadID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"NoMarketing\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoMassMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Owner\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"OwnerEmployeeName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ParentAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone1\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone1Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone2\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone2Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone3\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone3Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"QualificationDate\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Reason\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"RefContactID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Source\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"SourceCampaign\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Title\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WebSite\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Workgroup\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WorkgroupDescription\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Lead/{{url.leadId}}\",\"method\":\"GET\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\"}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.772Z",
+      "updatedAt": "2025-03-14T02:03:23.709Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3getleads",
+      "name": "getLeads",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.4",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole Request Body\",\"description\":\"Request body for the AcumaticaWhole AcumaticaWhole endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the AcumaticaWhole AcumaticaWhole endpoint.\",\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the Acumatica instance.\"}}},\"param\":{\"type\":\"object\",\"properties\":{\"filter\":{\"type\":\"string\"},\"expand\":{\"type\":\"string\"},\"select\":{\"type\":\"string\"},\"top\":{\"type\":\"string\"},\"orderby\":{\"type\":\"string\"},\"skip\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"expand\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"filter\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"orderby\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"select\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"skip\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"top\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Active\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"BusinessAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CompanyName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactMethod\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ConvertedBy\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Description\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"DoNotCall\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotEmail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotFax\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DoNotMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"DuplicateFound\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Email\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Fax\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"FaxType\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"FirstName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"JobTitle\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LanguageOrLocale\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastIncomingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastOutgoingActivity\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"LeadClass\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LeadDisplayName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LeadID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"NoMarketing\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoMassMail\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Owner\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OwnerEmployeeName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ParentAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone1\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone1Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone2\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone2Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Phone3\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Phone3Type\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"QualificationDate\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Reason\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"RefContactID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Source\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SourceCampaign\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Title\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WebSite\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Workgroup\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"WorkgroupDescription\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Lead\",\"method\":\"GET\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[{\"key\":\"$top\",\"value\":\"{{param.top}}\"},{\"key\":\"$skip\",\"value\":\"{{param.skip}}\"},{\"key\":\"$filter\",\"value\":\"{{param.filter}}\"},{\"key\":\"$orderby\",\"value\":\"{{param.orderby}}\"},{\"key\":\"$expand\",\"value\":\"{{param.expand}}\"},{\"key\":\"$select\",\"value\":\"{{param.select}}\"}],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.772Z",
+      "updatedAt": "2025-03-14T02:03:23.678Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3getoppertunities",
+      "name": "getOpportunities",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.4",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"\",\"description\":\"\",\"properties\":{\"auth\":{\"type\":\"object\",\"required\":[\"instanceUrl\",\"bearerToken\"],\"properties\":{\"bearerToken\":{\"type\":\"string\"},\"instanceUrl\":{\"type\":\"string\"}}},\"param\":{\"type\":\"object\",\"properties\":{\"filter\":{\"type\":\"string\"},\"expand\":{\"type\":\"string\"},\"select\":{\"type\":\"string\"},\"top\":{\"type\":\"string\"},\"orderby\":{\"type\":\"string\"},\"skip\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"param\":{\"expand\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"filter\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"orderby\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"select\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"skip\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"top\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"description\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Amount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"Branch\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"BusinessAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ClassID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactDisplayName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"ConvertedLeadDisplayName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ConvertedLeadID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CurrencyID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CurrencyViewState\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Details\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Discount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"Estimation\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Location\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ManualAmount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OpportunityID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Override\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Owner\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OwnerEmployeeName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ParentAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Reason\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Source\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SourceCampaign\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Stage\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Subject\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"TaxZone\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Total\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"WeightTotal\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"WorkgroupDescription\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"WorkgroupID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Opportunity\",\"method\":\"GET\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[{\"key\":\"$top\",\"value\":\"{{param.top}}\"},{\"key\":\"$skip\",\"value\":\"{{param.skip}}\"},{\"key\":\"$filter\",\"value\":\"{{param.filter}}\"},{\"key\":\"$orderby\",\"value\":\"{{param.orderby}}\"},{\"key\":\"$expand\",\"value\":\"{{param.expand}}\"},{\"key\":\"$select\",\"value\":\"{{param.select}}\"}],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.772Z",
+      "updatedAt": "2025-03-14T02:03:23.646Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_dcb0a8b6-be3e-4f5d-a4c5-86431a9a6ae3getopportunity",
+      "name": "getOpportunity",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.4",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"AcumaticaWhole Request Body\",\"description\":\"Request body for the AcumaticaWhole AcumaticaWhole endpoint.\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the AcumaticaWhole API.\",\"required\":[\"bearerToken\",\"instanceUrl\"],\"properties\":{\"bearerToken\":{\"type\":\"string\",\"title\":\"Bearer Token\",\"description\":\"The bearer token for authentication.\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the Acumatica instance.\"}}},\"url\":{\"type\":\"object\",\"title\":\"URL Parameters\",\"description\":\"URL parameters for the AcumaticaWhole API.\",\"required\":[\"opportunityId\"],\"properties\":{\"opportunityId\":{\"type\":\"string\",\"title\":\"Opportunity ID\",\"description\":\"The ID of the opportunity.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"bearerToken\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"url\":{\"opportunityId\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"id\":{\"type\":\"string\"},\"rowNumber\":{\"type\":\"integer\"},\"note\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Amount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"Branch\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"BusinessAccount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ClassID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactDisplayName\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ContactID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"integer\"}},\"required\":[]},\"ConvertedLeadDisplayName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ConvertedLeadID\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"CurrencyID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"CurrencyViewState\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Details\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Discount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"Estimation\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"LastModifiedDateTime\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Location\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"ManualAmount\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"NoteID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"OpportunityID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Override\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"boolean\"}},\"required\":[]},\"Owner\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"OwnerEmployeeName\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"ParentAccount\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Reason\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Source\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"SourceCampaign\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Stage\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Status\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"Subject\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"TaxZone\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"Total\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"WeightTotal\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"number\"}},\"required\":[]},\"WorkgroupDescription\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"WorkgroupID\":{\"type\":\"object\",\"properties\":{\"value\":{\"type\":\"string\"}},\"required\":[]},\"custom\":{\"type\":\"object\",\"properties\":{},\"required\":[]},\"_links\":{\"type\":\"object\",\"properties\":{\"self\":{\"type\":\"string\"},\"files:put\":{\"type\":\"string\"}},\"required\":[]}},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/Default/24.200.001/Opportunity/{{url.opportunityId}}\",\"method\":\"GET\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{}\",\"authType\":\"BEARER\",\"authConfig\":{\"bearerToken\":\"{{auth.bearerToken}}\",\"authKey\":\"\",\"authValue\":\"\",\"awsSignature\":{}}}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.772Z",
+      "updatedAt": "2025-03-14T02:03:23.586Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2tgkOVPOQ1MhRoXgdt0yATdQdwF",
+      "name": "login",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.3",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"\",\"description\":\"\",\"properties\":{\"body\":{\"type\":\"object\",\"properties\":{\"password\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}},\"url\":{\"type\":\"object\",\"properties\":{\"instanceUrl\":{\"type\":\"string\"}}}}}",
+            "uiSchema": "{\"url\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}},\"body\":{\"password\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"name\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{url.instanceUrl}}/entity/auth/login\",\"method\":\"POST\",\"headers\":[{\"key\":\"Content-Type\",\"value\":\"application/json\"}],\"params\":[],\"body\":\"{{body | shape}}\",\"authType\":\"NO_AUTH\",\"authConfig\":null}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-05T11:25:30.195Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  },
+  {
+    "node": {
+      "clientId": "community",
+      "id": "_knexa_2tgkVtBkCwy3ZnHbb08wpmYKYXC",
+      "name": "logout",
+      "imageUrl": null,
+      "isCommunityCreated": false,
+      "version": "1.0.4",
+      "contract": {
+        "action": {
+          "request": {
+            "schema": "{\"type\":\"object\",\"title\":\"Acumatica API Request\",\"description\":\"Acumatica API Request Body\",\"properties\":{\"auth\":{\"type\":\"object\",\"title\":\"Authentication\",\"description\":\"Authentication details for the Acumatica API.\",\"properties\":{\"Cookies\":{\"type\":\"string\",\"title\":\"cookies\",\"description\":\"The cookies of the Accumatica instance.\"},\"instanceUrl\":{\"type\":\"string\",\"title\":\"Instance URL\",\"description\":\"The URL of the Acumatica instance.\"}}}}}",
+            "uiSchema": "{\"auth\":{\"instanceUrl\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"},\"Cookies\":{\"ui:placeholder\":\"\",\"ui:widget\":\"\"}}}",
+            "__typename": "ContractOutput"
+          },
+          "success": {
+            "schema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{},\"required\":[]}",
+            "__typename": "ContractOutput"
+          },
+          "__typename": "ActionContractOutput"
+        },
+        "__typename": "DataSourceSpecOutput"
+      },
+      "configurationLayer": {
+        "mapper": "{\"url\":\"https://{{auth.instanceUrl}}/entity/auth/logout\",\"method\":\"POST\",\"headers\":[{\"key\":\"content-type\",\"value\":\"application/json\"},{\"key\":\"Cookies\",\"value\":\"{{auth.cookies}}\"}],\"params\":[],\"body\":\"{}\",\"authType\":\"NO_AUTH\",\"authConfig\":null}",
+        "__typename": "ConfigurationLayerOutput"
+      },
+      "type": "API",
+      "createdAt": "2025-07-18T07:08:56.771Z",
+      "updatedAt": "2025-03-05T11:25:30.170Z",
+      "__typename": "DataSourceTemplatePattOutput"
+    },
+    "__typename": "DataSourceTemplateEdge"
+  }
+]
