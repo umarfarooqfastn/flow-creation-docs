@@ -66,7 +66,7 @@ class FlowValidator:
         # Valid step types
         self.VALID_STEP_TYPES = {
             "COMPOSITE", "INLINE", "CONDITIONAL", "LOOP", "VARIABLE", 
-            "INTERNAL_DB", "API", "LOGGER"
+            "INTERNAL_DB", "API", "LAMBDA"
         }
         
         # Valid conditional operations (enum values)
@@ -444,6 +444,8 @@ class FlowValidator:
             self.validate_composite_step(step, location)
         elif step_type == "API":
             self.validate_api_step(step, location)
+        elif step_type == "LAMBDA":
+            self.validate_lambda_step(step, location)
 
     def validate_inline_step(self, step, location):
         """Validate INLINE step requirements"""
@@ -524,6 +526,35 @@ class FlowValidator:
             config = function["configuration"]
             if "authType" not in config:
                 self.add_warning("API step missing 'authType' in configuration", location)
+                
+    def validate_lambda_step(self, step, location):
+        """Validate LAMBDA step requirements"""
+        lambda_function = step.get("lambdaFunction")
+        if not lambda_function or not isinstance(lambda_function, dict):
+            self.add_error("LAMBDA step missing 'lambdaFunction' configuration", location)
+            return
+            
+        # Check required fields
+        required_lambda_fields = ["code", "language", "version"]
+        
+        for field in required_lambda_fields:
+            if field not in lambda_function:
+                self.add_error(f"LAMBDA step missing required field '{field}'", location)
+                
+        # Validate language
+        language = lambda_function.get("language")
+        if language and language != "PYTHON":
+            self.add_error(f"LAMBDA step invalid language '{language}' - only 'PYTHON' is supported", location)
+            
+        # Check for fastn_function in code
+        code = lambda_function.get("code", "")
+        if code and "def fastn_function(params):" not in code:
+            self.add_error("LAMBDA step code must define 'def fastn_function(params):' function", location)
+            self.add_info("LAMBDA steps require a main entry point function named 'fastn_function'")
+            
+        # Check queryExecutor exists  
+        if "queryExecutor" not in lambda_function:
+            self.add_warning("LAMBDA step missing 'queryExecutor' - may cause UI issues", location)
 
     def validate_data_references(self, flow):
         """Check for problematic data references throughout the flow"""

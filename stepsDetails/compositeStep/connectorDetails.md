@@ -3,6 +3,7 @@
 This file provides details for the available connectors.
 
 ## Bigcommerce
+
 - **Group ID:** `_knexa_c866d6f4-9ca4-40f5-9af5-5c54a9c5b4f3`
 - **Details File:** `./Bigcommerce.json`
 - **Endpoints:** `getChannels`, `getChannel`, `createChannel`, `updateChannel`, `getChannelActiveTheme`, `getChannelsCurrencyAssignments`, `getCustomers`, `createCustomer`, `getCategoryTrees`, `upsertCategoryTree`, `getCategories`, `createCategories`, `updateCategories`, `deleteCatagoryTree`, `deleteCategories`, `createProduct`, `getACategoryTree`, `updateProduct`, `getBrands`, `createBrand`, `getWebhooks`, `createWebhook`, `deleteWebhook`, `getWebhook`, `getProduct`, `deleteProduct`, `getProducts`, `getProductBySku`

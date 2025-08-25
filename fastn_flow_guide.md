@@ -78,6 +78,7 @@ Each step in the `steps` array is an object with a `type` and an `id`. The avail
 -   **INLINE Step:** Two distinct patterns:
     -   **Custom Code Steps** (JavaScript data processing) - See `stepsDetails/customCodeStep/customCode.md`
     -   **Response Steps** (JINJA final API response) - See `stepsDetails/responseStep/responseStep.md`
+-   **LAMBDA Step:** To execute complex Python code with access to external libraries for any advanced logic processing. **Execution time limit: ~10 seconds max.** See `stepsDetails/lambdaStep/lambda.md`.
 -   **CONDITIONAL Step (Switch):** To control the flow of execution based on a condition. See `stepsDetails/switchStep/switch.md`.
 -   **LOOP Step:** To iterate over a list of items. See `stepsDetails/loopStep/loop.md`.
 -   **VARIABLE Step:** To store and update variables within the flow. See `stepsDetails/variableStep/variable.md`.
@@ -216,6 +217,11 @@ Before starting, ensure you have:
 - Identify decision points (switch/conditional steps)
 - Determine loop requirements for data iteration
 - Plan data transformation points (inline steps)
+- **🚨 COMPULSORY: Study Complex Flow Patterns**
+  - **Read:** `flowExamples/acumatica_bigComerce/ACUMATICA_BIGCOMMERCE_FLOWS_ANALYSIS.md`
+  - **Purpose:** Understand how enterprise-grade data synchronization flows are architected
+  - **Learn:** Multi-tenant patterns, batch processing, error handling, and complex business logic
+  - **Apply:** These proven patterns to your flow design for robust, scalable solutions
 
 **Step 3: Gather Connector Information** 
 - For each external API call needed, use:
@@ -286,6 +292,15 @@ python3 generate_uicode.py <endpoint_name>
 - Ensure sub-steps use `{{data.steps.loopStepId.loopOverItem}}` for current item
 - Plan data extraction strategy for results outside loop scope
 - Use VARIABLE steps to collect loop results if needed
+
+**For LAMBDA Steps:**
+- Always define `fastn_function(params)` as the main entry point
+- Use only available Python libraries from the documented list
+- Include proper error handling with try-catch blocks
+- Access secrets via `params["data"]["secrets"]`, never hardcode credentials
+- Return JSON-serializable data structures
+- Handle timeouts for external API calls and database connections
+- Design for quick execution - avoid long-running computations
 
 ### 9.5. Model ID Standards
 
@@ -376,6 +391,12 @@ python3 flow_validator.py <flow_file.json>
 
 ### Data Mapping Patterns
 See section 6 for complete data mapping patterns and examples.
+
+### Complex Flow Architecture Reference
+**📚 COMPULSORY READING:** `flowExamples/acumatica_bigComerce/ACUMATICA_BIGCOMMERCE_FLOWS_ANALYSIS.md`
+- Enterprise-grade integration patterns for complex data synchronization
+- Multi-tenant architecture, batch processing, and error handling strategies
+- Real-world examples of flows ranging from 371 to 8,229 lines of complexity
 
 ### Validation Checklist
 - [ ] Root structure is an array `[{...}]`

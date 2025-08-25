@@ -1,0 +1,371 @@
+[
+  {
+    "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+    "id": "tokenVerification",
+    "newName": null,
+    "name": "tokenVerification",
+    "description": null,
+    "actionType": "READ",
+    "inputName": "input",
+    "inputModelId": "json",
+    "chatWelcomeMessage": null,
+    "outputModelId": "json",
+    "errorModelId": "",
+    "headerModelId": "json",
+    "apiPreview": {
+      "graphql": null,
+      "rest": {
+        "schema": "{\"openapi\":\"3.0.3\",\"info\":{\"title\":\"Flow OpenAPI Specification\",\"description\":\"OpenAPI specification for the flow\",\"version\":\"1.0.11\"},\"servers\":[{\"url\":\"https://qa.fastn.ai/api/v1\"}],\"paths\":{\"/tokenVerification\":{\"post\":{\"summary\":\"tokenVerification\",\"operationId\":\"POST-tokenVerification\",\"parameters\":[{\"in\":\"header\",\"name\":\"x-fastn-space-id\",\"description\":\"x-fastn-space-id Header\",\"schema\":{\"type\":\"string\",\"default\":\"60aecfe8-83ed-4df9-8467-8cf636d8eeff\"},\"required\":false},{\"in\":\"header\",\"name\":\"stage\",\"description\":\"stage Header\",\"schema\":{\"type\":\"string\",\"default\":\"DRAFT\"},\"required\":false},{\"in\":\"header\",\"name\":\"content-type\",\"description\":\"content-type Header\",\"schema\":{\"type\":\"string\",\"default\":\"application/json\"},\"required\":false},{\"in\":\"header\",\"name\":\"x-fastn-space-tenantid\",\"description\":\"x-fastn-space-tenantid Header\",\"schema\":{\"type\":\"string\",\"default\":\"\"},\"required\":false}],\"requestBody\":{\"required\":true,\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"input\":{\"title\":\"JSON\",\"properties\":{},\"type\":\"object\",\"description\":\"Free form JSON\"}},\"type\":\"object\"}}}},\"responses\":{\"200\":{\"description\":\"Success\",\"content\":{\"application/json\":{\"schema\":{\"title\":\"JSON\",\"properties\":{},\"type\":\"object\",\"description\":\"Free form JSON\"}}}}},\"security\":[{\"apiKey\":[]}]}}},\"components\":{\"securitySchemes\":{\"apiKey\":{\"in\":\"header\",\"name\":\"x-fastn-api-key\",\"type\":\"apiKey\"},\"bearerAuth\":{\"type\":\"http\",\"scheme\":\"bearer\"}}}}"
+      }
+    },
+    "version": "1.0.1",
+    "inputModel": {
+      "createdAt": 1755930829.3845613,
+      "updatedAt": 1755930829.3845384,
+      "id": "json",
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "outputModel": {
+      "createdAt": 1755930829.3911448,
+      "updatedAt": 1755930829.391122,
+      "id": "json",
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "errorModel": null,
+    "headerModel": {
+      "createdAt": 1748343829.3696427,
+      "updatedAt": 1748343829.3696182,
+      "id": "json",
+      "clientId": "9f0b8479-040f-4158-862e-0a9e7c4b49ff",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "status": "DEPLOYED",
+    "createdAt": 1755930829.3974059,
+    "updatedAt": 1755930829.4047806,
+    "deployedAt": 1752090306.8038795,
+    "resolver": {
+      "id": "tokenVerification",
+      "label": null,
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "groupId": null,
+      "type": null,
+      "field": null,
+      "dependencies": null,
+      "start": "verifyAndDecodeJwtToken",
+      "nodeBased": false,
+      "steps": [
+        {
+          "type": "LAMBDA",
+          "id": "verifyAndDecodeJwtToken",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": {
+            "code": "import jwt # PyJWT\nfrom jwt import InvalidTokenError\n\ndef fastn_function(params):\n    # Assuming the JWT token is included in the params for simulation\n    auth_header = params[\"data\"][\"headers\"][\"authorization\"]\n    if not auth_header.startswith('Bearer '):\n        return {\"error\": \"Missing or invalid Authorization header\"}\n\n    token = auth_header.replace('Bearer ', '')\n\n    # Your BigCommerce app's client secret\n    CLIENT_ID = params[\"data\"][\"secrets\"][\"bc_client_id\"]\n    CLIENT_SECRET = params[\"data\"][\"secrets\"][\"bc_client_secret\"]\n\n    try:\n        # Verify and decode the token\n        payload = jwt.decode(token, CLIENT_SECRET, audience=CLIENT_ID, algorithms=['HS512'])\n\n        # Extract customer email and store hash from the payload\n        email = payload.get('customer', {}).get('email')\n        store_hash = payload.get('store_hash')\n\n        if not email:\n            return {\"error\": \"Email not found in token\"}\n\n        # Return valid result\n        return {\n            \"status\": \"success\",\n            \"email\": email,\n            \"store_hash\": store_hash\n        }\n\n    except InvalidTokenError as e:\n        return {\"error\": f\"Token verification failed: {str(e)}\"}",
+            "next": null,
+            "validation": {
+              "validData": true,
+              "reason": null,
+              "valid": false,
+              "queryExecutor": null
+            },
+            "language": "PYTHON",
+            "version": 2,
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "headers"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "authorization"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "authorization"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "headers"
+                          },
+                          "version": 2
+                        }
+                      },
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "secrets"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "bc_client_id"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "bc_client_id"
+                                },
+                                "version": 2
+                              }
+                            },
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "bc_client_secret"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "customer"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "email"
+                                          },
+                                          "value": {
+                                            "children": [
+                                              {
+                                                "key": {
+                                                  "type": "java.lang.String",
+                                                  "value": "store_hash"
+                                                },
+                                                "value": {
+                                                  "children": [],
+                                                  "returnLiteral": true,
+                                                  "symbolOrIndex": {
+                                                    "type": "java.lang.String",
+                                                    "value": "store_hash"
+                                                  },
+                                                  "version": 2
+                                                }
+                                              }
+                                            ],
+                                            "returnLiteral": false,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "email"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "customer"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "bc_client_secret"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "secrets"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "outputSchema": null,
+          "next": null,
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        }
+      ]
+    },
+    "types": [],
+    "tests": null,
+    "hasActionType": true,
+    "metaData": {
+      "enableLogs": true,
+      "isAsync": false,
+      "hasSecret": false,
+      "enableMultitenant": false,
+      "enableValidation": false,
+      "architecture": "REST",
+      "isCustomAuthenticationEnabled": true,
+      "isNotificationEnabled": false,
+      "flowType": "API",
+      "jobMemoryLimit": null,
+      "jobTimeOut": null,
+      "jobCpuLimit": null,
+      "isConfigured": null,
+      "configurationFlows": [],
+      "invocationMethod": "API_REQUEST",
+      "priority": null,
+      "triggerType": null,
+      "schedule": null,
+      "triggerApp": null
+    },
+    "comment": null,
+    "labels": null,
+    "resourceType": "EXTERNAL",
+    "deleted": null,
+    "webhookId": null,
+    "webhook": null,
+    "deployedBy": null,
+    "createdby": null
+  }
+]

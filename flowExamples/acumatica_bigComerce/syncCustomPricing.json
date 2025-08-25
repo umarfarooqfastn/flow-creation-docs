@@ -1,0 +1,2789 @@
+[
+  {
+    "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+    "id": "syncCustomPricing",
+    "newName": null,
+    "name": "syncCustomPricing",
+    "description": null,
+    "actionType": "READ",
+    "inputName": "input",
+    "inputModelId": "json",
+    "chatWelcomeMessage": null,
+    "outputModelId": "json",
+    "errorModelId": "",
+    "headerModelId": "json",
+    "apiPreview": {
+      "graphql": null,
+      "rest": {
+        "schema": "{\"openapi\":\"3.0.3\",\"info\":{\"title\":\"Flow OpenAPI Specification\",\"description\":\"OpenAPI specification for the flow\",\"version\":\"1.0.11\"},\"servers\":[{\"url\":\"https://qa.fastn.ai/api/v1\"}],\"paths\":{\"/syncCustomPricing\":{\"post\":{\"summary\":\"syncCustomPricing\",\"operationId\":\"POST-syncCustomPricing\",\"parameters\":[{\"in\":\"header\",\"name\":\"x-fastn-space-id\",\"description\":\"x-fastn-space-id Header\",\"schema\":{\"type\":\"string\",\"default\":\"60aecfe8-83ed-4df9-8467-8cf636d8eeff\"},\"required\":false},{\"in\":\"header\",\"name\":\"stage\",\"description\":\"stage Header\",\"schema\":{\"type\":\"string\",\"default\":\"DRAFT\"},\"required\":false},{\"in\":\"header\",\"name\":\"content-type\",\"description\":\"content-type Header\",\"schema\":{\"type\":\"string\",\"default\":\"application/json\"},\"required\":false},{\"in\":\"header\",\"name\":\"x-fastn-space-tenantid\",\"description\":\"x-fastn-space-tenantid Header\",\"schema\":{\"type\":\"string\",\"default\":\"\"},\"required\":false}],\"requestBody\":{\"required\":true,\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"input\":{\"title\":\"JSON\",\"properties\":{},\"type\":\"object\",\"description\":\"Free form JSON\"}},\"type\":\"object\"}}}},\"responses\":{\"200\":{\"description\":\"Success\",\"content\":{\"application/json\":{\"schema\":{\"title\":\"JSON\",\"properties\":{},\"type\":\"object\",\"description\":\"Free form JSON\"}}}}},\"security\":[{\"apiKey\":[]}]}}},\"components\":{\"securitySchemes\":{\"apiKey\":{\"in\":\"header\",\"name\":\"x-fastn-api-key\",\"type\":\"apiKey\"},\"bearerAuth\":{\"type\":\"http\",\"scheme\":\"bearer\"}}}}"
+      }
+    },
+    "version": "1.0.1",
+    "inputModel": {
+      "createdAt": 1755930830.2668922,
+      "updatedAt": 1755930830.2668693,
+      "id": "json",
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "outputModel": {
+      "createdAt": 1755930830.2737598,
+      "updatedAt": 1755930830.2737362,
+      "id": "json",
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "errorModel": null,
+    "headerModel": {
+      "createdAt": 1746149705.109947,
+      "updatedAt": 1746149705.1099243,
+      "id": "json",
+      "clientId": "d0f8c7f3-69d3-403c-90a0-17c8857e095f",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "status": "DEPLOYED",
+    "createdAt": 1755930830.342426,
+    "updatedAt": 1755930830.357812,
+    "deployedAt": 1746231645.0088692,
+    "resolver": {
+      "id": "syncCustomPricing",
+      "label": null,
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "groupId": null,
+      "type": null,
+      "field": null,
+      "dependencies": null,
+      "start": "config_map",
+      "nodeBased": false,
+      "steps": [
+        {
+          "type": "VARIABLE",
+          "id": "Variable4793",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": {
+            "next": "checkTenantName",
+            "variables": [],
+            "code": "\n{\n  \"syncType\": {% if data.input.syncMode is defined %}\"{{data.input.syncMode}}\"{% else %}\"\"{% endif %},\n  \"tenantId\": {% if data.headers['x-fastn-space-tenantid'] is defined %}\"{{data.headers['x-fastn-space-tenantid']}}\"{% else %}null{% endif %},\n  \"acumaticaTableName\": \"Four13 - Sale Prices\",\n  \"data\": [],\n  \"tableName\": {% if data.headers['x-fastn-space-tenantid'] is defined %}\"acumatica_custom_pricing_{{data.headers['x-fastn-space-tenantid']}}\"{% else %}null{% endif %},\n  \"batchSize\": 100,\n  \"skipToken\": 0,\n  \"tenantName\": {% if data.steps.config_map.output.tenantName is defined %}\"{{data.steps.config_map.output.tenantName}}\"{% else %}null{% endif %}\n}",
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"syncType\":{\"actionType\":\"map\",\"target\":\"{{data.input.syncMode}}\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"},\"tenantId\":{\"actionType\":\"map\",\"target\":\"{{data.headers['x-fastn-space-tenantid']}}\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\"},\"acumaticaTableName\":{\"actionType\":\"map\",\"target\":\"Four13 - Sale Prices\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\"},\"data\":{\"actionType\":\"map\",\"target\":[],\"targetType\":\"array\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"},\"tableName\":{\"actionType\":\"map\",\"target\":\"acumatica_custom_pricing_{{data.headers['x-fastn-space-tenantid']}}\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\"},\"batchSize\":{\"actionType\":\"map\",\"target\":\"100\",\"targetType\":\"integer\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\"},\"skipToken\":{\"actionType\":\"map\",\"target\":\"0\",\"targetType\":\"integer\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\"},\"tenantName\":{\"actionType\":\"map\",\"target\":\"{{data.steps.config_map.output.tenantName}}\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "headers"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "x-fastn-space-tenantid"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "x-fastn-space-tenantid"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "headers"
+                          },
+                          "version": 2
+                        }
+                      },
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "input"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "syncMode"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "syncMode"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "input"
+                          },
+                          "version": 2
+                        }
+                      },
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "steps"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "config_map"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "output"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "tenantName"
+                                          },
+                                          "value": {
+                                            "children": [],
+                                            "returnLiteral": true,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "tenantName"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "output"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "config_map"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "steps"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "checkTenantName",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INTERNAL_DB",
+          "id": "CreateTables",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": {
+            "next": "Switch",
+            "query": "CREATE TABLE IF NOT EXISTS {{data.var.tableName}} (\r\n\t                unique_id TEXT PRIMARY KEY,\r\n\t\t\t\t    customer_id TEXT,\r\n\t\t\t\t\tprice_type TEXT,\r\n\t\t\t\t\tprice_code TEXT,\r\n\t\t\t\t\tinventory_id TEXT,\r\n                    description TEXT,\r\n                    uom TEXT,\r\n                    warehouse TEXT,\r\n                    promotion BOOLEAN DEFAULT FALSE,\r\n                    break_qty TEXT,\r\n                    price TEXT,\r\n                    effective_date TEXT,\r\n                    expiration_date TEXT, \r\n                    ignore_automatic_line_discounts BOOLEAN DEFAULT FALSE,\r\n                    customer_class TEXT, \r\n                    item_class TEXT,\r\n                    last_modified_date_time TEXT,\r\n                    inventory_id_2 TEXT\r\n);\r\n\r\nCREATE TABLE IF NOT EXISTS last_acumatica_sync_date(\r\n    tenant_id TEXT PRIMARY KEY,\r\n    last_sync_date TEXT\r\n);\r\n",
+            "code": null,
+            "dbQueryParams": [],
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "var"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "tableName"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "tableName"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "var"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "Switch",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "CONDITIONAL",
+          "id": "Switch",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": {
+            "id": "Switch",
+            "next": "getRecordsFromAcumatica",
+            "expressions": [
+              {
+                "name": "partialSync",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.var.syncType}}",
+                "value": "partial",
+                "operation": "EQ",
+                "next": "getLastSyncDate"
+              }
+            ],
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "var"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "syncType"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "syncType"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "var"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "getRecordsFromAcumatica",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "VARIABLE",
+          "id": "Variable1960",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": {
+            "next": "getRecordsFromAcumatica",
+            "variables": [],
+            "code": "\n{\n  \"lastModifiedDateTime\": {% if data.steps.getLastSyncDate.output[0].last_sync_date  is defined %}{{data.steps.getLastSyncDate.output[0].last_sync_date | tojson}}{% else %}\"\"{% endif %}\n}",
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"lastModifiedDateTime\":{\"actionType\":\"map\",\"target\":\"{{data.steps.getLastSyncDate.output[0].last_sync_date}}\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"AUTO\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "steps"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "getLastSyncDate"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "output"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.math.BigInteger",
+                                            "value": "0"
+                                          },
+                                          "value": {
+                                            "children": [
+                                              {
+                                                "key": {
+                                                  "type": "java.lang.String",
+                                                  "value": "last_sync_date"
+                                                },
+                                                "value": {
+                                                  "children": [],
+                                                  "returnLiteral": true,
+                                                  "symbolOrIndex": {
+                                                    "type": "java.lang.String",
+                                                    "value": "last_sync_date"
+                                                  },
+                                                  "version": 2
+                                                }
+                                              }
+                                            ],
+                                            "returnLiteral": false,
+                                            "symbolOrIndex": {
+                                              "type": "java.math.BigInteger",
+                                              "value": "0"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "output"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "getLastSyncDate"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "steps"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "getRecordsFromAcumatica",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INTERNAL_DB",
+          "id": "updateLastSyncDate",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": {
+            "next": "SuccessfullySyncedSa",
+            "query": "INSERT INTO last_acumatica_sync_date (tenant_id, last_sync_date) VALUES (?, ?)\r\nON CONFLICT (tenant_id)\r\nDO UPDATE SET last_sync_date = EXCLUDED.last_sync_date;\r\n",
+            "code": "\n[\n{\n  \"type\" : \"string\",\n  \"value\" : {{data.var.tenantId | tojson}}\n}\n,{\n  \"type\" : \"string\",\n  \"value\" : {{data.var.currentDateTime | tojson}}\n}\n\n]",
+            "dbQueryParams": [
+              {
+                "type": "string",
+                "value": "{{data.var.tenantId}}"
+              },
+              {
+                "type": "string",
+                "value": "{{data.var.currentDateTime}}"
+              }
+            ],
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "SuccessfullySyncedSa",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "VARIABLE",
+          "id": "Variable2863",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": {
+            "next": "updateLastSyncDate",
+            "variables": [],
+            "code": "\n{\n  \"currentDateTime\": \"{{'' | date_generate(\"now\",\"UTC+02:00\",\"UTC\",\"none\",\"1\",\"0\",\"0\",\"0\",\"yyyy-MM-dd HH:mm:ss.SSS Z\",\"ISO_8601\")}}\"\n}",
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"currentDateTime\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[{\"actionType\":\"dateSource\",\"type\":\"now\",\"sTimeZone\":\"UTC+02:00\",\"dTimeZone\":\"UTC\",\"date\":\"\",\"operation\":\"none\",\"days\":\"1\",\"hours\":\"0\",\"minutes\":\"0\",\"seconds\":\"0\",\"sDateFormat\":\"yyyy-MM-dd HH:mm:ss.SSS Z\",\"dDateFormat\":\"ISO_8601\",\"variable\":\"currentDateTime_dateSource\"},{\"actionType\":\"actions_return\",\"targetType\":\"string\",\"target\":\"currentDateTime_dateSource\"}],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"AUTO\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "updateLastSyncDate",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INTERNAL_DB",
+          "id": "getLastSyncDate",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": {
+            "next": "Variable1960",
+            "query": "SELECT (last_sync_date) FROM last_acumatica_sync_date WHERE tenant_id = '{{data.var.tenantId}}'",
+            "code": null,
+            "dbQueryParams": [],
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "var"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "tenantId"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "tenantId"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "var"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "Variable1960",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "LOOP",
+          "id": "getRecordsFromAcumatica",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": {
+            "next": "Variable2863",
+            "start": "Switch2",
+            "loopOver": null,
+            "type": "INFINITY",
+            "steps": [
+              {
+                "type": "CONDITIONAL",
+                "id": "Switch2",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": {
+                  "id": null,
+                  "next": "getRecords1",
+                  "expressions": [
+                    {
+                      "name": "no last sync date",
+                      "logic": "AND",
+                      "conditions": null,
+                      "variable": "{{data.var.lastModifiedDateTime}}",
+                      "value": null,
+                      "operation": "NOT_EXISTS",
+                      "next": "getRecords"
+                    }
+                  ],
+                  "queryExecutor": null
+                },
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "getRecords1",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "COMPOSITE",
+                "id": "getRecords",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": {
+                  "steps": [
+                    {
+                      "type": "INLINE",
+                      "id": "getRecordsMap",
+                      "actionId": null,
+                      "inline": {
+                        "code": "\n{\n  \"url\": {\n  \"tableName\": {% if data.var.resourceName is defined %}\"{{data.var.resourceName}}\"{% else %}\"\"{% endif %}\n},\n  \"param\": {\n  \"top\": {% if data.var.batchSize is defined %}\"{{data.var.batchSize}}\"{% else %}\"\"{% endif %},\n  \"skip\": {% if data.var.skipToken is defined %}\"{{data.var.skipToken}}\"{% else %}\"\"{% endif %}\n},\n  \"auth\": {\n  \"bearerToken\": \"\",\n  \"instanceUrl\": \"\"\n}\n}",
+                        "language": "JINJA",
+                        "fields": [],
+                        "next": "getRecordsApi",
+                        "uiCode": "{\"actionType\":\"map\",\"target\":{\"url\":{\"actionType\":\"map\",\"target\":{\"tableName\":{\"path\":\"url.tableName\",\"field\":\"url\",\"position\":[\"url\",\"tableName\"],\"key\":\"tableName\",\"selected\":false,\"actionType\":\"map\",\"target\":\"{{data.var.resourceName}}\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]},\"param\":{\"actionType\":\"map\",\"target\":{\"top\":{\"path\":\"param.top\",\"field\":\"param\",\"position\":[\"param\",\"top\"],\"key\":\"top\",\"selected\":true,\"actionType\":\"map\",\"target\":\"{{data.var.batchSize}}\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"autoEscape\":\"MANUAL\"},\"skip\":{\"path\":\"param.skip\",\"field\":\"param\",\"position\":[\"param\",\"skip\"],\"key\":\"skip\",\"selected\":true,\"actionType\":\"map\",\"target\":\"{{data.var.skipToken}}\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]},\"auth\":{\"actionType\":\"map\",\"target\":{\"bearerToken\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"},\"instanceUrl\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]}",
+                        "hasResponse": false,
+                        "isError": false,
+                        "statusCode": 200,
+                        "outputSchema": null,
+                        "queryExecutor": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "data"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "var"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "batchSize"
+                                          },
+                                          "value": {
+                                            "children": [],
+                                            "returnLiteral": true,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "batchSize"
+                                            },
+                                            "version": 2
+                                          }
+                                        },
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "resourceName"
+                                          },
+                                          "value": {
+                                            "children": [],
+                                            "returnLiteral": true,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "resourceName"
+                                            },
+                                            "version": 2
+                                          }
+                                        },
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "skipToken"
+                                          },
+                                          "value": {
+                                            "children": [],
+                                            "returnLiteral": true,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "skipToken"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "var"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "data"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "null",
+                            "value": null
+                          },
+                          "version": 2
+                        }
+                      },
+                      "function": null,
+                      "composite": null,
+                      "loop": null,
+                      "internalDatabase": null,
+                      "aiAction": null,
+                      "mcpClient": null,
+                      "logger": null,
+                      "downLoadFile": null,
+                      "endLoop": null,
+                      "trigger": null,
+                      "converter": null,
+                      "variables": null,
+                      "state": null,
+                      "conditional": null,
+                      "lambdaFunction": null,
+                      "outputSchema": null,
+                      "next": "getRecordsApi",
+                      "prevStep": null,
+                      "enableDebug": false,
+                      "description": null,
+                      "debugBreakAfter": null,
+                      "configuredStepSetting": null,
+                      "filter": null,
+                      "limit": null,
+                      "splitOut": null,
+                      "aggregate": null,
+                      "merge": null,
+                      "aiAgent": null,
+                      "settings": null,
+                      "ftp": null,
+                      "warnings": null,
+                      "tenantSettings": null
+                    },
+                    {
+                      "type": "API",
+                      "id": "getRecordsApi",
+                      "actionId": null,
+                      "inline": null,
+                      "function": {
+                        "id": "_knexa_2turfyc0YKsydg9P1s0G3NM67QI",
+                        "groupId": "_knexa_7e87c3fe-4ddf-4a79-a12e-0da07cccbfc3",
+                        "connectorId": "community",
+                        "name": "getRecords",
+                        "version": "1.0.6",
+                        "imageUrl": "https://play-lh.googleusercontent.com/R2f0wEbrGDdEuECuO-VX6FdM749eRyYXt3neh106Ij3M1jNalfnwWUwkF96EP0Ql8Q",
+                        "configuration": {
+                          "enableCache": false,
+                          "cacheTtlInSeconds": 0,
+                          "required": true,
+                          "validate": false,
+                          "enableRetry": false,
+                          "enableAuth": true,
+                          "authType": "BEARER",
+                          "auth": {
+                            "identifier": "$fastn_tenant_header",
+                            "authKey": null,
+                            "enableMultiConnection": false,
+                            "isWorkspaceIdentifier": false
+                          },
+                          "retry": {
+                            "maxRetries": 1,
+                            "maxDelayMilliseconds": 1000,
+                            "enableConnectionErrors": false,
+                            "retryList": [
+                              {
+                                "delayMilliseconds": 50,
+                                "statusCode": 500,
+                                "body": null
+                              }
+                            ]
+                          },
+                          "requestSetting": null
+                        },
+                        "next": null,
+                        "queryExecutor": null
+                      },
+                      "composite": null,
+                      "loop": null,
+                      "internalDatabase": null,
+                      "aiAction": null,
+                      "mcpClient": null,
+                      "logger": null,
+                      "downLoadFile": null,
+                      "endLoop": null,
+                      "trigger": null,
+                      "converter": null,
+                      "variables": null,
+                      "state": null,
+                      "conditional": null,
+                      "lambdaFunction": null,
+                      "outputSchema": null,
+                      "next": null,
+                      "prevStep": null,
+                      "enableDebug": false,
+                      "description": null,
+                      "debugBreakAfter": null,
+                      "configuredStepSetting": null,
+                      "filter": null,
+                      "limit": null,
+                      "splitOut": null,
+                      "aggregate": null,
+                      "merge": null,
+                      "aiAgent": null,
+                      "settings": null,
+                      "ftp": null,
+                      "warnings": null,
+                      "tenantSettings": null
+                    }
+                  ],
+                  "next": "Variable114",
+                  "start": null,
+                  "queryExecutor": null
+                },
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"odata.metadata\":{\"type\":\"string\"},\"value\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}",
+                "next": "Variable114",
+                "prevStep": null,
+                "enableDebug": true,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "VARIABLE",
+                "id": "Variable114",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": {
+                  "next": "checkEmptyRecords",
+                  "variables": [],
+                  "code": "\n{\n  \"data\": {% if data.steps.getRecords.output.value %}{{data.steps.getRecords.output.value| shape}}{% else %}null{% endif %}\n}",
+                  "uiCode": "{\"actionType\":\"map\",\"target\":{\"data\":{\"actionType\":\"map\",\"target\":\"{{data.steps.getRecords.output.value}}\",\"targetType\":\"array\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "steps"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "getRecords"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "output"
+                                          },
+                                          "value": {
+                                            "children": [
+                                              {
+                                                "key": {
+                                                  "type": "java.lang.String",
+                                                  "value": "value"
+                                                },
+                                                "value": {
+                                                  "children": [],
+                                                  "returnLiteral": true,
+                                                  "symbolOrIndex": {
+                                                    "type": "java.lang.String",
+                                                    "value": "value"
+                                                  },
+                                                  "version": 2
+                                                }
+                                              }
+                                            ],
+                                            "returnLiteral": false,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "output"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "getRecords"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "steps"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "checkEmptyRecords",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 5,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "COMPOSITE",
+                "id": "getRecords1",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": {
+                  "steps": [
+                    {
+                      "type": "INLINE",
+                      "id": "getRecords1Map",
+                      "actionId": null,
+                      "inline": {
+                        "code": "\n{\n  \"param\": {\n  \"top\": {% if data.var.batchSize is defined %}\"{{data.var.batchSize}}\"{% else %}null{% endif %},\n  \"skip\": {% if data.var.skipToken is defined %}\"{{data.var.skipToken}}\"{% else %}null{% endif %}\n},\n  \"auth\": {\n  \"bearerToken\": \"\",\n  \"instanceUrl\": \"\"\n}\n}",
+                        "language": "JINJA",
+                        "fields": [],
+                        "next": "getRecords1Api",
+                        "uiCode": "{\"actionType\":\"map\",\"target\":{\"param\":{\"actionType\":\"map\",\"target\":{\"top\":{\"path\":\"param.top\",\"field\":\"param\",\"position\":[\"param\",\"top\"],\"key\":\"top\",\"selected\":false,\"actionType\":\"map\",\"target\":\"{{data.var.batchSize}}\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"autoEscape\":\"MANUAL\"},\"skip\":{\"path\":\"param.skip\",\"field\":\"param\",\"position\":[\"param\",\"skip\"],\"key\":\"skip\",\"selected\":false,\"actionType\":\"map\",\"target\":\"{{data.var.skipToken}}\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]},\"auth\":{\"actionType\":\"map\",\"target\":{\"bearerToken\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"default\":[]},\"instanceUrl\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"default\":[]}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"default\":[],\"isRequred\":false,\"selected\":false,\"title\":\"\",\"description\":\"\",\"enum\":[]}",
+                        "hasResponse": false,
+                        "isError": false,
+                        "statusCode": 200,
+                        "outputSchema": null,
+                        "queryExecutor": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "data"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "var"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "batchSize"
+                                          },
+                                          "value": {
+                                            "children": [],
+                                            "returnLiteral": true,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "batchSize"
+                                            },
+                                            "version": 2
+                                          }
+                                        },
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "skipToken"
+                                          },
+                                          "value": {
+                                            "children": [],
+                                            "returnLiteral": true,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "skipToken"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "var"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "data"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "null",
+                            "value": null
+                          },
+                          "version": 2
+                        }
+                      },
+                      "function": null,
+                      "composite": null,
+                      "loop": null,
+                      "internalDatabase": null,
+                      "aiAction": null,
+                      "mcpClient": null,
+                      "logger": null,
+                      "downLoadFile": null,
+                      "endLoop": null,
+                      "trigger": null,
+                      "converter": null,
+                      "variables": null,
+                      "state": null,
+                      "conditional": null,
+                      "lambdaFunction": null,
+                      "outputSchema": null,
+                      "next": "getRecords1Api",
+                      "prevStep": null,
+                      "enableDebug": false,
+                      "description": null,
+                      "debugBreakAfter": null,
+                      "configuredStepSetting": null,
+                      "filter": null,
+                      "limit": null,
+                      "splitOut": null,
+                      "aggregate": null,
+                      "merge": null,
+                      "aiAgent": null,
+                      "settings": null,
+                      "ftp": null,
+                      "warnings": null,
+                      "tenantSettings": null
+                    },
+                    {
+                      "type": "API",
+                      "id": "getRecords1Api",
+                      "actionId": null,
+                      "inline": null,
+                      "function": {
+                        "id": "_knexa_2turfyc0YKsydg9P1s0G3NM67QI",
+                        "groupId": "_knexa_7e87c3fe-4ddf-4a79-a12e-0da07cccbfc3",
+                        "connectorId": "community",
+                        "name": "getRecords",
+                        "version": "1.0.6",
+                        "imageUrl": "https://play-lh.googleusercontent.com/R2f0wEbrGDdEuECuO-VX6FdM749eRyYXt3neh106Ij3M1jNalfnwWUwkF96EP0Ql8Q",
+                        "configuration": {
+                          "enableCache": false,
+                          "cacheTtlInSeconds": 0,
+                          "required": true,
+                          "validate": false,
+                          "enableRetry": false,
+                          "enableAuth": true,
+                          "authType": "BEARER",
+                          "auth": {
+                            "identifier": "$fastn_tenant_header",
+                            "authKey": null,
+                            "enableMultiConnection": false,
+                            "isWorkspaceIdentifier": false
+                          },
+                          "retry": {
+                            "maxRetries": 1,
+                            "maxDelayMilliseconds": 1000,
+                            "enableConnectionErrors": false,
+                            "retryList": [
+                              {
+                                "delayMilliseconds": 50,
+                                "statusCode": 500,
+                                "body": null
+                              }
+                            ]
+                          },
+                          "requestSetting": null
+                        },
+                        "next": null,
+                        "queryExecutor": null
+                      },
+                      "composite": null,
+                      "loop": null,
+                      "internalDatabase": null,
+                      "aiAction": null,
+                      "mcpClient": null,
+                      "logger": null,
+                      "downLoadFile": null,
+                      "endLoop": null,
+                      "trigger": null,
+                      "converter": null,
+                      "variables": null,
+                      "state": null,
+                      "conditional": null,
+                      "lambdaFunction": null,
+                      "outputSchema": null,
+                      "next": null,
+                      "prevStep": null,
+                      "enableDebug": false,
+                      "description": null,
+                      "debugBreakAfter": null,
+                      "configuredStepSetting": null,
+                      "filter": null,
+                      "limit": null,
+                      "splitOut": null,
+                      "aggregate": null,
+                      "merge": null,
+                      "aiAgent": null,
+                      "settings": null,
+                      "ftp": null,
+                      "warnings": null,
+                      "tenantSettings": null
+                    }
+                  ],
+                  "next": "Variable8197",
+                  "start": null,
+                  "queryExecutor": null
+                },
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": "{\"type\":\"object\",\"description\":\"\",\"title\":\"\",\"properties\":{\"odata.metadata\":{\"type\":\"string\"},\"value\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[]}",
+                "next": "Variable8197",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": "This tool is designed to execute the getRecords operation on the Acumatica platform. It requires the JSON payload to strictly match the expected structure (key and type), otherwise, the operation will fail. Always get confirmation from the user before calling the tool.",
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "VARIABLE",
+                "id": "Variable8197",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": {
+                  "next": "checkEmptyRecords",
+                  "variables": [],
+                  "code": "\n{\n  \"data\": {% if data.steps.getRecords1.output.value %}{{data.steps.getRecords1.output.value| shape}}{% else %}null{% endif %}\n}",
+                  "uiCode": "{\"actionType\":\"map\",\"target\":{\"data\":{\"actionType\":\"map\",\"target\":\"{{data.steps.getRecords1.output.value}}\",\"targetType\":\"array\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "steps"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "getRecords1"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "output"
+                                          },
+                                          "value": {
+                                            "children": [
+                                              {
+                                                "key": {
+                                                  "type": "java.lang.String",
+                                                  "value": "value"
+                                                },
+                                                "value": {
+                                                  "children": [],
+                                                  "returnLiteral": true,
+                                                  "symbolOrIndex": {
+                                                    "type": "java.lang.String",
+                                                    "value": "value"
+                                                  },
+                                                  "version": 2
+                                                }
+                                              }
+                                            ],
+                                            "returnLiteral": false,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "output"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "getRecords1"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "steps"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "checkEmptyRecords",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "CONDITIONAL",
+                "id": "checkEmptyRecords",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": {
+                  "id": "checkEmptyRecords",
+                  "next": "loopOverData",
+                  "expressions": [
+                    {
+                      "name": "empty records",
+                      "logic": "AND",
+                      "conditions": null,
+                      "variable": "{{data.var.data}}",
+                      "value": "0",
+                      "operation": "LENGTH_EQ",
+                      "next": "EndLoop"
+                    }
+                  ],
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "var"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "data"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "data"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "var"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "loopOverData",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "ENDLOOP",
+                "id": "EndLoop",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": {
+                  "next": null,
+                  "queryExecutor": null
+                },
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "LOOP",
+                "id": "loopOverData",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": {
+                  "next": "Variable7901",
+                  "start": "InsertTableSet",
+                  "loopOver": "{{data.var.data}}",
+                  "type": "DATA",
+                  "steps": [
+                    {
+                      "type": "INTERNAL_DB",
+                      "id": "InsertTableSet",
+                      "actionId": null,
+                      "inline": null,
+                      "function": null,
+                      "composite": null,
+                      "loop": null,
+                      "internalDatabase": {
+                        "next": null,
+                        "query": "INSERT INTO {{data.var.tableName}} (\r\n    unique_id, \r\n    customer_id,\r\n    price_type, \r\n    price_code, \r\n    inventory_id, \r\n    description, \r\n    uom, \r\n    warehouse, \r\n    promotion, \r\n    break_qty, \r\n    price, \r\n    effective_date, \r\n    expiration_date, \r\n    ignore_automatic_line_discounts, \r\n    customer_class, \r\n    item_class, \r\n    last_modified_date_time, \r\n    inventory_id_2\r\n) \r\nVALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)\r\nON CONFLICT (unique_id)\r\nDO UPDATE SET\r\n    customer_id = EXCLUDED.customer_id,\r\n    price_type = EXCLUDED.price_type,\r\n    price_code = EXCLUDED.price_code,\r\n    inventory_id = EXCLUDED.inventory_id,\r\n    description = EXCLUDED.description,\r\n    uom = EXCLUDED.uom,\r\n    warehouse = EXCLUDED.warehouse,\r\n    promotion = EXCLUDED.promotion,\r\n    break_qty = EXCLUDED.break_qty,\r\n    price = EXCLUDED.price,\r\n    effective_date = EXCLUDED.effective_date,\r\n    expiration_date = EXCLUDED.expiration_date,\r\n    ignore_automatic_line_discounts = EXCLUDED.ignore_automatic_line_discounts,\r\n    customer_class = EXCLUDED.customer_class,\r\n    item_class = EXCLUDED.item_class,\r\n    last_modified_date_time = EXCLUDED.last_modified_date_time,\r\n    inventory_id_2 = EXCLUDED.inventory_id_2;\r\n",
+                        "code": null,
+                        "dbQueryParams": [
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.UniqueID}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.CustomerID}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.PriceType}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.PriceCode}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.InventoryID}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.Description}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.UOM}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.Warehouse}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.Promotion}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.BreakQty}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.Price}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.EffectiveDate}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.ExpirationDate}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.IgnoreAutomaticLineDiscounts}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.CustomerClass}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.ItemClass}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.LastModifiedDateTime}}"
+                          },
+                          {
+                            "type": "string",
+                            "value": "{{data.steps.loopOverData.loopOverItem.InventoryID_2}}"
+                          }
+                        ],
+                        "queryExecutor": null
+                      },
+                      "aiAction": null,
+                      "mcpClient": null,
+                      "logger": null,
+                      "downLoadFile": null,
+                      "endLoop": null,
+                      "trigger": null,
+                      "converter": null,
+                      "variables": null,
+                      "state": null,
+                      "conditional": null,
+                      "lambdaFunction": null,
+                      "outputSchema": null,
+                      "next": null,
+                      "prevStep": null,
+                      "enableDebug": false,
+                      "description": null,
+                      "debugBreakAfter": 1,
+                      "configuredStepSetting": null,
+                      "filter": null,
+                      "limit": null,
+                      "splitOut": null,
+                      "aggregate": null,
+                      "merge": null,
+                      "aiAgent": null,
+                      "settings": {
+                        "failureBehavior": "FAILURE",
+                        "skipStatus": null,
+                        "errorMessage": null,
+                        "stepNote": null
+                      },
+                      "ftp": null,
+                      "warnings": null,
+                      "tenantSettings": null
+                    }
+                  ],
+                  "itemSchema": "{\n\t\"type\": \"object\"\n}",
+                  "isParallel": false,
+                  "loopSize": "0",
+                  "loopStart": "0",
+                  "queryExecutor": null
+                },
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "Variable7901",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "VARIABLE",
+                "id": "Variable7901",
+                "actionId": null,
+                "inline": null,
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": {
+                  "next": null,
+                  "variables": [],
+                  "code": "\n{\n  \"skipToken\": {% set skipToken_math_expression=data.var.skipToken + data.var.batchSize %}{% if skipToken_math_expression is defined %}{{skipToken_math_expression|int}}{% else %}\"\"{% endif %}\n}",
+                  "uiCode": "{\"actionType\":\"map\",\"target\":{\"skipToken\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"integer\",\"actions\":[{\"actionType\":\"mathematical_expression\",\"castType\":\"int\",\"calculation\":\"{{data.var.skipToken}} + {{data.var.batchSize}}\",\"variable\":\"skipToken_math_expression\"},{\"actionType\":\"actions_return\",\"targetType\":\"integer\",\"target\":\"skipToken_math_expression\"}],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "var"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "batchSize"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "batchSize"
+                                      },
+                                      "version": 2
+                                    }
+                                  },
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "skipToken"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "skipToken"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "var"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ],
+            "itemSchema": null,
+            "isParallel": false,
+            "loopSize": "0",
+            "loopStart": "0",
+            "queryExecutor": null
+          },
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "Variable2863",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INLINE",
+          "id": "config_map",
+          "actionId": null,
+          "inline": {
+            "code": "\n{\n  \"\": \"\"\n}",
+            "language": "JINJA",
+            "fields": [],
+            "next": "Variable4793",
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"\":{\"actionType\":\"map\",\"target\":\"\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "hasResponse": false,
+            "isError": false,
+            "statusCode": 200,
+            "outputSchema": null,
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "Variable4793",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": {
+            "flow": "acumaticaSyncConfig",
+            "stepId": "syncConfig",
+            "version": "1.0.4",
+            "configurationIds": null,
+            "enableMultiConfigs": false
+          }
+        },
+        {
+          "type": "CONDITIONAL",
+          "id": "checkTenantName",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": {
+            "id": "checkTenantName",
+            "next": "Variable400",
+            "expressions": [
+              {
+                "name": "tenant name exists",
+                "logic": "AND",
+                "conditions": null,
+                "variable": "{{data.var.tenantName}}",
+                "value": null,
+                "operation": "EXISTS",
+                "next": "Variable5962"
+              }
+            ],
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "var"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "tenantName"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "tenantName"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "var"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "Variable400",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "VARIABLE",
+          "id": "Variable400",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": {
+            "next": "CreateTables",
+            "variables": [],
+            "code": "\n{\n  \"resourceName\": {% if data.var.acumaticaTableName is defined %}\"{{data.var.acumaticaTableName}}\"{% else %}\"\"{% endif %}\n}",
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"resourceName\":{\"actionType\":\"map\",\"target\":\"{{data.var.acumaticaTableName}}\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "var"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "acumaticaTableName"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "acumaticaTableName"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "var"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "CreateTables",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "VARIABLE",
+          "id": "Variable5962",
+          "actionId": null,
+          "inline": null,
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": {
+            "next": "CreateTables",
+            "variables": [],
+            "code": "\n{\n  \"resourceName\": {% if data.var.tenantName is defined or data.var.tenantName %}\"{{data.var.tenantName}}/{{data.var.acumaticaTableName}}\"{% else %}\"\"{% endif %}\n}",
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"resourceName\":{\"actionType\":\"map\",\"target\":\"{{data.var.tenantName}}/{{data.var.acumaticaTableName}}\",\"targetType\":\"string\",\"actions\":[],\"default\":\"\",\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"selected\":false,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "queryExecutor": {
+              "children": [
+                {
+                  "key": {
+                    "type": "java.lang.String",
+                    "value": "data"
+                  },
+                  "value": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "var"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "tenantName"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "tenantName"
+                                },
+                                "version": 2
+                              }
+                            },
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "acumaticaTableName"
+                              },
+                              "value": {
+                                "children": [],
+                                "returnLiteral": true,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "acumaticaTableName"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "var"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "java.lang.String",
+                      "value": "data"
+                    },
+                    "version": 2
+                  }
+                }
+              ],
+              "returnLiteral": false,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "CreateTables",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INLINE",
+          "id": "SuccessfullySyncedSa",
+          "actionId": null,
+          "inline": {
+            "code": "\n{\n  \"message\": \"Successfully synced sale prices\"\n}",
+            "language": "JINJA",
+            "fields": [],
+            "next": null,
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"message\":{\"actionType\":\"map\",\"target\":\"Successfully synced sale prices\",\"targetType\":\"string\",\"actions\":[],\"default\":null,\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":true,\"selected\":false,\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"\",\"isRequred\":false,\"default\":[]}",
+            "hasResponse": true,
+            "isError": false,
+            "statusCode": 200,
+            "outputSchema": null,
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": null,
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        }
+      ]
+    },
+    "types": [],
+    "tests": null,
+    "hasActionType": true,
+    "metaData": {
+      "enableLogs": true,
+      "isAsync": true,
+      "hasSecret": true,
+      "enableMultitenant": true,
+      "enableValidation": false,
+      "architecture": "REST",
+      "isCustomAuthenticationEnabled": false,
+      "isNotificationEnabled": false,
+      "flowType": "API",
+      "jobMemoryLimit": 4096,
+      "jobTimeOut": 360,
+      "jobCpuLimit": "1",
+      "isConfigured": null,
+      "configurationFlows": [
+        {
+          "flow": "acumaticaSyncConfig",
+          "stepId": null,
+          "version": "1.0.4",
+          "configurationIds": null,
+          "enableMultiConfigs": null
+        }
+      ],
+      "invocationMethod": "API_REQUEST",
+      "priority": "LOW",
+      "triggerType": null,
+      "schedule": null,
+      "triggerApp": null
+    },
+    "comment": null,
+    "labels": null,
+    "resourceType": "EXTERNAL",
+    "deleted": null,
+    "webhookId": null,
+    "webhook": null,
+    "deployedBy": null,
+    "createdby": null
+  }
+]

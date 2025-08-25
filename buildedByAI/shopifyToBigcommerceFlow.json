@@ -1,0 +1,1142 @@
+[
+  {
+    "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+    "id": "shopifyToBigcommerceSync",
+    "newName": null,
+    "name": "shopifyToBigcommerceSync",
+    "description": null,
+    "actionType": "READ",
+    "inputName": "input",
+    "inputModelId": "07a1436d4df2fe3ee87d4fd70ea6a259",
+    "chatWelcomeMessage": null,
+    "outputModelId": "json",
+    "errorModelId": "",
+    "headerModelId": "9fed297b87c60d6808c16df827fc4407",
+    "apiPreview": {
+      "graphql": null,
+      "rest": {
+        "schema": "{\"openapi\":\"3.0.3\",\"info\":{\"title\":\"Flow OpenAPI Specification\",\"description\":\"OpenAPI specification for the flow\",\"version\":\"1.0.11\"},\"servers\":[{\"url\":\"https://qa.fastn.ai/api/v1\"}],\"paths\":{\"/shopifyToBigcommerceSync\":{\"post\":{\"summary\":\"shopifyToBigcommerceSync\",\"operationId\":\"POST-shopifyToBigcommerceSync\",\"parameters\":[{\"in\":\"header\",\"name\":\"x-fastn-space-id\",\"description\":\"x-fastn-space-id Header\",\"schema\":{\"type\":\"string\",\"default\":\"60aecfe8-83ed-4df9-8467-8cf636d8eeff\"},\"required\":false},{\"in\":\"header\",\"name\":\"stage\",\"description\":\"stage Header\",\"schema\":{\"type\":\"string\",\"default\":\"DRAFT\"},\"required\":false},{\"in\":\"header\",\"name\":\"content-type\",\"description\":\"content-type Header\",\"schema\":{\"type\":\"string\",\"default\":\"application/json\"},\"required\":false},{\"in\":\"header\",\"name\":\"x-fastn-space-tenantid\",\"description\":\"x-fastn-space-tenantid Header\",\"schema\":{\"type\":\"string\",\"default\":\"\"},\"required\":false}],\"requestBody\":{\"required\":true,\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"input\":{\"type\":\"object\",\"description\":\"Free form JSON\",\"title\":\"JSON\",\"properties\":{\"id\":{\"type\":\"string\"}}}},\"type\":\"object\"}}}},\"responses\":{\"200\":{\"description\":\"Success\",\"content\":{\"application/json\":{\"schema\":{\"title\":\"JSON\",\"properties\":{},\"type\":\"object\",\"description\":\"Free form JSON\"}}}}},\"security\":[{\"apiKey\":[]}]}}},\"components\":{\"securitySchemes\":{\"apiKey\":{\"in\":\"header\",\"name\":\"x-fastn-api-key\",\"type\":\"apiKey\"},\"bearerAuth\":{\"type\":\"http\",\"scheme\":\"bearer\"}}}}"
+      }
+    },
+    "version": "1.0.1",
+    "inputModel": {
+      "createdAt": 1755761350.2239325,
+      "updatedAt": 1755761350.2238643,
+      "id": "07a1436d4df2fe3ee87d4fd70ea6a259",
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "name": "shopifyToBigcommerceSync",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    "outputModel": {
+      "createdAt": 1740422508.4287813,
+      "updatedAt": 1740422508.428733,
+      "id": "json",
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "name": "Json",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "title": "JSON",
+        "required": [],
+        "properties": {},
+        "type": "object",
+        "description": "Free form JSON"
+      }
+    },
+    "errorModel": null,
+    "headerModel": {
+      "createdAt": 1755761379.2920797,
+      "updatedAt": 1755761379.292001,
+      "id": "9fed297b87c60d6808c16df827fc4407",
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "name": "shopifyToBigcommerceSync",
+      "type": null,
+      "version": "1.0",
+      "preview": null,
+      "jsonSchema": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "auth": {
+            "type": "string"
+          },
+          "authorization": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "uiSchema": null,
+      "isReadOnly": true,
+      "imageUrl": null,
+      "groupId": null,
+      "resourceType": null,
+      "deleted": false,
+      "isCommunityCreated": false,
+      "dataModel": {
+        "type": "object",
+        "description": "Free form JSON",
+        "title": "JSON",
+        "properties": {
+          "auth": {
+            "type": "string"
+          },
+          "authorization": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    "status": "DEPLOYED",
+    "createdAt": 1755761380.6950655,
+    "updatedAt": 1755761411.3791394,
+    "deployedAt": 1755761411.3791394,
+    "resolver": {
+      "id": "shopifyToBigcommerceSync",
+      "label": null,
+      "clientId": "60aecfe8-83ed-4df9-8467-8cf636d8eeff",
+      "groupId": null,
+      "type": null,
+      "field": null,
+      "dependencies": null,
+      "start": "getShopifyProducts",
+      "nodeBased": false,
+      "steps": [
+        {
+          "type": "COMPOSITE",
+          "id": "getShopifyProducts",
+          "actionId": null,
+          "composite": {
+            "id": "getShopifyProducts",
+            "next": "transformProductData",
+            "steps": [
+              {
+                "type": "INLINE",
+                "id": "mapShopifyAuth",
+                "actionId": null,
+                "inline": {
+                  "code": "{\n  \"auth\": {\n    \"apiKeyValue\": {% if data.secrets.shopify_access_token is defined %}\"{{data.secrets.shopify_access_token}}\"{% else %}\"\"{% endif %},\n    \"storeName\": {% if data.secrets.shopify_store_name is defined %}\"{{data.secrets.shopify_store_name}}\"{% else %}\"\"{% endif %}\n  },\n  \"params\": {\n    \"limit\": \"10\"\n  }\n}",
+                  "language": "JINJA",
+                  "fields": [],
+                  "next": "callShopifyApi",
+                  "uiCode": "{\"actionType\":\"map\",\"target\":{\"auth\":{\"actionType\":\"map\",\"target\":{\"apiKeyValue\":{\"actionType\":\"map\",\"target\":\"{{data.secrets.shopify_access_token}}\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"API Key Value\",\"description\":\"Your Shopify API key value.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"},\"storeName\":{\"actionType\":\"map\",\"target\":\"{{data.secrets.shopify_store_name}}\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Store Name\",\"description\":\"The name of your Shopify store.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"Authentication Details\",\"description\":\"Authentication parameters for the Shopify API.\",\"isRequred\":false,\"default\":\"\",\"autoEscape\":\"MANUAL\",\"selected\":false,\"byUser\":false},\"params\":{\"actionType\":\"map\",\"target\":{\"limit\":{\"actionType\":\"map\",\"target\":\"10\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"\",\"description\":\"test the flow Description\",\"isRequred\":false,\"default\":\"\",\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"Request Parameters\",\"description\":\"Parameters to filter and limit the Shopify API response.\",\"isRequred\":false,\"default\":\"\"}},\"targetType\":\"object\"}",
+                  "hasResponse": false,
+                  "isError": false,
+                  "statusCode": 200,
+                  "outputSchema": null,
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "secrets"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "shopify_access_token"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "shopify_access_token"
+                                      },
+                                      "version": 2
+                                    }
+                                  },
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "shopify_store_name"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "shopify_store_name"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "secrets"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "callShopifyApi",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "API",
+                "id": "callShopifyApi",
+                "actionId": null,
+                "function": {
+                  "id": "_knexa_2Yrk5ZdsORprOGpdpf9R4piOtmn",
+                  "groupId": "_knexa_2fc3b972-2f75-49d4-8cce-3a11a5990408",
+                  "connectorId": "community",
+                  "name": "getProducts",
+                  "version": "1.1.0",
+                  "configuration": {
+                    "enableAuth": true,
+                    "authType": "APIKEY",
+                    "retryOnFailure": true,
+                    "retryCount": 3,
+                    "retryInterval": 1000,
+                    "enableValidation": true,
+                    "timeout": 30000
+                  }
+                },
+                "inline": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ]
+          },
+          "function": null,
+          "inline": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "transformProductData",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INLINE",
+          "id": "transformProductData",
+          "actionId": null,
+          "inline": {
+            "code": "function handler(params) {\n  const shopifyProducts = params.data.steps.getShopifyProducts.output.products || [];\n  \n  const transformedProducts = shopifyProducts.map(product => {\n    // Transform Shopify product to BigCommerce format\n    const bcProduct = {\n      name: product.title || 'Unknown Product',\n      type: 'physical',\n      price: parseFloat(product.variants?.[0]?.price) || 0,\n      weight: product.variants?.[0]?.grams ? Math.round(product.variants[0].grams / 28.35) : 1, // Convert grams to ounces\n      description: product.body_html || product.title || '',\n      sku: product.variants?.[0]?.sku || '',\n      is_visible: product.status === 'active',\n      inventory_level: product.variants?.[0]?.inventory_quantity || 0,\n      inventory_tracking: 'product'\n    };\n    \n    return bcProduct;\n  });\n  \n  return {\n    transformedProducts: transformedProducts,\n    productCount: transformedProducts.length,\n    originalProducts: shopifyProducts\n  };\n}",
+            "language": "JAVASCRIPT",
+            "fields": [],
+            "next": "createBigCommerceProducts",
+            "uiCode": "function handler(params) {\n  const shopifyProducts = params.data.steps.getShopifyProducts.output.products || [];\n  \n  const transformedProducts = shopifyProducts.map(product => {\n    // Transform Shopify product to BigCommerce format\n    const bcProduct = {\n      name: product.title || 'Unknown Product',\n      type: 'physical',\n      price: parseFloat(product.variants?.[0]?.price) || 0,\n      weight: product.variants?.[0]?.grams ? Math.round(product.variants[0].grams / 28.35) : 1, // Convert grams to ounces\n      description: product.body_html || product.title || '',\n      sku: product.variants?.[0]?.sku || '',\n      is_visible: product.status === 'active',\n      inventory_level: product.variants?.[0]?.inventory_quantity || 0,\n      inventory_tracking: 'product'\n    };\n    \n    return bcProduct;\n  });\n  \n  return {\n    transformedProducts: transformedProducts,\n    productCount: transformedProducts.length,\n    originalProducts: shopifyProducts\n  };\n}",
+            "hasResponse": false,
+            "isError": false,
+            "statusCode": 200,
+            "outputSchema": null,
+            "queryExecutor": null
+          },
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "createBigCommerceProducts",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "LOOP",
+          "id": "createBigCommerceProducts",
+          "actionId": null,
+          "loop": {
+            "id": "createBigCommerceProducts",
+            "loopOver": "{{data.steps.transformProductData.output.transformedProducts}}",
+            "start": "mapProductForBigCommerce",
+            "next": "sendSlackNotification",
+            "steps": [
+              {
+                "type": "COMPOSITE",
+                "id": "mapProductForBigCommerce",
+                "actionId": null,
+                "composite": {
+                  "id": "mapProductForBigCommerce",
+                  "next": null,
+                  "steps": [
+                    {
+                      "type": "INLINE",
+                      "id": "mapBigCommerceAuth",
+                      "actionId": null,
+                      "inline": {
+                        "code": "{\n  \"auth\": {\n    \"apiKeyValue\": {% if data.secrets.bigcommerce_access_token is defined %}\"{{data.secrets.bigcommerce_access_token}}\"{% else %}\"\"{% endif %},\n    \"apiKeyName\": \"X-Auth-Token\",\n    \"storeHash\": {% if data.secrets.bigcommerce_store_hash is defined %}\"{{data.secrets.bigcommerce_store_hash}}\"{% else %}\"\"{% endif %}\n  },\n  \"body\": {\n    \"name\": \"{{data.steps.createBigCommerceProducts.loopOverItem.name}}\",\n    \"type\": \"{{data.steps.createBigCommerceProducts.loopOverItem.type}}\",\n    \"price\": {{data.steps.createBigCommerceProducts.loopOverItem.price}},\n    \"weight\": {{data.steps.createBigCommerceProducts.loopOverItem.weight}},\n    \"description\": \"{{data.steps.createBigCommerceProducts.loopOverItem.description}}\",\n    \"sku\": \"{{data.steps.createBigCommerceProducts.loopOverItem.sku}}\",\n    \"is_visible\": {{data.steps.createBigCommerceProducts.loopOverItem.is_visible}},\n    \"inventory_level\": {{data.steps.createBigCommerceProducts.loopOverItem.inventory_level}},\n    \"inventory_tracking\": \"{{data.steps.createBigCommerceProducts.loopOverItem.inventory_tracking}}\"\n  }\n}",
+                        "language": "JINJA",
+                        "fields": [],
+                        "next": "callBigCommerceApi",
+                        "uiCode": "{\"actionType\":\"map\",\"target\":{\"auth\":{\"actionType\":\"map\",\"target\":{\"apiKeyValue\":{\"actionType\":\"map\",\"target\":\"{{data.secrets.bigcommerce_access_token}}\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"API Key Value\",\"description\":\"The API key value for authentication.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"},\"apiKeyName\":{\"actionType\":\"map\",\"target\":\"X-Auth-Token\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"API Key Name\",\"description\":\"The API key name for authentication.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"},\"storeHash\":{\"actionType\":\"map\",\"target\":\"{{data.secrets.bigcommerce_store_hash}}\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Store Hash\",\"description\":\"The store hash for authentication.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"Authentication\",\"description\":\"Authentication details for the Bigcommerce API request.\",\"isRequred\":false,\"default\":\"\"},\"body\":{\"actionType\":\"map\",\"target\":{\"name\":{\"actionType\":\"map\",\"target\":\"{{data.steps.createBigCommerceProducts.loopOverItem.name}}\",\"targetType\":\"string\",\"title\":\"Product Name\",\"description\":\"Name of the product.\",\"isRequred\":true},\"type\":{\"actionType\":\"map\",\"target\":\"{{data.steps.createBigCommerceProducts.loopOverItem.type}}\",\"targetType\":\"string\",\"title\":\"Product Type\",\"description\":\"Type of the product.\",\"isRequred\":true},\"price\":{\"actionType\":\"map\",\"target\":\"{{data.steps.createBigCommerceProducts.loopOverItem.price}}\",\"targetType\":\"number\",\"title\":\"Price\",\"description\":\"Price of the product.\",\"isRequred\":true},\"weight\":{\"actionType\":\"map\",\"target\":\"{{data.steps.createBigCommerceProducts.loopOverItem.weight}}\",\"targetType\":\"integer\",\"title\":\"Weight\",\"description\":\"Weight of the product.\",\"isRequred\":true}},\"targetType\":\"object\",\"title\":\"Product Details\",\"description\":\"Product details for the Bigcommerce API request.\",\"isRequred\":false}},\"targetType\":\"object\"}",
+                        "hasResponse": false,
+                        "isError": false,
+                        "statusCode": 200,
+                        "outputSchema": null,
+                        "queryExecutor": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "data"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "secrets"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "bigcommerce_access_token"
+                                          },
+                                          "value": {
+                                            "children": [],
+                                            "returnLiteral": true,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "bigcommerce_access_token"
+                                            },
+                                            "version": 2
+                                          }
+                                        },
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "bigcommerce_store_hash"
+                                          },
+                                          "value": {
+                                            "children": [],
+                                            "returnLiteral": true,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "bigcommerce_store_hash"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "secrets"
+                                      },
+                                      "version": 2
+                                    }
+                                  },
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "steps"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "createBigCommerceProducts"
+                                          },
+                                          "value": {
+                                            "children": [
+                                              {
+                                                "key": {
+                                                  "type": "java.lang.String",
+                                                  "value": "loopOverItem"
+                                                },
+                                                "value": {
+                                                  "children": [],
+                                                  "returnLiteral": true,
+                                                  "symbolOrIndex": {
+                                                    "type": "java.lang.String",
+                                                    "value": "loopOverItem"
+                                                  },
+                                                  "version": 2
+                                                }
+                                              }
+                                            ],
+                                            "returnLiteral": false,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "createBigCommerceProducts"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "steps"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "data"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "null",
+                            "value": null
+                          },
+                          "version": 2
+                        }
+                      },
+                      "function": null,
+                      "composite": null,
+                      "loop": null,
+                      "internalDatabase": null,
+                      "aiAction": null,
+                      "mcpClient": null,
+                      "logger": null,
+                      "downLoadFile": null,
+                      "endLoop": null,
+                      "trigger": null,
+                      "converter": null,
+                      "variables": null,
+                      "state": null,
+                      "conditional": null,
+                      "lambdaFunction": null,
+                      "outputSchema": null,
+                      "next": "callBigCommerceApi",
+                      "prevStep": null,
+                      "enableDebug": false,
+                      "description": null,
+                      "debugBreakAfter": 1,
+                      "configuredStepSetting": null,
+                      "filter": null,
+                      "limit": null,
+                      "splitOut": null,
+                      "aggregate": null,
+                      "merge": null,
+                      "aiAgent": null,
+                      "settings": {
+                        "failureBehavior": "FAILURE",
+                        "skipStatus": null,
+                        "errorMessage": null,
+                        "stepNote": null
+                      },
+                      "ftp": null,
+                      "warnings": null,
+                      "tenantSettings": null
+                    },
+                    {
+                      "type": "API",
+                      "id": "callBigCommerceApi",
+                      "actionId": null,
+                      "function": {
+                        "id": "_knexa_2bmlxXlW6cAzkOniyTyvdyPjJGJ",
+                        "groupId": "_knexa_c866d6f4-9ca4-40f5-9af5-5c54a9c5b4f3",
+                        "connectorId": "community",
+                        "name": "createProduct",
+                        "version": "1.0.0",
+                        "configuration": {
+                          "enableAuth": true,
+                          "authType": "APIKEY",
+                          "retryOnFailure": true,
+                          "retryCount": 3,
+                          "retryInterval": 1000,
+                          "enableValidation": true,
+                          "timeout": 30000
+                        }
+                      },
+                      "inline": null,
+                      "composite": null,
+                      "loop": null,
+                      "internalDatabase": null,
+                      "aiAction": null,
+                      "mcpClient": null,
+                      "logger": null,
+                      "downLoadFile": null,
+                      "endLoop": null,
+                      "trigger": null,
+                      "converter": null,
+                      "variables": null,
+                      "state": null,
+                      "conditional": null,
+                      "lambdaFunction": null,
+                      "outputSchema": null,
+                      "next": null,
+                      "prevStep": null,
+                      "enableDebug": false,
+                      "description": null,
+                      "debugBreakAfter": 1,
+                      "configuredStepSetting": null,
+                      "filter": null,
+                      "limit": null,
+                      "splitOut": null,
+                      "aggregate": null,
+                      "merge": null,
+                      "aiAgent": null,
+                      "settings": {
+                        "failureBehavior": "FAILURE",
+                        "skipStatus": null,
+                        "errorMessage": null,
+                        "stepNote": null
+                      },
+                      "ftp": null,
+                      "warnings": null,
+                      "tenantSettings": null
+                    }
+                  ]
+                },
+                "function": null,
+                "inline": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ]
+          },
+          "function": null,
+          "inline": null,
+          "composite": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "sendSlackNotification",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "COMPOSITE",
+          "id": "sendSlackNotification",
+          "actionId": null,
+          "composite": {
+            "id": "sendSlackNotification",
+            "next": "finalResponse",
+            "steps": [
+              {
+                "type": "INLINE",
+                "id": "prepareSlackMessage",
+                "actionId": null,
+                "inline": {
+                  "code": "{\n  \"auth\": {\n    \"bearerToken\": {% if data.secrets.slack_bearer_token is defined %}\"{{data.secrets.slack_bearer_token}}\"{% else %}\"\"{% endif %}\n  },\n  \"body\": {\n    \"channel\": \"#ai_testing\",\n    \"text\": \"✅ Product sync completed! Successfully transferred {{data.steps.transformProductData.output.productCount}} products from Shopify to BigCommerce.\"\n  }\n}",
+                  "language": "JINJA",
+                  "fields": [],
+                  "next": "callSlackApi",
+                  "uiCode": "{\"actionType\":\"map\",\"target\":{\"auth\":{\"actionType\":\"map\",\"target\":{\"bearerToken\":{\"actionType\":\"map\",\"target\":\"{{data.secrets.slack_bearer_token}}\",\"targetType\":\"string\",\"actions\":[],\"enum\":[],\"title\":\"Bearer Token\",\"description\":\"Bearer token for authentication with the Slack API.\",\"isRequred\":true,\"default\":\"\",\"autoEscape\":\"MANUAL\"}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"Authentication\",\"description\":\"Authentication parameters for the Slack API.\",\"isRequred\":false,\"default\":\"\"},\"body\":{\"actionType\":\"map\",\"target\":{\"channel\":{\"actionType\":\"map\",\"target\":\"#ai_testing\",\"targetType\":\"string\",\"title\":\"Channel ID\",\"description\":\"Slack channel ID to send the message to.\",\"isRequred\":true},\"text\":{\"actionType\":\"map\",\"target\":\"✅ Product sync completed! Successfully transferred {{data.steps.transformProductData.output.productCount}} products from Shopify to BigCommerce.\",\"targetType\":\"string\",\"title\":\"Message Text\",\"description\":\"Plain text message.\",\"isRequred\":true}},\"targetType\":\"object\",\"actions\":[],\"enum\":[],\"title\":\"Request Body\",\"description\":\"Body of the Slack API request.\",\"isRequred\":false,\"default\":\"\"}},\"targetType\":\"object\"}",
+                  "hasResponse": false,
+                  "isError": false,
+                  "statusCode": 200,
+                  "outputSchema": null,
+                  "queryExecutor": {
+                    "children": [
+                      {
+                        "key": {
+                          "type": "java.lang.String",
+                          "value": "data"
+                        },
+                        "value": {
+                          "children": [
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "secrets"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "slack_bearer_token"
+                                    },
+                                    "value": {
+                                      "children": [],
+                                      "returnLiteral": true,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "slack_bearer_token"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "secrets"
+                                },
+                                "version": 2
+                              }
+                            },
+                            {
+                              "key": {
+                                "type": "java.lang.String",
+                                "value": "steps"
+                              },
+                              "value": {
+                                "children": [
+                                  {
+                                    "key": {
+                                      "type": "java.lang.String",
+                                      "value": "transformProductData"
+                                    },
+                                    "value": {
+                                      "children": [
+                                        {
+                                          "key": {
+                                            "type": "java.lang.String",
+                                            "value": "output"
+                                          },
+                                          "value": {
+                                            "children": [
+                                              {
+                                                "key": {
+                                                  "type": "java.lang.String",
+                                                  "value": "productCount"
+                                                },
+                                                "value": {
+                                                  "children": [],
+                                                  "returnLiteral": true,
+                                                  "symbolOrIndex": {
+                                                    "type": "java.lang.String",
+                                                    "value": "productCount"
+                                                  },
+                                                  "version": 2
+                                                }
+                                              }
+                                            ],
+                                            "returnLiteral": false,
+                                            "symbolOrIndex": {
+                                              "type": "java.lang.String",
+                                              "value": "output"
+                                            },
+                                            "version": 2
+                                          }
+                                        }
+                                      ],
+                                      "returnLiteral": false,
+                                      "symbolOrIndex": {
+                                        "type": "java.lang.String",
+                                        "value": "transformProductData"
+                                      },
+                                      "version": 2
+                                    }
+                                  }
+                                ],
+                                "returnLiteral": false,
+                                "symbolOrIndex": {
+                                  "type": "java.lang.String",
+                                  "value": "steps"
+                                },
+                                "version": 2
+                              }
+                            }
+                          ],
+                          "returnLiteral": false,
+                          "symbolOrIndex": {
+                            "type": "java.lang.String",
+                            "value": "data"
+                          },
+                          "version": 2
+                        }
+                      }
+                    ],
+                    "returnLiteral": false,
+                    "symbolOrIndex": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "version": 2
+                  }
+                },
+                "function": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": "callSlackApi",
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              },
+              {
+                "type": "API",
+                "id": "callSlackApi",
+                "actionId": null,
+                "function": {
+                  "id": "_knexa_2XfaKSZt7VF4AKpsRcQm683QmLP",
+                  "groupId": "_knexa_c9085d88-85d0-4436-82c6-4e42d6aba4c6",
+                  "connectorId": "community",
+                  "name": "sendMessage",
+                  "version": "1.1.1",
+                  "configuration": {
+                    "enableAuth": true,
+                    "authType": "BEARER",
+                    "retryOnFailure": true,
+                    "retryCount": 3,
+                    "retryInterval": 1000,
+                    "enableValidation": true,
+                    "timeout": 30000
+                  }
+                },
+                "inline": null,
+                "composite": null,
+                "loop": null,
+                "internalDatabase": null,
+                "aiAction": null,
+                "mcpClient": null,
+                "logger": null,
+                "downLoadFile": null,
+                "endLoop": null,
+                "trigger": null,
+                "converter": null,
+                "variables": null,
+                "state": null,
+                "conditional": null,
+                "lambdaFunction": null,
+                "outputSchema": null,
+                "next": null,
+                "prevStep": null,
+                "enableDebug": false,
+                "description": null,
+                "debugBreakAfter": 1,
+                "configuredStepSetting": null,
+                "filter": null,
+                "limit": null,
+                "splitOut": null,
+                "aggregate": null,
+                "merge": null,
+                "aiAgent": null,
+                "settings": {
+                  "failureBehavior": "FAILURE",
+                  "skipStatus": null,
+                  "errorMessage": null,
+                  "stepNote": null
+                },
+                "ftp": null,
+                "warnings": null,
+                "tenantSettings": null
+              }
+            ]
+          },
+          "function": null,
+          "inline": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": "finalResponse",
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        },
+        {
+          "type": "INLINE",
+          "id": "finalResponse",
+          "actionId": null,
+          "inline": {
+            "code": "{\n  \"status\": \"success\",\n  \"message\": \"Product sync completed successfully\",\n  \"productsProcessed\": {{data.steps.transformProductData.output.productCount}},\n  \"timestamp\": \"{{ 'now' | date('Y-m-d H:i:s') }}\",\n  \"slackNotified\": true\n}",
+            "language": "JINJA",
+            "fields": [],
+            "next": null,
+            "uiCode": "{\"actionType\":\"map\",\"target\":{\"status\":{\"actionType\":\"map\",\"target\":\"success\",\"targetType\":\"string\",\"actions\":[],\"default\":null},\"message\":{\"actionType\":\"map\",\"target\":\"Product sync completed successfully\",\"targetType\":\"string\",\"actions\":[],\"default\":null},\"productsProcessed\":{\"actionType\":\"map\",\"target\":\"{{data.steps.transformProductData.output.productCount}}\",\"targetType\":\"string\",\"actions\":[],\"default\":null},\"timestamp\":{\"actionType\":\"map\",\"target\":\"{{ 'now' | date('Y-m-d H:i:s') }}\",\"targetType\":\"string\",\"actions\":[],\"default\":null},\"slackNotified\":{\"actionType\":\"map\",\"target\":true,\"targetType\":\"boolean\",\"actions\":[],\"default\":null}},\"targetType\":\"object\",\"actions\":[],\"default\":null}",
+            "hasResponse": true,
+            "isError": false,
+            "statusCode": 200,
+            "outputSchema": null,
+            "queryExecutor": {
+              "children": [],
+              "returnLiteral": true,
+              "symbolOrIndex": {
+                "type": "null",
+                "value": null
+              },
+              "version": 2
+            }
+          },
+          "function": null,
+          "composite": null,
+          "loop": null,
+          "internalDatabase": null,
+          "aiAction": null,
+          "mcpClient": null,
+          "logger": null,
+          "downLoadFile": null,
+          "endLoop": null,
+          "trigger": null,
+          "converter": null,
+          "variables": null,
+          "state": null,
+          "conditional": null,
+          "lambdaFunction": null,
+          "outputSchema": null,
+          "next": null,
+          "prevStep": null,
+          "enableDebug": false,
+          "description": null,
+          "debugBreakAfter": 1,
+          "configuredStepSetting": null,
+          "filter": null,
+          "limit": null,
+          "splitOut": null,
+          "aggregate": null,
+          "merge": null,
+          "aiAgent": null,
+          "settings": {
+            "failureBehavior": "FAILURE",
+            "skipStatus": null,
+            "errorMessage": null,
+            "stepNote": null
+          },
+          "ftp": null,
+          "warnings": null,
+          "tenantSettings": null
+        }
+      ]
+    },
+    "types": [],
+    "tests": null,
+    "hasActionType": true,
+    "metaData": {
+      "enableLogs": true,
+      "isAsync": false,
+      "hasSecret": true,
+      "enableMultitenant": false,
+      "enableValidation": false,
+      "architecture": "REST",
+      "isCustomAuthenticationEnabled": true,
+      "isNotificationEnabled": false,
+      "flowType": "API",
+      "jobMemoryLimit": 4096,
+      "jobTimeOut": null,
+      "jobCpuLimit": "1",
+      "isConfigured": null,
+      "configurationFlows": [],
+      "invocationMethod": "API_REQUEST",
+      "priority": null,
+      "triggerType": null,
+      "schedule": null,
+      "triggerApp": null
+    },
+    "comment": null,
+    "labels": null,
+    "resourceType": "EXTERNAL",
+    "deleted": null,
+    "webhookId": null,
+    "webhook": null,
+    "deployedBy": "GenAIDeveloper",
+    "createdby": "GenAIDeveloper"
+  }
+]

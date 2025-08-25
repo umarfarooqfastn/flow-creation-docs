@@ -254,6 +254,9 @@ This template was trying to access index `[1]` of an array that only had 1 eleme
 - ✅ **Flow and step names follow camelCase conventions (no spaces, dashes, underscores)**
 - ✅ **COMPOSITE step names match exact connector endpoint names from JSON files**
 - ✅ **Flow name is short, descriptive, and deployment-safe**
+- ✅ **LAMBDA steps have proper lambdaFunction configuration with Python code**
+- ✅ **LAMBDA steps define fastn_function(params) as entry point**
+- ✅ **LAMBDA steps use only available Python libraries from documented list**
 - ✅ No linter errors in final JSON
 
 The flow is now safe from array bounds errors, status deserialization failures, and properly handles the product data structure.
@@ -295,6 +298,13 @@ The flow is now safe from array bounds errors, status deserialization failures, 
 - Validates flow names start with lowercase
 - Checks COMPOSITE step names match connector endpoints
 - Validates nested step naming in LOOP and COMPOSITE steps
+
+✅ **LAMBDA Step Validation**
+- Validates required lambdaFunction configuration
+- Checks for required fields (code, language, version)
+- Ensures language is set to "PYTHON"
+- Validates presence of fastn_function(params) entry point
+- Checks for queryExecutor configuration
 
 ✅ **Data Reference Safety**
 - Detects hardcoded array indices that cause bounds errors
